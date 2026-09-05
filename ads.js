@@ -134,6 +134,28 @@
   // Bait: create a decoy ad container. Adblockers hide/remove elements matching
   // ad-like class names (.ad-slot, .adsbox, [class*="ad-"], #ad-banner, etc.).
   function adBlockDetected(){
+    // PRIMARY, most reliable signal: did a real Adsterra banner actually render?
+    // Adsterra invoke.js injects an <iframe> (or <ins>) into each [data-adsterra]
+    // slot when it runs. If at least one real ad rendered, ads are NOT being blocked
+    // for this user -> never show the notice (avoid false positives / annoying players).
+    var slots = document.querySelectorAll('[data-adsterra]');
+    var realAdRendered = false;
+    for(var i=0;i<slots.length;i++){
+      var sl = slots[i];
+      if(sl.querySelector('iframe') || sl.querySelector('ins')){
+        realAdRendered = true;
+        break;
+      }
+    }
+    // Also consider a global ad iframe (popunder/socialbar may add their own).
+    if(!realAdRendered){
+      var anyAd = document.querySelector('iframe[src*="highrevenueformat"], iframe[src*="profitableratecpmnetwork"], ins[class*="adsby"]');
+      if(anyAd) realAdRendered = true;
+    }
+    if(realAdRendered) return false;
+
+    // SECONDARY signal (only evaluated if no real ad rendered): bait element.
+    // Adblockers hide/remove elements matching ad-like class names (.adsbox, .ad-slot, etc.).
     var bait = document.createElement('div');
     bait.className = 'adsbox ad-slot ad-banner ad-zone ad_space';
     bait.id = 'ad-banner-detector';
@@ -144,31 +166,16 @@
     var hidden = false;
     try {
       var c = getComputedStyle(bait);
-      // adblocker removed the element OR hid it via CSS
       hidden = !document.body.contains(bait) ||
                c.display === 'none' || c.visibility === 'hidden' ||
                c.height === '0px' || c.width === '0px';
     } catch(e){}
 
-    // Strongest signal: a real Adsterra banner slot was "activated" but no
-    // iframe/ins ever rendered -> the ad request was blocked.
-    var slots = document.querySelectorAll('[data-adsterra]');
-    var realBlocked = false;
-    for(var i=0;i<slots.length;i++){
-      var sl = slots[i];
-      if(sl.getAttribute('data-loaded')){
-        // Adsterra invoke.js creates an <iframe> (or <ins>) when it runs; if none
-        // appeared after activation, the ad request was blocked by the adblocker.
-        if(!sl.querySelector('iframe') && !sl.querySelector('ins')){
-          realBlocked = true;
-        }
-      }
-    }
-
     // cleanup bait
     if(bait.parentNode) bait.parentNode.removeChild(bait);
 
-    return hidden || realBlocked;
+    // Only report blocked if BOTH: no real ad rendered AND bait was hidden/removed.
+    return hidden;
   }
 
   function showAdblockNotice(){
