@@ -1,5 +1,4 @@
 User-agent: *
-Disallow:
+Allow: /
 
-# Sitemap
-Sitemap: https://www.switchere.online/sitemap.xml
+Sitemap: https://lipon.pro.bd/sitemap.xml

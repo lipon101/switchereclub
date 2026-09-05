@@ -1,1027 +1,128 @@
-    <!DOCTYPE html>
-    <html lang="en">
-
-      <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-    <head>
-        
-        <meta name="google-site-verification" content="jWlb1n4duaP9PjP3H7xr4sTNkxS4X4xHNK7fblbFxNU" />
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Switchere Club – Play 100+ Free Browser Games Instantly</title>
-        <meta name="description" content="Switchere Club – Play 100+ free browser games instantly online. No downloads, safe for all ages, with a growing library of free games for endless fun.">
-        <link rel="icon" href="classroom.png" sizes="16x16 32x32" type="image/png">
-        <link rel="canonical" href="https://www.switchere.online/" />
-        <meta name="robots" content="index, follow" />
-        <link rel="alternate" href="https://www.switchere.online/" hreflang="en" /> 
-        
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-64NJRHCT9P"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-64NJRHCT9P');
-        </script>
-        
-       <!-- Microsoft tag -->
-       <meta name="msvalidate.01" content="A1BF9810DF0199068F5BF447D82D4876" />
-        
-       <!-- Add published date -->
-       <meta property="article:published_time" content="2025-10-01T09:00:00+00:00" />
-       <!-- Add modified date -->
-       <meta property="article:modified_time" content="2025-10-04T15:30:00+00:00" />
-
-        <!-- Open Graph / Facebook / LinkedIn -->
-        <meta property="og:title" content="Switchere Club – Play 100+ Free Browser Games Instantly Online" />
-        <meta property="og:description" content="Play 100+ free browser games instantly at Switchere Club. No downloads, safe for all ages, with a growing library of free games for endless fun." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.switchere.online/" />
-        <meta property="og:image" content="https://www.switchere.online/images/social-preview.png" />
-        
-        <!-- Twitter / X -->
-        <meta name="twitter:card" content="switchereclub" />
-        <meta name="twitter:site" content="@switchereclub" />
-        <meta name="twitter:title" content="Switchere Club – Play 100+ Free Browser Games Instantly Online" />
-        <meta name="twitter:description" content="Play 100+ free browser games instantly at Switchere Club. No downloads, safe for all ages, with a growing library of free games for endless fun." />
-        <meta name="twitter:image" content="https://www.switchere.online/images/social-preview.png" />
-
-
-    </head>
-    <body>
-        <!-- Body Code -->
-    </body>
-    </html>
-      <!-- Google tag (gtag.js) -->
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link href="style.css" rel="stylesheet" type="text/css" />
-      <style>
-        body {
-          font-size: 16px;
-          /* Default font size for the body */
-        }
-
-        .welcome-text {
-          margin-top: 1px;
-          font-size: 44px;
-          font-weight: bold;
-          color: #333;
-          font-family: 'Bungee Shade', sans-serif; /* Replace 'Bungee Shade' with the name of the scriptive font you want to use */
-        }
-
-
-
-
-        .flex-container {
-          margin-top: 60px;
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: space-around;
-        }
-
-
-        .flex-item {
-            margin: 8px;
-            padding: 12px;
-            background-color: #fff;
-            text-align: center;
-            cursor: pointer;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.2s, box-shadow 0.2s;
-            position: relative;
-        }
-
-        .flex-item:hover {
-            transform: scale(1.1); /* Slightly expand on hover */
-            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* More pronounced shadow on hover */
-            border-radius: 8px;
-            border: 5px solid #000000;
-        }
-
-        .flex-item::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.2); /* Slightly dark overlay */
-            opacity: 0;
-            transition: opacity 0.2s ease-in-out;
-            border-radius: 8px;
-        }
-
-        .flex-item:hover::after {
-            opacity: 1;
-        }
-
-
-        .flex-item span {
-            visibility: hidden;
-            opacity: 0;
-            transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out; /* Faster transition duration */
-            position: absolute;
-            bottom: 10px; /* Lower the tooltip closer to the element */
-            left: 50%;
-            transform: translateX(-50%);
-            color: #ffffff; /* White text */
-            padding: 10px 15px;
-            font-size: 17px;
-            font-weight: 500;
-            white-space: nowrap;
-            z-index: 10;
-            pointer-events: none; /* Ensures the tooltip does not interfere with mouse events */
-        }
-
-        .flex-item:hover span {
-            visibility: visible;
-            opacity: 1;
-        }
-
-      </style>
-    </head>
-
-    <body>
-      <div class="welcome-text">Switchere Club</div>
-      
-
-
-
-      <div class="search-bar">
-        <input type="text" id="searchInput" placeholder="Search for a game..." onkeypress="handleKeyPress(event)">
-        <button onclick="searchGames()"><i class="fas fa-search"></i></button>
-      </div>
-
-
-      <script>
-          function handleKeyPress(event) {
-              if (event.keyCode === 13) { // Check if the pressed key is "Enter"
-                  searchGames(); // Trigger the search function
-              }
-          }
-
-          function searchGames() {
-              // Your search functionality here
-              // This function will be called when either the "Search" button is clicked or Enter key is pressed in the input field
-          }
-      </script>
-
-
-
-
-
-
-
-
-
-
-      <!-- Rest of your website content goes here -->
-      <div class="flex-container">
-
-
-
-        <div class="flex-item" onclick="window.location.href='/1v1.lol.html';" style="background-image: url('images/1v1.lol.png'); background-repeat: no-repeat; background-size: cover;">
-          <span class="visually-hidden">1v1 LOL</span>
-        </div>
-
-
-        <div class="flex-item" onclick="window.location.href='/bitlife.html';" style="background-image: url('images/bitlife.png'); background-repeat: no-repeat; background-size: cover;">
-      <span class="visually-hidden">BitLife</span>
-    </div>
-
-    <div class="flex-item" onclick="window.location.href='/amongus.html';" style="background-image: url('images/amongus.png'); background-repeat: no-repeat; background-size: cover;">
-      <span class="visually-hidden">Among Us</span>
-    </div>
-
-    <div class="flex-item" onclick="window.location.href='/basketballstars.html';" style="background-image: url('images/basketballstars.png'); background-repeat: no-repeat; background-size: cover;">
-      <span class="visually-hidden">Basketball Stars</span>
-    </div>
-
-    <div class="flex-item" onclick="window.location.href='/basketballlegends.html';" style="background-image: url('images/basketballlegends.png'); background-repeat: no-repeat; background-size: cover;">
-      <span class="visually-hidden">Basketball Legends</span>
-    </div>
-
-    <div class="flex-item" onclick="window.location.href='/geometrydash.html';" style="background-image: url('images/geometrydash.png'); background-repeat: no-repeat; background-size: cover;">
-      <span class="visually-hidden">Geometry Dash</span>
-    </div>
-
-
-        <div class="flex-item" onclick="window.location.href='/retrobowlcollege.html';" style="background-image: url('images/retrobowlcollege.png'); background-repeat: no-repeat; background-size: cover;">
-          <span class="visually-hidden">Retro Bowl College</span>
-        </div>
-
-
-          
-    <div class="flex-item" onclick="window.location.href='/littlealchemy.html';" style="background-image: url('images/littlealchemy.png'); background-repeat: no-repeat; background-size: cover;">
-      <span class="visually-hidden">Little Alchemy</span>
-    </div>
-
-    <div class="flex-item" onclick="window.location.href='/chromedino.html';" style="background-image: url('images/chromedino.png'); background-repeat: no-repeat; background-size: cover;">
-      <span class="visually-hidden">Chrome Dino</span>
-    </div>
-
-    <div class="flex-item" onclick="window.location.href='/craftmine.html';" style="background-image: url('images/craftmine.png'); background-repeat: no-repeat; background-size: cover;">
-      <span class="visually-hidden">Craft Mine</span>
-    </div>
-        
-        
-    <div class="flex-item" onclick="window.location.href='/eggycar.html';" style="background-image: url('images/eggycar.png'); background-repeat: no-repeat; background-size: cover;">
-      <span class="visually-hidden">Eggy Car</span>
-    </div>
-
-    
-
-    <div class="flex-item" onclick="window.location.href='/motox3m.html';" style="background-image: url('images/motox3m.png'); background-repeat: no-repeat; background-size: cover;">
-      <span class="visually-hidden">Moto X3M</span>
-    </div>
-
-    <div class="flex-item" onclick="window.location.href='/motox3m2.html';" style="background-image: url('images/motox3m2.png'); background-repeat: no-repeat; background-size: cover;">
-      <span class="visually-hidden">Moto X3M 2</span>
-    </div>
-
-    <div class="flex-item" onclick="window.location.href='/motox3m3.html';" style="background-image: url('images/motox3m3.png'); background-repeat: no-repeat; background-size: cover;">
-      <span class="visually-hidden">Moto X3M 3</span>
-    </div>
-
-        <div class="flex-item" onclick="window.location.href='/motox3mpool.html';" style="background-image: url('images/motox3mpool.jpg'); background-repeat: no-repeat; background-size: cover; color: transparent;">
-          <span>Moto X3M Pool</span>
-        </div>
-
-
-
-        <div class="flex-item" onclick="window.location.href='/motox3mspooky.html';" style="background-image: url('images/moto3mspooky.jpeg'); background-repeat: no-repeat; background-size: cover; color: transparent;">
-          <span>Moto X3M Spooky</span>
-        </div>
-
-
-
-        <div class="flex-item" onclick="window.location.href='/motox3mwinter.html';" style="background-image: url('images/motox3mwinter.jpeg'); background-repeat: no-repeat; background-size: cover; color: transparent;">
-          <span>Moto X3M Winter</span>
-        </div>
-
-
-        <div class="flex-item" onclick="window.location.href='/dogeminer.html';" style="background-image: url('images/dogeminer.png'); background-repeat: no-repeat; background-size: cover;">
-          <span class="visually-hidden">Doge Miner</span>
-        </div>
-
-
-        
-        <div class="flex-item" onclick="window.location.href='/driftboss.html';" style="background-image: url('images/driftboss.png'); background-repeat: no-repeat; background-size: cover;">
-          <span class="visually-hidden">Drift Boss</span>
-        </div>
-
-    <div class="flex-item" onclick="window.location.href='/ovo.html';" style="background-image: url('images/ovo.png'); background-repeat: no-repeat; background-size: cover;">
-      <span class="visually-hidden">Ovo</span>
-    </div>
-
-
-
-        <div class="flex-item" onclick="window.location.href='/awesometanks.html';" style="background-image: url('images/awesometanks.png'); background-repeat: no-repeat; background-size: cover;">
-      <span class="visually-hidden">Awesome Tanks</span>
-    </div>
-
-    <div class="flex-item" onclick="window.location.href='/awesometanks2.html';" style="background-image: url('images/awesometanks2.png'); background-repeat: no-repeat; background-size: cover;">
-      <span class="visually-hidden">Awesome Tanks 2</span>
-    </div>
-
-    <div class="flex-item" onclick="window.location.href='/flappybird.html';" style="background-image: url('images/flappybird.png'); background-repeat: no-repeat; background-size: cover;">
-      <span class="visually-hidden">Flappy Bird</span>
-    </div>
-
-    <div class="flex-item" onclick="window.location.href='/bobtherobber.html';" style="background-image: url('images/bobtherobber.png'); background-repeat: no-repeat; background-size: cover;">
-      <span class="visually-hidden">Bob The Robber</span>
-    </div>
-
-    <div class="flex-item" onclick="window.location.href='/paper.io2.html';" style="background-image: url('images/paper.io2.png'); background-repeat: no-repeat; background-size: cover;">
-      <span class="visually-hidden">Paper io 2</span>
-    </div>
-
-    <div class="flex-item" onclick="window.location.href='/rabbitsamurai.html';" style="background-image: url('images/rabbitsamurai.png'); background-repeat: no-repeat; background-size: cover;">
-      <span class="visually-hidden">Rabbit Samurai</span>
-    </div>
-
-    <div class="flex-item" onclick="window.location.href='/burritobison.html';" style="background-image: url('images/burritobison.png'); background-repeat: no-repeat; background-size: cover;">
-      <span class="visually-hidden">Burrito Bison</span>
-    </div>
-
-    <div class="flex-item" onclick="window.location.href='/skyblock.html';" style="background-image: url('images/skyblock.png'); background-repeat: no-repeat; background-size: cover;">
-      <span class="visually-hidden">Sky Block</span>
-    </div>
-
-    <div class="flex-item" onclick="window.location.href='/slope.html';" style="background-image: url('images/slope.png'); background-repeat: no-repeat; background-size: cover;">
-      <span class="visually-hidden">Slope</span>
-    </div>
-
-    <div class="flex-item" onclick="window.location.href='/slope2.html';" style="background-image: url('images/slope2.png'); background-repeat: no-repeat; background-size: cover;">
-      <span class="visually-hidden">Slope 2</span>
-    </div>
-
-    <div class="flex-item" onclick="window.location.href='/snakeio.html';" style="background-image: url('images/snakeio.png'); background-repeat: no-repeat; background-size: cover;">
-      <span class="visually-hidden">Snake io</span>
-    </div>
-
-    <div class="flex-item" onclick="window.location.href='/spaceiskey.html';" style="background-image: url('images/spaceiskey.png'); background-repeat: no-repeat; background-size: cover;">
-      <span class="visually-hidden">Space is Key</span>
-    </div>
-
-
-
-    <div class="flex-item" onclick="window.location.href='/badicecream2.html';" style="background-image: url('images/badicecream2.png'); background-repeat: no-repeat; background-size: cover;">
-      <span class="visually-hidden">Bad Ice Cream 2</span>
-    </div>
-
-    <div class="flex-item" onclick="window.location.href='/badpiggies.html';" style="background-image: url('images/badpiggies.png'); background-repeat: no-repeat; background-size: cover;">
-      <span class="visually-hidden">Bad Piggies</span>
-    </div>
-
-    <div class="flex-item" onclick="window.location.href='/breakingthebank.html';" style="background-image: url('images/breakingthebank.png'); background-repeat: no-repeat; background-size: cover;">
-      <span class="visually-hidden">Breaking the Bank</span>
-    </div>
-
-    <div class="flex-item" onclick="window.location.href='/cubefield.html';" style="background-image: url('images/cubefield.png'); background-repeat: no-repeat; background-size: cover;">
-      <span class="visually-hidden">Cube Field</span>
-    </div>
-
-    <div class="flex-item" onclick="window.location.href='/crossyroad.html';" style="background-image: url('images/crossyroad.png'); background-repeat: no-repeat; background-size: cover;">
-      <span class="visually-hidden">Crossy Road</span>
-    </div>
-
-    <div class="flex-item" onclick="window.location.href='/cuttherope.html';" style="background-image: url('images/cuttherope.png'); background-repeat: no-repeat; background-size: cover;">
-      <span class="visually-hidden">Cut the Rope</span>
-    </div>
-
-
-        <div class="flex-item" onclick="window.location.href='/dealornodeal.html';" style="background-image: url('images/dealornodeal.png'); background-repeat: no-repeat; background-size: cover;">
-          <span class="visually-hidden">Deal or No Deal</span>
-        </div>
-        
-
-        <div class="flex-item" onclick="window.location.href='/geometryrash.html';" style="background-image: url('images/geometryrash.png'); background-repeat: no-repeat; background-size: cover;">
-          <span class="visually-hidden">Geometry Rash</span>
-        </div>
-
-        <div class="flex-item" onclick="window.location.href='/golddigger.html';" style="background-image: url('images/golddigger.png'); background-repeat: no-repeat; background-size: cover;">
-          <span class="visually-hidden">Gold Digger FRVR</span>
-        </div>
-
-        <div class="flex-item" onclick="window.location.href='/helixjump.html';" style="background-image: url('images/helixjump.png'); background-repeat: no-repeat; background-size: cover;">
-          <span class="visually-hidden">Helix Jump</span>
-        </div>
-
-        <div class="flex-item" onclick="window.location.href='/hexgl.html';" style="background-image: url('images/hexgl.png'); background-repeat: no-repeat; background-size: cover;">
-          <span class="visually-hidden">Hex GL</span>
-        </div>
-
-        <div class="flex-item" onclick="window.location.href='/hextris.html';" style="background-image: url('images/hextris.png'); background-repeat: no-repeat; background-size: cover;">
-          <span class="visually-hidden">Hextris</span>
-        </div>
-
-        <div class="flex-item" onclick="window.location.href='/idlebreakout.html';" style="background-image: url('images/idlebreakout.png'); background-repeat: no-repeat; background-size: cover;">
-          <span class="visually-hidden">Idle Breakout</span>
-        </div>
-
-        <div class="flex-item" onclick="window.location.href='/justfalllol.html';" style="background-image: url('images/justfalllol.png'); background-repeat: no-repeat; background-size: cover;">
-          <span class="visually-hidden">Just Fall LOL</span>
-        </div>
-
-        <div class="flex-item" onclick="window.location.href='/knifehit.html';" style="background-image: url('images/knifehit.png'); background-repeat: no-repeat; background-size: cover;">
-          <span class="visually-hidden">Knife Hit</span>
-        </div>
-
-        <div class="flex-item" onclick="window.location.href='/mario.html';" style="background-image: url('images/mario.png'); background-repeat: no-repeat; background-size: cover;">
-          <span class="visually-hidden">Super 64 Mario</span>
-        </div>
-
-        <div class="flex-item" onclick="window.location.href='/ngon.html';" style="background-image: url('images/ngon.png'); background-repeat: no-repeat; background-size: cover;">
-          <span class="visually-hidden">N GON</span>
-        </div>
-
-        <div class="flex-item" onclick="window.location.href='/pacman.html';" style="background-image: url('images/pacman.png'); background-repeat: no-repeat; background-size: cover;">
-          <span class="visually-hidden">Pacman</span>
-        </div>
-
-        <div class="flex-item" onclick="window.location.href='/rocketleague.html';" style="background-image: url('images/rocketleague.png'); background-repeat: no-repeat; background-size: cover;">
-          <span class="visually-hidden">Rocket League</span>
-        </div>
-
-        <div class="flex-item" onclick="window.location.href='/rooftopsnipers.html';" style="background-image: url('images/rooftopsnipers.png'); background-repeat: no-repeat; background-size: cover;">
-          <span class="visually-hidden">Rooftop Snipers</span>
-        </div>
-
-        <div class="flex-item" onclick="window.location.href='/rooftopsnipers2.html';" style="background-image: url('images/rooftopsnipers2.png'); background-repeat: no-repeat; background-size: cover;">
-          <span class="visually-hidden">Rooftop Snipers 2</span>
-        </div>
-
-        <div class="flex-item" onclick="window.location.href='/skibiditoilet.html';" style="background-image: url('images/skibiditoilet.png'); background-repeat: no-repeat; background-size: cover;">
-          <span class="visually-hidden">Skibidi Toilet</span>
-        </div>
-
-
-        <div class="flex-item" onclick="window.location.href='/snowrider3d.html';" style="background-image: url('images/snowrider3d.png'); background-repeat: no-repeat; background-size: cover;">
-          <span class="visually-hidden">Snow Rider 3D</span>
-        </div>
-
-        <div class="flex-item" onclick="window.location.href='/spacebarclicker.html';" style="background-image: url('images/spacebarclicker.png'); background-repeat: no-repeat; background-size: cover;">
-          <span class="visually-hidden">Space Bar Clicker</span>
-        </div>
-
-        <div class="flex-item" onclick="window.location.href='/spankthemonkey.html';" style="background-image: url('images/spankthemonkey.png'); background-repeat: no-repeat; background-size: cover;">
-          <span class="visually-hidden">Spank the Monkey</span>
-        </div>
-
-        <div class="flex-item" onclick="window.location.href='/stack.html';" style="background-image: url('images/stack.png'); background-repeat: no-repeat; background-size: cover;">
-          <span class="visually-hidden">Stack</span>
-        </div>
-
-        <div class="flex-item" onclick="window.location.href='/sprinter.html';" style="background-image: url('images/sprinter.png'); background-repeat: no-repeat; background-size: cover;">
-          <span class="visually-hidden">Sprinter</span>
-        </div>
-
-        <div class="flex-item" onclick="window.location.href='/stealingthediamond.html';" style="background-image: url('images/stealingthediamond.png'); background-repeat: no-repeat; background-size: cover;">
-          <span class="visually-hidden">Stealing the Diamond</span>
-        </div>
-
-        <div class="flex-item" onclick="window.location.href='/stickmanhook.html';" style="background-image: url('images/stickmanhook.png'); background-repeat: no-repeat; background-size: cover;">
-          <span class="visually-hidden">Stickman Hook</span>
-        </div>
-
-        <div class="flex-item" onclick="window.location.href='/tetris.html';" style="background-image: url('images/tetris.png'); background-repeat: no-repeat; background-size: cover;">
-          <span class="visually-hidden">Tetris</span>
-        </div>
-
-        <div class="flex-item" onclick="window.location.href='/theimpossiblequiz.html';" style="background-image: url('images/theimpossiblequiz.png'); background-repeat: no-repeat; background-size: cover;">
-          <span class="visually-hidden">The Impossible Quiz</span>
-        </div>
-
-        <div class="flex-item" onclick="window.location.href='/tinyfishing.html';" style="background-image: url('images/tinyfishing.png'); background-repeat: no-repeat; background-size: cover;">
-          <span class="visually-hidden">Tiny Fishing</span>
-        </div>
-
-        <div class="flex-item" onclick="window.location.href='/cannonbasketball4.html';" style="background-image: url('images/cannonbasketball4.png'); background-repeat: no-repeat; background-size: cover;">
-          <span class="visually-hidden">Cannon Basketball 4</span>
-        </div>
-
-        <div class="flex-item" onclick="window.location.href='/2048cupcakes.html';" style="background-image: url('images/2048cupcake.png'); background-repeat: no-repeat; background-size: cover;">
-          <span class="visually-hidden">2048 Cupcakes</span>
-        </div>
-
-
-
-
-       <div class="flex-item" onclick="window.location.href='/defendthetank.html';" style="background-image: url('images/defendthetank.png'); background-repeat: no-repeat; background-size: cover; color: transparent;">
-        <span>Defend the Tank</span>
-    </div>
-
-
-
-
-        <div class="flex-item" onclick="window.location.href='/bigredbutton.html';" style="background-image: url('images/thebigredbutton.png'); background-repeat: no-repeat; background-size: cover; color: transparent;">
-        <span>Big Red Button</span>
-    </div>
-
-    <div class="flex-item" onclick="window.location.href='/googlesnake.html';" style="background-image: url('images/googlesnake.png'); background-repeat: no-repeat; background-size: cover; color: transparent;">
-        <span>Google Snake</span>
-    </div>
-
-    <div class="flex-item" onclick="window.location.href='/meme2048.html';" style="background-image: url('images/meme2048.png'); background-repeat: no-repeat; background-size: cover; color: transparent;">
-        <span>Meme 2048</span>
-    </div>
-
-    <div class="flex-item" onclick="window.location.href='/minigolfmaster.html';" style="background-image: url('images/minigolf.png'); background-repeat: no-repeat; background-size: cover; color: transparent;">
-        <span>Mini Golf Master</span>
-    </div>
-
-    <div class="flex-item" onclick="window.location.href='/paperplanes.html';" style="background-image: url('images/paperplanes.png'); background-repeat: no-repeat; background-size: cover; color: transparent;">
-        <span>Papery Planes</span>
-    </div>
-
-    <div class="flex-item" onclick="window.location.href='/rollyvortex.html';" style="background-image: url('images/rollyvortex.png'); background-repeat: no-repeat; background-size: cover; color: transparent;">
-        <span>Rolly Vortex</span>
-    </div>
-
-    <div class="flex-item" onclick="window.location.href='/snowbattleio.html';" style="background-image: url('images/snowbattleio.png'); background-repeat: no-repeat; background-size: cover; color: transparent;">
-        <span>Snow Battle io</span>
-    </div>
-
-    <div class="flex-item" onclick="window.location.href='/soundboard.html';" style="background-image: url('images/soundboard.png'); background-repeat: no-repeat; background-size: cover; color: transparent;">
-        <span>Meme Sound Board</span>
-    </div>
-
-    <div class="flex-item" onclick="window.location.href='/minecraft.html';" style="background-image: url('images/minecraft.png'); background-repeat: no-repeat; background-size: cover; color: transparent;">
-        <span>Minecraft</span>
-    </div>
-
-    <div class="flex-item" onclick="window.location.href='/2048.html';" style="background-image: url('images/2048.png'); background-repeat: no-repeat; background-size: cover; color: transparent;">
-        <span>2048</span>
-    </div>
-
-    <div class="flex-item" onclick="window.location.href='/clickerheroes.html';" style="background-image: url('images/clickerheroes.png'); background-repeat: no-repeat; background-size: cover; color: transparent;">
-        <span>Clicker Heroes</span>
-    </div>
-
-    <div class="flex-item" onclick="window.location.href='/coreball.html';" style="background-image: url('images/coreball.png'); background-repeat: no-repeat; background-size: cover; color: transparent;">
-        <span>Core Ball</span>
-    </div>
-
-    <div class="flex-item" onclick="window.location.href='/dune.html';" style="background-image: url('images/dune.png'); background-repeat: no-repeat; background-size: cover; color: transparent;">
-        <span>Dune</span>
-    </div>
-
-    <div class="flex-item" onclick="window.location.href='/dadish.html';" style="background-image: url('images/dadish.png'); background-repeat: no-repeat; background-size: cover; color: transparent;">
-        <span>Dadish</span>
-    </div>
-
-    <div class="flex-item" onclick="window.location.href='/dadish2.html';" style="background-image: url('images/dadish2.png'); background-repeat: no-repeat; background-size: cover; color: transparent;">
-        <span>Dadish 2</span>
-    </div>
-
-    <div class="flex-item" onclick="window.location.href='/getawayshootout.html';" style="background-image: url('images/getawayshootout.png'); background-repeat: no-repeat; background-size: cover; color: transparent;">
-        <span>Getaway Shootout</span>
-    </div>
-
-    <div class="flex-item" onclick="window.location.href='/vex3.html';" style="background-image: url('images/vex3.png'); background-repeat: no-repeat; background-size: cover; color: transparent;">
-        <span>Vex 3</span>
-    </div>
-
-    <div class="flex-item" onclick="window.location.href='/vex4.html';" style="background-image: url('images/vex4.png'); background-repeat: no-repeat; background-size: cover; color: transparent;">
-        <span>Vex 4</span>
-    </div>
-
-    <div class="flex-item" onclick="window.location.href='/vex5.html';" style="background-image: url('images/vex5.png'); background-repeat: no-repeat; background-size: cover; color: transparent;">
-        <span>Vex 5</span>
-    </div>
-
-    <div class="flex-item" onclick="window.location.href='/vex6.html';" style="background-image: url('images/vex6.png'); background-repeat: no-repeat; background-size: cover; color: transparent;">
-        <span>Vex 6</span>
-    </div>
-
-
-
-      <div class="flex-item" onclick="window.location.href='/vex7.html';" style="background-image: url('images/vex7.png'); background-repeat: no-repeat; background-size: cover; color: transparent;">
-          <span>Vex 7</span>
-      </div>
-
-    <div class="flex-item" onclick="window.location.href='/baldisbasics.html';" style="background-image: url('images/baldisbasics.png'); background-repeat: no-repeat; background-size: cover; color: transparent;">
-        <span>Baldi's Basics</span>
-    </div>
-
-    <div class="flex-item" onclick="window.location.href='/basketbros.html';" style="background-image: url('images/basketbros.png'); background-repeat: no-repeat; background-size: cover; color: transparent;">
-        <span>Basket Bros</span>
-    </div>
-
-    <div class="flex-item" onclick="window.location.href='/basketrandom.html';" style="background-image: url('images/basketrandom.png'); background-repeat: no-repeat; background-size: cover; color: transparent;">
-        <span>Basket Random</span>
-    </div>
-
-    <div class="flex-item" onclick="window.location.href='/btd4.html';" style="background-image: url('images/btd4.png'); background-repeat: no-repeat; background-size: cover; color: transparent;">
-        <span>BTD 4</span>
-    </div>
-
-    <div class="flex-item" onclick="window.location.href='/clusterrush.html';" style="background-image: url('images/clusterrush.png'); background-repeat: no-repeat; background-size: cover; color: transparent;">
-        <span>Cluster Rush</span>
-    </div>
-
-    <div class="flex-item" onclick="window.location.href='/colormatch.html';" style="background-image: url('images/colormatch.png'); background-repeat: no-repeat; background-size: cover; color: transparent;">
-        <span>Color Match</span>
-    </div>
-
-
-
-
-        <div class="flex-item" onclick="window.location.href='/drifthunters.html';" style="background-image: url('images/drifthunters.png'); background-repeat: no-repeat; background-size: cover; color: transparent;">
-        <span>Drift Hunters</span>
-    </div>
-
-    <div class="flex-item" onclick="window.location.href='/ducklife.html';" style="background-image: url('images/ducklife.png'); background-repeat: no-repeat; background-size: cover; color: transparent;">
-        <span>Duck Life</span>
-    </div>
-
-    <div class="flex-item" onclick="window.location.href='/ducklife2.html';" style="background-image: url('images/ducklife2.png'); background-repeat: no-repeat; background-size: cover; color: transparent;">
-        <span>Duck Life 2</span>
-    </div>
-
-    <div class="flex-item" onclick="window.location.href='/ducklife3.html';" style="background-image: url('images/ducklife3.png'); background-repeat: no-repeat; background-size: cover; color: transparent;">
-        <span>Duck Life 3</span>
-    </div>
-
-    <div class="flex-item" onclick="window.location.href='/ducklife4.html';" style="background-image: url('images/ducklife4.png'); background-repeat: no-repeat; background-size: cover; color: transparent;">
-        <span>Duck Life 4</span>
-    </div>
-
-    <div class="flex-item" onclick="window.location.href='/edgenotfound.html';" style="background-image: url('images/edgenotfound.png'); background-repeat: no-repeat; background-size: cover; color: transparent;">
-        <span>Edge Not Found</span>
-    </div>
-
-    <div class="flex-item" onclick="window.location.href='/letssurf.html';" style="background-image: url('images/letssurf.png'); background-repeat: no-repeat; background-size: cover; color: transparent;">
-        <span>Let's Surf</span>
-    </div>
-
-    <div class="flex-item" onclick="window.location.href='/mergeroundracers.html';" style="background-image: url('images/mergeroundracers.png'); background-repeat: no-repeat; background-size: cover; color: transparent;">
-        <span>Merge Round Racers</span>
-    </div>
-
-    <div class="flex-item" onclick="window.location.href='/monkeymart.html';" style="background-image: url('images/monkeymart.png'); background-repeat: no-repeat; background-size: cover; color: transparent;">
-        <span>Monkey Mart</span>
-    </div>
-
-    <div class="flex-item" onclick="window.location.href='/tanukisunset.html';" style="background-image: url('images/tanukisunset.png'); background-repeat: no-repeat; background-size: cover; color: transparent;">
-        <span>Tanuki Sunset</span>
-    </div>
-
-    <div class="flex-item" onclick="window.location.href='/tombofthemask.html';" style="background-image: url('images/tombofthemask.png'); background-repeat: no-repeat; background-size: cover; color: transparent;">
-        <span>Tomb of The Mask</span>
-    </div>
-
-
-        <div class="flex-item" onclick="window.location.href='/towermaster.html';" style="background-image: url('images/towerbuilder.png'); background-repeat: no-repeat; background-size: cover; color: transparent;">
-            <span>Tower Builder</span>
-        </div>
-
-
-        <div class="flex-item" onclick="window.location.href='/particleclicker.html';" style="background-image: url('images/particleclicker.png'); background-repeat: no-repeat; background-size: cover; color: transparent;">
-            <span>Particle Clicker</span>
-        </div>
-
-
-        <div class="flex-item" onclick="window.location.href='/run3.html';" style="background-image: url('images/run3.png'); background-repeat: no-repeat; background-size: cover; color: transparent;">
-            <span>Run 3</span>
-        </div>
-
-
-          
-        <div class="flex-item" onclick="window.location.href='/learntofly2.html';" style="background-image: url('images/learntofly2.png'); background-repeat: no-repeat; background-size: cover; color: transparent;">
-            <span>Learn to Fly 2</span>
-        </div>
-
-
-
-        <div class="flex-item" onclick="window.location.href='/googlefued.html';" style="background-image: url('images/googlefeud.png'); background-repeat: no-repeat; background-size: cover; color: transparent;">
-            <span>Google Feud</span>
-        </div>
-
-
-
-        <div class="flex-item" onclick="window.location.href='/bloxors.html';" style="background-image: url('images/bloxors.png'); background-repeat: no-repeat; background-size: cover; color: transparent;">
-            <span>Bloxors</span>
-        </div>
-
-
-
-        <div class="flex-item" onclick="window.location.href='/sonic.html';" style="background-image: url('images/sonic.png'); background-repeat: no-repeat; background-size: cover; color: transparent;">
-            <span>Sonic</span>
-        </div>
-
-        
-
-        <div class="flex-item" onclick="window.location.href='/donkeykong.html';" style="background-image: url('images/donkeykong.png'); background-repeat: no-repeat; background-size: cover; color: transparent;">
-            <span>Donkey Kong</span>
-        </div>
-
-
-
-        <div class="flex-item" onclick="window.location.href='/blockblast.html';" style="background-image: url('images/blockblast.png'); background-repeat: no-repeat; background-size: cover; color: transparent;">
-            <span>Block Blast</span>
-        </div>
-
-
-          <div class="flex-item" onclick="window.location.href='/fireboyandwatergirl.html';" style="background-image: url('images/fireboyandwatergirl.png'); background-repeat: no-repeat; background-size: cover; color: transparent;">
-            <span>Fireboy and Watergirl</span>
-        </div>
-
-
-
-
-            <div class="flex-item" onclick="window.location.href='/fireboyandwatergirl2.html';" style="background-image: url('images/fireboyandwatergirl2.png'); background-repeat: no-repeat; background-size: cover; color: transparent;">
-            <span>Fireboy and Watergirl 2</span>
-        </div>
-
-
-
-
-            <div class="flex-item" onclick="window.location.href='/fireboyandwatergirl3.html';" style="background-image: url('images/fireboyandwatergirl3.png'); background-repeat: no-repeat; background-size: cover; color: transparent;">
-            <span>Fireboy and Watergirl 3</span>
-        </div>
-
-
-
-            <div class="flex-item" onclick="window.location.href='/fireboyandwatergirl4.html';" style="background-image: url('images/fireboyandwatergirl4.png'); background-repeat: no-repeat; background-size: cover; color: transparent;">
-            <span>Fireboy and Watergirl 4</span>
-        </div>
-
-
-
-
- <div class="flex-item" onclick="window.location.href='/chess.html';" style="background-image: url('images/chess.png'); background-repeat: no-repeat; background-size: cover; color: transparent;">
-            <span>Chess</span>
-        </div>
-
-          
-
- <div class="flex-item" onclick="window.location.href='/flappy2048.html';" style="background-image: url('images/flappy2048.png'); background-repeat: no-repeat; background-size: cover; color: transparent;">
-            <span>Flappy 2048</span>
-        </div>
-
-
-
-           <div class="flex-item" onclick="window.location.href='/shuttledeck.html';" style="background-image: url('images/shuttledeck.png'); background-repeat: no-repeat; background-size: cover; color: transparent;">
-            <span>Shuttle Deck</span>
-        </div>
-        
-
-        
-      </div>
-
-
-
-
-
-
-
-
-
-
- <!DOCTYPE html>
-    <html lang="en">
-    <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f3f3f3;
-        font-size: 14px;
-      }
-      /* Main Container */
-      .container {
-        max-width: 500px;
-        margin: 30px auto;
-        padding: 10px;
-        background-color: #fff;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      }
-      /* Tip Section */
-      .tip {
-        text-align: center;
-        margin-bottom: 10px;
-      }
-      .tip-text {
-        font-size: 14px;
-        color: #333;
-        line-height: 1.4;
-      }
-      .tip-img {
-        width: 30px;
-        height: 30px;
-        vertical-align: middle;
-      }
-      /* Footer Section */
-      footer {
-        background-color: #2c3e50;
-        color: #fff;
-        text-align: center;
-        padding: 10px;
-        border-bottom-left-radius: 10px;
-        border-bottom-right-radius: 10px;
-      }
-      .footer-links {
-        margin-top: 5px;
-      }
-      .footer-links a {
-        color: #fff;
-        text-decoration: none;
-        margin: 0 5px;
-        transition: color 0.3s ease;
-      }
-      .footer-links a:hover {
-        color: #3498db;
-      }
-      .hit-counter {
-        margin-top: 10px;
-      }
-      .hit-counter img {
-        width: 80px;
-        height: auto;
-      }
-    </style>
-    </head>
-    <body>
-
-    <!-- Main Content Container -->
-    <div class="container">
-      <!-- Student Tip Section -->
-      <div class="tip">
-        <div class="tip-text">
-          🚀 Attention, Students! Activate School Panic Mode with this button
-          <img class="tip-img" src="https://raw.githubusercontent.com/switchereclub/switchereclub.github.io/refs/heads/main/images/panic.png" alt="Tilde key"> 
-          when the teacher is near! 📚✨ It instantly transforms into a study screen!
-
-        </div>
-      </div>
-    </div>
-    <h1></h1>
-  <!-- Footer Section -->
-<footer>
-  <div class="bottomFoot">❤️ 2025 Switchere Club</div>
-  <div class="footer-links">
-    <a href="privacypolicy.html">Privacy Policy</a>
-    <a href="https://ko-fi.com/switchere" target="_blank">Support Us</a>
-  </div>
-</footer>
-
-<!-- JavaScript for Panic Key Functionality -->
-<script>
-  window.addEventListener('keydown', function (e) {
-    if(e.key === '') {
-      window.open('https://classroom.google.com/u/0/h', '_blank');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Switchere Club — Play Free Online Games Instantly | No Download</title>
+  <meta name="description" content="Switchere Club offers hundreds of free online games you can play instantly in your browser — no downloads, no sign-up. Action, puzzle, sports, racing & more. Safe for all ages." />
+  <meta name="robots" content="index, follow" />
+  <meta name="google-site-verification" content="jWlb1n4duaP9PjP3H7xr4sTNkxS4X4xHNK7fblbFxNU" />
+  <meta name="msvalidate.01" content="A1BF9810DF0199068F5BF447D82D4876" />
+  <link rel="canonical" href="https://lipon.pro.bd/" />
+  <link rel="icon" href="classroom.png" type="image/png" />
+  <meta name="theme-color" content="#0e1420" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Switchere Club" />
+  <meta property="og:title" content="Switchere Club — Play Free Online Games Instantly" />
+  <meta property="og:description" content="Play hundreds of free online games instantly — no downloads or sign-up required. Safe for all ages." />
+  <meta property="og:url" content="https://lipon.pro.bd/" />
+  <meta property="og:image" content="https://lipon.pro.bd/images/social-preview.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@switchereclub" />
+  <meta name="twitter:title" content="Switchere Club — Play Free Online Games Instantly" />
+  <meta name="twitter:description" content="Play hundreds of free online games instantly — no downloads or sign-up required." />
+  <meta name="twitter:image" content="https://lipon.pro.bd/images/social-preview.png" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-64NJRHCT9P"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-64NJRHCT9P');</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Switchere Club","url":"https://lipon.pro.bd/","description":"Play hundreds of free online browser games instantly — no downloads or sign-up required.","potentialAction":{"@type":"SearchAction","target":"https://lipon.pro.bd/?q={search_term_string}","query-input":"required name=search_term_string"}}</script>
+  <link rel="preconnect" href="https://www.googletagmanager.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root{--bg:#0e1420;--panel:#151d2c;--card:#1a2334;--border:#263048;--txt:#e6e9ef;--muted:#8b96a8;--accent:#22c55e;--accent2:#4facfe;}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{background:var(--bg);color:var(--txt);font-family:'Inter',system-ui,sans-serif;line-height:1.6;min-height:100vh;}
+    a{color:inherit;text-decoration:none;}
+    .wrap{max-width:1200px;margin:0 auto;padding:0 16px;}
+    header.site{position:sticky;top:0;z-index:50;background:rgba(14,20,32,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);}
+    .nav{display:flex;align-items:center;gap:14px;padding:12px 0;flex-wrap:wrap;}
+    .brand{font-family:'Bungee',system-ui;font-size:1.25rem;color:#fff;letter-spacing:.5px;}
+    .brand span{color:var(--accent);}
+    .nav-links{display:flex;gap:6px;margin-left:auto;flex-wrap:wrap;}
+    .nav-links a{padding:7px 13px;border-radius:9px;color:var(--muted);font-weight:600;font-size:.9rem;transition:.2s;}
+    .nav-links a:hover,.nav-links a.active{background:var(--card);color:#fff;}
+    .hero{text-align:center;padding:42px 0 18px;}
+    .hero h1{font-size:clamp(1.9rem,4.5vw,3rem);font-weight:800;letter-spacing:-.5px;line-height:1.15;}
+    .hero h1 .grad{background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent;}
+    .hero p{color:var(--muted);max-width:640px;margin:14px auto 0;font-size:1.05rem;}
+    .search{max-width:560px;margin:22px auto 0;display:flex;gap:8px;}
+    .search input{flex:1;padding:13px 18px;border-radius:12px;border:1px solid var(--border);background:var(--panel);color:var(--txt);font-size:1rem;outline:none;}
+    .search input:focus{border-color:var(--accent);}
+    .search button{padding:0 20px;border-radius:12px;border:none;background:var(--accent);color:#fff;font-weight:700;cursor:pointer;font-size:1rem;}
+    .cats{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin:20px 0 6px;}
+    .cat{padding:8px 16px;border-radius:999px;background:var(--card);border:1px solid var(--border);color:var(--muted);font-weight:600;font-size:.88rem;cursor:pointer;transition:.15s;}
+    .cat:hover,.cat.active{background:var(--accent);color:#fff;border-color:var(--accent);}
+    .ad-slot{background:var(--card);border:1px dashed var(--border);border-radius:14px;margin:16px 0;display:flex;align-items:center;justify-content:center;min-height:90px;color:var(--muted);font-size:.8rem;overflow:hidden;}
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px;padding:10px 0 30px;}
+    .card{position:relative;border-radius:14px;overflow:hidden;background:var(--card);aspect-ratio:1/1;cursor:pointer;transition:.18s;border:1px solid var(--border);display:block;}
+    .card:hover{transform:translateY(-4px);border-color:var(--accent);box-shadow:0 12px 26px rgba(34,197,94,.15);}
+    .card img{width:100%;height:100%;object-fit:cover;display:block;}
+    .card .lbl{position:absolute;left:0;right:0;bottom:0;padding:20px 8px 8px;background:linear-gradient(transparent,rgba(0,0,0,.85));font-weight:600;font-size:.85rem;color:#fff;text-align:center;}
+    .tile-letter{display:flex;align-items:center;justify-content:center;width:100%;height:100%;font-size:3rem;font-weight:800;color:var(--accent);background:linear-gradient(135deg,#1a2334,#24324a);}
+    .nores{text-align:center;color:var(--muted);padding:40px 0;font-size:1.05rem;}
+    footer.site{border-top:1px solid var(--border);margin-top:30px;padding:30px 0 20px;background:var(--panel);}
+    footer .cols{display:flex;flex-wrap:wrap;gap:30px;justify-content:space-between;}
+    footer h4{font-size:.95rem;margin-bottom:10px;color:#fff;}
+    footer a{display:block;color:var(--muted);font-size:.9rem;padding:3px 0;}
+    footer a:hover{color:var(--accent);}
+    .disclaimer{color:var(--muted);font-size:.8rem;margin-top:20px;border-top:1px solid var(--border);padding-top:14px;}
+    @media(max-width:600px){.grid{grid-template-columns:repeat(auto-fill,minmax(110px,1fr));}}
+  </style>
+</head>
+<body>
+  <header class="site"><div class="wrap nav"><div class="brand">Switchere<span>Club</span></div><nav class="nav-links"><a href="/" class="active">Games</a><a href="/tools.html">Tools</a><a href="/security.html">Security</a><a href="/privacypolicy.html">Privacy</a></nav></div></header>
+  <main class="wrap">
+    <section class="hero">
+      <h1>Play <span class="grad">Free Online Games</span><br/>Instantly. No Downloads.</h1>
+      <p>Hundreds of high-quality browser games — action, puzzle, sports, racing & more. Pick a game and play right away, safe for all ages.</p>
+      <div class="search"><input id="q" type="text" placeholder="Search games…" autocomplete="off" /><button id="searchBtn">Search</button></div>
+    </section>
+    <div class="ad-slot" data-adsterra data-key="37fac26fb228ad6f463c96f56b54dcbe" data-w="728" data-h="90">Advertisement</div>
+    <div class="cats" id="cats"></div>
+    <div class="ad-slot" data-adsterra data-key="793d8bb524d00a156bcd9b13090236d8" data-w="300" data-h="250">Advertisement</div>
+    <div class="grid" id="grid"></div>
+    <div class="nores" id="nores" style="display:none">No games found. Try another search.</div>
+  </main>
+  <footer class="site"><div class="wrap">
+    <div class="cols">
+      <div><h4>Switchere Club</h4><a href="/">Free Online Games</a><a href="/tools.html">Free Online Tools</a><a href="/security.html">Security Tools</a></div>
+      <div><h4>Company</h4><a href="/privacypolicy.html">Privacy Policy</a><a href="/clearai.html">Support</a><a href="mailto:sales@lipon.pro.bd">Contact</a></div>
+      <div><h4>Popular</h4><a href="https://www.profitableratecpmnetwork.com/c6i57ps2?key=98c39bed813d55b1fbd2d65809bc2aba" target="_blank" rel="nofollow noopener">More Free Games</a><a href="/geometrydash.html">Geometry Dash</a><a href="/slope.html">Slope</a><a href="/moto-x3m.html">Moto X3M</a><a href="/amongus.html">Among Us</a></div>
+    </div>
+    <p class="disclaimer">Switchere Club provides links to third-party games for your convenience. We do not host or own the games. This site uses cookies and third-party advertising. By using this site you agree to our <a href="/privacypolicy.html" style="display:inline;color:var(--accent);">Privacy Policy</a>.</p>
+  </div></footer>
+  <script src="games.js"></script>
+  <script src="ads.js"></script>
+  <script>
+  function escapeHtml(s){return String(s).replace(/[&<>"]/g,function(m){return{"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[m];});}
+  (function(){
+    var grid=document.getElementById('grid'),nores=document.getElementById('nores'),catsEl=document.getElementById('cats');
+    var catalog=(window.GAME_CATALOG||[]);
+    var CATS={'Action':/(shoot|tank|war|gun|fight|battle|sniper|knife|shooter|hit|soccer|football|basket|smash|duel|doom|krunker)/i,'Racing':/(moto|drift|drive|race|rider|speed|stunt|bike|car|taxi|jam)/i,'Puzzle':/(2048|cube|match|wordle|word|tetris|merge|logic|brain|rope|hill|roll|draw|maze|color|slice)/i,'Sports':/(basket|soccer|football|golf|pool|tennis|hockey|bowl|duel|ludo)/i,'Idle':/(idle|clicker|miner|cookie|gem|monkey|egg|dog)/i,'Adventure':/(robber|odyssey|quest|treasure|hill|dune|sky|world|dadish|duck|bob|red|fireboy|watergirl|temple|cave)/i};
+    function catOf(t){for(var k in CATS){if(CATS[k].test(t))return k;}return 'Adventure';}
+    catalog.forEach(function(g){g.cat=catOf(g.title);});
+    var activeCat='All',query='';
+    function render(){
+      var list=catalog.filter(function(g){var okC=(activeCat==='All')||(g.cat===activeCat);var okQ=!query||g.title.toLowerCase().indexOf(query)>=0;return okC&&okQ;});
+      grid.innerHTML='';
+      list.forEach(function(g){
+        var card=document.createElement('a');card.className='card';card.href='/'+g.file;card.setAttribute('aria-label',g.title);
+        if(g.img){card.innerHTML='<img src="'+g.img+'" alt="'+escapeHtml(g.title)+'" loading="lazy"><span class="lbl">'+escapeHtml(g.title)+'</span>';}
+        else{card.innerHTML='<span class="tile-letter">'+escapeHtml(g.title[0])+'</span><span class="lbl">'+escapeHtml(g.title)+'</span>';}
+        grid.appendChild(card);
+      });
+      nores.style.display=list.length?'none':'block';
     }
-  }, false);
-</script>
-
+    var cats=['All','Action','Racing','Puzzle','Sports','Adventure','Idle'];
+    cats.forEach(function(c){var b=document.createElement('button');b.className='cat'+(c==='All'?' active':'');b.textContent=c;b.onclick=function(){activeCat=c;document.querySelectorAll('.cat').forEach(function(x){x.classList.remove('active');});b.classList.add('active');render();};catsEl.appendChild(b);});
+    var q=document.getElementById('q'),t;
+    function doSearch(){query=q.value.trim().toLowerCase();activeCat='All';document.querySelectorAll('.cat').forEach(function(x){x.classList.remove('active');});(document.querySelectorAll('.cat')[0]||{}).classList&&document.querySelectorAll('.cat')[0].classList.add('active');render();}
+    q.addEventListener('input',function(){clearTimeout(t);t=setTimeout(doSearch,160);});
+    document.getElementById('searchBtn').onclick=doSearch;
+    q.addEventListener('keydown',function(e){if(e.key==='Enter'){clearTimeout(t);doSearch();}});
+    var m=(location.search.match(/[?&]q=([^&]+)/)||[])[1];
+    if(m){q.value=decodeURIComponent(m);doSearch();}
+    render();
+  })();
+  </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function() {
-        function searchGames() {
-          var input, filter, flexContainer, flexItem, a, i, txtValue;
-          input = document.getElementById('searchInput');
-          filter = input.value.toUpperCase();
-          flexContainer = document.getElementsByClassName('flex-container')[0];
-          flexItem = flexContainer.getElementsByClassName('flex-item');
-
-          for (i = 0; i < flexItem.length; i++) {
-            a = flexItem[i];
-            txtValue = a.textContent || a.innerText;
-            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-              flexItem[i].style.display = '';
-            } else {
-              flexItem[i].style.display = 'none';
-            }
-          }
-        }
-
-        // Call searchGames function when user types in the search input
-        document.getElementById('searchInput').addEventListener('input', searchGames);
-      });
-    </script>
-
-
-
- <style>
-      .random-game {
-          position: absolute;
-          top: 20px;
-          right: 20px;
-          padding: 12px 24px;
-          background: linear-gradient(135deg, #6e8efb, #a777e3);
-          color: #fff;
-          text-transform: uppercase;
-          font-weight: bold;
-          font-family: 'Roboto', sans-serif;
-          cursor: pointer;
-          border: none;
-          border-radius: 25px;
-          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-          transition: background 0.3s, transform 0.2s;
-      }
-
-      .random-game:hover {
-          background: linear-gradient(135deg, #a777e3, #6e8efb);
-          transform: translateY(-2px);
-      }
-    </style>
-
-    <button class="random-game" onclick="randomGame()">Random Game</button>
-
-    <script>
-      const gameUrls = [
-          '/1v1.lol.html',
-          '/bitlife.html',
-          '/amongus.html',
-          '/basketballstars.html',
-          '/basketballlegends.html',
-          '/geometrydash.html',
-          '/littlealchemy.html',
-          '/chromedino.html',
-          '/craftmine.html',
-          '/eggycar.html',
-          '/dogeminer.html',
-          '/motox3m.html',
-          '/motox3m2.html',
-          '/motox3m3.html',
-          '/ovo.html',
-          '/awesometanks.html',
-          '/awesometanks2.html',
-          '/flappybird.html',
-          '/bobtherobber.html',
-          '/paper.io2.html',
-          '/rabbitsamurai.html',
-          '/burritobison.html',
-          '/skyblock.html',
-          '/slope.html',
-          '/slope2.html',
-          '/snakeio.html',
-          '/spaceiskey.html',
-          '/badicecream2.html',
-          '/badpiggies.html',
-          '/breakingthebank.html',
-          '/cubefield.html',
-          '/crossyroad.html',
-          '/cuttherope.html',
-          '/dealornodeal.html',
-          '/driftboss.html',
-          '/geometryrash.html',
-          '/golddigger.html',
-          '/helixjump.html',
-          '/hexgl.html',
-          '/hextris.html',
-          '/idlebreakout.html',
-          '/justfalllol.html',
-          '/knifehit.html',
-          '/mario.html',
-          '/ngon.html',
-          '/pacman.html',
-          '/rocketleague.html',
-          '/rooftopsnipers.html',
-          '/rooftopsnipers2.html',
-          '/skibiditoilet.html',
-          '/snowrider3d.html',
-          '/spacebarclicker.html',
-          '/spankthemonkey.html',
-          '/stack.html',
-          '/sprinter.html',
-          '/stealingthediamond.html',
-          '/stickmanhook.html',
-          '/tetris.html',
-          '/theimpossiblequiz.html',
-          '/tinyfishing.html',
-          '/cannonbasketball4.html',
-          '/2048cupcakes.html',
-          '/defendthetank.html',
-          '/bigredbutton.html',
-          '/googlesnake.html',
-          '/meme2048.html',
-          '/minigolfmaster.html',
-          '/paperplanes.html',
-          '/rollyvortex.html',
-          '/snowbattleio.html',
-          '/soundboard.html',
-          '/minecraft.html',
-          '/2048.html',
-          '/clickerheroes.html',
-          '/coreball.html',
-          '/dune.html',
-          '/dadish.html',
-          '/dadish2.html',
-          '/getawayshootout.html',
-          '/vex3.html',
-          '/vex4.html',
-          '/vex5.html',
-          '/vex6.html',
-          '/baldisbasics.html',
-          '/basketbros.html',
-          '/basketrandom.html',
-          '/btd4.html',
-          '/clusterrush.html',
-          '/colormatch.html',
-          '/drifthunters.html',
-          '/ducklife.html',
-          '/ducklife2.html',
-          '/ducklife3.html',
-          '/ducklife4.html',
-          '/edgenotfound.html',
-          '/letssurf.html',
-          '/mergeroundracers.html',
-          '/monkeymart.html',
-          '/tanukisunset.html',
-          '/tombofthemask.html',
-          '/towermaster.html',
-          '/particleclicker.html',
-          '/learntofly.html',
-          '/learntofly2.html',
-          '/run3.html',
-
-      ];
-
-      function randomGame() {
-          const randomIndex = Math.floor(Math.random() * gameUrls.length);
-          window.location.href = gameUrls[randomIndex];
-      }
-    </script>  
