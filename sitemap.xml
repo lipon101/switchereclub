@@ -9,20 +9,20 @@
   <url>
     <loc>https://lipon.pro.bd/tools.html</loc>
     <lastmod>2026-09-05</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://lipon.pro.bd/security.html</loc>
     <lastmod>2026-09-05</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://lipon.pro.bd/privacypolicy.html</loc>
     <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://lipon.pro.bd/1v1.lol.html</loc>
@@ -43,13 +43,13 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://lipon.pro.bd/amongus.html</loc>
+    <loc>https://lipon.pro.bd/asmallworldcup.html</loc>
     <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://lipon.pro.bd/asmallworldcup.html</loc>
+    <loc>https://lipon.pro.bd/amongus.html</loc>
     <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -91,18 +91,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://lipon.pro.bd/basketballlegends.html</loc>
-    <lastmod>2026-09-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://lipon.pro.bd/basketballstars.html</loc>
-    <lastmod>2026-09-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://lipon.pro.bd/basketbros.html</loc>
     <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
@@ -110,6 +98,18 @@
   </url>
   <url>
     <loc>https://lipon.pro.bd/basketrandom.html</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lipon.pro.bd/basketballlegends.html</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lipon.pro.bd/basketballstars.html</loc>
     <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -182,12 +182,6 @@
   </url>
   <url>
     <loc>https://lipon.pro.bd/chromedino.html</loc>
-    <lastmod>2026-09-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://lipon.pro.bd/clearai.html</loc>
     <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -523,12 +517,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://lipon.pro.bd/litlysupport.html</loc>
-    <lastmod>2026-09-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://lipon.pro.bd/littlealchemy.html</loc>
     <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
@@ -547,13 +535,13 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://lipon.pro.bd/mario.html</loc>
+    <loc>https://lipon.pro.bd/meme2048.html</loc>
     <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://lipon.pro.bd/meme2048.html</loc>
+    <loc>https://lipon.pro.bd/soundboard.html</loc>
     <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -745,12 +733,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://lipon.pro.bd/snowballfight.html</loc>
-    <lastmod>2026-09-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://lipon.pro.bd/snowbattleio.html</loc>
     <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
@@ -763,13 +745,13 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://lipon.pro.bd/sonic.html</loc>
+    <loc>https://lipon.pro.bd/snowballfight.html</loc>
     <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://lipon.pro.bd/soundboard.html</loc>
+    <loc>https://lipon.pro.bd/sonic.html</loc>
     <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -818,6 +800,12 @@
   </url>
   <url>
     <loc>https://lipon.pro.bd/stickmanhook.html</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lipon.pro.bd/mario.html</loc>
     <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -911,119 +899,5 @@
     <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://lipon.pro.bd/tools/age-calculator.html</loc>
-    <lastmod>2026-09-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://lipon.pro.bd/tools/flip-coin-roll-dice-online.html</loc>
-    <lastmod>2026-09-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://lipon.pro.bd/tools/hashtag-generator.html</loc>
-    <lastmod>2026-09-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://lipon.pro.bd/tools/image-resizer.html</loc>
-    <lastmod>2026-09-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://lipon.pro.bd/tools/image-to-pdf-converter.html</loc>
-    <lastmod>2026-09-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://lipon.pro.bd/tools/love-calculator.html</loc>
-    <lastmod>2026-09-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://lipon.pro.bd/tools/mood-tracker-online.html</loc>
-    <lastmod>2026-09-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://lipon.pro.bd/tools/online-stopwatch-pomodoro-timer.html</loc>
-    <lastmod>2026-09-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://lipon.pro.bd/tools/pdf-compressor.html</loc>
-    <lastmod>2026-09-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://lipon.pro.bd/tools/percentage-calculator.html</loc>
-    <lastmod>2026-09-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://lipon.pro.bd/tools/random-decision-maker.html</loc>
-    <lastmod>2026-09-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://lipon.pro.bd/tools/sleep-calculator.html</loc>
-    <lastmod>2026-09-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://lipon.pro.bd/tools/suit-size-calculator.html</loc>
-    <lastmod>2026-09-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://lipon.pro.bd/tools/text-cleaner.html</loc>
-    <lastmod>2026-09-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://lipon.pro.bd/tools/utm-builder.html</loc>
-    <lastmod>2026-09-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://lipon.pro.bd/tools/word-counter.html</loc>
-    <lastmod>2026-09-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://lipon.pro.bd/security/email-header-analyzer.html</loc>
-    <lastmod>2026-09-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://lipon.pro.bd/security/open-redirect.html</loc>
-    <lastmod>2026-09-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://lipon.pro.bd/security/password-strength-checker-online.html</loc>
-    <lastmod>2026-09-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
   </url>
 </urlset>

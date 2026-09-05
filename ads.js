@@ -10,9 +10,9 @@
     if (document.getElementById('sc-consent-style')) return;
     var css = [
       "#sc-consent{position:fixed;left:0;right:0;bottom:0;z-index:999999;padding:14px;font-family:'Inter','Segoe UI',system-ui,sans-serif;}",
-      "#sc-consent .sc-box{max-width:800px;margin:0 auto;display:flex;align-items:center;gap:16px;background:rgba(21,29,44,.98);border:1px solid #2a3446;border-radius:18px;padding:18px 20px;box-shadow:0 24px 60px rgba(0,0,0,.55);backdrop-filter:blur(14px);}",
+      "#sc-consent .sc-box{max-width:560px;margin:0 auto;display:flex;align-items:center;gap:16px;background:rgba(21,29,44,.98);border:1px solid #2a3446;border-radius:18px;padding:18px 20px;box-shadow:0 24px 60px rgba(0,0,0,.55);backdrop-filter:blur(14px);}",
       "#sc-consent .sc-icon{flex:0 0 auto;width:46px;height:46px;border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:24px;background:linear-gradient(135deg,#22c55e,#16a34a);color:#fff;box-shadow:0 6px 16px rgba(34,197,94,.35);}",
-      "#sc-consent .sc-text{flex:1 1 320px;color:#cbd2e0;font-size:13.5px;line-height:1.55;min-width:0;}",
+      "#sc-consent .sc-text{flex:1 1 auto;color:#cbd2e0;font-size:13px;line-height:1.4;min-width:0;white-space:nowrap;}",
       "#sc-consent .sc-text strong{color:#fff;font-weight:700;display:block;margin-bottom:2px;font-size:14.5px;}",
       "#sc-consent .sc-text a{color:#4facfe;text-decoration:underline;font-weight:600;white-space:nowrap;}",
       "#sc-consent .sc-text a:hover{color:#7cc4ff;}",
@@ -35,7 +35,7 @@
     var el = document.createElement('div'); el.id='sc-consent';
     el.innerHTML = '<div class="sc-box">'
       + '<div class="sc-icon">🍪</div>'
-      + '<div class="sc-text"><strong>We value your privacy</strong>We use cookies and third-party advertising to keep Switchere Club free. <a href="/privacypolicy.html">Privacy Policy</a></div>'
+      + '<div class="sc-text">Cookies & ads keep Switchere Club free. <a href="/privacypolicy.html">Privacy Policy</a></div>'
       + '<div class="sc-actions"><button class="sc-accept" id="sc-consent-ok" type="button">Accept</button><button class="sc-decline" id="sc-consent-no" type="button">Decline</button></div>'
       + '</div>';
     document.body.appendChild(el);
