@@ -24,7 +24,18 @@
       "#sc-consent .sc-accept:hover{box-shadow:0 8px 22px rgba(34,197,94,.5);background:linear-gradient(135deg,#25d264,#17ae4f);}",
       "#sc-consent .sc-decline{background:rgba(255,255,255,.04);color:#e6e9ef;border:1px solid #3b4a63;box-shadow:none;}",
       "#sc-consent .sc-decline:hover{background:#1f2937;color:#fff;border-color:#4facfe;box-shadow:0 4px 14px rgba(79,172,254,.18);}",
-      "@media(max-width:600px){#sc-consent .sc-box{flex-direction:column;align-items:stretch;text-align:left;}#sc-consent .sc-actions{width:100%;}#sc-consent .sc-actions button{flex:1;}}"
+      "@media(max-width:600px){#sc-consent .sc-box{flex-direction:column;align-items:stretch;text-align:left;}#sc-consent .sc-actions{width:100%;}#sc-consent .sc-actions button{flex:1;}}",
+      "#sc-adblock{position:fixed;left:0;right:0;top:0;z-index:9999998;padding:14px;font-family:'Inter','Segoe UI',system-ui,sans-serif;}",
+      "#sc-adblock .ab-box{max-width:600px;margin:0 auto;display:flex;align-items:center;gap:14px;background:rgba(21,29,44,.98);border:1px solid #2a3446;border-radius:16px;padding:16px 18px;box-shadow:0 24px 60px rgba(0,0,0,.55);backdrop-filter:blur(14px);}",
+      "#sc-adblock .ab-icon{flex:0 0 auto;width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;background:linear-gradient(135deg,#4facfe,#2563eb);color:#fff;box-shadow:0 6px 16px rgba(79,172,254,.35);}",
+      "#sc-adblock .ab-text{flex:1 1 auto;color:#cbd2e0;font-size:13px;line-height:1.45;min-width:120px;}",
+      "#sc-adblock .ab-text strong{color:#fff;font-weight:700;display:block;margin-bottom:2px;font-size:14.5px;}",
+      "#sc-adblock .ab-actions{flex:0 0 auto;display:flex;gap:8px;align-items:center;}",
+      "#sc-adblock button{font-family:'Inter','Segoe UI',system-ui,sans-serif;font-weight:700;font-size:13px;border-radius:11px;padding:10px 16px;cursor:pointer;transition:transform .15s,box-shadow .15s,background .15s,border-color .15s;line-height:1;white-space:nowrap;}",
+      "#sc-adblock .ab-ok{background:linear-gradient(135deg,#22c55e,#16a34a);color:#fff;border:1px solid transparent;box-shadow:0 6px 16px rgba(34,197,94,.35);}",
+      "#sc-adblock .ab-later{background:rgba(255,255,255,.04);color:#e6e9ef;border:1px solid #3b4a63;box-shadow:none;}",
+      "#sc-adblock .ab-later:hover{background:#1f2937;color:#fff;border-color:#4facfe;}",
+      "@media(max-width:600px){#sc-adblock .ab-box{flex-direction:column;align-items:stretch;text-align:left;}#sc-adblock .ab-actions{width:100%;}#sc-adblock .ab-actions button{flex:1;}}"
     ].join("");
     var s = document.createElement('style'); s.id='sc-consent-style'; s.textContent=css; document.head.appendChild(s);
   }
@@ -110,6 +121,88 @@
     injectBody('https://pl31196891.profitableratecpmnetwork.com/f5/86/c5/f586c502f00f0adba9d308c986acd3b6.js', false);
   }
 
+  // ---- Adblock detection + friendly notice ----
+  var AB_KEY = 'switchere_ab_asked';
+
+  function abWasAsked(){
+    try { return sessionStorage.getItem(AB_KEY) === '1'; } catch(e){ return false; }
+  }
+  function abMarkAsked(){
+    try { sessionStorage.setItem(AB_KEY, '1'); } catch(e){}
+  }
+
+  // Bait: create a decoy ad container. Adblockers hide/remove elements matching
+  // ad-like class names (.ad-slot, .adsbox, [class*="ad-"], #ad-banner, etc.).
+  function adBlockDetected(){
+    var bait = document.createElement('div');
+    bait.className = 'adsbox ad-slot ad-banner ad-zone ad_space';
+    bait.id = 'ad-banner-detector';
+    bait.innerHTML = '&nbsp;';
+    bait.setAttribute('style','position:absolute;left:-9999px;top:-9999px;width:1px;height:1px;');
+    document.body.appendChild(bait);
+
+    var hidden = false;
+    try {
+      var c = getComputedStyle(bait);
+      // adblocker removed the element OR hid it via CSS
+      hidden = !document.body.contains(bait) ||
+               c.display === 'none' || c.visibility === 'hidden' ||
+               c.height === '0px' || c.width === '0px';
+    } catch(e){}
+
+    // Strongest signal: a real Adsterra banner slot was "activated" but no
+    // iframe/ins ever rendered -> the ad request was blocked.
+    var slots = document.querySelectorAll('[data-adsterra]');
+    var realBlocked = false;
+    for(var i=0;i<slots.length;i++){
+      var sl = slots[i];
+      if(sl.getAttribute('data-loaded')){
+        // Adsterra invoke.js creates an <iframe> (or <ins>) when it runs; if none
+        // appeared after activation, the ad request was blocked by the adblocker.
+        if(!sl.querySelector('iframe') && !sl.querySelector('ins')){
+          realBlocked = true;
+        }
+      }
+    }
+
+    // cleanup bait
+    if(bait.parentNode) bait.parentNode.removeChild(bait);
+
+    return hidden || realBlocked;
+  }
+
+  function showAdblockNotice(){
+    if(document.getElementById('sc-adblock')) return;
+    if(abWasAsked()) return;
+    injectStyle();
+    var el = document.createElement('div'); el.id='sc-adblock';
+    el.innerHTML = '<div class="ab-box">'
+      + '<div class="ab-icon">🛡️</div>'
+      + '<div class="ab-text"><strong>Support free games 💚</strong>'
+      + 'We noticed an ad blocker. Ads keep Switchere Club 100% free. Please disable it for this site so you can keep playing forever — thank you! </div>'
+      + '<div class="ab-actions">'
+      + '<button class="ab-ok" id="sc-adblock-ok" type="button">Done, ads are back ✓</button>'
+      + '<button class="ab-later" id="sc-adblock-later" type="button">Maybe later</button>'
+      + '</div></div>';
+    document.body.appendChild(el);
+
+    var dismiss = function(){ abMarkAsked(); if(el.parentNode) el.parentNode.removeChild(el); };
+    el.querySelector('#sc-adblock-ok').onclick = function(){
+      dismiss();
+      // re-run ads in case adblocker was just turned off
+      initAds();
+    };
+    el.querySelector('#sc-adblock-later').onclick = dismiss;
+  }
+
+  function checkAdblock(){
+    // generous delay so slow ads (legit users) don't trip a false positive,
+    // then judge based on bait-element hiding + real banner slots.
+    setTimeout(function(){
+      if(adBlockDetected()) showAdblockNotice();
+    }, 2500);
+  }
+
   function initAds(){
     if(!hasConsent()) return;
     loadPopunder();
@@ -119,6 +212,7 @@
   }
 
   function boot(){
+    checkAdblock();
     var cfg = window.SWITCHERE_ADS || {};
     if(cfg.consent === false){ initAds(); return; }
     if(!hasConsent()){ showConsent(); return; }
