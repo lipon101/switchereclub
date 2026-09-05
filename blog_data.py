@@ -4,8 +4,9 @@
 from blog_data_1 import ARTICLES_1
 from blog_data_2 import ARTICLES_2
 from blog_data_3 import ARTICLES_3
+from blog_data_4 import ARTICLES_4
 
-ARTICLES = ARTICLES_1 + ARTICLES_2 + ARTICLES_3
+ARTICLES = ARTICLES_1 + ARTICLES_2 + ARTICLES_3 + ARTICLES_4
 
 if __name__ == "__main__":
     slugs = [a["slug"] for a in ARTICLES]
