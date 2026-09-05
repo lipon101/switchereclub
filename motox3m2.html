@@ -31,6 +31,8 @@
     .topbar { display:flex; align-items:center; gap:12px; padding:6px 4px 12px; }
     .brand { flex:1; font-weight:800; letter-spacing:-.5px; font-size:1.05rem; }
     .brand a { color:#e6e9ef; text-decoration:none; } .brand a span { color:#22c55e; }
+    .back-button { background:rgba(255,255,255,.06); color:#e6e9ef; border:1px solid #3b4a63; padding:9px 16px; border-radius:9px; font-weight:700; cursor:pointer; font-size:.9rem; text-decoration:none; display:inline-block; transition:background .15s,border-color .15s; }
+    .back-button:hover { background:#1f2937; border-color:#4facfe; color:#fff; }
     .home-button { background:linear-gradient(135deg,#22c55e,#16a34a); color:#fff; border:none; padding:9px 16px; border-radius:9px; font-weight:700; cursor:pointer; font-size:.9rem; text-decoration:none; display:inline-block; }
     .content { position:relative; width:100%; aspect-ratio:16/9; max-height:72vh; background:#000; border-radius:14px; overflow:hidden; border:1px solid #263048; }
     iframe { width:100%; height:100%; border:none; display:block; }
@@ -42,7 +44,7 @@
     .rel { margin:22px 4px 4px; }
     .rel h2 { font-size:1.05rem; color:#fff; margin-bottom:10px; }
     .rel-grid { display:flex; flex-wrap:wrap; gap:8px; }
-    .rel-card { background:var(--card,#1a2334); border:1px solid #263048; border-radius:10px; padding:10px 14px; color:#e6e9ef; text-decoration:none; font-size:.88rem; font-weight:600; transition:border-color .15s, transform .15s; }
+    .rel-card { background:#1a2334; border:1px solid #263048; border-radius:10px; padding:10px 14px; color:#e6e9ef; text-decoration:none; font-size:.88rem; font-weight:600; transition:border-color .15s, transform .15s; }
     .rel-card:hover { border-color:#22c55e; transform:translateY(-1px); }
     .sc-adwrap { margin:16px auto 0; text-align:center; min-height:100px; }
   </style>
@@ -51,12 +53,14 @@
   <div id="main-content">
     <div class="topbar">
       <div class="brand"><a href="/">Switchere<span>Club</span></a></div>
+      <button class="back-button" onclick="goBack()">← Back</button>
       <button class="home-button" onclick="goToHomePage()">Home</button>
     </div>
     <div class="content">
       <iframe id="gameFrame" src="https://sciencemathedu.github.io/motox3m2/" allow="fullscreen; autoplay; gamepad" allowfullscreen onload="focusGame()" title="Play Moto X3M 2 online free"></iframe>
       <button class="fullscreen-button" onclick="toggleFullScreen()">⛶ Fullscreen</button>
     </div>
+    <div class="sc-adwrap" data-adsterra data-key="37fac26fb228ad6f463c96f56b54dcbe" data-w="728" data-h="90" style="text-align:center;margin:16px auto 0;min-height:90px;"></div>
     <div class="sc-adwrap" data-adsterra data-key="793d8bb524d00a156bcd9b13090236d8" data-w="300" data-h="250" style="text-align:center;margin:16px auto 0;min-height:250px;"></div>
     <h1>Moto X3M 2</h1>
     <div class="seo">
@@ -69,6 +73,7 @@
             <a class="rel-card" href="/motox3m3.html">Moto X3M 3</a>            <a class="rel-card" href="/motox3mpool.html">Moto X3M Pool Party</a>            <a class="rel-card" href="/motox3mspooky.html">Moto X3M Spooky</a>            <a class="rel-card" href="/motox3mwinter.html">Moto X3M Winter</a>
       </div>
     </div>
+    <div class="sc-adwrap" data-adsterra data-key="793d8bb524d00a156bcd9b13090236d8" data-w="300" data-h="250" style="text-align:center;margin:16px auto 0;min-height:250px;"></div>
   </div>
   <script>
     function toggleFullScreen() {
@@ -81,6 +86,13 @@
     }
     function focusGame() { var i = document.getElementById('gameFrame'); if (i) i.focus(); }
     function goToHomePage() { window.location.href = '/'; }
+    function goBack() {
+      if (document.referrer && document.referrer.indexOf(location.hostname) !== -1) {
+        history.back();
+      } else {
+        window.location.href = '/';
+      }
+    }
   </script>
   <script src="/ads.js"></script>
 </body>

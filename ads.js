@@ -67,19 +67,16 @@
     var os = document.createElement('script');
     os.text = "atOptions={'key':'"+key+"','format':'iframe','height':"+h+",'width':"+w+",'params':{}};";
     el.appendChild(os);
-    injectAt(el, 'https://www.highrevenueformat.com/'+key+'/invoke.js', true);
+    // Banner invoke.js must load synchronously (no async) for the iframe ad to render.
+    var s = document.createElement('script');
+    s.src = 'https://www.highrevenueformat.com/'+key+'/invoke.js';
+    s.setAttribute('data-cfasync','false');
+    el.appendChild(s);
   };
 
   function initBanners(){
     var slots = document.querySelectorAll('[data-adsterra]');
-    if(!('IntersectionObserver' in window)){
-      for(var i=0;i<slots.length;i++) window.adsterra.activateBanner(slots[i]);
-      return;
-    }
-    var io = new IntersectionObserver(function(es){
-      es.forEach(function(e){ if(e.isIntersecting){ window.adsterra.activateBanner(e.target); io.unobserve(e.target); } });
-    },{ rootMargin:'250px' });
-    for(var j=0;j<slots.length;j++) io.observe(slots[j]);
+    for(var i=0;i<slots.length;i++) window.adsterra.activateBanner(slots[i]);
   }
 
   // ---- Native Banner (official: invoke.js + container div) ----

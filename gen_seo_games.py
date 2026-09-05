@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-# Regenerate all game pages with rich, natural, policy-safe SEO.
-import json, re, os, html, datetime
+# Regenerate all game pages with rich SEO + proper back button + multiple ads.
+import json, re, html, datetime
 
 with open("games.js","r") as f:
     js = f.read()
@@ -9,11 +9,7 @@ games = json.loads(m.group(1))
 
 SITE = "https://lipon.pro.bd"
 BRAND = "Switchere Club"
-TODAY = datetime.date.today().isoformat()
 PUB = "2025-10-01T09:00:00+00:00"
-
-def slug_title(t):
-    return t.strip()
 
 def intro_for(title):
     t = html.escape(title)
@@ -43,24 +39,17 @@ def related(index, n=4):
         i += 1
     return out
 
-def img_or_none(g):
-    imp = g.get("img") or ""
-    return imp if imp else "images/social-preview.png"
-
 def build_page(g, index):
-    title = slug_title(g["title"])
+    title = g["title"].strip()
     desc = (f"Play {title} free online at {BRAND}. Instant browser gameplay — no download, no sign-up. "
             f"Works on mobile & desktop. Safe for all ages.")
     file = g["file"]
     url = f"{SITE}/{file}"
-    img = img_or_none(g)
+    img = g.get("img") or "images/social-preview.png"
 
-    intro = intro_for(title)
-    howto = howto_for(title)
     faqs = faq_for(title)
     rels = related(index, 4)
 
-    # FAQPage JSON-LD
     faq_ld = {
         "@context": "https://schema.org",
         "@type": "FAQPage",
@@ -70,7 +59,6 @@ def build_page(g, index):
             "acceptedAnswer": {"@type": "Answer", "text": f["a"]}
         } for f in faqs]
     }
-
     game_ld = {
         "@context": "https://schema.org",
         "@type": "VideoGame",
@@ -83,13 +71,9 @@ def build_page(g, index):
         "inLanguage": "en",
         "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
         "publisher": {"@type": "Organization", "name": BRAND, "url": SITE + "/"},
-        "aggregateRating": None,  # no fake ratings
         "datePublished": PUB,
         "dateModified": PUB,
     }
-    # remove None
-    game_ld = {k:v for k,v in game_ld.items() if v is not None}
-
     breadcrumb_ld = {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
@@ -137,6 +121,8 @@ def build_page(g, index):
     .topbar {{ display:flex; align-items:center; gap:12px; padding:6px 4px 12px; }}
     .brand {{ flex:1; font-weight:800; letter-spacing:-.5px; font-size:1.05rem; }}
     .brand a {{ color:#e6e9ef; text-decoration:none; }} .brand a span {{ color:#22c55e; }}
+    .back-button {{ background:rgba(255,255,255,.06); color:#e6e9ef; border:1px solid #3b4a63; padding:9px 16px; border-radius:9px; font-weight:700; cursor:pointer; font-size:.9rem; text-decoration:none; display:inline-block; transition:background .15s,border-color .15s; }}
+    .back-button:hover {{ background:#1f2937; border-color:#4facfe; color:#fff; }}
     .home-button {{ background:linear-gradient(135deg,#22c55e,#16a34a); color:#fff; border:none; padding:9px 16px; border-radius:9px; font-weight:700; cursor:pointer; font-size:.9rem; text-decoration:none; display:inline-block; }}
     .content {{ position:relative; width:100%; aspect-ratio:16/9; max-height:72vh; background:#000; border-radius:14px; overflow:hidden; border:1px solid #263048; }}
     iframe {{ width:100%; height:100%; border:none; display:block; }}
@@ -148,7 +134,7 @@ def build_page(g, index):
     .rel {{ margin:22px 4px 4px; }}
     .rel h2 {{ font-size:1.05rem; color:#fff; margin-bottom:10px; }}
     .rel-grid {{ display:flex; flex-wrap:wrap; gap:8px; }}
-    .rel-card {{ background:var(--card,#1a2334); border:1px solid #263048; border-radius:10px; padding:10px 14px; color:#e6e9ef; text-decoration:none; font-size:.88rem; font-weight:600; transition:border-color .15s, transform .15s; }}
+    .rel-card {{ background:#1a2334; border:1px solid #263048; border-radius:10px; padding:10px 14px; color:#e6e9ef; text-decoration:none; font-size:.88rem; font-weight:600; transition:border-color .15s, transform .15s; }}
     .rel-card:hover {{ border-color:#22c55e; transform:translateY(-1px); }}
     .sc-adwrap {{ margin:16px auto 0; text-align:center; min-height:100px; }}
   </style>
@@ -157,17 +143,19 @@ def build_page(g, index):
   <div id="main-content">
     <div class="topbar">
       <div class="brand"><a href="/">Switchere<span>Club</span></a></div>
+      <button class="back-button" onclick="goBack()">← Back</button>
       <button class="home-button" onclick="goToHomePage()">Home</button>
     </div>
     <div class="content">
       <iframe id="gameFrame" src="{g["src"]}" allow="fullscreen; autoplay; gamepad" allowfullscreen onload="focusGame()" title="Play {title} online free"></iframe>
       <button class="fullscreen-button" onclick="toggleFullScreen()">⛶ Fullscreen</button>
     </div>
+    <div class="sc-adwrap" data-adsterra data-key="37fac26fb228ad6f463c96f56b54dcbe" data-w="728" data-h="90" style="text-align:center;margin:16px auto 0;min-height:90px;"></div>
     <div class="sc-adwrap" data-adsterra data-key="793d8bb524d00a156bcd9b13090236d8" data-w="300" data-h="250" style="text-align:center;margin:16px auto 0;min-height:250px;"></div>
     <h1>{title}</h1>
     <div class="seo">
-      <p>{intro}</p>
-      <p>{howto}</p>
+      <p>{intro_for(title)}</p>
+      <p>{howto_for(title)}</p>
     </div>
     <div class="rel">
       <h2>More Free Games</h2>
@@ -175,6 +163,7 @@ def build_page(g, index):
 {rel_links}
       </div>
     </div>
+    <div class="sc-adwrap" data-adsterra data-key="793d8bb524d00a156bcd9b13090236d8" data-w="300" data-h="250" style="text-align:center;margin:16px auto 0;min-height:250px;"></div>
   </div>
   <script>
     function toggleFullScreen() {{
@@ -187,6 +176,13 @@ def build_page(g, index):
     }}
     function focusGame() {{ var i = document.getElementById('gameFrame'); if (i) i.focus(); }}
     function goToHomePage() {{ window.location.href = '/'; }}
+    function goBack() {{
+      if (document.referrer && document.referrer.indexOf(location.hostname) !== -1) {{
+        history.back();
+      }} else {{
+        window.location.href = '/';
+      }}
+    }}
   </script>
   <script src="/ads.js"></script>
 </body>
@@ -203,4 +199,4 @@ for i, g in enumerate(games):
     except Exception as e:
         print("ERROR", g["file"], e)
 
-print(f"Regenerated {n} game pages with SEO.")
+print(f"Regenerated {n} game pages.")
