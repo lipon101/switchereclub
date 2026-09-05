@@ -89,6 +89,26 @@
     footer a{display:block;color:var(--muted);font-size:.9rem;padding:3px 0;}
     footer a:hover{color:var(--accent);}
     .disclaimer{color:var(--muted);font-size:.8rem;margin-top:20px;border-top:1px solid var(--border);padding-top:14px;}
+    .bcard .bimg{width:100%;height:170px;object-fit:cover;display:block;background:var(--panel);}
+    .bcard .bimg-wrap{position:relative;overflow:hidden;}
+    .bcard .bimg-wrap::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(14,20,32,.55));pointer-events:none;}
+    .bcard .bcat{padding-top:14px;}
+    .bcard .bimg-wrap .bcat{position:absolute;top:10px;left:12px;z-index:2;padding:4px 10px;border-radius:20px;background:rgba(14,20,32,.75);backdrop-filter:blur(4px);font-size:.68rem;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:var(--accent);}
+    .article .hero{width:100%;max-height:420px;object-fit:cover;border-radius:14px;margin:18px 0 6px;display:block;border:1px solid var(--border);}
+    .article .fig{margin:22px 0;}
+    .article .fig img{width:100%;border-radius:12px;display:block;border:1px solid var(--border);}
+    .article .fig figcaption{color:var(--muted);font-size:.8rem;margin-top:8px;text-align:center;}
+    .article .inbody{margin:22px 0;}
+    .article .inbody img{width:100%;border-radius:12px;display:block;border:1px solid var(--border);}
+    .article .inbody figcaption{color:var(--muted);font-size:.8rem;margin-top:8px;text-align:center;}
+    .article a{color:var(--accent2);}
+    .article a:hover{text-decoration:underline;}
+    .backtop{position:fixed;bottom:26px;right:26px;z-index:90;width:46px;height:46px;border-radius:50%;background:var(--accent);color:#fff;border:none;font-size:1.3rem;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(34,197,94,.35);opacity:0;visibility:hidden;transform:translateY(12px);transition:.25s;}
+    .backtop.show{opacity:1;visibility:visible;transform:translateY(0);}
+    .backtop:hover{filter:brightness(1.1);}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:translateY(0);}}
+    .bcard{animation:fadeUp .5s ease both;}
+    .bcard:hover{transform:translateY(-6px);border-color:var(--accent);box-shadow:0 16px 34px rgba(34,197,94,.18);}
     @media(max-width:600px){.blog-grid{grid-template-columns:1fr;}}
   </style>
 </head>
@@ -102,259 +122,259 @@
     <div class="blog-grid">
     
             <article class="bcard">
-      <div class="bcat">Game Lists</div>
+      <div class="bimg-wrap"><img class="bimg" src="https://upload.wikimedia.org/wikipedia/commons/8/84/Board_10%25.png" alt="The 15 Best Free Browser Games to Play in 2026" loading="lazy" /><div class="bcat">Game Lists</div></div>
       <h3><a href="/blogs/best-free-browser-games-2026.html">The 15 Best Free Browser Games to Play in 2026</a></h3>
       <p>No downloads, no installs, no sign-ups. These are the browser games I keep coming back to in 2026, and why each one is worth your time.</p>
       <div class="bmeta">2026-09-04 &middot; 8 min read</div>
       <a class="readmore" href="/blogs/best-free-browser-games-2026.html">Read More</a>
     </article>
             <article class="bcard">
-      <div class="bcat">Game Lists</div>
+      <div class="bimg-wrap"><img class="bimg" src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Anarch_MP.png" alt="The Best 2-Player Games to Play Online With a Friend" loading="lazy" /><div class="bcat">Game Lists</div></div>
       <h3><a href="/blogs/best-2-player-games-online.html">The Best 2-Player Games to Play Online With a Friend</a></h3>
       <p>Stuck at home with a friend and a keyboard? These are the best two-player browser games that actually work, and how to play them.</p>
       <div class="bmeta">2026-09-01 &middot; 6 min read</div>
       <a class="readmore" href="/blogs/best-2-player-games-online.html">Read More</a>
     </article>
             <article class="bcard">
-      <div class="bcat">Game Lists</div>
+      <div class="bimg-wrap"><img class="bimg" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Ranger_RPG_Character_Idle_Sprite_Sheet.png/960px-Ranger_RPG_Character_Idle_Sprite_Sheet.png" alt="The Best Idle Games to Play in Your Browser (and Why They&#x27;re Addictive)" loading="lazy" /><div class="bcat">Game Lists</div></div>
       <h3><a href="/blogs/best-idle-games-browser.html">The Best Idle Games to Play in Your Browser (and Why They&#x27;re Addictive)</a></h3>
       <p>Idle games are the perfect background game. Here are the best ones you can play in the browser, and why they&#x27;re so hard to put down.</p>
       <div class="bmeta">2026-08-28 &middot; 6 min read</div>
       <a class="readmore" href="/blogs/best-idle-games-browser.html">Read More</a>
     </article>
             <article class="bcard">
-      <div class="bcat">Game Lists</div>
+      <div class="bimg-wrap"><img class="bimg" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Jigsaw_puzzle_01_by_Scouten.jpg/960px-Jigsaw_puzzle_01_by_Scouten.jpg" alt="The Best Puzzle Games to Train Your Brain (Free and Online)" loading="lazy" /><div class="bcat">Game Lists</div></div>
       <h3><a href="/blogs/best-puzzle-games-brain.html">The Best Puzzle Games to Train Your Brain (Free and Online)</a></h3>
       <p>Puzzle games are fun and good for your brain. Here are the best free online puzzle games that actually make you think.</p>
       <div class="bmeta">2026-08-27 &middot; 6 min read</div>
       <a class="readmore" href="/blogs/best-puzzle-games-brain.html">Read More</a>
     </article>
             <article class="bcard">
-      <div class="bcat">Game Lists</div>
+      <div class="bimg-wrap"><img class="bimg" src="https://upload.wikimedia.org/wikipedia/commons/9/92/DRM_Brands_Hatch_11.jpg" alt="The Best Racing Games You Can Play in the Browser" loading="lazy" /><div class="bcat">Game Lists</div></div>
       <h3><a href="/blogs/best-racing-games-browser.html">The Best Racing Games You Can Play in the Browser</a></h3>
       <p>From Moto X3M to drift games, these are the best racing games you can play right in your browser, no download needed.</p>
       <div class="bmeta">2026-08-25 &middot; 6 min read</div>
       <a class="readmore" href="/blogs/best-racing-games-browser.html">Read More</a>
     </article>
             <article class="bcard">
-      <div class="bcat">Game Lists</div>
+      <div class="bimg-wrap"><img class="bimg" src="https://upload.wikimedia.org/wikipedia/commons/4/4d/Dell_video_game_marathon%2C_Guantanamo.jpg" alt="The Best Sports Games to Play Online for Free" loading="lazy" /><div class="bcat">Game Lists</div></div>
       <h3><a href="/blogs/best-sports-games-online.html">The Best Sports Games to Play Online for Free</a></h3>
       <p>Basketball, soccer, and more. These are the best sports games you can play in the browser, and they&#x27;re all free.</p>
       <div class="bmeta">2026-08-23 &middot; 6 min read</div>
       <a class="readmore" href="/blogs/best-sports-games-online.html">Read More</a>
     </article>
             <article class="bcard">
-      <div class="bcat">Game Lists</div>
+      <div class="bimg-wrap"><img class="bimg" src="https://upload.wikimedia.org/wikipedia/commons/6/60/Action_52_In-Game_Logo.png" alt="The Best Action Games to Play in the Browser" loading="lazy" /><div class="bcat">Game Lists</div></div>
       <h3><a href="/blogs/best-action-games-browser.html">The Best Action Games to Play in the Browser</a></h3>
       <p>Shooters, fighters, and more: the best action games you can play in the browser, all free and instant.</p>
       <div class="bmeta">2026-08-22 &middot; 6 min read</div>
       <a class="readmore" href="/blogs/best-action-games-browser.html">Read More</a>
     </article>
             <article class="bcard">
-      <div class="bcat">Game Lists</div>
+      <div class="bimg-wrap"><img class="bimg" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/BattlegroundMapPaths.png/960px-BattlegroundMapPaths.png" alt="The Best .io Games to Play Online (and They&#x27;re All Free)" loading="lazy" /><div class="bcat">Game Lists</div></div>
       <h3><a href="/blogs/best-io-games-online.html">The Best .io Games to Play Online (and They&#x27;re All Free)</a></h3>
       <p>Agar.io, Slither.io, and more. The .io games are simple, competitive, and addictive. Here are the best ones to play.</p>
       <div class="bmeta">2026-08-20 &middot; 6 min read</div>
       <a class="readmore" href="/blogs/best-io-games-online.html">Read More</a>
     </article>
             <article class="bcard">
-      <div class="bcat">Game Lists</div>
+      <div class="bimg-wrap"><img class="bimg" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/1786_Beyer_Glasschord_with_key_hammers_striking_glass_bars.jpg/960px-1786_Beyer_Glasschord_with_key_hammers_striking_glass_bars.jpg" alt="The Best Typing Games to Improve Your Speed (and Have Fun)" loading="lazy" /><div class="bcat">Game Lists</div></div>
       <h3><a href="/blogs/best-typing-games.html">The Best Typing Games to Improve Your Speed (and Have Fun)</a></h3>
       <p>Typing games are fun and they make you faster. Here are the best typing games to improve your speed and accuracy.</p>
       <div class="bmeta">2026-08-18 &middot; 5 min read</div>
       <a class="readmore" href="/blogs/best-typing-games.html">Read More</a>
     </article>
             <article class="bcard">
-      <div class="bcat">Game Lists</div>
+      <div class="bimg-wrap"><img class="bimg" src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Anarch_MP.png" alt="The Best Multiplayer Browser Games to Play With Friends" loading="lazy" /><div class="bcat">Game Lists</div></div>
       <h3><a href="/blogs/best-multiplayer-browser-games.html">The Best Multiplayer Browser Games to Play With Friends</a></h3>
       <p>Multiplayer games are better with friends. Here are the best multiplayer browser games you can play together, all free.</p>
       <div class="bmeta">2026-08-17 &middot; 6 min read</div>
       <a class="readmore" href="/blogs/best-multiplayer-browser-games.html">Read More</a>
     </article>
             <article class="bcard">
-      <div class="bcat">Game Lists</div>
+      <div class="bimg-wrap"><img class="bimg" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/46-215-0006_Piatnychany_Tower_RB_24.jpg/960px-46-215-0006_Piatnychany_Tower_RB_24.jpg" alt="The Best Tower Defense Games to Play in Your Browser" loading="lazy" /><div class="bcat">Game Lists</div></div>
       <h3><a href="/blogs/best-tower-defense-games-browser.html">The Best Tower Defense Games to Play in Your Browser</a></h3>
       <p>Tower defense is the perfect browser genre: easy to learn, hard to put down, and endlessly replayable. These are the ones actually worth your time.</p>
       <div class="bmeta">2026-09-02 &middot; 7 min read</div>
       <a class="readmore" href="/blogs/best-tower-defense-games-browser.html">Read More</a>
     </article>
             <article class="bcard">
-      <div class="bcat">Game Lists</div>
+      <div class="bimg-wrap"><img class="bimg" src="https://upload.wikimedia.org/wikipedia/commons/0/0a/Atom_Zombie_Smasher_cover_%282011%29.jpg" alt="The Best Zombie Games to Play Online for Free" loading="lazy" /><div class="bcat">Game Lists</div></div>
       <h3><a href="/blogs/best-zombie-games-browser.html">The Best Zombie Games to Play Online for Free</a></h3>
       <p>Zombie games are everywhere, but the good browser ones are harder to find. These are the ones worth your time, from survival to pure action.</p>
       <div class="bmeta">2026-08-30 &middot; 6 min read</div>
       <a class="readmore" href="/blogs/best-zombie-games-browser.html">Read More</a>
     </article>
             <article class="bcard">
-      <div class="bcat">Game Lists</div>
+      <div class="bimg-wrap"><img class="bimg" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/2276Home_cooking_in_the_Philippines_59.jpg/960px-2276Home_cooking_in_the_Philippines_59.jpg" alt="The Best Cooking Games to Play in the Browser" loading="lazy" /><div class="bcat">Game Lists</div></div>
       <h3><a href="/blogs/best-cooking-games-browser.html">The Best Cooking Games to Play in the Browser</a></h3>
       <p>Cooking games are the perfect mix of fast action and satisfying progress. These are the ones worth playing, from time management to full kitchens.</p>
       <div class="bmeta">2026-08-28 &middot; 6 min read</div>
       <a class="readmore" href="/blogs/best-cooking-games-browser.html">Read More</a>
     </article>
             <article class="bcard">
-      <div class="bcat">Game Lists</div>
+      <div class="bimg-wrap"><img class="bimg" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/25_Cassutt_%28N-6291N%29_Formula_One_Racer_2014_Reno_Air_Races_photo_Don_Ramey_Logan.jpg/960px-25_Cassutt_%28N-6291N%29_Formula_One_Racer_2014_Reno_Air_Races_photo_Don_Ramey_Logan.jpg" alt="The Best Driving Games to Play Online for Free" loading="lazy" /><div class="bcat">Game Lists</div></div>
       <h3><a href="/blogs/best-driving-games-online.html">The Best Driving Games to Play Online for Free</a></h3>
       <p>From drift games to racing sims, the browser has some genuinely fun driving games. These are the ones worth your time, and how to pick the right one.</p>
       <div class="bmeta">2026-08-26 &middot; 6 min read</div>
       <a class="readmore" href="/blogs/best-driving-games-online.html">Read More</a>
     </article>
             <article class="bcard">
-      <div class="bcat">Game Lists</div>
+      <div class="bimg-wrap"><img class="bimg" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Acer_desktop_computers_in_computer_classroom_of_Baozhong_Junior_High_School_20121009.jpg/960px-Acer_desktop_computers_in_computer_classroom_of_Baozhong_Junior_High_School_20121009.jpg" alt="The Best Free Games to Play on a School Computer" loading="lazy" /><div class="bcat">Game Lists</div></div>
       <h3><a href="/blogs/best-free-games-for-school-computers.html">The Best Free Games to Play on a School Computer</a></h3>
       <p>School computers are slow, locked down, and not built for gaming. But there are plenty of free browser games that run fine on them. Here are the ones that actually work.</p>
       <div class="bmeta">2026-09-04 &middot; 7 min read</div>
       <a class="readmore" href="/blogs/best-free-games-for-school-computers.html">Read More</a>
     </article>
             <article class="bcard">
-      <div class="bcat">Game Lists</div>
+      <div class="bimg-wrap"><img class="bimg" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Children_playing_video_games.jpg/960px-Children_playing_video_games.jpg" alt="The Best Games to Play With Friends Online (Free &amp; Browser-Based)" loading="lazy" /><div class="bcat">Game Lists</div></div>
       <h3><a href="/blogs/best-games-to-play-with-friends-online.html">The Best Games to Play With Friends Online (Free &amp; Browser-Based)</a></h3>
       <p>You don&#x27;t need a console or a big download to play with friends. These free browser games are perfect for a group, and they all work right in your browser.</p>
       <div class="bmeta">2026-09-02 &middot; 7 min read</div>
       <a class="readmore" href="/blogs/best-games-to-play-with-friends-online.html">Read More</a>
     </article>
             <article class="bcard">
-      <div class="bcat">Game Lists</div>
+      <div class="bimg-wrap"><img class="bimg" src="/images/geometrydash.png" alt="The Best Games Like Geometry Dash to Try Next" loading="lazy" /><div class="bcat">Game Lists</div></div>
       <h3><a href="/blogs/games-like-geometry-dash.html">The Best Games Like Geometry Dash to Try Next</a></h3>
       <p>If you&#x27;ve beaten every Geometry Dash level and you&#x27;re still hungry for more, these games scratch the same itch. Fast, rhythmic, and hard to put down.</p>
       <div class="bmeta">2026-09-01 &middot; 7 min read</div>
       <a class="readmore" href="/blogs/games-like-geometry-dash.html">Read More</a>
     </article>
             <article class="bcard">
-      <div class="bcat">Game Lists</div>
+      <div class="bimg-wrap"><img class="bimg" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Bored%2C_bored%2C_bored_%287949872568%29.jpg/960px-Bored%2C_bored%2C_bored_%287949872568%29.jpg" alt="The Best Games to Play When You&#x27;re Bored" loading="lazy" /><div class="bcat">Game Lists</div></div>
       <h3><a href="/blogs/best-games-to-play-when-bored.html">The Best Games to Play When You&#x27;re Bored</a></h3>
       <p>Boredom is the best reason to play a game, but you need the right one. These are the games that are perfect for killing time, whether you have two minutes or two hours.</p>
       <div class="bmeta">2026-08-30 &middot; 6 min read</div>
       <a class="readmore" href="/blogs/best-games-to-play-when-bored.html">Read More</a>
     </article>
             <article class="bcard">
-      <div class="bcat">Game Lists</div>
+      <div class="bimg-wrap"><img class="bimg" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/2006_broken_laptop_computer_237398638.jpg/960px-2006_broken_laptop_computer_237398638.jpg" alt="The Best Games for Low-End PCs and Laptops" loading="lazy" /><div class="bcat">Game Lists</div></div>
       <h3><a href="/blogs/best-games-for-low-end-pcs.html">The Best Games for Low-End PCs and Laptops</a></h3>
       <p>You don&#x27;t need a gaming PC to have fun. These games run great on low-end computers and laptops, and they&#x27;re all free to play in your browser.</p>
       <div class="bmeta">2026-08-28 &middot; 7 min read</div>
       <a class="readmore" href="/blogs/best-games-for-low-end-pcs.html">Read More</a>
     </article>
             <article class="bcard">
-      <div class="bcat">Game Lists</div>
+      <div class="bimg-wrap"><img class="bimg" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Education_Mobile_Game_%285018723826%29.jpg/960px-Education_Mobile_Game_%285018723826%29.jpg" alt="The Best Browser Games to Play on Your Phone" loading="lazy" /><div class="bcat">Game Lists</div></div>
       <h3><a href="/blogs/best-browser-games-for-phone.html">The Best Browser Games to Play on Your Phone</a></h3>
       <p>You don&#x27;t need to download an app to play a game on your phone. These browser games run right in your phone&#x27;s browser, and they&#x27;re all free.</p>
       <div class="bmeta">2026-08-26 &middot; 6 min read</div>
       <a class="readmore" href="/blogs/best-browser-games-for-phone.html">Read More</a>
     </article>
             <article class="bcard">
-      <div class="bcat">Game Lists</div>
+      <div class="bimg-wrap"><img class="bimg" src="https://upload.wikimedia.org/wikipedia/commons/b/b3/BgeFpsShooter.jpg" alt="The Best Free FPS Games You Can Play in a Browser" loading="lazy" /><div class="bcat">Game Lists</div></div>
       <h3><a href="/blogs/best-free-browser-fps-games.html">The Best Free FPS Games You Can Play in a Browser</a></h3>
       <p>You don&#x27;t need a gaming PC to play a shooter. These free browser FPS games run in a tab, need no downloads, and are genuinely fun. Here are the ones worth your time.</p>
       <div class="bmeta">2026-09-05 &middot; 7 min read</div>
       <a class="readmore" href="/blogs/best-free-browser-fps-games.html">Read More</a>
     </article>
             <article class="bcard">
-      <div class="bcat">Game Lists</div>
+      <div class="bimg-wrap"><img class="bimg" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/1990s_home_computer_office_New_Orleans.jpg/960px-1990s_home_computer_office_New_Orleans.jpg" alt="The Best Games That Look Like Work (For When You Should Be Working)" loading="lazy" /><div class="bcat">Game Lists</div></div>
       <h3><a href="/blogs/best-games-that-look-like-work.html">The Best Games That Look Like Work (For When You Should Be Working)</a></h3>
       <p>Sometimes you need a game that looks like a spreadsheet from across the room. These browser games are fun, but they&#x27;ll pass the glance test. Here are the best ones.</p>
       <div class="bmeta">2026-09-04 &middot; 6 min read</div>
       <a class="readmore" href="/blogs/best-games-that-look-like-work.html">Read More</a>
     </article>
             <article class="bcard">
-      <div class="bcat">Game Lists</div>
+      <div class="bimg-wrap"><img class="bimg" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Drawing_for_beginners_%281920%29_%2814750197431%29.jpg/960px-Drawing_for_beginners_%281920%29_%2814750197431%29.jpg" alt="The Best Games for Beginners: Easy to Learn, Hard to Put Down" loading="lazy" /><div class="bcat">Game Lists</div></div>
       <h3><a href="/blogs/best-games-for-beginners.html">The Best Games for Beginners: Easy to Learn, Hard to Put Down</a></h3>
       <p>Not everyone wants to start with a hardcore game. These are the best games for beginners, easy to learn, fun from the first minute, and perfect for building confidence.</p>
       <div class="bmeta">2026-09-03 &middot; 7 min read</div>
       <a class="readmore" href="/blogs/best-games-for-beginners.html">Read More</a>
     </article>
             <article class="bcard">
-      <div class="bcat">Game Lists</div>
+      <div class="bimg-wrap"><img class="bimg" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Entrance_to_Game_Over.jpg/960px-Entrance_to_Game_Over.jpg" alt="The Best Retro Games You Can Play Online for Free" loading="lazy" /><div class="bcat">Game Lists</div></div>
       <h3><a href="/blogs/best-retro-games-online-free.html">The Best Retro Games You Can Play Online for Free</a></h3>
       <p>The classics never die. These retro games are still fun today, and you can play them all for free in a browser. Here are the ones that hold up best.</p>
       <div class="bmeta">2026-09-03 &middot; 7 min read</div>
       <a class="readmore" href="/blogs/best-retro-games-online-free.html">Read More</a>
     </article>
             <article class="bcard">
-      <div class="bcat">Game Lists</div>
+      <div class="bimg-wrap"><img class="bimg" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Children_playing_a_game_on_an_iPad.jpg/960px-Children_playing_a_game_on_an_iPad.jpg" alt="The Best Games to Play With Kids (That Adults Enjoy Too)" loading="lazy" /><div class="bcat">Game Lists</div></div>
       <h3><a href="/blogs/best-games-to-play-with-kids.html">The Best Games to Play With Kids (That Adults Enjoy Too)</a></h3>
       <p>Finding a game that&#x27;s fun for both you and your kids is harder than it sounds. These are the games that kids love and adults don&#x27;t hate playing.</p>
       <div class="bmeta">2026-09-02 &middot; 7 min read</div>
       <a class="readmore" href="/blogs/best-games-to-play-with-kids.html">Read More</a>
     </article>
             <article class="bcard">
-      <div class="bcat">Game Lists</div>
+      <div class="bimg-wrap"><img class="bimg" src="/images/amongus.png" alt="The Best Games Like Among Us: Social Deduction Games to Try" loading="lazy" /><div class="bcat">Game Lists</div></div>
       <h3><a href="/blogs/games-like-among-us.html">The Best Games Like Among Us: Social Deduction Games to Try</a></h3>
       <p>Love the lying and the backstabbing of Among Us? These are the best social deduction games like it, and most of them are free to play in a browser.</p>
       <div class="bmeta">2026-09-01 &middot; 7 min read</div>
       <a class="readmore" href="/blogs/games-like-among-us.html">Read More</a>
     </article>
             <article class="bcard">
-      <div class="bcat">Game Lists</div>
+      <div class="bimg-wrap"><img class="bimg" src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Arena_%28web_browser%29_screenshot.png" alt="The Best Free Browser Games That Need No Download" loading="lazy" /><div class="bcat">Game Lists</div></div>
       <h3><a href="/blogs/best-browser-games-no-download.html">The Best Free Browser Games That Need No Download</a></h3>
       <p>No installs, no updates, no waiting. These are the best free browser games you can play instantly, with nothing to download and nothing to set up.</p>
       <div class="bmeta">2026-08-31 &middot; 7 min read</div>
       <a class="readmore" href="/blogs/best-browser-games-no-download.html">Read More</a>
     </article>
             <article class="bcard">
-      <div class="bcat">Game Lists</div>
+      <div class="bimg-wrap"><img class="bimg" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Astaroth-_RGB_Lighting_Update.jpg/960px-Astaroth-_RGB_Lighting_Update.jpg" alt="The Best Gaming Laptops Under $2000" loading="lazy" /><div class="bcat">Game Lists</div></div>
       <h3><a href="/blogs/best-gaming-laptops-under-2000.html">The Best Gaming Laptops Under $2000</a></h3>
       <p>You don&#x27;t need to spend a fortune on a gaming laptop. Here are the best gaming laptops under $2000 that actually deliver.</p>
       <div class="bmeta">2026-09-05 &middot; 8 min read</div>
       <a class="readmore" href="/blogs/best-gaming-laptops-under-2000.html">Read More</a>
     </article>
             <article class="bcard">
-      <div class="bcat">Game Lists</div>
+      <div class="bimg-wrap"><img class="bimg" src="https://upload.wikimedia.org/wikipedia/commons/d/d7/%22Nothing%22_Steam_Video_Game_Screenshot.jpg" alt="The Best Free Games on Steam" loading="lazy" /><div class="bcat">Game Lists</div></div>
       <h3><a href="/blogs/best-free-games-on-steam.html">The Best Free Games on Steam</a></h3>
       <p>Steam has a ton of free games, and some of them are genuinely great. Here are the best free games on Steam worth your time.</p>
       <div class="bmeta">2026-09-05 &middot; 8 min read</div>
       <a class="readmore" href="/blogs/best-free-games-on-steam.html">Read More</a>
     </article>
             <article class="bcard">
-      <div class="bcat">Game Lists</div>
+      <div class="bimg-wrap"><img class="bimg" src="https://upload.wikimedia.org/wikipedia/commons/d/d6/Roblox_Blocked_by_Turkey_BTK.png" alt="The Best Free Games on Roblox" loading="lazy" /><div class="bcat">Game Lists</div></div>
       <h3><a href="/blogs/best-free-games-on-roblox.html">The Best Free Games on Roblox</a></h3>
       <p>Roblox is full of games, and a lot of them are free. Here are the best free games on Roblox that are actually worth playing.</p>
       <div class="bmeta">2026-09-05 &middot; 7 min read</div>
       <a class="readmore" href="/blogs/best-free-games-on-roblox.html">Read More</a>
     </article>
             <article class="bcard">
-      <div class="bcat">Game Lists</div>
+      <div class="bimg-wrap"><img class="bimg" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/Cleaning_women_at_coffee_break_in_tram_depot%2C_Stockholm_1930_%286081775137%29.jpg/960px-Cleaning_women_at_coffee_break_in_tram_depot%2C_Stockholm_1930_%286081775137%29.jpg" alt="The Best Games for a Quick Break" loading="lazy" /><div class="bcat">Game Lists</div></div>
       <h3><a href="/blogs/best-games-for-a-quick-break.html">The Best Games for a Quick Break</a></h3>
       <p>Sometimes you only have a few minutes to play. Here are the best games for a quick break that you can pick up and put down.</p>
       <div class="bmeta">2026-09-05 &middot; 6 min read</div>
       <a class="readmore" href="/blogs/best-games-for-a-quick-break.html">Read More</a>
     </article>
             <article class="bcard">
-      <div class="bcat">Game Lists</div>
+      <div class="bimg-wrap"><img class="bimg" src="/images/minecraft.png" alt="The Best Games Like Minecraft" loading="lazy" /><div class="bcat">Game Lists</div></div>
       <h3><a href="/blogs/best-games-like-minecraft.html">The Best Games Like Minecraft</a></h3>
       <p>Love Minecraft but want more games? Here are the best games that offer the same building, exploring, and creating.</p>
       <div class="bmeta">2026-09-05 &middot; 7 min read</div>
       <a class="readmore" href="/blogs/best-games-like-minecraft.html">Read More</a>
     </article>
             <article class="bcard">
-      <div class="bcat">Game Lists</div>
+      <div class="bimg-wrap"><img class="bimg" src="https://upload.wikimedia.org/wikipedia/commons/6/62/D%C3%A9but_de_Candy_Box.png" alt="The Best Games to Play Without Downloading" loading="lazy" /><div class="bcat">Game Lists</div></div>
       <h3><a href="/blogs/best-games-to-play-without-downloading.html">The Best Games to Play Without Downloading</a></h3>
       <p>You don&#x27;t need to download anything to play great games. Here are the best games you can play right in your browser.</p>
       <div class="bmeta">2026-09-05 &middot; 6 min read</div>
       <a class="readmore" href="/blogs/best-games-to-play-without-downloading.html">Read More</a>
     </article>
             <article class="bcard">
-      <div class="bcat">Game Lists</div>
+      <div class="bimg-wrap"><img class="bimg" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Professor_and_students_in_a_university_classroom_in_Tennessee.jpg/960px-Professor_and_students_in_a_university_classroom_in_Tennessee.jpg" alt="The Best Games to Play in Class" loading="lazy" /><div class="bcat">Game Lists</div></div>
       <h3><a href="/blogs/best-games-to-play-in-class.html">The Best Games to Play in Class</a></h3>
       <p>Sometimes you need a game that looks like you&#x27;re working. Here are the best games to play in class that look like work.</p>
       <div class="bmeta">2026-09-05 &middot; 6 min read</div>
       <a class="readmore" href="/blogs/best-games-to-play-in-class.html">Read More</a>
     </article>
             <article class="bcard">
-      <div class="bcat">Game Lists</div>
+      <div class="bimg-wrap"><img class="bimg" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Compaq_Concerto_001.jpg/960px-Compaq_Concerto_001.jpg" alt="The Best Games for a Laptop" loading="lazy" /><div class="bcat">Game Lists</div></div>
       <h3><a href="/blogs/best-games-for-a-laptop.html">The Best Games for a Laptop</a></h3>
       <p>Laptops aren&#x27;t built for gaming, but you can still play great games on them. Here are the best games for a laptop.</p>
       <div class="bmeta">2026-09-05 &middot; 6 min read</div>
       <a class="readmore" href="/blogs/best-games-for-a-laptop.html">Read More</a>
     </article>
             <article class="bcard">
-      <div class="bcat">Game Lists</div>
+      <div class="bimg-wrap"><img class="bimg" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/2013_Hand_Star_Game_t174914.jpg/960px-2013_Hand_Star_Game_t174914.jpg" alt="The Best Games to Play With Your Hands" loading="lazy" /><div class="bcat">Game Lists</div></div>
       <h3><a href="/blogs/best-games-to-play-with-your-hands.html">The Best Games to Play With Your Hands</a></h3>
       <p>Some games are all about your hands. Here are the best games that test your hand-eye coordination and reflexes.</p>
       <div class="bmeta">2026-09-05 &middot; 6 min read</div>
       <a class="readmore" href="/blogs/best-games-to-play-with-your-hands.html">Read More</a>
     </article>
             <article class="bcard">
-      <div class="bcat">Game Lists</div>
+      <div class="bimg-wrap"><img class="bimg" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Leaflet_at_Narita_arrival._Requirement_to_have_a_smartphone_to_enter_Japan_during_COVID-19_pandemic.jpg/960px-Leaflet_at_Narita_arrival._Requirement_to_have_a_smartphone_to_enter_Japan_during_COVID-19_pandemic.jpg" alt="The Best Games for a Phone" loading="lazy" /><div class="bcat">Game Lists</div></div>
       <h3><a href="/blogs/best-games-for-a-phone.html">The Best Games for a Phone</a></h3>
       <p>Your phone is a great gaming device. Here are the best games for a phone that are fun and free to play.</p>
       <div class="bmeta">2026-09-05 &middot; 6 min read</div>
@@ -370,6 +390,21 @@
     </div>
     <p class="disclaimer">We link to third-party games (we don't host them). Cookies &amp; ads keep Switchere Club free. <a href="/privacypolicy.html" style="display:inline;color:var(--accent);">Privacy Policy</a>.</p>
   </div></footer>
+  <button class="backtop" id="backTop" aria-label="Back to top">&uarr;</button>
+  <script>
+    (function(){
+      var bt = document.getElementById('backTop');
+      if (bt) {
+        window.addEventListener('scroll', function () {
+          if (window.scrollY > 300) bt.classList.add('show');
+          else bt.classList.remove('show');
+        });
+        bt.addEventListener('click', function () {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+    })();
+  </script>
   <script src="/ads.js"></script>
 </body>
 </html>

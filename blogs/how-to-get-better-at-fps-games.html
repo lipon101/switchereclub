@@ -89,6 +89,26 @@
     footer a{display:block;color:var(--muted);font-size:.9rem;padding:3px 0;}
     footer a:hover{color:var(--accent);}
     .disclaimer{color:var(--muted);font-size:.8rem;margin-top:20px;border-top:1px solid var(--border);padding-top:14px;}
+    .bcard .bimg{width:100%;height:170px;object-fit:cover;display:block;background:var(--panel);}
+    .bcard .bimg-wrap{position:relative;overflow:hidden;}
+    .bcard .bimg-wrap::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(14,20,32,.55));pointer-events:none;}
+    .bcard .bcat{padding-top:14px;}
+    .bcard .bimg-wrap .bcat{position:absolute;top:10px;left:12px;z-index:2;padding:4px 10px;border-radius:20px;background:rgba(14,20,32,.75);backdrop-filter:blur(4px);font-size:.68rem;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:var(--accent);}
+    .article .hero{width:100%;max-height:420px;object-fit:cover;border-radius:14px;margin:18px 0 6px;display:block;border:1px solid var(--border);}
+    .article .fig{margin:22px 0;}
+    .article .fig img{width:100%;border-radius:12px;display:block;border:1px solid var(--border);}
+    .article .fig figcaption{color:var(--muted);font-size:.8rem;margin-top:8px;text-align:center;}
+    .article .inbody{margin:22px 0;}
+    .article .inbody img{width:100%;border-radius:12px;display:block;border:1px solid var(--border);}
+    .article .inbody figcaption{color:var(--muted);font-size:.8rem;margin-top:8px;text-align:center;}
+    .article a{color:var(--accent2);}
+    .article a:hover{text-decoration:underline;}
+    .backtop{position:fixed;bottom:26px;right:26px;z-index:90;width:46px;height:46px;border-radius:50%;background:var(--accent);color:#fff;border:none;font-size:1.3rem;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(34,197,94,.35);opacity:0;visibility:hidden;transform:translateY(12px);transition:.25s;}
+    .backtop.show{opacity:1;visibility:visible;transform:translateY(0);}
+    .backtop:hover{filter:brightness(1.1);}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:translateY(0);}}
+    .bcard{animation:fadeUp .5s ease both;}
+    .bcard:hover{transform:translateY(-6px);border-color:var(--accent);box-shadow:0 16px 34px rgba(34,197,94,.18);}
     @media(max-width:600px){.blog-grid{grid-template-columns:1fr;}}
   </style>
 </head>
@@ -109,6 +129,7 @@
       <div class="acat">Guides</div>
       <h1>How to Get Better at FPS Games: Aim, Movement, and Game Sense</h1>
       <div class="ameta">2026-09-04 &middot; 8 min read</div>
+      <img class="hero" src="https://upload.wikimedia.org/wikipedia/commons/b/b3/BgeFpsShooter.jpg" alt="How to Get Better at FPS Games: Aim, Movement, and Game Sense" loading="lazy" />
       <div class="ad-slot" data-adsterra data-key="793d8bb524d00a156bcd9b13090236d8" data-w="300" data-h="250" style="max-width:340px;margin:18px auto;"></div>
       <p>Everyone wants to be better at FPS games, but most people just play more and hope it happens. It doesn't work that way. Playing more helps, but only if you're practicing the right things. There are three pillars to getting good at any shooter: aim, movement, and game sense. If you work on all three, you'll improve faster than you thought possible. Here's how.</p><h2>Aim is about consistency, not talent</h2>
 <p>Aim is the most obvious skill, and it's also the most trainable. The secret is that good aim is mostly about muscle memory and consistency, not natural talent. Set your sensitivity once and don't change it. Changing sensitivity constantly resets your muscle memory. Then practice. There are aim trainers you can use, but even just playing and focusing on your crosshair placement helps. Keep your crosshair at head level, not at the floor, and you'll win more fights before they even start.</p>
@@ -124,6 +145,8 @@
 <h2>Don't blame your gear</h2>
 <p>It's tempting to blame your mouse, your monitor, or your internet. And sure, gear matters a little. But the truth is, a good player with average gear will beat an average player with great gear almost every time. Focus on your skills first. Upgrade your gear only when your skills are the thing holding you back, not the other way around.</p>
 <p>Getting better at FPS games is a process. Work on your aim, keep your crosshair up, move with purpose, and build your game sense. Do that, and you'll see real improvement. It won't happen overnight, but it will happen.</p>
+      <figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Como_criar_um_First_Person_Shooter_%286853085053%29.jpg/960px-Como_criar_um_First_Person_Shooter_%286853085053%29.jpg" alt="Como criar um First Person Shooter (6853085053).jpg" loading="lazy" /><figcaption>Como criar um First Person Shooter (6853085053).jpg</figcaption></figure><figure class="inbody"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b3/BgeFpsShooter.jpg" alt="A first-person shooter game" loading="lazy" /><figcaption>A first-person shooter game</figcaption></figure>
+      <div class="related"><h3>Related reading</h3><a href="/blogs/best-free-browser-fps-games.html">our free browser FPS list</a><a href="/blogs/how-to-improve-your-aim-in-fps.html">our aim guide</a><a href="https://en.wikipedia.org/wiki/First-person_shooter" target="_blank" rel="noopener nofollow">Learn more about this game</a></div>
       <div class="related">
         <h3>Keep reading</h3>
         <a href="/blogs/geometry-dash-tips-for-beginners.html">Geometry Dash Tips for Beginners: How to Stop Dying at 3%</a><a href="/blogs/slope-game-high-score-tips.html">How to Get a High Score in Slope: The Only Guide You Need</a><a href="/blogs/moto-x3m-all-levels-guide.html">Moto X3M: How to Beat Every Level Without Rage Quitting</a>
@@ -137,6 +160,21 @@
     </div>
     <p class="disclaimer">We link to third-party games (we don't host them). Cookies &amp; ads keep Switchere Club free. <a href="/privacypolicy.html" style="display:inline;color:var(--accent);">Privacy Policy</a>.</p>
   </div></footer>
+  <button class="backtop" id="backTop" aria-label="Back to top">&uarr;</button>
+  <script>
+    (function(){
+      var bt = document.getElementById('backTop');
+      if (bt) {
+        window.addEventListener('scroll', function () {
+          if (window.scrollY > 300) bt.classList.add('show');
+          else bt.classList.remove('show');
+        });
+        bt.addEventListener('click', function () {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+    })();
+  </script>
   <script src="/ads.js"></script>
 </body>
 </html>

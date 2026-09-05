@@ -3,6 +3,7 @@
 # Content lives in blog_data.py. Run:  python3 gen_blogs.py
 import os, html, datetime
 from blog_data import ARTICLES
+from blog_enrich import enrich_all
 
 SITE = "https://lipon.pro.bd"
 BRAND = "Switchere Club"
@@ -101,6 +102,26 @@ def head(title, desc, canonical, og_type="article"):
     footer a{{display:block;color:var(--muted);font-size:.9rem;padding:3px 0;}}
     footer a:hover{{color:var(--accent);}}
     .disclaimer{{color:var(--muted);font-size:.8rem;margin-top:20px;border-top:1px solid var(--border);padding-top:14px;}}
+    .bcard .bimg{{width:100%;height:170px;object-fit:cover;display:block;background:var(--panel);}}
+    .bcard .bimg-wrap{{position:relative;overflow:hidden;}}
+    .bcard .bimg-wrap::after{{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(14,20,32,.55));pointer-events:none;}}
+    .bcard .bcat{{padding-top:14px;}}
+    .bcard .bimg-wrap .bcat{{position:absolute;top:10px;left:12px;z-index:2;padding:4px 10px;border-radius:20px;background:rgba(14,20,32,.75);backdrop-filter:blur(4px);font-size:.68rem;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:var(--accent);}}
+    .article .hero{{width:100%;max-height:420px;object-fit:cover;border-radius:14px;margin:18px 0 6px;display:block;border:1px solid var(--border);}}
+    .article .fig{{margin:22px 0;}}
+    .article .fig img{{width:100%;border-radius:12px;display:block;border:1px solid var(--border);}}
+    .article .fig figcaption{{color:var(--muted);font-size:.8rem;margin-top:8px;text-align:center;}}
+    .article .inbody{{margin:22px 0;}}
+    .article .inbody img{{width:100%;border-radius:12px;display:block;border:1px solid var(--border);}}
+    .article .inbody figcaption{{color:var(--muted);font-size:.8rem;margin-top:8px;text-align:center;}}
+    .article a{{color:var(--accent2);}}
+    .article a:hover{{text-decoration:underline;}}
+    .backtop{{position:fixed;bottom:26px;right:26px;z-index:90;width:46px;height:46px;border-radius:50%;background:var(--accent);color:#fff;border:none;font-size:1.3rem;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(34,197,94,.35);opacity:0;visibility:hidden;transform:translateY(12px);transition:.25s;}}
+    .backtop.show{{opacity:1;visibility:visible;transform:translateY(0);}}
+    .backtop:hover{{filter:brightness(1.1);}}
+    @keyframes fadeUp{{from{{opacity:0;transform:translateY(14px);}}to{{opacity:1;transform:translateY(0);}}}}
+    .bcard{{animation:fadeUp .5s ease both;}}
+    .bcard:hover{{transform:translateY(-6px);border-color:var(--accent);box-shadow:0 16px 34px rgba(34,197,94,.18);}}
     @media(max-width:600px){{.blog-grid{{grid-template-columns:1fr;}}}}
   </style>
 </head>
@@ -129,6 +150,21 @@ def footer():
     </div>
     <p class="disclaimer">We link to third-party games (we don't host them). Cookies &amp; ads keep Switchere Club free. <a href="/privacypolicy.html" style="display:inline;color:var(--accent);">Privacy Policy</a>.</p>
   </div></footer>
+  <button class="backtop" id="backTop" aria-label="Back to top">&uarr;</button>
+  <script>
+    (function(){{
+      var bt = document.getElementById('backTop');
+      if (bt) {{
+        window.addEventListener('scroll', function () {{
+          if (window.scrollY > 300) bt.classList.add('show');
+          else bt.classList.remove('show');
+        }});
+        bt.addEventListener('click', function () {{
+          window.scrollTo({{ top: 0, behavior: 'smooth' }});
+        }});
+      }}
+    }})();
+  </script>
   <script src="/ads.js"></script>
 </body>
 </html>"""
@@ -148,8 +184,14 @@ def categories():
 def build_listing():
     cards = []
     for a in ARTICLES:
+        cover = a.get("cover_image") or ""
+        cover_html = ""
+        if cover:
+            cover_html = f'<div class="bimg-wrap"><img class="bimg" src="{cover}" alt="{html.escape(a["title"])}" loading="lazy" /><div class="bcat">{html.escape(a["category"])}</div></div>'
+        else:
+            cover_html = f'<div class="bcat">{html.escape(a["category"])}</div>'
         cards.append(f"""<article class="bcard" data-cat="{html.escape(a['category'])}" data-title="{html.escape(a['title'].lower())}" data-desc="{html.escape(a['description'].lower())}">
-      <div class="bcat">{html.escape(a["category"])}</div>
+      {cover_html}
       <h3><a href="/blogs/{a["slug"]}.html">{html.escape(a["title"])}</a></h3>
       <p>{html.escape(a["description"])}</p>
       <div class="bmeta">{a["date"]} &middot; {a["read_time"]} min read</div>
@@ -224,9 +266,15 @@ def build_category(cat):
     for a in ARTICLES:
         if a["category"] != cat:
             continue
+        cover = a.get("cover_image") or ""
+        cover_html = ""
+        if cover:
+            cover_html = f'<div class="bimg-wrap"><img class="bimg" src="{cover}" alt="{html.escape(a["title"])}" loading="lazy" /><div class="bcat">{html.escape(a["category"])}</div></div>'
+        else:
+            cover_html = f'<div class="bcat">{html.escape(a["category"])}</div>'
         cards.append(f"""
             <article class="bcard">
-      <div class="bcat">{html.escape(a["category"])}</div>
+      {cover_html}
       <h3><a href="/blogs/{a["slug"]}.html">{html.escape(a["title"])}</a></h3>
       <p>{html.escape(a["description"])}</p>
       <div class="bmeta">{a["date"]} &middot; {a["read_time"]} min read</div>
@@ -266,6 +314,24 @@ def build_article(a):
             if len(related) >= 3:
                 break
     rel_html = "".join(f'<a href="/blogs/{r["slug"]}.html">{html.escape(r["title"])}</a>' for r in related[:3])
+    # hero + in-body images
+    hero_html = ""
+    if a.get("cover_image"):
+        hero_html = f'<img class="hero" src="{a["cover_image"]}" alt="{html.escape(a["title"])}" loading="lazy" />'
+    inbody_html = ""
+    for img in (a.get("images") or [])[:2]:
+        inbody_html += f'<figure class="inbody"><img src="{img["url"]}" alt="{html.escape(img.get("alt", a["title"]))}" loading="lazy" /><figcaption>{html.escape(img.get("alt", ""))}</figcaption></figure>'
+    # internal + external links block
+    links_html = ""
+    ints = a.get("internal_links") or []
+    ext = a.get("external_link")
+    if ints or ext:
+        parts = []
+        for target_slug, anchor in ints[:2]:
+            parts.append(f'<a href="/blogs/{target_slug}.html">{html.escape(anchor)}</a>')
+        if ext:
+            parts.append(f'<a href="{ext}" target="_blank" rel="noopener nofollow">Learn more about this game</a>')
+        links_html = '<div class="related"><h3>Related reading</h3>' + "".join(parts) + "</div>"
     schema = f"""<script type="application/ld+json">{{
   "@context": "https://schema.org",
   "@type": "Article",
@@ -284,8 +350,11 @@ def build_article(a):
       <div class="acat">{html.escape(a["category"])}</div>
       <h1>{html.escape(a["title"])}</h1>
       <div class="ameta">{a["date"]} &middot; {a["read_time"]} min read</div>
+      {hero_html}
       <div class="ad-slot" data-adsterra data-key="793d8bb524d00a156bcd9b13090236d8" data-w="300" data-h="250" style="max-width:340px;margin:18px auto;"></div>
       {a["body"]}
+      {inbody_html}
+      {links_html}
       <div class="related">
         <h3>Keep reading</h3>
         {rel_html}
@@ -298,6 +367,8 @@ def build_article(a):
 
 # ---------- main ----------
 def main():
+    global ARTICLES
+    ARTICLES = enrich_all(ARTICLES)
     os.makedirs("blogs", exist_ok=True)
     os.makedirs("blogs/category", exist_ok=True)
     with open("blogs.html", "w") as f:

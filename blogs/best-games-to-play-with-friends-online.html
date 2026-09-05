@@ -89,6 +89,26 @@
     footer a{display:block;color:var(--muted);font-size:.9rem;padding:3px 0;}
     footer a:hover{color:var(--accent);}
     .disclaimer{color:var(--muted);font-size:.8rem;margin-top:20px;border-top:1px solid var(--border);padding-top:14px;}
+    .bcard .bimg{width:100%;height:170px;object-fit:cover;display:block;background:var(--panel);}
+    .bcard .bimg-wrap{position:relative;overflow:hidden;}
+    .bcard .bimg-wrap::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(14,20,32,.55));pointer-events:none;}
+    .bcard .bcat{padding-top:14px;}
+    .bcard .bimg-wrap .bcat{position:absolute;top:10px;left:12px;z-index:2;padding:4px 10px;border-radius:20px;background:rgba(14,20,32,.75);backdrop-filter:blur(4px);font-size:.68rem;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:var(--accent);}
+    .article .hero{width:100%;max-height:420px;object-fit:cover;border-radius:14px;margin:18px 0 6px;display:block;border:1px solid var(--border);}
+    .article .fig{margin:22px 0;}
+    .article .fig img{width:100%;border-radius:12px;display:block;border:1px solid var(--border);}
+    .article .fig figcaption{color:var(--muted);font-size:.8rem;margin-top:8px;text-align:center;}
+    .article .inbody{margin:22px 0;}
+    .article .inbody img{width:100%;border-radius:12px;display:block;border:1px solid var(--border);}
+    .article .inbody figcaption{color:var(--muted);font-size:.8rem;margin-top:8px;text-align:center;}
+    .article a{color:var(--accent2);}
+    .article a:hover{text-decoration:underline;}
+    .backtop{position:fixed;bottom:26px;right:26px;z-index:90;width:46px;height:46px;border-radius:50%;background:var(--accent);color:#fff;border:none;font-size:1.3rem;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(34,197,94,.35);opacity:0;visibility:hidden;transform:translateY(12px);transition:.25s;}
+    .backtop.show{opacity:1;visibility:visible;transform:translateY(0);}
+    .backtop:hover{filter:brightness(1.1);}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:translateY(0);}}
+    .bcard{animation:fadeUp .5s ease both;}
+    .bcard:hover{transform:translateY(-6px);border-color:var(--accent);box-shadow:0 16px 34px rgba(34,197,94,.18);}
     @media(max-width:600px){.blog-grid{grid-template-columns:1fr;}}
   </style>
 </head>
@@ -109,6 +129,7 @@
       <div class="acat">Game Lists</div>
       <h1>The Best Games to Play With Friends Online (Free &amp; Browser-Based)</h1>
       <div class="ameta">2026-09-02 &middot; 7 min read</div>
+      <img class="hero" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Children_playing_video_games.jpg/960px-Children_playing_video_games.jpg" alt="The Best Games to Play With Friends Online (Free &amp; Browser-Based)" loading="lazy" />
       <div class="ad-slot" data-adsterra data-key="793d8bb524d00a156bcd9b13090236d8" data-w="300" data-h="250" style="max-width:340px;margin:18px auto;"></div>
       <p>Playing games with friends is the best way to play, but it used to mean everyone needed the same console and the same copy of the game. Not anymore. There are plenty of free browser games that you can play with friends, and they all work right in your browser. No downloads, no installs, no excuses. Here are the ones that are actually fun with a group.</p>
 <h2>What makes a good group game</h2>
@@ -127,6 +148,8 @@
 <h2>How to get a group together</h2>
 <p>The easiest way to play with friends online is to pick a game, share the link, and start a call. Most of these games let you create a room and share a code, so everyone can join. You don't need to be in the same room, and you don't need the same console. Just a browser and a link.</p>
 <p>Playing games with friends is about the time you spend together, not the game itself. Pick one of these, get your friends together, and have fun. That's the whole point.</p>
+      <figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Friends_are_playing_video_games_at_home_sitting_on_sofa_and_having_pizza_with_popcorn._%2849613910247%29.jpg/960px-Friends_are_playing_video_games_at_home_sitting_on_sofa_and_having_pizza_with_popcorn._%2849613910247%29.jpg" alt="Friends are playing video games at home sitting on sofa and having pizza with popcorn. (49613910247).jpg" loading="lazy" /><figcaption>Friends are playing video games at home sitting on sofa and having pizza with popcorn. (49613910247).jpg</figcaption></figure><figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Children_playing_video_games.jpg/960px-Children_playing_video_games.jpg" alt="Friends playing video games together" loading="lazy" /><figcaption>Friends playing video games together</figcaption></figure>
+      <div class="related"><h3>Related reading</h3><a href="/blogs/best-browser-games-no-download.html">our no-download browser games list</a><a href="/blogs/best-games-for-a-quick-break.html">our quick break games list</a><a href="https://en.wikipedia.org/wiki/Friendship" target="_blank" rel="noopener nofollow">Learn more about this game</a></div>
       <div class="related">
         <h3>Keep reading</h3>
         <a href="/blogs/best-free-browser-games-2026.html">The 15 Best Free Browser Games to Play in 2026</a><a href="/blogs/best-2-player-games-online.html">The Best 2-Player Games to Play Online With a Friend</a><a href="/blogs/best-idle-games-browser.html">The Best Idle Games to Play in Your Browser (and Why They&#x27;re Addictive)</a>
@@ -140,6 +163,21 @@
     </div>
     <p class="disclaimer">We link to third-party games (we don't host them). Cookies &amp; ads keep Switchere Club free. <a href="/privacypolicy.html" style="display:inline;color:var(--accent);">Privacy Policy</a>.</p>
   </div></footer>
+  <button class="backtop" id="backTop" aria-label="Back to top">&uarr;</button>
+  <script>
+    (function(){
+      var bt = document.getElementById('backTop');
+      if (bt) {
+        window.addEventListener('scroll', function () {
+          if (window.scrollY > 300) bt.classList.add('show');
+          else bt.classList.remove('show');
+        });
+        bt.addEventListener('click', function () {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+    })();
+  </script>
   <script src="/ads.js"></script>
 </body>
 </html>

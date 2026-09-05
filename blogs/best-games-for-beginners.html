@@ -89,6 +89,26 @@
     footer a{display:block;color:var(--muted);font-size:.9rem;padding:3px 0;}
     footer a:hover{color:var(--accent);}
     .disclaimer{color:var(--muted);font-size:.8rem;margin-top:20px;border-top:1px solid var(--border);padding-top:14px;}
+    .bcard .bimg{width:100%;height:170px;object-fit:cover;display:block;background:var(--panel);}
+    .bcard .bimg-wrap{position:relative;overflow:hidden;}
+    .bcard .bimg-wrap::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(14,20,32,.55));pointer-events:none;}
+    .bcard .bcat{padding-top:14px;}
+    .bcard .bimg-wrap .bcat{position:absolute;top:10px;left:12px;z-index:2;padding:4px 10px;border-radius:20px;background:rgba(14,20,32,.75);backdrop-filter:blur(4px);font-size:.68rem;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:var(--accent);}
+    .article .hero{width:100%;max-height:420px;object-fit:cover;border-radius:14px;margin:18px 0 6px;display:block;border:1px solid var(--border);}
+    .article .fig{margin:22px 0;}
+    .article .fig img{width:100%;border-radius:12px;display:block;border:1px solid var(--border);}
+    .article .fig figcaption{color:var(--muted);font-size:.8rem;margin-top:8px;text-align:center;}
+    .article .inbody{margin:22px 0;}
+    .article .inbody img{width:100%;border-radius:12px;display:block;border:1px solid var(--border);}
+    .article .inbody figcaption{color:var(--muted);font-size:.8rem;margin-top:8px;text-align:center;}
+    .article a{color:var(--accent2);}
+    .article a:hover{text-decoration:underline;}
+    .backtop{position:fixed;bottom:26px;right:26px;z-index:90;width:46px;height:46px;border-radius:50%;background:var(--accent);color:#fff;border:none;font-size:1.3rem;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(34,197,94,.35);opacity:0;visibility:hidden;transform:translateY(12px);transition:.25s;}
+    .backtop.show{opacity:1;visibility:visible;transform:translateY(0);}
+    .backtop:hover{filter:brightness(1.1);}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:translateY(0);}}
+    .bcard{animation:fadeUp .5s ease both;}
+    .bcard:hover{transform:translateY(-6px);border-color:var(--accent);box-shadow:0 16px 34px rgba(34,197,94,.18);}
     @media(max-width:600px){.blog-grid{grid-template-columns:1fr;}}
   </style>
 </head>
@@ -109,6 +129,7 @@
       <div class="acat">Game Lists</div>
       <h1>The Best Games for Beginners: Easy to Learn, Hard to Put Down</h1>
       <div class="ameta">2026-09-03 &middot; 7 min read</div>
+      <img class="hero" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Drawing_for_beginners_%281920%29_%2814750197431%29.jpg/960px-Drawing_for_beginners_%281920%29_%2814750197431%29.jpg" alt="The Best Games for Beginners: Easy to Learn, Hard to Put Down" loading="lazy" />
       <div class="ad-slot" data-adsterra data-key="793d8bb524d00a156bcd9b13090236d8" data-w="300" data-h="250" style="max-width:340px;margin:18px auto;"></div>
       <p>There's a weird pressure in gaming to start with something hard. People think you need to prove yourself by jumping into a brutal game and getting good. That's nonsense. The best way to get into gaming is to start with something easy, fun, and forgiving. These are the games that are perfect for beginners, the ones that teach you the basics without punishing you for every mistake.</p>
 <h2>What makes a good beginner game</h2>
@@ -124,6 +145,8 @@
 <div class="tip"><strong>Pro tip:</strong> Don't be afraid to start with the easiest difficulty. There's no shame in playing on easy mode. The point is to have fun and learn, not to prove anything.</div>
 <h2>Why these games are the right start</h2>
 <p>These games are the perfect starting point because they're all easy to learn, forgiving, and fun. They'll teach you the basics of gaming without making you feel bad about yourself. Once you've got the hang of these, you can move on to harder games with confidence. But there's no rush. The best way to get into gaming is to start with something you enjoy.</p>
+      <figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Drawing_for_beginners_%281920%29_%2814750197431%29.jpg/960px-Drawing_for_beginners_%281920%29_%2814750197431%29.jpg" alt="Learning something new" loading="lazy" /><figcaption>Learning something new</figcaption></figure>
+      <div class="related"><h3>Related reading</h3><a href="/blogs/best-browser-games-no-download.html">our no-download browser games list</a><a href="/blogs/best-games-for-a-quick-break.html">our quick break games list</a></div>
       <div class="related">
         <h3>Keep reading</h3>
         <a href="/blogs/best-free-browser-games-2026.html">The 15 Best Free Browser Games to Play in 2026</a><a href="/blogs/best-2-player-games-online.html">The Best 2-Player Games to Play Online With a Friend</a><a href="/blogs/best-idle-games-browser.html">The Best Idle Games to Play in Your Browser (and Why They&#x27;re Addictive)</a>
@@ -137,6 +160,21 @@
     </div>
     <p class="disclaimer">We link to third-party games (we don't host them). Cookies &amp; ads keep Switchere Club free. <a href="/privacypolicy.html" style="display:inline;color:var(--accent);">Privacy Policy</a>.</p>
   </div></footer>
+  <button class="backtop" id="backTop" aria-label="Back to top">&uarr;</button>
+  <script>
+    (function(){
+      var bt = document.getElementById('backTop');
+      if (bt) {
+        window.addEventListener('scroll', function () {
+          if (window.scrollY > 300) bt.classList.add('show');
+          else bt.classList.remove('show');
+        });
+        bt.addEventListener('click', function () {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+    })();
+  </script>
   <script src="/ads.js"></script>
 </body>
 </html>

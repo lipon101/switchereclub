@@ -89,6 +89,26 @@
     footer a{display:block;color:var(--muted);font-size:.9rem;padding:3px 0;}
     footer a:hover{color:var(--accent);}
     .disclaimer{color:var(--muted);font-size:.8rem;margin-top:20px;border-top:1px solid var(--border);padding-top:14px;}
+    .bcard .bimg{width:100%;height:170px;object-fit:cover;display:block;background:var(--panel);}
+    .bcard .bimg-wrap{position:relative;overflow:hidden;}
+    .bcard .bimg-wrap::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(14,20,32,.55));pointer-events:none;}
+    .bcard .bcat{padding-top:14px;}
+    .bcard .bimg-wrap .bcat{position:absolute;top:10px;left:12px;z-index:2;padding:4px 10px;border-radius:20px;background:rgba(14,20,32,.75);backdrop-filter:blur(4px);font-size:.68rem;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:var(--accent);}
+    .article .hero{width:100%;max-height:420px;object-fit:cover;border-radius:14px;margin:18px 0 6px;display:block;border:1px solid var(--border);}
+    .article .fig{margin:22px 0;}
+    .article .fig img{width:100%;border-radius:12px;display:block;border:1px solid var(--border);}
+    .article .fig figcaption{color:var(--muted);font-size:.8rem;margin-top:8px;text-align:center;}
+    .article .inbody{margin:22px 0;}
+    .article .inbody img{width:100%;border-radius:12px;display:block;border:1px solid var(--border);}
+    .article .inbody figcaption{color:var(--muted);font-size:.8rem;margin-top:8px;text-align:center;}
+    .article a{color:var(--accent2);}
+    .article a:hover{text-decoration:underline;}
+    .backtop{position:fixed;bottom:26px;right:26px;z-index:90;width:46px;height:46px;border-radius:50%;background:var(--accent);color:#fff;border:none;font-size:1.3rem;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(34,197,94,.35);opacity:0;visibility:hidden;transform:translateY(12px);transition:.25s;}
+    .backtop.show{opacity:1;visibility:visible;transform:translateY(0);}
+    .backtop:hover{filter:brightness(1.1);}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:translateY(0);}}
+    .bcard{animation:fadeUp .5s ease both;}
+    .bcard:hover{transform:translateY(-6px);border-color:var(--accent);box-shadow:0 16px 34px rgba(34,197,94,.18);}
     @media(max-width:600px){.blog-grid{grid-template-columns:1fr;}}
   </style>
 </head>
@@ -109,8 +129,11 @@
       <div class="acat">Gaming Culture</div>
       <h1>The History of Browser Games: From Flash to Now</h1>
       <div class="ameta">2026-09-05 &middot; 8 min read</div>
+      <img class="hero" src="https://upload.wikimedia.org/wikipedia/commons/f/fe/1.10.14_Computer_History_Museum_%2811937785246%29.jpg" alt="The History of Browser Games: From Flash to Now" loading="lazy" />
       <div class="ad-slot" data-adsterra data-key="793d8bb524d00a156bcd9b13090236d8" data-w="300" data-h="250" style="max-width:340px;margin:18px auto;"></div>
       <p>Browser games are everywhere now, but they've been around for a long time. They've changed a lot over the years, from simple pages to the full games we play today. Here's the story of how browser games evolved.</p><h2>The early days</h2><p>Browser games started in the 1990s, when the internet was new. The first browser games were simple, text-based games and basic puzzles. They were limited by the technology of the time, but they were a start. People were excited to play games in their browser, without downloading anything.</p><h2>The Flash era</h2><p>The big change came with Flash. Flash let developers make more complex games, and it opened the door for a huge wave of browser games. Sites like Newgrounds and Miniclip became popular, and people played games like the classics. Flash was the golden age of browser games.</p><h2>The HTML5 revolution</h2><p>Flash eventually died, and HTML5 took its place. HTML5 let developers make games that ran in the browser without plugins, and it was a big improvement. Games got faster, smoother, and more complex. The browser game was reborn.</p><div class="tip"><strong>Pro tip:</strong> Many classic Flash games have been remade in HTML5. If you miss the old games, you can often find them remade and playable in your browser.</div><h2>Where we are now</h2><p>Now, browser games are bigger than ever. They're fast, they're polished, and they're free. You can play everything from simple puzzle games to full multiplayer games in your browser. The technology has come a long way, and browser games are here to stay.</p><p>Browser games have come a long way. From simple text games to the polished games we play today, they've been a part of gaming for decades. And they're only getting better.</p>
+      <figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/CHM_Computer_History_Museum%2C_MV%2C_California_01.jpg/960px-CHM_Computer_History_Museum%2C_MV%2C_California_01.jpg" alt="CHM Computer History Museum, MV, California 01.jpg" loading="lazy" /><figcaption>CHM Computer History Museum, MV, California 01.jpg</figcaption></figure><figure class="inbody"><img src="https://upload.wikimedia.org/wikipedia/commons/f/fe/1.10.14_Computer_History_Museum_%2811937785246%29.jpg" alt="The Computer History Museum" loading="lazy" /><figcaption>The Computer History Museum</figcaption></figure>
+      <div class="related"><h3>Related reading</h3><a href="/blogs/best-browser-games-no-download.html">our no-download browser games list</a><a href="/blogs/best-free-browser-games-2026.html">the best free browser games of 2026</a><a href="https://en.wikipedia.org/wiki/Browser_game" target="_blank" rel="noopener nofollow">Learn more about this game</a></div>
       <div class="related">
         <h3>Keep reading</h3>
         <a href="/blogs/geometry-dash-tips-for-beginners.html">Geometry Dash Tips for Beginners: How to Stop Dying at 3%</a><a href="/blogs/best-free-browser-games-2026.html">The 15 Best Free Browser Games to Play in 2026</a><a href="/blogs/slope-game-high-score-tips.html">How to Get a High Score in Slope: The Only Guide You Need</a>
@@ -124,6 +147,21 @@
     </div>
     <p class="disclaimer">We link to third-party games (we don't host them). Cookies &amp; ads keep Switchere Club free. <a href="/privacypolicy.html" style="display:inline;color:var(--accent);">Privacy Policy</a>.</p>
   </div></footer>
+  <button class="backtop" id="backTop" aria-label="Back to top">&uarr;</button>
+  <script>
+    (function(){
+      var bt = document.getElementById('backTop');
+      if (bt) {
+        window.addEventListener('scroll', function () {
+          if (window.scrollY > 300) bt.classList.add('show');
+          else bt.classList.remove('show');
+        });
+        bt.addEventListener('click', function () {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+    })();
+  </script>
   <script src="/ads.js"></script>
 </body>
 </html>

@@ -89,6 +89,26 @@
     footer a{display:block;color:var(--muted);font-size:.9rem;padding:3px 0;}
     footer a:hover{color:var(--accent);}
     .disclaimer{color:var(--muted);font-size:.8rem;margin-top:20px;border-top:1px solid var(--border);padding-top:14px;}
+    .bcard .bimg{width:100%;height:170px;object-fit:cover;display:block;background:var(--panel);}
+    .bcard .bimg-wrap{position:relative;overflow:hidden;}
+    .bcard .bimg-wrap::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(14,20,32,.55));pointer-events:none;}
+    .bcard .bcat{padding-top:14px;}
+    .bcard .bimg-wrap .bcat{position:absolute;top:10px;left:12px;z-index:2;padding:4px 10px;border-radius:20px;background:rgba(14,20,32,.75);backdrop-filter:blur(4px);font-size:.68rem;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:var(--accent);}
+    .article .hero{width:100%;max-height:420px;object-fit:cover;border-radius:14px;margin:18px 0 6px;display:block;border:1px solid var(--border);}
+    .article .fig{margin:22px 0;}
+    .article .fig img{width:100%;border-radius:12px;display:block;border:1px solid var(--border);}
+    .article .fig figcaption{color:var(--muted);font-size:.8rem;margin-top:8px;text-align:center;}
+    .article .inbody{margin:22px 0;}
+    .article .inbody img{width:100%;border-radius:12px;display:block;border:1px solid var(--border);}
+    .article .inbody figcaption{color:var(--muted);font-size:.8rem;margin-top:8px;text-align:center;}
+    .article a{color:var(--accent2);}
+    .article a:hover{text-decoration:underline;}
+    .backtop{position:fixed;bottom:26px;right:26px;z-index:90;width:46px;height:46px;border-radius:50%;background:var(--accent);color:#fff;border:none;font-size:1.3rem;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(34,197,94,.35);opacity:0;visibility:hidden;transform:translateY(12px);transition:.25s;}
+    .backtop.show{opacity:1;visibility:visible;transform:translateY(0);}
+    .backtop:hover{filter:brightness(1.1);}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:translateY(0);}}
+    .bcard{animation:fadeUp .5s ease both;}
+    .bcard:hover{transform:translateY(-6px);border-color:var(--accent);box-shadow:0 16px 34px rgba(34,197,94,.18);}
     @media(max-width:600px){.blog-grid{grid-template-columns:1fr;}}
   </style>
 </head>
@@ -109,8 +129,11 @@
       <div class="acat">Guides</div>
       <h1>How to Play Chess for Beginners</h1>
       <div class="ameta">2026-09-05 &middot; 8 min read</div>
+      <img class="hero" src="/images/chess.png" alt="How to Play Chess for Beginners" loading="lazy" />
       <div class="ad-slot" data-adsterra data-key="793d8bb524d00a156bcd9b13090236d8" data-w="300" data-h="250" style="max-width:340px;margin:18px auto;"></div>
       <p>Chess is one of the most popular games in the world, and it's a great game to learn. It might look complicated, but the basics are easy to learn. Here's how to play chess for beginners.</p><h2>The pieces</h2><p>Chess has two sides, each with the same pieces. The pawn moves forward one square, the rook moves in a straight line, the knight moves in an L shape, the bishop moves diagonally, the queen moves in any direction, and the king moves one square in any direction. Each piece has its own way of moving.</p><h2>The goal</h2><p>The goal of chess is to checkmate your opponent's king. Checkmate is when the king is in check and can't escape. If you checkmate your opponent's king, you win. If your king is checkmated, you lose.</p><h2>The basic rules</h2><p>There are a few basic rules. You can't move a piece onto a square occupied by your own piece. You can capture an opponent's piece by moving onto their square. And you can't move your king into check. These are the basics.</p><div class="tip"><strong>Pro tip:</strong> The most important piece is the king. Protect your king, and try to attack your opponent's king. Everything else is secondary.</div><h2>Start playing</h2><p>The best way to learn chess is to play. You can play online or with a friend. Don't worry about winning at first. Just play, and you'll learn. The more you play, the better you'll get.</p>
+      <figure class="inbody"><img src="/images/chess.png" alt="How to Play Chess for Beginners" loading="lazy" /><figcaption>How to Play Chess for Beginners</figcaption></figure>
+      <div class="related"><h3>Related reading</h3><a href="/blogs/how-to-play-chess-online.html">our chess guide</a><a href="/blogs/best-games-for-beginners.html">our beginner games list</a><a href="https://en.wikipedia.org/wiki/Chess" target="_blank" rel="noopener nofollow">Learn more about this game</a></div>
       <div class="related">
         <h3>Keep reading</h3>
         <a href="/blogs/geometry-dash-tips-for-beginners.html">Geometry Dash Tips for Beginners: How to Stop Dying at 3%</a><a href="/blogs/slope-game-high-score-tips.html">How to Get a High Score in Slope: The Only Guide You Need</a><a href="/blogs/moto-x3m-all-levels-guide.html">Moto X3M: How to Beat Every Level Without Rage Quitting</a>
@@ -124,6 +147,21 @@
     </div>
     <p class="disclaimer">We link to third-party games (we don't host them). Cookies &amp; ads keep Switchere Club free. <a href="/privacypolicy.html" style="display:inline;color:var(--accent);">Privacy Policy</a>.</p>
   </div></footer>
+  <button class="backtop" id="backTop" aria-label="Back to top">&uarr;</button>
+  <script>
+    (function(){
+      var bt = document.getElementById('backTop');
+      if (bt) {
+        window.addEventListener('scroll', function () {
+          if (window.scrollY > 300) bt.classList.add('show');
+          else bt.classList.remove('show');
+        });
+        bt.addEventListener('click', function () {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+    })();
+  </script>
   <script src="/ads.js"></script>
 </body>
 </html>

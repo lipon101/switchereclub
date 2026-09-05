@@ -89,6 +89,26 @@
     footer a{display:block;color:var(--muted);font-size:.9rem;padding:3px 0;}
     footer a:hover{color:var(--accent);}
     .disclaimer{color:var(--muted);font-size:.8rem;margin-top:20px;border-top:1px solid var(--border);padding-top:14px;}
+    .bcard .bimg{width:100%;height:170px;object-fit:cover;display:block;background:var(--panel);}
+    .bcard .bimg-wrap{position:relative;overflow:hidden;}
+    .bcard .bimg-wrap::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(14,20,32,.55));pointer-events:none;}
+    .bcard .bcat{padding-top:14px;}
+    .bcard .bimg-wrap .bcat{position:absolute;top:10px;left:12px;z-index:2;padding:4px 10px;border-radius:20px;background:rgba(14,20,32,.75);backdrop-filter:blur(4px);font-size:.68rem;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:var(--accent);}
+    .article .hero{width:100%;max-height:420px;object-fit:cover;border-radius:14px;margin:18px 0 6px;display:block;border:1px solid var(--border);}
+    .article .fig{margin:22px 0;}
+    .article .fig img{width:100%;border-radius:12px;display:block;border:1px solid var(--border);}
+    .article .fig figcaption{color:var(--muted);font-size:.8rem;margin-top:8px;text-align:center;}
+    .article .inbody{margin:22px 0;}
+    .article .inbody img{width:100%;border-radius:12px;display:block;border:1px solid var(--border);}
+    .article .inbody figcaption{color:var(--muted);font-size:.8rem;margin-top:8px;text-align:center;}
+    .article a{color:var(--accent2);}
+    .article a:hover{text-decoration:underline;}
+    .backtop{position:fixed;bottom:26px;right:26px;z-index:90;width:46px;height:46px;border-radius:50%;background:var(--accent);color:#fff;border:none;font-size:1.3rem;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(34,197,94,.35);opacity:0;visibility:hidden;transform:translateY(12px);transition:.25s;}
+    .backtop.show{opacity:1;visibility:visible;transform:translateY(0);}
+    .backtop:hover{filter:brightness(1.1);}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:translateY(0);}}
+    .bcard{animation:fadeUp .5s ease both;}
+    .bcard:hover{transform:translateY(-6px);border-color:var(--accent);box-shadow:0 16px 34px rgba(34,197,94,.18);}
     @media(max-width:600px){.blog-grid{grid-template-columns:1fr;}}
   </style>
 </head>
@@ -109,8 +129,11 @@
       <div class="acat">Guides</div>
       <h1>How to Get Better at Chess</h1>
       <div class="ameta">2026-09-05 &middot; 8 min read</div>
+      <img class="hero" src="/images/chess.png" alt="How to Get Better at Chess" loading="lazy" />
       <div class="ad-slot" data-adsterra data-key="793d8bb524d00a156bcd9b13090236d8" data-w="300" data-h="250" style="max-width:340px;margin:18px auto;"></div>
       <p>Chess is one of the oldest and most popular games in the world, and it's a game of pure skill. You can get better at it, but it takes practice and the right approach. Here's how to actually improve your chess game.</p><h2>Learn the basics well</h2><p>The first step is learning the basics well. You need to know how each piece moves and understand the basic rules. But you also need to understand the basic principles, like controlling the center and developing your pieces. The basics are the foundation of everything.</p><h2>Practice tactics</h2><p>Tactics are the most important thing in chess. They're short sequences of moves that lead to a win, like capturing a piece or checkmate. You can practice tactics with puzzles, and there are hundreds of free puzzle sites. Practicing tactics is the fastest way to improve.</p><h2>Play games and review them</h2><p>You need to play games to improve, but you also need to review them. After each game, look at your mistakes and learn from them. Why did you lose that piece? What did you miss? Reviewing your games is how you learn.</p><div class="tip"><strong>Pro tip:</strong> Play slower games, not just blitz. A longer game gives you time to think, and thinking is how you learn. Blitz is fun, but it doesn't teach you as much.</div><h2>Study the masters</h2><p>One of the best ways to improve is to study the games of the masters. You can learn a lot by seeing how the best players think and play. There are books and online courses with master games, and they're a great learning tool.</p><p>Improving at chess takes practice and the right approach. Learn the basics, practice tactics, review your games, and study the masters. Do that, and you'll get better.</p>
+      <figure class="inbody"><img src="/images/chess.png" alt="How to Get Better at Chess" loading="lazy" /><figcaption>How to Get Better at Chess</figcaption></figure>
+      <div class="related"><h3>Related reading</h3><a href="/blogs/how-to-play-chess-online.html">our chess guide</a><a href="/blogs/how-to-get-better-at-gaming.html">our guide to getting better at gaming</a><a href="https://en.wikipedia.org/wiki/Chess" target="_blank" rel="noopener nofollow">Learn more about this game</a></div>
       <div class="related">
         <h3>Keep reading</h3>
         <a href="/blogs/geometry-dash-tips-for-beginners.html">Geometry Dash Tips for Beginners: How to Stop Dying at 3%</a><a href="/blogs/slope-game-high-score-tips.html">How to Get a High Score in Slope: The Only Guide You Need</a><a href="/blogs/moto-x3m-all-levels-guide.html">Moto X3M: How to Beat Every Level Without Rage Quitting</a>
@@ -124,6 +147,21 @@
     </div>
     <p class="disclaimer">We link to third-party games (we don't host them). Cookies &amp; ads keep Switchere Club free. <a href="/privacypolicy.html" style="display:inline;color:var(--accent);">Privacy Policy</a>.</p>
   </div></footer>
+  <button class="backtop" id="backTop" aria-label="Back to top">&uarr;</button>
+  <script>
+    (function(){
+      var bt = document.getElementById('backTop');
+      if (bt) {
+        window.addEventListener('scroll', function () {
+          if (window.scrollY > 300) bt.classList.add('show');
+          else bt.classList.remove('show');
+        });
+        bt.addEventListener('click', function () {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+    })();
+  </script>
   <script src="/ads.js"></script>
 </body>
 </html>

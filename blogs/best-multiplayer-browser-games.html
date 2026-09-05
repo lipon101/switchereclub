@@ -89,6 +89,26 @@
     footer a{display:block;color:var(--muted);font-size:.9rem;padding:3px 0;}
     footer a:hover{color:var(--accent);}
     .disclaimer{color:var(--muted);font-size:.8rem;margin-top:20px;border-top:1px solid var(--border);padding-top:14px;}
+    .bcard .bimg{width:100%;height:170px;object-fit:cover;display:block;background:var(--panel);}
+    .bcard .bimg-wrap{position:relative;overflow:hidden;}
+    .bcard .bimg-wrap::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(14,20,32,.55));pointer-events:none;}
+    .bcard .bcat{padding-top:14px;}
+    .bcard .bimg-wrap .bcat{position:absolute;top:10px;left:12px;z-index:2;padding:4px 10px;border-radius:20px;background:rgba(14,20,32,.75);backdrop-filter:blur(4px);font-size:.68rem;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:var(--accent);}
+    .article .hero{width:100%;max-height:420px;object-fit:cover;border-radius:14px;margin:18px 0 6px;display:block;border:1px solid var(--border);}
+    .article .fig{margin:22px 0;}
+    .article .fig img{width:100%;border-radius:12px;display:block;border:1px solid var(--border);}
+    .article .fig figcaption{color:var(--muted);font-size:.8rem;margin-top:8px;text-align:center;}
+    .article .inbody{margin:22px 0;}
+    .article .inbody img{width:100%;border-radius:12px;display:block;border:1px solid var(--border);}
+    .article .inbody figcaption{color:var(--muted);font-size:.8rem;margin-top:8px;text-align:center;}
+    .article a{color:var(--accent2);}
+    .article a:hover{text-decoration:underline;}
+    .backtop{position:fixed;bottom:26px;right:26px;z-index:90;width:46px;height:46px;border-radius:50%;background:var(--accent);color:#fff;border:none;font-size:1.3rem;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(34,197,94,.35);opacity:0;visibility:hidden;transform:translateY(12px);transition:.25s;}
+    .backtop.show{opacity:1;visibility:visible;transform:translateY(0);}
+    .backtop:hover{filter:brightness(1.1);}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:translateY(0);}}
+    .bcard{animation:fadeUp .5s ease both;}
+    .bcard:hover{transform:translateY(-6px);border-color:var(--accent);box-shadow:0 16px 34px rgba(34,197,94,.18);}
     @media(max-width:600px){.blog-grid{grid-template-columns:1fr;}}
   </style>
 </head>
@@ -109,6 +129,7 @@
       <div class="acat">Game Lists</div>
       <h1>The Best Multiplayer Browser Games to Play With Friends</h1>
       <div class="ameta">2026-08-17 &middot; 6 min read</div>
+      <img class="hero" src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Anarch_MP.png" alt="The Best Multiplayer Browser Games to Play With Friends" loading="lazy" />
       <div class="ad-slot" data-adsterra data-key="793d8bb524d00a156bcd9b13090236d8" data-w="300" data-h="250" style="max-width:340px;margin:18px auto;"></div>
       <p>Multiplayer games are the best way to play with friends. And you don't need a console to play them. The browser has some great multiplayer games. Here are the best ones you can play right now.</p>
 <h2>Among Us</h2>
@@ -127,6 +148,8 @@
 <h2>The best way to play</h2>
 <p>Multiplayer games are best played with a group. The more, the merrier, and it's a low-effort way to stay connected with friends who live far away.</p>
 <p>So, if you want to play with friends, try a multiplayer game. You'll have a blast.</p>
+      <figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Lyon_E-Sport_9_-_Palais_des_sports_de_Lyon_-_LAN_party_%28detail%29.jpg/960px-Lyon_E-Sport_9_-_Palais_des_sports_de_Lyon_-_LAN_party_%28detail%29.jpg" alt="Lyon E-Sport 9 - Palais des sports de Lyon - LAN party (detail).jpg" loading="lazy" /><figcaption>Lyon E-Sport 9 - Palais des sports de Lyon - LAN party (detail).jpg</figcaption></figure><figure class="inbody"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Anarch_MP.png" alt="A multiplayer gaming event" loading="lazy" /><figcaption>A multiplayer gaming event</figcaption></figure>
+      <div class="related"><h3>Related reading</h3><a href="/blogs/best-browser-games-no-download.html">our no-download browser games list</a><a href="/blogs/best-games-to-play-with-friends-online.html">our games to play with friends list</a><a href="https://en.wikipedia.org/wiki/Browser_game" target="_blank" rel="noopener nofollow">Learn more about this game</a></div>
       <div class="related">
         <h3>Keep reading</h3>
         <a href="/blogs/best-free-browser-games-2026.html">The 15 Best Free Browser Games to Play in 2026</a><a href="/blogs/best-2-player-games-online.html">The Best 2-Player Games to Play Online With a Friend</a><a href="/blogs/best-idle-games-browser.html">The Best Idle Games to Play in Your Browser (and Why They&#x27;re Addictive)</a>
@@ -140,6 +163,21 @@
     </div>
     <p class="disclaimer">We link to third-party games (we don't host them). Cookies &amp; ads keep Switchere Club free. <a href="/privacypolicy.html" style="display:inline;color:var(--accent);">Privacy Policy</a>.</p>
   </div></footer>
+  <button class="backtop" id="backTop" aria-label="Back to top">&uarr;</button>
+  <script>
+    (function(){
+      var bt = document.getElementById('backTop');
+      if (bt) {
+        window.addEventListener('scroll', function () {
+          if (window.scrollY > 300) bt.classList.add('show');
+          else bt.classList.remove('show');
+        });
+        bt.addEventListener('click', function () {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+    })();
+  </script>
   <script src="/ads.js"></script>
 </body>
 </html>

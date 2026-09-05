@@ -89,6 +89,26 @@
     footer a{display:block;color:var(--muted);font-size:.9rem;padding:3px 0;}
     footer a:hover{color:var(--accent);}
     .disclaimer{color:var(--muted);font-size:.8rem;margin-top:20px;border-top:1px solid var(--border);padding-top:14px;}
+    .bcard .bimg{width:100%;height:170px;object-fit:cover;display:block;background:var(--panel);}
+    .bcard .bimg-wrap{position:relative;overflow:hidden;}
+    .bcard .bimg-wrap::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(14,20,32,.55));pointer-events:none;}
+    .bcard .bcat{padding-top:14px;}
+    .bcard .bimg-wrap .bcat{position:absolute;top:10px;left:12px;z-index:2;padding:4px 10px;border-radius:20px;background:rgba(14,20,32,.75);backdrop-filter:blur(4px);font-size:.68rem;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:var(--accent);}
+    .article .hero{width:100%;max-height:420px;object-fit:cover;border-radius:14px;margin:18px 0 6px;display:block;border:1px solid var(--border);}
+    .article .fig{margin:22px 0;}
+    .article .fig img{width:100%;border-radius:12px;display:block;border:1px solid var(--border);}
+    .article .fig figcaption{color:var(--muted);font-size:.8rem;margin-top:8px;text-align:center;}
+    .article .inbody{margin:22px 0;}
+    .article .inbody img{width:100%;border-radius:12px;display:block;border:1px solid var(--border);}
+    .article .inbody figcaption{color:var(--muted);font-size:.8rem;margin-top:8px;text-align:center;}
+    .article a{color:var(--accent2);}
+    .article a:hover{text-decoration:underline;}
+    .backtop{position:fixed;bottom:26px;right:26px;z-index:90;width:46px;height:46px;border-radius:50%;background:var(--accent);color:#fff;border:none;font-size:1.3rem;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(34,197,94,.35);opacity:0;visibility:hidden;transform:translateY(12px);transition:.25s;}
+    .backtop.show{opacity:1;visibility:visible;transform:translateY(0);}
+    .backtop:hover{filter:brightness(1.1);}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:translateY(0);}}
+    .bcard{animation:fadeUp .5s ease both;}
+    .bcard:hover{transform:translateY(-6px);border-color:var(--accent);box-shadow:0 16px 34px rgba(34,197,94,.18);}
     @media(max-width:600px){.blog-grid{grid-template-columns:1fr;}}
   </style>
 </head>
@@ -109,6 +129,7 @@
       <div class="acat">Guides</div>
       <h1>How to Play Solitaire: Rules, Tips, and Winning Strategies</h1>
       <div class="ameta">2026-09-01 &middot; 7 min read</div>
+      <img class="hero" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/Carpet_patience_2.jpg/960px-Carpet_patience_2.jpg" alt="How to Play Solitaire: Rules, Tips, and Winning Strategies" loading="lazy" />
       <div class="ad-slot" data-adsterra data-key="793d8bb524d00a156bcd9b13090236d8" data-w="300" data-h="250" style="max-width:340px;margin:18px auto;"></div>
       <p>Solitaire is one of those games everyone has played but almost nobody knows the rules to. You've probably clicked through a few cards on your computer and called it a day. But there's a real game here, and once you understand how it works, it's genuinely satisfying. Here's how to play Solitaire properly, and how to win more often.</p>
 <h2>The setup</h2>
@@ -125,6 +146,8 @@
 <h2>Know when to give up</h2>
 <p>Here's the honest truth: not every game of Solitaire is winnable. Some deals are just bad, and no amount of skill will fix them. If you've made all the obvious moves and you're stuck, it's okay to start a new game. The best players know when to cut their losses and try a better deal. It's not giving up, it's being smart.</p>
 <p>Solitaire is a game of patience and strategy. Move your Aces, reveal your face-down cards, and use your empty columns wisely. Do that, and you'll win more than you lose. And even when you lose, it's still a relaxing way to spend a few minutes.</p>
+      <figure class="inbody"><img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Gate_%28solitaire%29.jpg" alt="Gate (solitaire).jpg" loading="lazy" /><figcaption>Gate (solitaire).jpg</figcaption></figure><figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/Carpet_patience_2.jpg/960px-Carpet_patience_2.jpg" alt="A solitaire card game" loading="lazy" /><figcaption>A solitaire card game</figcaption></figure>
+      <div class="related"><h3>Related reading</h3><a href="/blogs/how-to-get-better-at-gaming.html">our guide to getting better at gaming</a><a href="/blogs/how-to-improve-reaction-time-gaming.html">our reaction time guide</a><a href="https://en.wikipedia.org/wiki/Klondike_(solitaire)" target="_blank" rel="noopener nofollow">Learn more about this game</a></div>
       <div class="related">
         <h3>Keep reading</h3>
         <a href="/blogs/geometry-dash-tips-for-beginners.html">Geometry Dash Tips for Beginners: How to Stop Dying at 3%</a><a href="/blogs/slope-game-high-score-tips.html">How to Get a High Score in Slope: The Only Guide You Need</a><a href="/blogs/moto-x3m-all-levels-guide.html">Moto X3M: How to Beat Every Level Without Rage Quitting</a>
@@ -138,6 +161,21 @@
     </div>
     <p class="disclaimer">We link to third-party games (we don't host them). Cookies &amp; ads keep Switchere Club free. <a href="/privacypolicy.html" style="display:inline;color:var(--accent);">Privacy Policy</a>.</p>
   </div></footer>
+  <button class="backtop" id="backTop" aria-label="Back to top">&uarr;</button>
+  <script>
+    (function(){
+      var bt = document.getElementById('backTop');
+      if (bt) {
+        window.addEventListener('scroll', function () {
+          if (window.scrollY > 300) bt.classList.add('show');
+          else bt.classList.remove('show');
+        });
+        bt.addEventListener('click', function () {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+    })();
+  </script>
   <script src="/ads.js"></script>
 </body>
 </html>

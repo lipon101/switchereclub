@@ -89,6 +89,26 @@
     footer a{display:block;color:var(--muted);font-size:.9rem;padding:3px 0;}
     footer a:hover{color:var(--accent);}
     .disclaimer{color:var(--muted);font-size:.8rem;margin-top:20px;border-top:1px solid var(--border);padding-top:14px;}
+    .bcard .bimg{width:100%;height:170px;object-fit:cover;display:block;background:var(--panel);}
+    .bcard .bimg-wrap{position:relative;overflow:hidden;}
+    .bcard .bimg-wrap::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(14,20,32,.55));pointer-events:none;}
+    .bcard .bcat{padding-top:14px;}
+    .bcard .bimg-wrap .bcat{position:absolute;top:10px;left:12px;z-index:2;padding:4px 10px;border-radius:20px;background:rgba(14,20,32,.75);backdrop-filter:blur(4px);font-size:.68rem;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:var(--accent);}
+    .article .hero{width:100%;max-height:420px;object-fit:cover;border-radius:14px;margin:18px 0 6px;display:block;border:1px solid var(--border);}
+    .article .fig{margin:22px 0;}
+    .article .fig img{width:100%;border-radius:12px;display:block;border:1px solid var(--border);}
+    .article .fig figcaption{color:var(--muted);font-size:.8rem;margin-top:8px;text-align:center;}
+    .article .inbody{margin:22px 0;}
+    .article .inbody img{width:100%;border-radius:12px;display:block;border:1px solid var(--border);}
+    .article .inbody figcaption{color:var(--muted);font-size:.8rem;margin-top:8px;text-align:center;}
+    .article a{color:var(--accent2);}
+    .article a:hover{text-decoration:underline;}
+    .backtop{position:fixed;bottom:26px;right:26px;z-index:90;width:46px;height:46px;border-radius:50%;background:var(--accent);color:#fff;border:none;font-size:1.3rem;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(34,197,94,.35);opacity:0;visibility:hidden;transform:translateY(12px);transition:.25s;}
+    .backtop.show{opacity:1;visibility:visible;transform:translateY(0);}
+    .backtop:hover{filter:brightness(1.1);}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:translateY(0);}}
+    .bcard{animation:fadeUp .5s ease both;}
+    .bcard:hover{transform:translateY(-6px);border-color:var(--accent);box-shadow:0 16px 34px rgba(34,197,94,.18);}
     @media(max-width:600px){.blog-grid{grid-template-columns:1fr;}}
   </style>
 </head>
@@ -109,8 +129,11 @@
       <div class="acat">Guides</div>
       <h1>Gaming on a Chromebook: What Works and What Doesn&#x27;t</h1>
       <div class="ameta">2026-09-05 &middot; 7 min read</div>
+      <img class="hero" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Chromebook_laptop_for_Wikimedians_1.jpg/960px-Chromebook_laptop_for_Wikimedians_1.jpg" alt="Gaming on a Chromebook: What Works and What Doesn&#x27;t" loading="lazy" />
       <div class="ad-slot" data-adsterra data-key="793d8bb524d00a156bcd9b13090236d8" data-w="300" data-h="250" style="max-width:340px;margin:18px auto;"></div>
       <p>Chromebooks are cheap, light, and great for school and work. But they're not built for gaming. That said, you can still play games on a Chromebook, and some of them work surprisingly well. Here's what works, what doesn't, and how to get the most out of it.</p><h2>Browser games are your friend</h2><p>The best games to play on a Chromebook are browser games. They run in the browser, so they don't need a powerful machine. You can play games like Geometry Dash, Slope, and 2048 right in your browser. Browser games are the sweet spot for Chromebook gaming.</p><h2>Android games work too</h2><p>Many Chromebooks can run Android apps, which means you can play Android games. There are a lot of great Android games, and they run well on Chromebooks. Just check if your Chromebook supports Android apps, and you can play a huge library of games.</p><h2>Cloud gaming is an option</h2><p>If you want to play bigger games, cloud gaming is an option. Services like GeForce Now let you stream games to your Chromebook, so you can play games that would never run on a Chromebook. It requires a good internet connection, but it works.</p><div class="tip"><strong>Pro tip:</strong> Keep your Chromebook updated. ChromeOS updates can improve performance and fix bugs, and they can make your games run better.</div><h2>Know the limits</h2><p>It's important to know the limits. A Chromebook isn't going to run the latest AAA games. But if you stick to browser games, Android games, and cloud gaming, you can have a lot of fun. Don't expect too much, and you won't be disappointed.</p><p>Gaming on a Chromebook is possible, if you know what to play. Stick to browser games, try Android games, and consider cloud gaming. Do that, and you can have a lot of fun on your Chromebook.</p>
+      <figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Chromebook_laptop_for_Wikimedians_2.jpg/960px-Chromebook_laptop_for_Wikimedians_2.jpg" alt="Chromebook laptop for Wikimedians 2.jpg" loading="lazy" /><figcaption>Chromebook laptop for Wikimedians 2.jpg</figcaption></figure><figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Chromebook_laptop_for_Wikimedians_1.jpg/960px-Chromebook_laptop_for_Wikimedians_1.jpg" alt="A Chromebook laptop" loading="lazy" /><figcaption>A Chromebook laptop</figcaption></figure>
+      <div class="related"><h3>Related reading</h3><a href="/blogs/best-games-that-look-like-work.html">our games that look like work list</a><a href="/blogs/how-to-get-better-at-gaming.html">our guide to getting better at gaming</a><a href="https://en.wikipedia.org/wiki/Chromebook" target="_blank" rel="noopener nofollow">Learn more about this game</a></div>
       <div class="related">
         <h3>Keep reading</h3>
         <a href="/blogs/geometry-dash-tips-for-beginners.html">Geometry Dash Tips for Beginners: How to Stop Dying at 3%</a><a href="/blogs/slope-game-high-score-tips.html">How to Get a High Score in Slope: The Only Guide You Need</a><a href="/blogs/moto-x3m-all-levels-guide.html">Moto X3M: How to Beat Every Level Without Rage Quitting</a>
@@ -124,6 +147,21 @@
     </div>
     <p class="disclaimer">We link to third-party games (we don't host them). Cookies &amp; ads keep Switchere Club free. <a href="/privacypolicy.html" style="display:inline;color:var(--accent);">Privacy Policy</a>.</p>
   </div></footer>
+  <button class="backtop" id="backTop" aria-label="Back to top">&uarr;</button>
+  <script>
+    (function(){
+      var bt = document.getElementById('backTop');
+      if (bt) {
+        window.addEventListener('scroll', function () {
+          if (window.scrollY > 300) bt.classList.add('show');
+          else bt.classList.remove('show');
+        });
+        bt.addEventListener('click', function () {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+    })();
+  </script>
   <script src="/ads.js"></script>
 </body>
 </html>

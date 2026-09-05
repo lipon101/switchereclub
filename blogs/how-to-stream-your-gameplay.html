@@ -89,6 +89,26 @@
     footer a{display:block;color:var(--muted);font-size:.9rem;padding:3px 0;}
     footer a:hover{color:var(--accent);}
     .disclaimer{color:var(--muted);font-size:.8rem;margin-top:20px;border-top:1px solid var(--border);padding-top:14px;}
+    .bcard .bimg{width:100%;height:170px;object-fit:cover;display:block;background:var(--panel);}
+    .bcard .bimg-wrap{position:relative;overflow:hidden;}
+    .bcard .bimg-wrap::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(14,20,32,.55));pointer-events:none;}
+    .bcard .bcat{padding-top:14px;}
+    .bcard .bimg-wrap .bcat{position:absolute;top:10px;left:12px;z-index:2;padding:4px 10px;border-radius:20px;background:rgba(14,20,32,.75);backdrop-filter:blur(4px);font-size:.68rem;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:var(--accent);}
+    .article .hero{width:100%;max-height:420px;object-fit:cover;border-radius:14px;margin:18px 0 6px;display:block;border:1px solid var(--border);}
+    .article .fig{margin:22px 0;}
+    .article .fig img{width:100%;border-radius:12px;display:block;border:1px solid var(--border);}
+    .article .fig figcaption{color:var(--muted);font-size:.8rem;margin-top:8px;text-align:center;}
+    .article .inbody{margin:22px 0;}
+    .article .inbody img{width:100%;border-radius:12px;display:block;border:1px solid var(--border);}
+    .article .inbody figcaption{color:var(--muted);font-size:.8rem;margin-top:8px;text-align:center;}
+    .article a{color:var(--accent2);}
+    .article a:hover{text-decoration:underline;}
+    .backtop{position:fixed;bottom:26px;right:26px;z-index:90;width:46px;height:46px;border-radius:50%;background:var(--accent);color:#fff;border:none;font-size:1.3rem;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(34,197,94,.35);opacity:0;visibility:hidden;transform:translateY(12px);transition:.25s;}
+    .backtop.show{opacity:1;visibility:visible;transform:translateY(0);}
+    .backtop:hover{filter:brightness(1.1);}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:translateY(0);}}
+    .bcard{animation:fadeUp .5s ease both;}
+    .bcard:hover{transform:translateY(-6px);border-color:var(--accent);box-shadow:0 16px 34px rgba(34,197,94,.18);}
     @media(max-width:600px){.blog-grid{grid-template-columns:1fr;}}
   </style>
 </head>
@@ -109,8 +129,11 @@
       <div class="acat">Guides</div>
       <h1>How to Stream Your Gameplay: A Beginner&#x27;s Guide</h1>
       <div class="ameta">2026-09-05 &middot; 8 min read</div>
+      <img class="hero" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Google_Stadia_Cloud-gaming_%2848605895992%29.jpg/960px-Google_Stadia_Cloud-gaming_%2848605895992%29.jpg" alt="How to Stream Your Gameplay: A Beginner&#x27;s Guide" loading="lazy" />
       <div class="ad-slot" data-adsterra data-key="793d8bb524d00a156bcd9b13090236d8" data-w="300" data-h="250" style="max-width:340px;margin:18px auto;"></div>
       <p>Streaming your gameplay is a lot of fun, and it's easier to get started than you might think. You don't need a fancy setup or a huge following. You just need the basics and a willingness to have fun. Here's how to get started streaming.</p><h2>What you need</h2><p>To stream, you need a few things: a computer that can run the game, a streaming program, and an account on a streaming platform. The most popular platform is Twitch, but there are others. You don't need a fancy camera or microphone to start. You can upgrade as you go.</p><h2>Set up your stream</h2><p>Once you have the basics, you need to set up your stream. This means setting up your streaming software, connecting your game, and adding a title and a description. It takes a little time to set up, but it's not hard. There are plenty of guides online to help you.</p><h2>Be yourself</h2><p>The most important thing about streaming is being yourself. People watch streams for the personality, not just the game. So be yourself, talk to your viewers, and have fun. The more you're yourself, the more people will want to watch.</p><div class="tip"><strong>Pro tip:</strong> Don't worry about the number of viewers. When you're starting out, you'll have few viewers, and that's fine. Focus on having fun and being consistent. The viewers will come with time.</div><h2>Be consistent</h2><p>Consistency is key in streaming. If you stream at the same time every week, people will know when to watch. It's better to stream a few times a week consistently than to stream a lot once and then disappear. Consistency builds an audience.</p><p>Streaming is a fun and rewarding hobby. Get the basics, set up your stream, be yourself, and be consistent. Do that, and you'll build a channel you're proud of.</p>
+      <figure class="inbody"><img src="https://upload.wikimedia.org/wikipedia/commons/b/bc/Stormtrooper_at_video_game_trade_show_%281115754217%29.jpg" alt="Stormtrooper at video game trade show (1115754217).jpg" loading="lazy" /><figcaption>Stormtrooper at video game trade show (1115754217).jpg</figcaption></figure><figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Google_Stadia_Cloud-gaming_%2848605895992%29.jpg/960px-Google_Stadia_Cloud-gaming_%2848605895992%29.jpg" alt="Cloud gaming" loading="lazy" /><figcaption>Cloud gaming</figcaption></figure>
+      <div class="related"><h3>Related reading</h3><a href="/blogs/how-to-get-better-at-gaming.html">our guide to getting better at gaming</a><a href="/blogs/how-to-improve-reaction-time-gaming.html">our reaction time guide</a><a href="https://en.wikipedia.org/wiki/Video_game_live_streaming" target="_blank" rel="noopener nofollow">Learn more about this game</a></div>
       <div class="related">
         <h3>Keep reading</h3>
         <a href="/blogs/geometry-dash-tips-for-beginners.html">Geometry Dash Tips for Beginners: How to Stop Dying at 3%</a><a href="/blogs/slope-game-high-score-tips.html">How to Get a High Score in Slope: The Only Guide You Need</a><a href="/blogs/moto-x3m-all-levels-guide.html">Moto X3M: How to Beat Every Level Without Rage Quitting</a>
@@ -124,6 +147,21 @@
     </div>
     <p class="disclaimer">We link to third-party games (we don't host them). Cookies &amp; ads keep Switchere Club free. <a href="/privacypolicy.html" style="display:inline;color:var(--accent);">Privacy Policy</a>.</p>
   </div></footer>
+  <button class="backtop" id="backTop" aria-label="Back to top">&uarr;</button>
+  <script>
+    (function(){
+      var bt = document.getElementById('backTop');
+      if (bt) {
+        window.addEventListener('scroll', function () {
+          if (window.scrollY > 300) bt.classList.add('show');
+          else bt.classList.remove('show');
+        });
+        bt.addEventListener('click', function () {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+    })();
+  </script>
   <script src="/ads.js"></script>
 </body>
 </html>
