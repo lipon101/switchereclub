@@ -9,22 +9,13 @@
   function injectStyle(){
     if (document.getElementById('sc-consent-style')) return;
     var css = [
-      "#sc-consent{position:fixed;left:0;right:0;bottom:0;z-index:999999;padding:14px;font-family:'Inter','Segoe UI',system-ui,sans-serif;}",
-      "#sc-consent .sc-box{max-width:560px;margin:0 auto;display:flex;align-items:center;gap:16px;background:rgba(21,29,44,.98);border:1px solid #2a3446;border-radius:18px;padding:18px 20px;box-shadow:0 24px 60px rgba(0,0,0,.55);backdrop-filter:blur(14px);}",
-      "#sc-consent .sc-icon{flex:0 0 auto;width:46px;height:46px;border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:24px;background:linear-gradient(135deg,#22c55e,#16a34a);color:#fff;box-shadow:0 6px 16px rgba(34,197,94,.35);}",
-      "#sc-consent .sc-text{flex:1 1 auto;color:#cbd2e0;font-size:13px;line-height:1.45;min-width:120px;}",
-      "#sc-consent .sc-text strong{color:#fff;font-weight:700;display:block;margin-bottom:2px;font-size:14.5px;}",
+      "#sc-consent{position:fixed;left:12px;right:12px;bottom:12px;z-index:999999;font-family:'Inter','Segoe UI',system-ui,sans-serif;max-width:420px;margin:0 auto;opacity:0;transform:translateY(16px);transition:opacity .45s ease,transform .45s ease;pointer-events:none;}",
+      "#sc-consent.sc-show{opacity:1;transform:translateY(0);pointer-events:auto;}",
+      "#sc-consent .sc-box{display:flex;align-items:center;gap:10px;background:rgba(21,29,44,.96);border:1px solid #2a3446;border-radius:14px;padding:11px 13px;box-shadow:0 12px 32px rgba(0,0,0,.45);backdrop-filter:blur(10px);}",
+      "#sc-consent .sc-text{flex:1 1 auto;color:#b6c0d0;font-size:12px;line-height:1.4;min-width:120px;}",
       "#sc-consent .sc-text a{color:#4facfe;text-decoration:underline;font-weight:600;}",
-      "#sc-consent .sc-text a:hover{color:#7cc4ff;}",
-      "#sc-consent .sc-actions{flex:0 0 auto;display:flex;gap:10px;align-items:center;}",
-      "#sc-consent button{font-family:'Inter','Segoe UI',system-ui,sans-serif;font-weight:700;font-size:13.5px;border-radius:11px;padding:11px 20px;cursor:pointer;transition:transform .15s,box-shadow .15s,background .15s,border-color .15s;line-height:1;}",
-      "#sc-consent button:hover{transform:translateY(-1px);}",
-      "#sc-consent button:active{transform:translateY(0);}",
-      "#sc-consent .sc-accept{background:linear-gradient(135deg,#22c55e,#16a34a);color:#fff;border:1px solid transparent;box-shadow:0 6px 16px rgba(34,197,94,.35);}",
-      "#sc-consent .sc-accept:hover{box-shadow:0 8px 22px rgba(34,197,94,.5);background:linear-gradient(135deg,#25d264,#17ae4f);}",
-      "#sc-consent .sc-decline{background:rgba(255,255,255,.04);color:#e6e9ef;border:1px solid #3b4a63;box-shadow:none;}",
-      "#sc-consent .sc-decline:hover{background:#1f2937;color:#fff;border-color:#4facfe;box-shadow:0 4px 14px rgba(79,172,254,.18);}",
-      "@media(max-width:600px){#sc-consent .sc-box{flex-direction:column;align-items:stretch;text-align:left;}#sc-consent .sc-actions{width:100%;}#sc-consent .sc-actions button{flex:1;}}",
+      "#sc-consent .sc-close{flex:0 0 auto;width:26px;height:26px;border:none;border-radius:8px;background:rgba(255,255,255,.05);color:#8b96a8;font-size:15px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .15s,color .15s;}",
+      "#sc-consent .sc-close:hover{background:rgba(255,255,255,.12);color:#fff;}",
       "#sc-adblock{position:fixed;left:0;right:0;top:0;z-index:9999998;padding:14px;font-family:'Inter','Segoe UI',system-ui,sans-serif;}",
       "#sc-adblock .ab-box{max-width:600px;margin:0 auto;display:flex;align-items:center;gap:14px;background:rgba(21,29,44,.98);border:1px solid #2a3446;border-radius:16px;padding:16px 18px;box-shadow:0 24px 60px rgba(0,0,0,.55);backdrop-filter:blur(14px);}",
       "#sc-adblock .ab-icon{flex:0 0 auto;width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;background:linear-gradient(135deg,#4facfe,#2563eb);color:#fff;box-shadow:0 6px 16px rgba(79,172,254,.35);}",
@@ -45,13 +36,17 @@
     injectStyle();
     var el = document.createElement('div'); el.id='sc-consent';
     el.innerHTML = '<div class="sc-box">'
-      + '<div class="sc-icon">🍪</div>'
-      + '<div class="sc-text">Cookies & ads keep Switchere Club free. <a href="/privacypolicy.html">Privacy Policy</a></div>'
-      + '<div class="sc-actions"><button class="sc-accept" id="sc-consent-ok" type="button">Accept</button><button class="sc-decline" id="sc-consent-no" type="button">Decline</button></div>'
+      + '<div class="sc-text">\ud83c\udf6a Cookies & ads keep Switchere Club free. <a href="/privacypolicy.html">Privacy Policy</a></div>'
+      + '<button class="sc-close" type="button" aria-label="Dismiss">\u2715</button>'
       + '</div>';
     document.body.appendChild(el);
-    el.querySelector('#sc-consent-ok').onclick=function(){try{localStorage.setItem(CONSENT_KEY,'1');}catch(e){}el.remove();};
-    el.querySelector('#sc-consent-no').onclick=function(){try{localStorage.setItem(CONSENT_KEY,'0');}catch(e){}el.remove();};
+    // slide in
+    setTimeout(function(){ el.className = 'sc-show'; }, 60);
+    // dismiss just hides it; ads are ALWAYS running regardless (no gating)
+    var dismiss = function(){ try{ localStorage.setItem(CONSENT_KEY,'1'); }catch(e){} if(el.parentNode) el.parentNode.removeChild(el); };
+    el.querySelector('.sc-close').onclick = dismiss;
+    // auto-dismiss quietly after a few seconds (pro-site pattern, never blocks ads)
+    setTimeout(function(){ if(document.getElementById('sc-consent')) dismiss(); }, 9000);
   }
 
   // ---- script injectors ----
