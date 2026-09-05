@@ -63,6 +63,16 @@ def head(title, desc, canonical, og_type="article"):
     .bcard .bmeta{{color:var(--muted);font-size:.78rem;padding:10px 18px 0;}}
     .bcard .readmore{{display:inline-block;margin:14px 18px 18px;padding:9px 16px;border-radius:9px;background:var(--accent);color:#fff;font-weight:700;font-size:.88rem;align-self:flex-start;transition:.15s;}}
     .bcard .readmore:hover{{filter:brightness(1.1);}}
+    .cat-bar{{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:18px 0 6px;}}
+    .cat-bar a{{padding:7px 15px;border-radius:20px;background:var(--card);border:1px solid var(--border);color:var(--muted);font-weight:600;font-size:.85rem;transition:.15s;}}
+    .cat-bar a:hover,.cat-bar a.active{{background:var(--accent);color:#fff;border-color:var(--accent);}}
+    .search-wrap{{max-width:520px;margin:18px auto 4px;}}
+    .search-wrap input{{width:100%;padding:12px 16px;border-radius:10px;border:1px solid var(--border);background:var(--card);color:var(--txt);font-size:.95rem;outline:none;}}
+    .search-wrap input:focus{{border-color:var(--accent);}}
+    .filter-row{{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:12px 0 4px;}}
+    .filter-btn{{padding:7px 15px;border-radius:20px;background:var(--card);border:1px solid var(--border);color:var(--muted);font-weight:600;font-size:.85rem;cursor:pointer;transition:.15s;font-family:inherit;}}
+    .filter-btn:hover,.filter-btn.active{{background:var(--accent);color:#fff;border-color:var(--accent);}}
+    .no-results{{display:none;text-align:center;color:var(--muted);padding:30px 0;}}
     .article{{max-width:760px;margin:0 auto;padding:30px 0 40px;}}
     .article .crumb{{color:var(--muted);font-size:.85rem;margin-bottom:14px;}}
     .article .crumb a:hover{{color:var(--accent);}}
@@ -123,30 +133,126 @@ def footer():
 </body>
 </html>"""
 
+# ---------- category helpers ----------
+def category_slug(cat):
+    return cat.lower().replace(" ", "-")
+
+def categories():
+    seen = []
+    for a in ARTICLES:
+        if a["category"] not in seen:
+            seen.append(a["category"])
+    return seen
+
 # ---------- build listing page ----------
 def build_listing():
     cards = []
     for a in ARTICLES:
-        cards.append(f"""<article class="bcard">
+        cards.append(f"""<article class="bcard" data-cat="{html.escape(a['category'])}" data-title="{html.escape(a['title'].lower())}" data-desc="{html.escape(a['description'].lower())}">
       <div class="bcat">{html.escape(a["category"])}</div>
       <h3><a href="/blogs/{a["slug"]}.html">{html.escape(a["title"])}</a></h3>
       <p>{html.escape(a["description"])}</p>
       <div class="bmeta">{a["date"]} &middot; {a["read_time"]} min read</div>
       <a class="readmore" href="/blogs/{a['slug']}.html">Read More</a>
     </article>""")
+    cat_links = "".join(
+        f'<a href="/blogs/category/{category_slug(c)}.html">{html.escape(c)}</a>'
+        for c in categories()
+    )
+    filter_btns = "".join(
+        f'<button class="filter-btn" data-filter="{html.escape(c)}">{html.escape(c)}</button>'
+        for c in categories()
+    )
     body = f"""<main class="wrap">
     <section class="page-head">
       <h1>Blog &amp; <span class="grad">Gaming Guides</span></h1>
       <p>Tips, tricks, walkthroughs and honest guides for the games you love. Written by people who actually play them.</p>
     </section>
-    <div class="ad-slot" data-adsterra data-key="793d8bb524d00a156bcd9b13090236d8" data-w="300" data-h="250" style="max-width:340px;margin-left:auto;margin-right:auto;"></div>
-    <div class="blog-grid">
+    <div class="cat-bar">{cat_links}</div>
+    <div class="search-wrap"><input type="text" id="blogSearch" placeholder="Search articles, games, topics..." aria-label="Search articles" /></div>
+    <div class="filter-row"><button class="filter-btn active" data-filter="all">All</button>{filter_btns}</div>
+    <div class="ad-slot" data-adsterra data-key="8988dbb524d00a156bcd9b13090236d8" data-w="300" data-h="250" style="max-width:340px;margin-left:auto;margin-right:auto;"></div>
+    <div class="blog-grid" id="blogGrid">
     {''.join(cards)}
     </div>
-  </main>"""
+    <div class="no-results" id="noResults">No articles match your search. Try a different keyword or category.</div>
+  </main>
+  <script>
+    (function(){{
+      var grid = document.getElementById('blogGrid');
+      var cards = Array.prototype.slice.call(grid.querySelectorAll('.bcard'));
+      var search = document.getElementById('blogSearch');
+      var noResults = document.getElementById('noResults');
+      var activeCat = 'all';
+      function apply() {{
+        var q = (search.value || '').toLowerCase().trim();
+        var shown = 0;
+        cards.forEach(function (card) {{
+          var cat = card.getAttribute('data-cat').toLowerCase();
+          var title = card.getAttribute('data-title') || '';
+          var desc = card.getAttribute('data-desc') || '';
+          var matchCat = activeCat === 'all' || cat === activeCat.toLowerCase();
+          var matchQ = !q || title.indexOf(q) !== -1 || desc.indexOf(q) !== -1 || cat.indexOf(q) !== -1;
+          var show = matchCat && matchQ;
+          card.style.display = show ? '' : 'none';
+          if (show) shown++;
+        }});
+        noResults.style.display = shown ? 'none' : 'block';
+      }}
+      search.addEventListener('input', apply);
+      var btns = document.querySelectorAll('.filter-btn');
+      btns.forEach(function (btn) {{
+        btn.addEventListener('click', function () {{
+          btns.forEach(function (b) {{ b.classList.remove('active'); }});
+          btn.classList.add('active');
+          activeCat = btn.getAttribute('data-filter');
+          apply();
+        }});
+      }});
+    }})();
+  </script>"""
     page = head(f"Blog &amp; Gaming Guides \u2014 {BRAND}",
                 "Gaming tips, guides, walkthroughs and honest advice written by real players. Free, useful and easy to read.",
                 f"{SITE}/blogs.html", og_type="website")
+    page += header("blogs") + body + footer()
+    return page
+
+# ---------- build category page ----------
+def build_category(cat):
+    slug = category_slug(cat)
+    cards = []
+    for a in ARTICLES:
+        if a["category"] != cat:
+            continue
+        cards.append(f"""
+            <article class="bcard">
+      <div class="bcat">{html.escape(a["category"])}</div>
+      <h3><a href="/blogs/{a["slug"]}.html">{html.escape(a["title"])}</a></h3>
+      <p>{html.escape(a["description"])}</p>
+      <div class="bmeta">{a["date"]} &middot; {a["read_time"]} min read</div>
+      <a class="readmore" href="/blogs/{a['slug']}.html">Read More</a>
+    </article>""")
+    cat_links = "".join(
+        '<a href="/blogs/category/{}.html"{}>{}</a>'.format(
+            category_slug(c), ' class="active"' if c == cat else "", html.escape(c)
+        )
+        for c in categories()
+    )
+    body = f"""<main class="wrap">
+    <section class="page-head">
+      <h1><span class="grad">{html.escape(cat)}</span></h1>
+      <p>All {html.escape(cat)} articles on {BRAND}. Browse the full collection below.</p>
+    </section>
+    <div class="cat-bar">{cat_links}</div>
+    <div class="ad-slot" data-adsterra data-key="8988aab52420d00a156bcd9b13090236d8" data-w="300" data-h="250" style="max-width:340px;margin-left:auto;margin-right:auto;"></div>
+    <div class="blog-grid">
+    {''.join(cards)}
+    </div>
+    <p style="text-align:center;margin:10px 0 30px;"><a href="/blogs.html" style="color:var(--accent);font-weight:600;">&larr; Back to all articles</a></p>
+  </main>"""
+    page = head(f"{html.escape(cat)} \u2014 {BRAND}",
+                f"All {html.escape(cat)} articles on {BRAND}. Tips, guides and honest advice written by real players.",
+                f"{SITE}/blogs/category/{slug}.html", og_type="website")
     page += header("blogs") + body + footer()
     return page
 
@@ -193,12 +299,16 @@ def build_article(a):
 # ---------- main ----------
 def main():
     os.makedirs("blogs", exist_ok=True)
+    os.makedirs("blogs/category", exist_ok=True)
     with open("blogs.html", "w") as f:
         f.write(build_listing())
     for a in ARTICLES:
         with open(f"blogs/{a['slug']}.html", "w") as f:
             f.write(build_article(a))
-    print(f"Generated blogs.html + {len(ARTICLES)} article pages in blogs/")
+    for c in categories():
+        with open(f"blogs/category/{category_slug(c)}.html", "w") as f:
+            f.write(build_category(c))
+    print(f"Generated blogs.html + {len(ARTICLES)} article pages + {len(categories())} category pages in blogs/")
 
 if __name__ == "__main__":
     import json

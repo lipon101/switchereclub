@@ -51,6 +51,16 @@
     .bcard .bmeta{color:var(--muted);font-size:.78rem;padding:10px 18px 0;}
     .bcard .readmore{display:inline-block;margin:14px 18px 18px;padding:9px 16px;border-radius:9px;background:var(--accent);color:#fff;font-weight:700;font-size:.88rem;align-self:flex-start;transition:.15s;}
     .bcard .readmore:hover{filter:brightness(1.1);}
+    .cat-bar{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:18px 0 6px;}
+    .cat-bar a{padding:7px 15px;border-radius:20px;background:var(--card);border:1px solid var(--border);color:var(--muted);font-weight:600;font-size:.85rem;transition:.15s;}
+    .cat-bar a:hover,.cat-bar a.active{background:var(--accent);color:#fff;border-color:var(--accent);}
+    .search-wrap{max-width:520px;margin:18px auto 4px;}
+    .search-wrap input{width:100%;padding:12px 16px;border-radius:10px;border:1px solid var(--border);background:var(--card);color:var(--txt);font-size:.95rem;outline:none;}
+    .search-wrap input:focus{border-color:var(--accent);}
+    .filter-row{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:12px 0 4px;}
+    .filter-btn{padding:7px 15px;border-radius:20px;background:var(--card);border:1px solid var(--border);color:var(--muted);font-weight:600;font-size:.85rem;cursor:pointer;transition:.15s;font-family:inherit;}
+    .filter-btn:hover,.filter-btn.active{background:var(--accent);color:#fff;border-color:var(--accent);}
+    .no-results{display:none;text-align:center;color:var(--muted);padding:30px 0;}
     .article{max-width:760px;margin:0 auto;padding:30px 0 40px;}
     .article .crumb{color:var(--muted);font-size:.85rem;margin-bottom:14px;}
     .article .crumb a:hover{color:var(--accent);}
@@ -87,609 +97,612 @@
       <h1>Blog &amp; <span class="grad">Gaming Guides</span></h1>
       <p>Tips, tricks, walkthroughs and honest guides for the games you love. Written by people who actually play them.</p>
     </section>
-    <div class="ad-slot" data-adsterra data-key="793d8bb524d00a156bcd9b13090236d8" data-w="300" data-h="250" style="max-width:340px;margin-left:auto;margin-right:auto;"></div>
-    <div class="blog-grid">
-    <article class="bcard">
+    <div class="cat-bar"><a href="/blogs/category/guides.html">Guides</a><a href="/blogs/category/game-lists.html">Game Lists</a><a href="/blogs/category/gaming-culture.html">Gaming Culture</a></div>
+    <div class="search-wrap"><input type="text" id="blogSearch" placeholder="Search articles, games, topics..." aria-label="Search articles" /></div>
+    <div class="filter-row"><button class="filter-btn active" data-filter="all">All</button><button class="filter-btn" data-filter="Guides">Guides</button><button class="filter-btn" data-filter="Game Lists">Game Lists</button><button class="filter-btn" data-filter="Gaming Culture">Gaming Culture</button></div>
+    <div class="ad-slot" data-adsterra data-key="8988dbb524d00a156bcd9b13090236d8" data-w="300" data-h="250" style="max-width:340px;margin-left:auto;margin-right:auto;"></div>
+    <div class="blog-grid" id="blogGrid">
+    <article class="bcard" data-cat="Guides" data-title="geometry dash tips for beginners: how to stop dying at 3%" data-desc="new to geometry dash and stuck on the first level? these are the exact habits that helped me finally beat stereo madness and start clearing levels for real.">
       <div class="bcat">Guides</div>
       <h3><a href="/blogs/geometry-dash-tips-for-beginners.html">Geometry Dash Tips for Beginners: How to Stop Dying at 3%</a></h3>
       <p>New to Geometry Dash and stuck on the first level? These are the exact habits that helped me finally beat Stereo Madness and start clearing levels for real.</p>
       <div class="bmeta">2026-09-05 &middot; 6 min read</div>
       <a class="readmore" href="/blogs/geometry-dash-tips-for-beginners.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Game Lists" data-title="the 15 best free browser games to play in 2026" data-desc="no downloads, no installs, no sign-ups. these are the browser games i keep coming back to in 2026, and why each one is worth your time.">
       <div class="bcat">Game Lists</div>
       <h3><a href="/blogs/best-free-browser-games-2026.html">The 15 Best Free Browser Games to Play in 2026</a></h3>
       <p>No downloads, no installs, no sign-ups. These are the browser games I keep coming back to in 2026, and why each one is worth your time.</p>
       <div class="bmeta">2026-09-04 &middot; 8 min read</div>
       <a class="readmore" href="/blogs/best-free-browser-games-2026.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Guides" data-title="how to get a high score in slope: the only guide you need" data-desc="slope looks simple, but the high score is brutal. here&#x27;s how to actually survive longer than 30 seconds and climb the leaderboard.">
       <div class="bcat">Guides</div>
       <h3><a href="/blogs/slope-game-high-score-tips.html">How to Get a High Score in Slope: The Only Guide You Need</a></h3>
       <p>Slope looks simple, but the high score is brutal. Here&#x27;s how to actually survive longer than 30 seconds and climb the leaderboard.</p>
       <div class="bmeta">2026-09-03 &middot; 5 min read</div>
       <a class="readmore" href="/blogs/slope-game-high-score-tips.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Guides" data-title="moto x3m: how to beat every level without rage quitting" data-desc="moto x3m is fun until level 15. here&#x27;s how to actually clear the whole game, including the brutal later levels, without throwing your phone.">
       <div class="bcat">Guides</div>
       <h3><a href="/blogs/moto-x3m-all-levels-guide.html">Moto X3M: How to Beat Every Level Without Rage Quitting</a></h3>
       <p>Moto X3M is fun until level 15. Here&#x27;s how to actually clear the whole game, including the brutal later levels, without throwing your phone.</p>
       <div class="bmeta">2026-09-02 &middot; 7 min read</div>
       <a class="readmore" href="/blogs/moto-x3m-all-levels-guide.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Game Lists" data-title="the best 2-player games to play online with a friend" data-desc="stuck at home with a friend and a keyboard? these are the best two-player browser games that actually work, and how to play them.">
       <div class="bcat">Game Lists</div>
       <h3><a href="/blogs/best-2-player-games-online.html">The Best 2-Player Games to Play Online With a Friend</a></h3>
       <p>Stuck at home with a friend and a keyboard? These are the best two-player browser games that actually work, and how to play them.</p>
       <div class="bmeta">2026-09-01 &middot; 6 min read</div>
       <a class="readmore" href="/blogs/best-2-player-games-online.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Guides" data-title="what is 2048? rules, strategy, and how to actually win" data-desc="2048 looks simple, but winning takes real strategy. here&#x27;s the rules, the corner strategy, and the exact moves that get you to the 2048 tile.">
       <div class="bcat">Guides</div>
       <h3><a href="/blogs/what-is-2048-game-rules.html">What Is 2048? Rules, Strategy, and How to Actually Win</a></h3>
       <p>2048 looks simple, but winning takes real strategy. Here&#x27;s the rules, the corner strategy, and the exact moves that get you to the 2048 tile.</p>
       <div class="bmeta">2026-08-30 &middot; 5 min read</div>
       <a class="readmore" href="/blogs/what-is-2048-game-rules.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Guides" data-title="among us: 12 tips to win as impostor and crewmate" data-desc="whether you&#x27;re the impostor or a crewmate, these are the strategies that actually win games. no more getting caught in the first round.">
       <div class="bcat">Guides</div>
       <h3><a href="/blogs/among-us-tips-to-win.html">Among Us: 12 Tips to Win as Impostor and Crewmate</a></h3>
       <p>Whether you&#x27;re the impostor or a crewmate, these are the strategies that actually win games. No more getting caught in the first round.</p>
       <div class="bmeta">2026-08-29 &middot; 7 min read</div>
       <a class="readmore" href="/blogs/among-us-tips-to-win.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Game Lists" data-title="the best idle games to play in your browser (and why they&#x27;re addictive)" data-desc="idle games are the perfect background game. here are the best ones you can play in the browser, and why they&#x27;re so hard to put down.">
       <div class="bcat">Game Lists</div>
       <h3><a href="/blogs/best-idle-games-browser.html">The Best Idle Games to Play in Your Browser (and Why They&#x27;re Addictive)</a></h3>
       <p>Idle games are the perfect background game. Here are the best ones you can play in the browser, and why they&#x27;re so hard to put down.</p>
       <div class="bmeta">2026-08-28 &middot; 6 min read</div>
       <a class="readmore" href="/blogs/best-idle-games-browser.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Game Lists" data-title="the best puzzle games to train your brain (free and online)" data-desc="puzzle games are fun and good for your brain. here are the best free online puzzle games that actually make you think.">
       <div class="bcat">Game Lists</div>
       <h3><a href="/blogs/best-puzzle-games-brain.html">The Best Puzzle Games to Train Your Brain (Free and Online)</a></h3>
       <p>Puzzle games are fun and good for your brain. Here are the best free online puzzle games that actually make you think.</p>
       <div class="bmeta">2026-08-27 &middot; 6 min read</div>
       <a class="readmore" href="/blogs/best-puzzle-games-brain.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Guides" data-title="the hardest geometry dash levels ever made (and how to beat them)" data-desc="from clubstep to the impossible demons, these are the hardest geometry dash levels ever created, and the honest truth about beating them.">
       <div class="bcat">Guides</div>
       <h3><a href="/blogs/geometry-dash-hardest-levels.html">The Hardest Geometry Dash Levels Ever Made (and How to Beat Them)</a></h3>
       <p>From Clubstep to the impossible demons, these are the hardest Geometry Dash levels ever created, and the honest truth about beating them.</p>
       <div class="bmeta">2026-08-26 &middot; 7 min read</div>
       <a class="readmore" href="/blogs/geometry-dash-hardest-levels.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Game Lists" data-title="the best racing games you can play in the browser" data-desc="from moto x3m to drift games, these are the best racing games you can play right in your browser, no download needed.">
       <div class="bcat">Game Lists</div>
       <h3><a href="/blogs/best-racing-games-browser.html">The Best Racing Games You Can Play in the Browser</a></h3>
       <p>From Moto X3M to drift games, these are the best racing games you can play right in your browser, no download needed.</p>
       <div class="bmeta">2026-08-25 &middot; 6 min read</div>
       <a class="readmore" href="/blogs/best-racing-games-browser.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Guides" data-title="how to play 1v1.lol: a complete beginner&#x27;s guide" data-desc="1v1.lol is fortnite-style building and shooting in the browser. here&#x27;s how to build, shoot, and actually win your first match.">
       <div class="bcat">Guides</div>
       <h3><a href="/blogs/how-to-play-1v1-lol.html">How to Play 1v1.LOL: A Complete Beginner&#x27;s Guide</a></h3>
       <p>1v1.LOL is Fortnite-style building and shooting in the browser. Here&#x27;s how to build, shoot, and actually win your first match.</p>
       <div class="bmeta">2026-08-24 &middot; 6 min read</div>
       <a class="readmore" href="/blogs/how-to-play-1v1-lol.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Game Lists" data-title="the best sports games to play online for free" data-desc="basketball, soccer, and more. these are the best sports games you can play in the browser, and they&#x27;re all free.">
       <div class="bcat">Game Lists</div>
       <h3><a href="/blogs/best-sports-games-online.html">The Best Sports Games to Play Online for Free</a></h3>
       <p>Basketball, soccer, and more. These are the best sports games you can play in the browser, and they&#x27;re all free.</p>
       <div class="bmeta">2026-08-23 &middot; 6 min read</div>
       <a class="readmore" href="/blogs/best-sports-games-online.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Guides" data-title="how to beat 2048 every time: the corner strategy explained" data-desc="there&#x27;s a strategy that wins 2048 almost every time. here&#x27;s the corner strategy, explained simply, so you can finally reach the 2048 tile.">
       <div class="bcat">Guides</div>
       <h3><a href="/blogs/how-to-beat-2048-every-time.html">How to Beat 2048 Every Time: The Corner Strategy Explained</a></h3>
       <p>There&#x27;s a strategy that wins 2048 almost every time. Here&#x27;s the corner strategy, explained simply, so you can finally reach the 2048 tile.</p>
       <div class="bmeta">2026-08-23 &middot; 5 min read</div>
       <a class="readmore" href="/blogs/how-to-beat-2048-every-time.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Game Lists" data-title="the best action games to play in the browser" data-desc="shooters, fighters, and more: the best action games you can play in the browser, all free and instant.">
       <div class="bcat">Game Lists</div>
       <h3><a href="/blogs/best-action-games-browser.html">The Best Action Games to Play in the Browser</a></h3>
       <p>Shooters, fighters, and more: the best action games you can play in the browser, all free and instant.</p>
       <div class="bmeta">2026-08-22 &middot; 6 min read</div>
       <a class="readmore" href="/blogs/best-action-games-browser.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Guides" data-title="geometry dash practice mode: the secret to beating hard levels" data-desc="practice mode is the most underused feature in geometry dash. here&#x27;s how to use it properly to beat levels you thought were impossible.">
       <div class="bcat">Guides</div>
       <h3><a href="/blogs/geometry-dash-practice-mode-guide.html">Geometry Dash Practice Mode: The Secret to Beating Hard Levels</a></h3>
       <p>Practice mode is the most underused feature in Geometry Dash. Here&#x27;s how to use it properly to beat levels you thought were impossible.</p>
       <div class="bmeta">2026-08-21 &middot; 5 min read</div>
       <a class="readmore" href="/blogs/geometry-dash-practice-mode-guide.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Game Lists" data-title="the best .io games to play online (and they&#x27;re all free)" data-desc="agar.io, slither.io, and more. the .io games are simple, competitive, and addictive. here are the best ones to play.">
       <div class="bcat">Game Lists</div>
       <h3><a href="/blogs/best-io-games-online.html">The Best .io Games to Play Online (and They&#x27;re All Free)</a></h3>
       <p>Agar.io, Slither.io, and more. The .io games are simple, competitive, and addictive. Here are the best ones to play.</p>
       <div class="bmeta">2026-08-20 &middot; 6 min read</div>
       <a class="readmore" href="/blogs/best-io-games-online.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Guides" data-title="how to get better at gaming: 10 habits that actually work" data-desc="want to get better at games? it&#x27;s not about talent. these 10 habits are what actually separate good players from great ones.">
       <div class="bcat">Guides</div>
       <h3><a href="/blogs/how-to-get-better-at-gaming.html">How to Get Better at Gaming: 10 Habits That Actually Work</a></h3>
       <p>Want to get better at games? It&#x27;s not about talent. These 10 habits are what actually separate good players from great ones.</p>
       <div class="bmeta">2026-08-19 &middot; 7 min read</div>
       <a class="readmore" href="/blogs/how-to-get-better-at-gaming.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Game Lists" data-title="the best typing games to improve your speed (and have fun)" data-desc="typing games are fun and they make you faster. here are the best typing games to improve your speed and accuracy.">
       <div class="bcat">Game Lists</div>
       <h3><a href="/blogs/best-typing-games.html">The Best Typing Games to Improve Your Speed (and Have Fun)</a></h3>
       <p>Typing games are fun and they make you faster. Here are the best typing games to improve your speed and accuracy.</p>
       <div class="bmeta">2026-08-18 &middot; 5 min read</div>
       <a class="readmore" href="/blogs/best-typing-games.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Game Lists" data-title="the best multiplayer browser games to play with friends" data-desc="multiplayer games are better with friends. here are the best multiplayer browser games you can play together, all free.">
       <div class="bcat">Game Lists</div>
       <h3><a href="/blogs/best-multiplayer-browser-games.html">The Best Multiplayer Browser Games to Play With Friends</a></h3>
       <p>Multiplayer games are better with friends. Here are the best multiplayer browser games you can play together, all free.</p>
       <div class="bmeta">2026-08-17 &middot; 6 min read</div>
       <a class="readmore" href="/blogs/best-multiplayer-browser-games.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Guides" data-title="how to play chess online: a complete beginner&#x27;s first week" data-desc="chess looks intimidating until you realize it&#x27;s just a few rules and a lot of pattern recognition. here&#x27;s how to go from &#x27;i don&#x27;t know how the knight moves&#x27; to winning real games online in a week.">
       <div class="bcat">Guides</div>
       <h3><a href="/blogs/how-to-play-chess-online.html">How to Play Chess Online: A Complete Beginner&#x27;s First Week</a></h3>
       <p>Chess looks intimidating until you realize it&#x27;s just a few rules and a lot of pattern recognition. Here&#x27;s how to go from &#x27;I don&#x27;t know how the knight moves&#x27; to winning real games online in a week.</p>
       <div class="bmeta">2026-09-03 &middot; 7 min read</div>
       <a class="readmore" href="/blogs/how-to-play-chess-online.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Game Lists" data-title="the best tower defense games to play in your browser" data-desc="tower defense is the perfect browser genre: easy to learn, hard to put down, and endlessly replayable. these are the ones actually worth your time.">
       <div class="bcat">Game Lists</div>
       <h3><a href="/blogs/best-tower-defense-games-browser.html">The Best Tower Defense Games to Play in Your Browser</a></h3>
       <p>Tower defense is the perfect browser genre: easy to learn, hard to put down, and endlessly replayable. These are the ones actually worth your time.</p>
       <div class="bmeta">2026-09-02 &middot; 7 min read</div>
       <a class="readmore" href="/blogs/best-tower-defense-games-browser.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Guides" data-title="how to beat the impossible quiz: every answer explained" data-desc="the impossible quiz is designed to trick you, but every question has a logic to it. here&#x27;s how to get through all 100 questions without losing your mind.">
       <div class="bcat">Guides</div>
       <h3><a href="/blogs/how-to-beat-the-impossible-quiz.html">How to Beat the Impossible Quiz: Every Answer Explained</a></h3>
       <p>The Impossible Quiz is designed to trick you, but every question has a logic to it. Here&#x27;s how to get through all 100 questions without losing your mind.</p>
       <div class="bmeta">2026-09-01 &middot; 8 min read</div>
       <a class="readmore" href="/blogs/how-to-beat-the-impossible-quiz.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Guides" data-title="tetris: how to get a high score and master the stack" data-desc="tetris looks simple until you&#x27;re staring at a wall of blocks. these are the stacking habits and scoring tricks that turn a casual player into a high-score machine.">
       <div class="bcat">Guides</div>
       <h3><a href="/blogs/tetris-high-score-strategy.html">Tetris: How to Get a High Score and Master the Stack</a></h3>
       <p>Tetris looks simple until you&#x27;re staring at a wall of blocks. These are the stacking habits and scoring tricks that turn a casual player into a high-score machine.</p>
       <div class="bmeta">2026-08-31 &middot; 7 min read</div>
       <a class="readmore" href="/blogs/tetris-high-score-strategy.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Game Lists" data-title="the best zombie games to play online for free" data-desc="zombie games are everywhere, but the good browser ones are harder to find. these are the ones worth your time, from survival to pure action.">
       <div class="bcat">Game Lists</div>
       <h3><a href="/blogs/best-zombie-games-browser.html">The Best Zombie Games to Play Online for Free</a></h3>
       <p>Zombie games are everywhere, but the good browser ones are harder to find. These are the ones worth your time, from survival to pure action.</p>
       <div class="bmeta">2026-08-30 &middot; 6 min read</div>
       <a class="readmore" href="/blogs/best-zombie-games-browser.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Guides" data-title="how to get better at 1v1.lol: aim, building, and editing" data-desc="1v1.lol looks simple, but the players who win are the ones who build, edit, and aim better. here&#x27;s how to actually improve, not just play more.">
       <div class="bcat">Guides</div>
       <h3><a href="/blogs/how-to-get-better-at-1v1-lol.html">How to Get Better at 1v1.LOL: Aim, Building, and Editing</a></h3>
       <p>1v1.LOL looks simple, but the players who win are the ones who build, edit, and aim better. Here&#x27;s how to actually improve, not just play more.</p>
       <div class="bmeta">2026-08-29 &middot; 7 min read</div>
       <a class="readmore" href="/blogs/how-to-get-better-at-1v1-lol.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Game Lists" data-title="the best cooking games to play in the browser" data-desc="cooking games are the perfect mix of fast action and satisfying progress. these are the ones worth playing, from time management to full kitchens.">
       <div class="bcat">Game Lists</div>
       <h3><a href="/blogs/best-cooking-games-browser.html">The Best Cooking Games to Play in the Browser</a></h3>
       <p>Cooking games are the perfect mix of fast action and satisfying progress. These are the ones worth playing, from time management to full kitchens.</p>
       <div class="bmeta">2026-08-28 &middot; 6 min read</div>
       <a class="readmore" href="/blogs/best-cooking-games-browser.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Guides" data-title="how to play pac-man: ghosts, power pellets, and high scores" data-desc="pac-man looks simple, but the ghosts have personalities and the maze has a rhythm. here&#x27;s how to actually get a high score instead of dying in the first minute.">
       <div class="bcat">Guides</div>
       <h3><a href="/blogs/how-to-play-pac-man.html">How to Play Pac-Man: Ghosts, Power Pellets, and High Scores</a></h3>
       <p>Pac-Man looks simple, but the ghosts have personalities and the maze has a rhythm. Here&#x27;s how to actually get a high score instead of dying in the first minute.</p>
       <div class="bmeta">2026-08-27 &middot; 6 min read</div>
       <a class="readmore" href="/blogs/how-to-play-pac-man.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Game Lists" data-title="the best driving games to play online for free" data-desc="from drift games to racing sims, the browser has some genuinely fun driving games. these are the ones worth your time, and how to pick the right one.">
       <div class="bcat">Game Lists</div>
       <h3><a href="/blogs/best-driving-games-online.html">The Best Driving Games to Play Online for Free</a></h3>
       <p>From drift games to racing sims, the browser has some genuinely fun driving games. These are the ones worth your time, and how to pick the right one.</p>
       <div class="bmeta">2026-08-26 &middot; 6 min read</div>
       <a class="readmore" href="/blogs/best-driving-games-online.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Guides" data-title="how to get better at minecraft: tips that actually work" data-desc="minecraft doesn&#x27;t have a tutorial that teaches you to survive, so most players learn the hard way. here&#x27;s the stuff i wish someone had told me on day one.">
       <div class="bcat">Guides</div>
       <h3><a href="/blogs/how-to-get-better-at-minecraft.html">How to Get Better at Minecraft: Tips That Actually Work</a></h3>
       <p>Minecraft doesn&#x27;t have a tutorial that teaches you to survive, so most players learn the hard way. Here&#x27;s the stuff I wish someone had told me on day one.</p>
       <div class="bmeta">2026-09-04 &middot; 8 min read</div>
       <a class="readmore" href="/blogs/how-to-get-better-at-minecraft.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Game Lists" data-title="the best free games to play on a school computer" data-desc="school computers are slow, locked down, and not built for gaming. but there are plenty of free browser games that run fine on them. here are the ones that actually work.">
       <div class="bcat">Game Lists</div>
       <h3><a href="/blogs/best-free-games-for-school-computers.html">The Best Free Games to Play on a School Computer</a></h3>
       <p>School computers are slow, locked down, and not built for gaming. But there are plenty of free browser games that run fine on them. Here are the ones that actually work.</p>
       <div class="bmeta">2026-09-04 &middot; 7 min read</div>
       <a class="readmore" href="/blogs/best-free-games-for-school-computers.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Guides" data-title="fireboy and watergirl: the complete co-op guide" data-desc="fireboy and watergirl looks simple, but it&#x27;s a real test of teamwork. here&#x27;s how to beat every level with a friend without driving each other crazy.">
       <div class="bcat">Guides</div>
       <h3><a href="/blogs/fireboy-and-watergirl-co-op-guide.html">Fireboy and Watergirl: The Complete Co-op Guide</a></h3>
       <p>Fireboy and Watergirl looks simple, but it&#x27;s a real test of teamwork. Here&#x27;s how to beat every level with a friend without driving each other crazy.</p>
       <div class="bmeta">2026-09-03 &middot; 7 min read</div>
       <a class="readmore" href="/blogs/fireboy-and-watergirl-co-op-guide.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Game Lists" data-title="the best games to play with friends online (free &amp; browser-based)" data-desc="you don&#x27;t need a console or a big download to play with friends. these free browser games are perfect for a group, and they all work right in your browser.">
       <div class="bcat">Game Lists</div>
       <h3><a href="/blogs/best-games-to-play-with-friends-online.html">The Best Games to Play With Friends Online (Free &amp; Browser-Based)</a></h3>
       <p>You don&#x27;t need a console or a big download to play with friends. These free browser games are perfect for a group, and they all work right in your browser.</p>
       <div class="bmeta">2026-09-02 &middot; 7 min read</div>
       <a class="readmore" href="/blogs/best-games-to-play-with-friends-online.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Guides" data-title="how to build a gaming setup on a budget" data-desc="you don&#x27;t need a thousand-dollar rig to have a great gaming setup. here&#x27;s how to build one that&#x27;s comfortable, functional, and easy on your wallet.">
       <div class="bcat">Guides</div>
       <h3><a href="/blogs/gaming-setup-on-a-budget.html">How to Build a Gaming Setup on a Budget</a></h3>
       <p>You don&#x27;t need a thousand-dollar rig to have a great gaming setup. Here&#x27;s how to build one that&#x27;s comfortable, functional, and easy on your wallet.</p>
       <div class="bmeta">2026-09-01 &middot; 8 min read</div>
       <a class="readmore" href="/blogs/gaming-setup-on-a-budget.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Game Lists" data-title="the best games like geometry dash to try next" data-desc="if you&#x27;ve beaten every geometry dash level and you&#x27;re still hungry for more, these games scratch the same itch. fast, rhythmic, and hard to put down.">
       <div class="bcat">Game Lists</div>
       <h3><a href="/blogs/games-like-geometry-dash.html">The Best Games Like Geometry Dash to Try Next</a></h3>
       <p>If you&#x27;ve beaten every Geometry Dash level and you&#x27;re still hungry for more, these games scratch the same itch. Fast, rhythmic, and hard to put down.</p>
       <div class="bmeta">2026-09-01 &middot; 7 min read</div>
       <a class="readmore" href="/blogs/games-like-geometry-dash.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Guides" data-title="how to play flappy bird: tips to beat your high score" data-desc="flappy bird looks impossible, but it&#x27;s actually a game of rhythm and patience. here&#x27;s how to stop dying on the first pipe and start racking up points.">
       <div class="bcat">Guides</div>
       <h3><a href="/blogs/how-to-play-flappy-bird.html">How to Play Flappy Bird: Tips to Beat Your High Score</a></h3>
       <p>Flappy Bird looks impossible, but it&#x27;s actually a game of rhythm and patience. Here&#x27;s how to stop dying on the first pipe and start racking up points.</p>
       <div class="bmeta">2026-08-31 &middot; 6 min read</div>
       <a class="readmore" href="/blogs/how-to-play-flappy-bird.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Game Lists" data-title="the best games to play when you&#x27;re bored" data-desc="boredom is the best reason to play a game, but you need the right one. these are the games that are perfect for killing time, whether you have two minutes or two hours.">
       <div class="bcat">Game Lists</div>
       <h3><a href="/blogs/best-games-to-play-when-bored.html">The Best Games to Play When You&#x27;re Bored</a></h3>
       <p>Boredom is the best reason to play a game, but you need the right one. These are the games that are perfect for killing time, whether you have two minutes or two hours.</p>
       <div class="bmeta">2026-08-30 &middot; 6 min read</div>
       <a class="readmore" href="/blogs/best-games-to-play-when-bored.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Guides" data-title="how to type faster: a gamer&#x27;s guide to better typing" data-desc="typing fast isn&#x27;t just for office workers. it makes you better at games, faster at chat, and more efficient at everything. here&#x27;s how to actually get faster.">
       <div class="bcat">Guides</div>
       <h3><a href="/blogs/how-to-type-faster.html">How to Type Faster: A Gamer&#x27;s Guide to Better Typing</a></h3>
       <p>Typing fast isn&#x27;t just for office workers. It makes you better at games, faster at chat, and more efficient at everything. Here&#x27;s how to actually get faster.</p>
       <div class="bmeta">2026-08-29 &middot; 7 min read</div>
       <a class="readmore" href="/blogs/how-to-type-faster.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Game Lists" data-title="the best games for low-end pcs and laptops" data-desc="you don&#x27;t need a gaming pc to have fun. these games run great on low-end computers and laptops, and they&#x27;re all free to play in your browser.">
       <div class="bcat">Game Lists</div>
       <h3><a href="/blogs/best-games-for-low-end-pcs.html">The Best Games for Low-End PCs and Laptops</a></h3>
       <p>You don&#x27;t need a gaming PC to have fun. These games run great on low-end computers and laptops, and they&#x27;re all free to play in your browser.</p>
       <div class="bmeta">2026-08-28 &middot; 7 min read</div>
       <a class="readmore" href="/blogs/best-games-for-low-end-pcs.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Guides" data-title="how to play snake: the classic game, explained" data-desc="snake is one of the oldest games around, and it&#x27;s still one of the best. here&#x27;s how to play, how to get a high score, and why it&#x27;s still so addictive.">
       <div class="bcat">Guides</div>
       <h3><a href="/blogs/how-to-play-snake.html">How to Play Snake: The Classic Game, Explained</a></h3>
       <p>Snake is one of the oldest games around, and it&#x27;s still one of the best. Here&#x27;s how to play, how to get a high score, and why it&#x27;s still so addictive.</p>
       <div class="bmeta">2026-08-27 &middot; 6 min read</div>
       <a class="readmore" href="/blogs/how-to-play-snake.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Game Lists" data-title="the best browser games to play on your phone" data-desc="you don&#x27;t need to download an app to play a game on your phone. these browser games run right in your phone&#x27;s browser, and they&#x27;re all free.">
       <div class="bcat">Game Lists</div>
       <h3><a href="/blogs/best-browser-games-for-phone.html">The Best Browser Games to Play on Your Phone</a></h3>
       <p>You don&#x27;t need to download an app to play a game on your phone. These browser games run right in your phone&#x27;s browser, and they&#x27;re all free.</p>
       <div class="bmeta">2026-08-26 &middot; 6 min read</div>
       <a class="readmore" href="/blogs/best-browser-games-for-phone.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Guides" data-title="how to play subway surfers: tips to beat your high score" data-desc="subway surfers looks like a mindless runner, but there&#x27;s real skill in going far. here&#x27;s how to read the track, chain moves, and stop dying to the same obstacles.">
       <div class="bcat">Guides</div>
       <h3><a href="/blogs/how-to-play-subway-surfers-tips.html">How to Play Subway Surfers: Tips to Beat Your High Score</a></h3>
       <p>Subway Surfers looks like a mindless runner, but there&#x27;s real skill in going far. Here&#x27;s how to read the track, chain moves, and stop dying to the same obstacles.</p>
       <div class="bmeta">2026-09-05 &middot; 7 min read</div>
       <a class="readmore" href="/blogs/how-to-play-subway-surfers-tips.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Game Lists" data-title="the best free fps games you can play in a browser" data-desc="you don&#x27;t need a gaming pc to play a shooter. these free browser fps games run in a tab, need no downloads, and are genuinely fun. here are the ones worth your time.">
       <div class="bcat">Game Lists</div>
       <h3><a href="/blogs/best-free-browser-fps-games.html">The Best Free FPS Games You Can Play in a Browser</a></h3>
       <p>You don&#x27;t need a gaming PC to play a shooter. These free browser FPS games run in a tab, need no downloads, and are genuinely fun. Here are the ones worth your time.</p>
       <div class="bmeta">2026-09-05 &middot; 7 min read</div>
       <a class="readmore" href="/blogs/best-free-browser-fps-games.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Guides" data-title="how to get better at fps games: aim, movement, and game sense" data-desc="getting better at shooters isn&#x27;t about talent. it&#x27;s about aim, movement, and game sense, and all three can be trained. here&#x27;s how to actually improve, not just play more.">
       <div class="bcat">Guides</div>
       <h3><a href="/blogs/how-to-get-better-at-fps-games.html">How to Get Better at FPS Games: Aim, Movement, and Game Sense</a></h3>
       <p>Getting better at shooters isn&#x27;t about talent. It&#x27;s about aim, movement, and game sense, and all three can be trained. Here&#x27;s how to actually improve, not just play more.</p>
       <div class="bmeta">2026-09-04 &middot; 8 min read</div>
       <a class="readmore" href="/blogs/how-to-get-better-at-fps-games.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Game Lists" data-title="the best games that look like work (for when you should be working)" data-desc="sometimes you need a game that looks like a spreadsheet from across the room. these browser games are fun, but they&#x27;ll pass the glance test. here are the best ones.">
       <div class="bcat">Game Lists</div>
       <h3><a href="/blogs/best-games-that-look-like-work.html">The Best Games That Look Like Work (For When You Should Be Working)</a></h3>
       <p>Sometimes you need a game that looks like a spreadsheet from across the room. These browser games are fun, but they&#x27;ll pass the glance test. Here are the best ones.</p>
       <div class="bmeta">2026-09-04 &middot; 6 min read</div>
       <a class="readmore" href="/blogs/best-games-that-look-like-work.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Game Lists" data-title="the best games for beginners: easy to learn, hard to put down" data-desc="not everyone wants to start with a hardcore game. these are the best games for beginners, easy to learn, fun from the first minute, and perfect for building confidence.">
       <div class="bcat">Game Lists</div>
       <h3><a href="/blogs/best-games-for-beginners.html">The Best Games for Beginners: Easy to Learn, Hard to Put Down</a></h3>
       <p>Not everyone wants to start with a hardcore game. These are the best games for beginners, easy to learn, fun from the first minute, and perfect for building confidence.</p>
       <div class="bmeta">2026-09-03 &middot; 7 min read</div>
       <a class="readmore" href="/blogs/best-games-for-beginners.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Game Lists" data-title="the best retro games you can play online for free" data-desc="the classics never die. these retro games are still fun today, and you can play them all for free in a browser. here are the ones that hold up best.">
       <div class="bcat">Game Lists</div>
       <h3><a href="/blogs/best-retro-games-online-free.html">The Best Retro Games You Can Play Online for Free</a></h3>
       <p>The classics never die. These retro games are still fun today, and you can play them all for free in a browser. Here are the ones that hold up best.</p>
       <div class="bmeta">2026-09-03 &middot; 7 min read</div>
       <a class="readmore" href="/blogs/best-retro-games-online-free.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Guides" data-title="how to improve your reaction time for gaming" data-desc="reaction time is a real skill, and it can be trained. here&#x27;s how to actually get faster at reacting in games, with practical tips that work.">
       <div class="bcat">Guides</div>
       <h3><a href="/blogs/how-to-improve-reaction-time-gaming.html">How to Improve Your Reaction Time for Gaming</a></h3>
       <p>Reaction time is a real skill, and it can be trained. Here&#x27;s how to actually get faster at reacting in games, with practical tips that work.</p>
       <div class="bmeta">2026-09-02 &middot; 7 min read</div>
       <a class="readmore" href="/blogs/how-to-improve-reaction-time-gaming.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Game Lists" data-title="the best games to play with kids (that adults enjoy too)" data-desc="finding a game that&#x27;s fun for both you and your kids is harder than it sounds. these are the games that kids love and adults don&#x27;t hate playing.">
       <div class="bcat">Game Lists</div>
       <h3><a href="/blogs/best-games-to-play-with-kids.html">The Best Games to Play With Kids (That Adults Enjoy Too)</a></h3>
       <p>Finding a game that&#x27;s fun for both you and your kids is harder than it sounds. These are the games that kids love and adults don&#x27;t hate playing.</p>
       <div class="bmeta">2026-09-02 &middot; 7 min read</div>
       <a class="readmore" href="/blogs/best-games-to-play-with-kids.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Guides" data-title="how to play solitaire: rules, tips, and winning strategies" data-desc="solitaire is the classic card game everyone knows but few actually understand. here&#x27;s how to play it properly, and how to actually win more often.">
       <div class="bcat">Guides</div>
       <h3><a href="/blogs/how-to-play-solitaire.html">How to Play Solitaire: Rules, Tips, and Winning Strategies</a></h3>
       <p>Solitaire is the classic card game everyone knows but few actually understand. Here&#x27;s how to play it properly, and how to actually win more often.</p>
       <div class="bmeta">2026-09-01 &middot; 7 min read</div>
       <a class="readmore" href="/blogs/how-to-play-solitaire.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Game Lists" data-title="the best games like among us: social deduction games to try" data-desc="love the lying and the backstabbing of among us? these are the best social deduction games like it, and most of them are free to play in a browser.">
       <div class="bcat">Game Lists</div>
       <h3><a href="/blogs/games-like-among-us.html">The Best Games Like Among Us: Social Deduction Games to Try</a></h3>
       <p>Love the lying and the backstabbing of Among Us? These are the best social deduction games like it, and most of them are free to play in a browser.</p>
       <div class="bmeta">2026-09-01 &middot; 7 min read</div>
       <a class="readmore" href="/blogs/games-like-among-us.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Guides" data-title="how to set up a gaming mouse: dpi, sensitivity, and more" data-desc="a gaming mouse is only as good as its setup. here&#x27;s how to set up your dpi, sensitivity, and buttons so your mouse actually helps you play better.">
       <div class="bcat">Guides</div>
       <h3><a href="/blogs/how-to-set-up-gaming-mouse.html">How to Set Up a Gaming Mouse: DPI, Sensitivity, and More</a></h3>
       <p>A gaming mouse is only as good as its setup. Here&#x27;s how to set up your DPI, sensitivity, and buttons so your mouse actually helps you play better.</p>
       <div class="bmeta">2026-08-31 &middot; 8 min read</div>
       <a class="readmore" href="/blogs/how-to-set-up-gaming-mouse.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Game Lists" data-title="the best free browser games that need no download" data-desc="no installs, no updates, no waiting. these are the best free browser games you can play instantly, with nothing to download and nothing to set up.">
       <div class="bcat">Game Lists</div>
       <h3><a href="/blogs/best-browser-games-no-download.html">The Best Free Browser Games That Need No Download</a></h3>
       <p>No installs, no updates, no waiting. These are the best free browser games you can play instantly, with nothing to download and nothing to set up.</p>
       <div class="bmeta">2026-08-31 &middot; 7 min read</div>
       <a class="readmore" href="/blogs/best-browser-games-no-download.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Guides" data-title="how to play temple run 2: run further, die less" data-desc="temple run 2 throws a lot at you fast. here&#x27;s how to read the track, time your swipes, and stop dying to the same traps over and over.">
       <div class="bcat">Guides</div>
       <h3><a href="/blogs/how-to-play-temple-run-2.html">How to Play Temple Run 2: Run Further, Die Less</a></h3>
       <p>Temple Run 2 throws a lot at you fast. Here&#x27;s how to read the track, time your swipes, and stop dying to the same traps over and over.</p>
       <div class="bmeta">2026-09-05 &middot; 7 min read</div>
       <a class="readmore" href="/blogs/how-to-play-temple-run-2.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Guides" data-title="how to play crossy road: a guide to getting further" data-desc="crossy road is a one-tap game with a surprising amount of skill. here&#x27;s how to read the lanes, time your hops, and stop getting flattened.">
       <div class="bcat">Guides</div>
       <h3><a href="/blogs/how-to-play-crossy-road.html">How to Play Crossy Road: A Guide to Getting Further</a></h3>
       <p>Crossy Road is a one-tap game with a surprising amount of skill. Here&#x27;s how to read the lanes, time your hops, and stop getting flattened.</p>
       <div class="bmeta">2026-09-05 &middot; 6 min read</div>
       <a class="readmore" href="/blogs/how-to-play-crossy-road.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Guides" data-title="how to play helix jump: master the bounce" data-desc="helix jump looks like pure luck, but there&#x27;s real skill in controlling the ball. here&#x27;s how to read the tower, time your drops, and go deep.">
       <div class="bcat">Guides</div>
       <h3><a href="/blogs/how-to-play-helix-jump.html">How to Play Helix Jump: Master the Bounce</a></h3>
       <p>Helix Jump looks like pure luck, but there&#x27;s real skill in controlling the ball. Here&#x27;s how to read the tower, time your drops, and go deep.</p>
       <div class="bmeta">2026-09-05 &middot; 6 min read</div>
       <a class="readmore" href="/blogs/how-to-play-helix-jump.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Guides" data-title="how to play cut the rope: a puzzle guide" data-desc="cut the rope is a physics puzzle that&#x27;s easy to pick up and hard to master. here&#x27;s how to think about the puzzles and feed om nom every candy.">
       <div class="bcat">Guides</div>
       <h3><a href="/blogs/how-to-play-cut-the-rope.html">How to Play Cut the Rope: A Puzzle Guide</a></h3>
       <p>Cut the Rope is a physics puzzle that&#x27;s easy to pick up and hard to master. Here&#x27;s how to think about the puzzles and feed Om Nom every candy.</p>
       <div class="bmeta">2026-09-05 &middot; 6 min read</div>
       <a class="readmore" href="/blogs/how-to-play-cut-the-rope.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Guides" data-title="how to play agar.io: grow big, don&#x27;t get eaten" data-desc="agar.io looks like a simple blob game, but there&#x27;s real strategy to growing big and staying alive. here&#x27;s how to dominate the leaderboard.">
       <div class="bcat">Guides</div>
       <h3><a href="/blogs/how-to-play-agar-io.html">How to Play Agar.io: Grow Big, Don&#x27;t Get Eaten</a></h3>
       <p>Agar.io looks like a simple blob game, but there&#x27;s real strategy to growing big and staying alive. Here&#x27;s how to dominate the leaderboard.</p>
       <div class="bmeta">2026-09-05 &middot; 7 min read</div>
       <a class="readmore" href="/blogs/how-to-play-agar-io.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Guides" data-title="how to play slither.io: the snake game, mastered" data-desc="slither.io is a snake game with a twist, and it&#x27;s way more strategic than it looks. here&#x27;s how to grow long, trap enemies, and survive.">
       <div class="bcat">Guides</div>
       <h3><a href="/blogs/how-to-play-slither-io.html">How to Play Slither.io: The Snake Game, Mastered</a></h3>
       <p>Slither.io is a snake game with a twist, and it&#x27;s way more strategic than it looks. Here&#x27;s how to grow long, trap enemies, and survive.</p>
       <div class="bmeta">2026-09-05 &middot; 7 min read</div>
       <a class="readmore" href="/blogs/how-to-play-slither-io.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Guides" data-title="how to play snake.io: the modern snake game" data-desc="snake.io takes the classic snake game and makes it multiplayer. here&#x27;s how to grow, avoid the bigger snakes, and climb the leaderboard.">
       <div class="bcat">Guides</div>
       <h3><a href="/blogs/how-to-play-snake-io.html">How to Play Snake.io: The Modern Snake Game</a></h3>
       <p>Snake.io takes the classic snake game and makes it multiplayer. Here&#x27;s how to grow, avoid the bigger snakes, and climb the leaderboard.</p>
       <div class="bmeta">2026-09-05 &middot; 6 min read</div>
       <a class="readmore" href="/blogs/how-to-play-snake-io.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Guides" data-title="how to play paper.io: claim the map" data-desc="paper.io is a territory game that&#x27;s way more strategic than it looks. here&#x27;s how to claim land, defend it, and take over the map.">
       <div class="bcat">Guides</div>
       <h3><a href="/blogs/how-to-play-paper-io.html">How to Play Paper.io: Claim the Map</a></h3>
       <p>Paper.io is a territory game that&#x27;s way more strategic than it looks. Here&#x27;s how to claim land, defend it, and take over the map.</p>
       <div class="bmeta">2026-09-05 &middot; 6 min read</div>
       <a class="readmore" href="/blogs/how-to-play-paper-io.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Guides" data-title="how to play run 3: the space runner, explained" data-desc="run 3 is a fast-paced runner set in space, and it&#x27;s harder than it looks. here&#x27;s how to handle the jumps, the gaps, and the tricky levels.">
       <div class="bcat">Guides</div>
       <h3><a href="/blogs/how-to-play-run-3.html">How to Play Run 3: The Space Runner, Explained</a></h3>
       <p>Run 3 is a fast-paced runner set in space, and it&#x27;s harder than it looks. Here&#x27;s how to handle the jumps, the gaps, and the tricky levels.</p>
       <div class="bmeta">2026-09-05 &middot; 7 min read</div>
       <a class="readmore" href="/blogs/how-to-play-run-3.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Guides" data-title="how to play stickman hook: swing like a pro" data-desc="stickman hook is a swinging game that&#x27;s all about timing. here&#x27;s how to keep your momentum, time your swings, and fly through the levels.">
       <div class="bcat">Guides</div>
       <h3><a href="/blogs/how-to-play-stickman-hook.html">How to Play Stickman Hook: Swing Like a Pro</a></h3>
       <p>Stickman Hook is a swinging game that&#x27;s all about timing. Here&#x27;s how to keep your momentum, time your swings, and fly through the levels.</p>
       <div class="bmeta">2026-09-05 &middot; 6 min read</div>
       <a class="readmore" href="/blogs/how-to-play-stickman-hook.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Guides" data-title="how to play little alchemy: a guide to combining" data-desc="little alchemy is a game about combining elements to make new ones. here&#x27;s how to think about the combinations and unlock everything.">
       <div class="bcat">Guides</div>
       <h3><a href="/blogs/how-to-play-little-alchemy.html">How to Play Little Alchemy: A Guide to Combining</a></h3>
       <p>Little Alchemy is a game about combining elements to make new ones. Here&#x27;s how to think about the combinations and unlock everything.</p>
       <div class="bmeta">2026-09-05 &middot; 6 min read</div>
       <a class="readmore" href="/blogs/how-to-play-little-alchemy.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Guides" data-title="how to play tiny fishing: a relaxing guide" data-desc="tiny fishing is a relaxing game about catching fish and making money. here&#x27;s how to upgrade, catch the big ones, and build your fishing empire.">
       <div class="bcat">Guides</div>
       <h3><a href="/blogs/how-to-play-tiny-fishing.html">How to Play Tiny Fishing: A Relaxing Guide</a></h3>
       <p>Tiny Fishing is a relaxing game about catching fish and making money. Here&#x27;s how to upgrade, catch the big ones, and build your fishing empire.</p>
       <div class="bmeta">2026-09-05 &middot; 6 min read</div>
       <a class="readmore" href="/blogs/how-to-play-tiny-fishing.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Guides" data-title="how to play 2048 cupcakes: a sweet strategy guide" data-desc="2048 cupcakes is the dessert version of the classic number puzzle. here&#x27;s how to use the corner strategy and merge your way to the top.">
       <div class="bcat">Guides</div>
       <h3><a href="/blogs/how-to-play-2048-cupcakes.html">How to Play 2048 Cupcakes: A Sweet Strategy Guide</a></h3>
       <p>2048 Cupcakes is the dessert version of the classic number puzzle. Here&#x27;s how to use the corner strategy and merge your way to the top.</p>
       <div class="bmeta">2026-09-05 &middot; 6 min read</div>
       <a class="readmore" href="/blogs/how-to-play-2048-cupcakes.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Guides" data-title="how to play basketball legends: dunk like a pro" data-desc="basketball legends is a fast, fun basketball game. here&#x27;s how to shoot, defend, and use your special moves to dominate the court.">
       <div class="bcat">Guides</div>
       <h3><a href="/blogs/how-to-play-basketball-legends.html">How to Play Basketball Legends: Dunk Like a Pro</a></h3>
       <p>Basketball Legends is a fast, fun basketball game. Here&#x27;s how to shoot, defend, and use your special moves to dominate the court.</p>
       <div class="bmeta">2026-09-05 &middot; 6 min read</div>
       <a class="readmore" href="/blogs/how-to-play-basketball-legends.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Guides" data-title="how to play basketball stars: score big, win big" data-desc="basketball stars is a one-on-one basketball game that&#x27;s all about skill. here&#x27;s how to shoot, defend, and use your specials to win.">
       <div class="bcat">Guides</div>
       <h3><a href="/blogs/how-to-play-basketball-stars.html">How to Play Basketball Stars: Score Big, Win Big</a></h3>
       <p>Basketball Stars is a one-on-one basketball game that&#x27;s all about skill. Here&#x27;s how to shoot, defend, and use your specials to win.</p>
       <div class="bmeta">2026-09-05 &middot; 6 min read</div>
       <a class="readmore" href="/blogs/how-to-play-basketball-stars.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Guides" data-title="how to play vex 3: the platformer, mastered" data-desc="vex 3 is a hard platformer that&#x27;s all about precision. here&#x27;s how to handle the jumps, the spikes, and the tricky levels.">
       <div class="bcat">Guides</div>
       <h3><a href="/blogs/how-to-play-vex-3.html">How to Play Vex 3: The Platformer, Mastered</a></h3>
       <p>Vex 3 is a hard platformer that&#x27;s all about precision. Here&#x27;s how to handle the jumps, the spikes, and the tricky levels.</p>
       <div class="bmeta">2026-09-05 &middot; 7 min read</div>
       <a class="readmore" href="/blogs/how-to-play-vex-3.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Guides" data-title="how to play vex 4: tips for the hardest levels" data-desc="vex 4 is the latest in the hard platformer series, and it&#x27;s the hardest yet. here&#x27;s how to handle the new mechanics and beat the levels.">
       <div class="bcat">Guides</div>
       <h3><a href="/blogs/how-to-play-vex-4.html">How to Play Vex 4: Tips for the Hardest Levels</a></h3>
       <p>Vex 4 is the latest in the hard platformer series, and it&#x27;s the hardest yet. Here&#x27;s how to handle the new mechanics and beat the levels.</p>
       <div class="bmeta">2026-09-05 &middot; 7 min read</div>
       <a class="readmore" href="/blogs/how-to-play-vex-4.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Guides" data-title="how to play vex 5: the ultimate vex guide" data-desc="vex 5 is the biggest and best game in the vex series. here&#x27;s how to handle the new levels, the new mechanics, and the new challenges.">
       <div class="bcat">Guides</div>
       <h3><a href="/blogs/how-to-play-vex-5.html">How to Play Vex 5: The Ultimate Vex Guide</a></h3>
       <p>Vex 5 is the biggest and best game in the Vex series. Here&#x27;s how to handle the new levels, the new mechanics, and the new challenges.</p>
       <div class="bmeta">2026-09-05 &middot; 7 min read</div>
       <a class="readmore" href="/blogs/how-to-play-vex-5.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Guides" data-title="how to play vex 6: the newest challenge" data-desc="vex 6 is the newest game in the vex series, and it&#x27;s a fresh challenge. here&#x27;s how to handle the new levels and beat the game.">
       <div class="bcat">Guides</div>
       <h3><a href="/blogs/how-to-play-vex-6.html">How to Play Vex 6: The Newest Challenge</a></h3>
       <p>Vex 6 is the newest game in the Vex series, and it&#x27;s a fresh challenge. Here&#x27;s how to handle the new levels and beat the game.</p>
       <div class="bmeta">2026-09-05 &middot; 7 min read</div>
       <a class="readmore" href="/blogs/how-to-play-vex-6.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Guides" data-title="how to play vex 7: the final challenge" data-desc="vex 7 is the latest in the vex series, and it&#x27;s the final challenge. here&#x27;s how to handle the hardest levels and beat the game.">
       <div class="bcat">Guides</div>
       <h3><a href="/blogs/how-to-play-vex-7.html">How to Play Vex 7: The Final Challenge</a></h3>
       <p>Vex 7 is the latest in the Vex series, and it&#x27;s the final challenge. Here&#x27;s how to handle the hardest levels and beat the game.</p>
       <div class="bmeta">2026-09-05 &middot; 7 min read</div>
       <a class="readmore" href="/blogs/how-to-play-vex-7.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Guides" data-title="how to play moto x3m 2: the sequel, mastered" data-desc="moto x3m 2 is the sequel to the hit bike game, and it&#x27;s harder. here&#x27;s how to handle the new levels and beat the game.">
       <div class="bcat">Guides</div>
       <h3><a href="/blogs/how-to-play-moto-x3m-2.html">How to Play Moto X3M 2: The Sequel, Mastered</a></h3>
       <p>Moto X3M 2 is the sequel to the hit bike game, and it&#x27;s harder. Here&#x27;s how to handle the new levels and beat the game.</p>
       <div class="bmeta">2026-09-05 &middot; 7 min read</div>
       <a class="readmore" href="/blogs/how-to-play-moto-x3m-2.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Guides" data-title="how to play moto x3m 3: the hardest yet" data-desc="moto x3m 3 is the hardest game in the series, and it&#x27;s a real challenge. here&#x27;s how to handle the new levels and beat the game.">
       <div class="bcat">Guides</div>
       <h3><a href="/blogs/how-to-play-moto-x3m-3.html">How to Play Moto X3M 3: The Hardest Yet</a></h3>
       <p>Moto X3M 3 is the hardest game in the series, and it&#x27;s a real challenge. Here&#x27;s how to handle the new levels and beat the game.</p>
       <div class="bmeta">2026-09-05 &middot; 7 min read</div>
       <a class="readmore" href="/blogs/how-to-play-moto-x3m-3.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Guides" data-title="how to play moto x3m pool party: a guide" data-desc="moto x3m pool party is a fun spin on the bike game. here&#x27;s how to handle the pool-themed levels and beat the game.">
       <div class="bcat">Guides</div>
       <h3><a href="/blogs/how-to-play-moto-x3m-pool.html">How to Play Moto X3M Pool Party: A Guide</a></h3>
       <p>Moto X3M Pool Party is a fun spin on the bike game. Here&#x27;s how to handle the pool-themed levels and beat the game.</p>
       <div class="bmeta">2026-09-05 &middot; 6 min read</div>
       <a class="readmore" href="/blogs/how-to-play-moto-x3m-pool.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Guides" data-title="how to play moto x3m spooky land: a guide" data-desc="moto x3m spooky land is the spooky version of the bike game. here&#x27;s how to handle the spooky levels and beat the game.">
       <div class="bcat">Guides</div>
       <h3><a href="/blogs/how-to-play-moto-x3m-spooky.html">How to Play Moto X3M Spooky Land: A Guide</a></h3>
       <p>Moto X3M Spooky Land is the spooky version of the bike game. Here&#x27;s how to handle the spooky levels and beat the game.</p>
       <div class="bmeta">2026-09-05 &middot; 6 min read</div>
       <a class="readmore" href="/blogs/how-to-play-moto-x3m-spooky.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Guides" data-title="how to play moto x3m winter: the winter guide" data-desc="moto x3m winter is the winter version of the bike game. here&#x27;s how to handle the icy levels and beat the game.">
       <div class="bcat">Guides</div>
       <h3><a href="/blogs/how-to-play-moto-x3m-winter.html">How to Play Moto X3M Winter: The Winter Guide</a></h3>
       <p>Moto X3M Winter is the winter version of the bike game. Here&#x27;s how to handle the icy levels and beat the game.</p>
       <div class="bmeta">2026-09-05 &middot; 6 min read</div>
       <a class="readmore" href="/blogs/how-to-play-moto-x3m-winter.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Guides" data-title="how to build a gaming pc on a budget" data-desc="you don&#x27;t need to spend a fortune to build a pc that plays games well. here&#x27;s how to pick parts, save money, and build a rig that lasts.">
       <div class="bcat">Guides</div>
       <h3><a href="/blogs/how-to-build-a-gaming-pc-on-a-budget.html">How to Build a Gaming PC on a Budget</a></h3>
       <p>You don&#x27;t need to spend a fortune to build a PC that plays games well. Here&#x27;s how to pick parts, save money, and build a rig that lasts.</p>
       <div class="bmeta">2026-09-05 &middot; 9 min read</div>
       <a class="readmore" href="/blogs/how-to-build-a-gaming-pc-on-a-budget.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Game Lists" data-title="the best gaming laptops under $2000" data-desc="you don&#x27;t need to spend a fortune on a gaming laptop. here are the best gaming laptops under $2000 that actually deliver.">
       <div class="bcat">Game Lists</div>
       <h3><a href="/blogs/best-gaming-laptops-under-2000.html">The Best Gaming Laptops Under $2000</a></h3>
       <p>You don&#x27;t need to spend a fortune on a gaming laptop. Here are the best gaming laptops under $2000 that actually deliver.</p>
       <div class="bmeta">2026-09-05 &middot; 8 min read</div>
       <a class="readmore" href="/blogs/best-gaming-laptops-under-2000.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Guides" data-title="how to improve your aim in fps games" data-desc="good aim isn&#x27;t a talent, it&#x27;s a skill you can train. here&#x27;s how to improve your aim in fps games with practice and the right habits.">
       <div class="bcat">Guides</div>
       <h3><a href="/blogs/how-to-improve-your-aim-in-fps.html">How to Improve Your Aim in FPS Games</a></h3>
       <p>Good aim isn&#x27;t a talent, it&#x27;s a skill you can train. Here&#x27;s how to improve your aim in FPS games with practice and the right habits.</p>
       <div class="bmeta">2026-09-05 &middot; 8 min read</div>
       <a class="readmore" href="/blogs/how-to-improve-your-aim-in-fps.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Gaming Culture" data-title="the history of browser games: from flash to now" data-desc="browser games have been around for decades, and they&#x27;ve changed a lot. here&#x27;s the story of how they went from simple pages to the games we play today.">
       <div class="bcat">Gaming Culture</div>
       <h3><a href="/blogs/the-history-of-browser-games.html">The History of Browser Games: From Flash to Now</a></h3>
       <p>Browser games have been around for decades, and they&#x27;ve changed a lot. Here&#x27;s the story of how they went from simple pages to the games we play today.</p>
       <div class="bmeta">2026-09-05 &middot; 8 min read</div>
       <a class="readmore" href="/blogs/the-history-of-browser-games.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Guides" data-title="how to stream your gameplay: a beginner&#x27;s guide" data-desc="streaming your gameplay is easier than you think. here&#x27;s how to get started, what you need, and how to grow your channel.">
       <div class="bcat">Guides</div>
       <h3><a href="/blogs/how-to-stream-your-gameplay.html">How to Stream Your Gameplay: A Beginner&#x27;s Guide</a></h3>
       <p>Streaming your gameplay is easier than you think. Here&#x27;s how to get started, what you need, and how to grow your channel.</p>
       <div class="bmeta">2026-09-05 &middot; 8 min read</div>
       <a class="readmore" href="/blogs/how-to-stream-your-gameplay.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Game Lists" data-title="the best free games on steam" data-desc="steam has a ton of free games, and some of them are genuinely great. here are the best free games on steam worth your time.">
       <div class="bcat">Game Lists</div>
       <h3><a href="/blogs/best-free-games-on-steam.html">The Best Free Games on Steam</a></h3>
       <p>Steam has a ton of free games, and some of them are genuinely great. Here are the best free games on Steam worth your time.</p>
       <div class="bmeta">2026-09-05 &middot; 8 min read</div>
       <a class="readmore" href="/blogs/best-free-games-on-steam.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Guides" data-title="how to choose a gaming keyboard" data-desc="a good keyboard can make a big difference in gaming. here&#x27;s how to choose the right one, from switches to size to features.">
       <div class="bcat">Guides</div>
       <h3><a href="/blogs/how-to-choose-a-gaming-keyboard.html">How to Choose a Gaming Keyboard</a></h3>
       <p>A good keyboard can make a big difference in gaming. Here&#x27;s how to choose the right one, from switches to size to features.</p>
       <div class="bmeta">2026-09-05 &middot; 7 min read</div>
       <a class="readmore" href="/blogs/how-to-choose-a-gaming-keyboard.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Guides" data-title="gaming on a chromebook: what works and what doesn&#x27;t" data-desc="chromebooks aren&#x27;t built for gaming, but you can still play games on them. here&#x27;s what works, what doesn&#x27;t, and how to get the most out of it.">
       <div class="bcat">Guides</div>
       <h3><a href="/blogs/gaming-on-a-chromebook.html">Gaming on a Chromebook: What Works and What Doesn&#x27;t</a></h3>
       <p>Chromebooks aren&#x27;t built for gaming, but you can still play games on them. Here&#x27;s what works, what doesn&#x27;t, and how to get the most out of it.</p>
       <div class="bmeta">2026-09-05 &middot; 7 min read</div>
       <a class="readmore" href="/blogs/gaming-on-a-chromebook.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Guides" data-title="how to record your gameplay: a simple guide" data-desc="recording your gameplay is easier than you think. here&#x27;s how to record, edit, and share your best gaming moments.">
       <div class="bcat">Guides</div>
       <h3><a href="/blogs/how-to-record-your-gameplay.html">How to Record Your Gameplay: A Simple Guide</a></h3>
       <p>Recording your gameplay is easier than you think. Here&#x27;s how to record, edit, and share your best gaming moments.</p>
       <div class="bmeta">2026-09-05 &middot; 7 min read</div>
       <a class="readmore" href="/blogs/how-to-record-your-gameplay.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Game Lists" data-title="the best free games on roblox" data-desc="roblox is full of games, and a lot of them are free. here are the best free games on roblox that are actually worth playing.">
       <div class="bcat">Game Lists</div>
       <h3><a href="/blogs/best-free-games-on-roblox.html">The Best Free Games on Roblox</a></h3>
       <p>Roblox is full of games, and a lot of them are free. Here are the best free games on Roblox that are actually worth playing.</p>
       <div class="bmeta">2026-09-05 &middot; 7 min read</div>
       <a class="readmore" href="/blogs/best-free-games-on-roblox.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Guides" data-title="how to get better at fortnite: a real guide" data-desc="fortnite is a hard game, but you can get better. here&#x27;s how to improve your building, your aim, and your game sense.">
       <div class="bcat">Guides</div>
       <h3><a href="/blogs/how-to-get-better-at-fortnite.html">How to Get Better at Fortnite: A Real Guide</a></h3>
       <p>Fortnite is a hard game, but you can get better. Here&#x27;s how to improve your building, your aim, and your game sense.</p>
       <div class="bmeta">2026-09-05 &middot; 8 min read</div>
       <a class="readmore" href="/blogs/how-to-get-better-at-fortnite.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Game Lists" data-title="the best games for a quick break" data-desc="sometimes you only have a few minutes to play. here are the best games for a quick break that you can pick up and put down.">
       <div class="bcat">Game Lists</div>
       <h3><a href="/blogs/best-games-for-a-quick-break.html">The Best Games for a Quick Break</a></h3>
       <p>Sometimes you only have a few minutes to play. Here are the best games for a quick break that you can pick up and put down.</p>
       <div class="bmeta">2026-09-05 &middot; 6 min read</div>
       <a class="readmore" href="/blogs/best-games-for-a-quick-break.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Game Lists" data-title="the best games like minecraft" data-desc="love minecraft but want more games? here are the best games that offer the same building, exploring, and creating.">
       <div class="bcat">Game Lists</div>
       <h3><a href="/blogs/best-games-like-minecraft.html">The Best Games Like Minecraft</a></h3>
       <p>Love Minecraft but want more games? Here are the best games that offer the same building, exploring, and creating.</p>
       <div class="bmeta">2026-09-05 &middot; 7 min read</div>
       <a class="readmore" href="/blogs/best-games-like-minecraft.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Guides" data-title="how to get better at chess" data-desc="chess is a game of skill, and you can get better. here&#x27;s how to improve your game, from the basics to tactics.">
       <div class="bcat">Guides</div>
       <h3><a href="/blogs/how-to-get-better-at-chess.html">How to Get Better at Chess</a></h3>
       <p>Chess is a game of skill, and you can get better. Here&#x27;s how to improve your game, from the basics to tactics.</p>
       <div class="bmeta">2026-09-05 &middot; 8 min read</div>
       <a class="readmore" href="/blogs/how-to-get-better-at-chess.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Game Lists" data-title="the best games to play without downloading" data-desc="you don&#x27;t need to download anything to play great games. here are the best games you can play right in your browser.">
       <div class="bcat">Game Lists</div>
       <h3><a href="/blogs/best-games-to-play-without-downloading.html">The Best Games to Play Without Downloading</a></h3>
       <p>You don&#x27;t need to download anything to play great games. Here are the best games you can play right in your browser.</p>
       <div class="bmeta">2026-09-05 &middot; 6 min read</div>
       <a class="readmore" href="/blogs/best-games-to-play-without-downloading.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Guides" data-title="how to play chess online with friends" data-desc="playing chess with friends is a great way to have fun and improve. here&#x27;s how to set up a game and play online.">
       <div class="bcat">Guides</div>
       <h3><a href="/blogs/how-to-play-chess-online-with-friends.html">How to Play Chess Online With Friends</a></h3>
       <p>Playing chess with friends is a great way to have fun and improve. Here&#x27;s how to set up a game and play online.</p>
       <div class="bmeta">2026-09-05 &middot; 6 min read</div>
       <a class="readmore" href="/blogs/how-to-play-chess-online-with-friends.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Game Lists" data-title="the best games to play in class" data-desc="sometimes you need a game that looks like you&#x27;re working. here are the best games to play in class that look like work.">
       <div class="bcat">Game Lists</div>
       <h3><a href="/blogs/best-games-to-play-in-class.html">The Best Games to Play in Class</a></h3>
       <p>Sometimes you need a game that looks like you&#x27;re working. Here are the best games to play in class that look like work.</p>
       <div class="bmeta">2026-09-05 &middot; 6 min read</div>
       <a class="readmore" href="/blogs/best-games-to-play-in-class.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Guides" data-title="how to get better at typing: a practical guide" data-desc="typing faster and more accurately is a skill you can learn. here&#x27;s how to improve your typing with practice and the right habits.">
       <div class="bcat">Guides</div>
       <h3><a href="/blogs/how-to-get-better-at-typing.html">How to Get Better at Typing: A Practical Guide</a></h3>
       <p>Typing faster and more accurately is a skill you can learn. Here&#x27;s how to improve your typing with practice and the right habits.</p>
       <div class="bmeta">2026-09-05 &middot; 7 min read</div>
       <a class="readmore" href="/blogs/how-to-get-better-at-typing.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Game Lists" data-title="the best games for a laptop" data-desc="laptops aren&#x27;t built for gaming, but you can still play great games on them. here are the best games for a laptop.">
       <div class="bcat">Game Lists</div>
       <h3><a href="/blogs/best-games-for-a-laptop.html">The Best Games for a Laptop</a></h3>
       <p>Laptops aren&#x27;t built for gaming, but you can still play great games on them. Here are the best games for a laptop.</p>
       <div class="bmeta">2026-09-05 &middot; 6 min read</div>
       <a class="readmore" href="/blogs/best-games-for-a-laptop.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Guides" data-title="how to play chess for beginners" data-desc="chess is a great game, and the basics are easy to learn. here&#x27;s how to play chess for beginners, from the pieces to the rules.">
       <div class="bcat">Guides</div>
       <h3><a href="/blogs/how-to-play-chess-for-beginners.html">How to Play Chess for Beginners</a></h3>
       <p>Chess is a great game, and the basics are easy to learn. Here&#x27;s how to play chess for beginners, from the pieces to the rules.</p>
       <div class="bmeta">2026-09-05 &middot; 8 min read</div>
       <a class="readmore" href="/blogs/how-to-play-chess-for-beginners.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Game Lists" data-title="the best games to play with your hands" data-desc="some games are all about your hands. here are the best games that test your hand-eye coordination and reflexes.">
       <div class="bcat">Game Lists</div>
       <h3><a href="/blogs/best-games-to-play-with-your-hands.html">The Best Games to Play With Your Hands</a></h3>
       <p>Some games are all about your hands. Here are the best games that test your hand-eye coordination and reflexes.</p>
       <div class="bmeta">2026-09-05 &middot; 6 min read</div>
       <a class="readmore" href="/blogs/best-games-to-play-with-your-hands.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Guides" data-title="how to play chess online for free" data-desc="you can play chess online for free, and it&#x27;s easy to get started. here&#x27;s how to play chess online for free.">
       <div class="bcat">Guides</div>
       <h3><a href="/blogs/how-to-play-chess-online-for-free.html">How to Play Chess Online for Free</a></h3>
       <p>You can play chess online for free, and it&#x27;s easy to get started. Here&#x27;s how to play chess online for free.</p>
       <div class="bmeta">2026-09-05 &middot; 6 min read</div>
       <a class="readmore" href="/blogs/how-to-play-chess-online-for-free.html">Read More</a>
-    </article><article class="bcard">
+    </article><article class="bcard" data-cat="Game Lists" data-title="the best games for a phone" data-desc="your phone is a great gaming device. here are the best games for a phone that are fun and free to play.">
       <div class="bcat">Game Lists</div>
       <h3><a href="/blogs/best-games-for-a-phone.html">The Best Games for a Phone</a></h3>
       <p>Your phone is a great gaming device. Here are the best games for a phone that are fun and free to play.</p>
@@ -697,7 +710,42 @@
       <a class="readmore" href="/blogs/best-games-for-a-phone.html">Read More</a>
     </article>
     </div>
-  </main><footer class="site"><div class="wrap">
+    <div class="no-results" id="noResults">No articles match your search. Try a different keyword or category.</div>
+  </main>
+  <script>
+    (function(){
+      var grid = document.getElementById('blogGrid');
+      var cards = Array.prototype.slice.call(grid.querySelectorAll('.bcard'));
+      var search = document.getElementById('blogSearch');
+      var noResults = document.getElementById('noResults');
+      var activeCat = 'all';
+      function apply() {
+        var q = (search.value || '').toLowerCase().trim();
+        var shown = 0;
+        cards.forEach(function (card) {
+          var cat = card.getAttribute('data-cat').toLowerCase();
+          var title = card.getAttribute('data-title') || '';
+          var desc = card.getAttribute('data-desc') || '';
+          var matchCat = activeCat === 'all' || cat === activeCat.toLowerCase();
+          var matchQ = !q || title.indexOf(q) !== -1 || desc.indexOf(q) !== -1 || cat.indexOf(q) !== -1;
+          var show = matchCat && matchQ;
+          card.style.display = show ? '' : 'none';
+          if (show) shown++;
+        });
+        noResults.style.display = shown ? 'none' : 'block';
+      }
+      search.addEventListener('input', apply);
+      var btns = document.querySelectorAll('.filter-btn');
+      btns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          btns.forEach(function (b) { b.classList.remove('active'); });
+          btn.classList.add('active');
+          activeCat = btn.getAttribute('data-filter');
+          apply();
+        });
+      });
+    })();
+  </script><footer class="site"><div class="wrap">
     <div class="cols">
       <div><h4>Switchere Club</h4><a href="/">Free Online Games</a><a href="/tools.html">Free Online Tools</a><a href="/security.html">Security Tools</a><a href="/blogs.html">Blog &amp; Guides</a></div>
       <div><h4>Company</h4><a href="/privacypolicy.html">Privacy Policy</a><a href="/clearai.html">Support</a><a href="mailto:sales@lipon.pro.bd">Contact</a></div>
