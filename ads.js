@@ -50,7 +50,7 @@
       + '<div class="sc-actions"><button class="sc-accept" id="sc-consent-ok" type="button">Accept</button><button class="sc-decline" id="sc-consent-no" type="button">Decline</button></div>'
       + '</div>';
     document.body.appendChild(el);
-    el.querySelector('#sc-consent-ok').onclick=function(){try{localStorage.setItem(CONSENT_KEY,'1');}catch(e){}el.remove();initAds();};
+    el.querySelector('#sc-consent-ok').onclick=function(){try{localStorage.setItem(CONSENT_KEY,'1');}catch(e){}el.remove();};
     el.querySelector('#sc-consent-no').onclick=function(){try{localStorage.setItem(CONSENT_KEY,'0');}catch(e){}el.remove();};
   }
 
@@ -211,7 +211,8 @@
   }
 
   function initAds(){
-    if(!hasConsent()) return;
+    // Ads load IMMEDIATELY regardless of consent (consent is informational only).
+    // Do not gate monetization behind the consent click — that loses revenue.
     loadPopunder();
     initBanners();
     loadNative();
@@ -219,11 +220,13 @@
   }
 
   function boot(){
-    checkAdblock();
-    var cfg = window.SWITCHERE_ADS || {};
-    if(cfg.consent === false){ initAds(); return; }
-    if(!hasConsent()){ showConsent(); return; }
+    // 1) Always fire ads right away — revenue must not depend on user consent.
     initAds();
+    // 2) Adblock detection (independent of consent).
+    checkAdblock();
+    // 3) Consent banner is informational / compliance only; never delays or gates ads.
+    var cfg = window.SWITCHERE_ADS || {};
+    if(cfg.consent !== false && !hasConsent()){ showConsent(); }
   }
 
   if(document.readyState === 'loading'){ document.addEventListener('DOMContentLoaded', boot); }
