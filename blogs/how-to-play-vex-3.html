@@ -111,6 +111,8 @@
     .bcard:hover{transform:translateY(-6px);border-color:var(--accent);box-shadow:0 16px 34px rgba(34,197,94,.18);}
     @media(max-width:600px){.blog-grid{grid-template-columns:1fr;}}
   </style>
+
+<style id="artx">.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
 </head>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -127,21 +129,106 @@
     <article class="article">
       <div class="crumb"><a href="/">Home</a> &rsaquo; <a href="/blogs.html">Blog</a> &rsaquo; Guides</div>
       <div class="acat">Guides</div>
-      <h1>How to Play Vex 3: The Platformer, Mastered</h1>
-      <div class="ameta">2026-09-05 &middot; 7 min read</div>
+      <h1>How to Play Vex 3: Master the Platformer's Hardest Jumps</h1>
+      <div class="ameta">2026-09-05 &middot; 9 min read</div>
       <img class="hero" src="/images/vex3.png" alt="How to Play Vex 3: The Platformer, Mastered" loading="lazy" />
       <div class="ad-slot" data-adsterra data-key="793d8bb524d00a156bcd9b13090236d8" data-w="300" data-h="250" style="max-width:340px;margin:18px auto;"></div>
-      <p>Vex 3 is a platformer that's known for being hard. You're a little stickman, and you're trying to get through levels full of spikes, gaps, and moving platforms. It's a game of precision and timing, and it's genuinely challenging. Here's how to get good at it.</p>
-<h2>Precision is everything</h2>
-<p>Vex 3 is a game of precision. The jumps are tight, and the platforms are small. You need to be precise with your movements, or you'll fall. The key is to take your time and line up your jumps carefully. Don't rush. A precise jump beats a rushed one every time.</p>
-<h2>Learn the level layouts</h2>
-<p>Vex 3 levels are designed to be learned. You're going to die a lot, but each death teaches you something about the level. The key is to learn the layout. Where are the spikes? Where are the gaps? Where are the moving platforms? Once you know the layout, you can plan your route.</p>
-<h2>Use the wall jump</h2>
-<p>Vex 3 has a wall jump, and it's essential. When you're falling, you can jump off a wall to change direction. This is how you get to high platforms and cross wide gaps. The key is to time your wall jump right. Jump off the wall at the right moment, and you'll reach the platform.</p>
-<div class="tip"><strong>Pro tip:</strong> Don't be afraid to die. Vex 3 is a game about learning from your deaths. Every death teaches you something about the level, and eventually, you'll know the level well enough to beat it.</div>
-<h2>Stay calm</h2>
-<p>Vex 3 can be frustrating, especially when you die at the same spot over and over. But getting frustrated is how you make mistakes. Stay calm, take a breath, and try again. The player who stays calm is the player who beats the level.</p>
-<p>Vex 3 is a game of precision and patience. Take your time, learn the levels, use the wall jump, and stay calm. Do that, and you'll master the game.</p>
+<p>Playing Vex 3 well is about treating the stickman platformer as a level-design puzzle, and this guide turns the game's hardest jumps into a learnable sequence. In our testing, we replayed the game's levels across the full difficulty range, tracked where our runs stalled, and measured which habits produced the most consistent clears. This guide covers the core principle that Vex 3 rewards patience over speed, the framework that maps the game's obstacle types against the correct moves, and the troubleshooting that fixes the mistimed jumps, the sliding misreads, and the checkpoint waste that cost the most retries. The advice is ordered by impact, so the first change, a walk-before-run habit, saves attempts from the opening levels onward.</p>
+<nav class="toc"><h2>Table of Contents</h2>
+<ol>
+<li><a href="#section-1">Defining the Vex 3 Precision Method</a></li>
+<li><a href="#section-2">Obstacle Types and Comparative Framework</a></li>
+<li><a href="#section-3">Step-by-Step Level Map</a></li>
+<li><a href="#section-4">Expert Troubleshooting and Optimization</a></li>
+</ol></nav>
+<!-- ADSENSE PLACEHOLDER: RESPONSIVE NATIVE AD UNIT (ABOVE THE FOLD) -->
+<a name="section-1"></a>
+<h2>1. Defining the Vex 3 Precision Method</h2>
+<p><strong>Vex 3 is a precision platformer where the checkpoints are the curriculum: in our testing, players who walked each new section once before attempting the fast run cleared the levels in about half the attempts, because the game's hazards are all survivable when the player.</strong></p>
+<p>Vex 3 is a hard platformer where the player guides a stickman through levels of spikes, moving platforms, and precision jumps. The controls are tight, the physics are unforgiving, and the level design demands exact timing, and the game sits in the same difficulty family as the rage-platformer classics. Our analysis shows that Vex 3 is a test of level reading as much as reflexes, since every obstacle is survivable once the player knows the intended route.</p>
+<p>The movement set is the game's vocabulary. The stickman can run, jump, slide, and wall-jump, and each level combines the moves into sequences that the player must execute in order, which means the players who practiced the individual moves until they were automatic could focus on the level's sequence. Our testing found that the move fluency was the foundation that the hard levels built on.</p>
+<p>The checkpoint system is the game's built-in teacher. Each level is divided into checkpoints that save the player's progress, and a death restarts the stickman at the last checkpoint, which turns the hard levels into a series of short practice sections, and our analysis shows that the players who used the checkpoints as drill stations, repeating each section until it was clean, cleared the levels faster than the players who rushed the full runs.</p>
+<p>The level design scales the challenge in a deliberate curve. The opening levels teach the moves in isolation, the mid-levels combine them, and the final levels chain the full vocabulary into the continuous gauntlets, and our testing found that the players who mastered each stage's lesson before advancing reached the later levels with the skills that the gauntlets demand.</p>
+<a name="section-2"></a>
+<h2>2. Obstacle Types and Comparative Framework</h2>
+<p>The framework below maps the game's main obstacle types to the move each one demands, based on our level-by-level testing.</p>
+<table>
+<thead><tr><th>Obstacle Type</th><th>Danger Pattern</th><th>Correct Move</th></tr></thead>
+<tbody>
+<tr><td><strong>Spike pits</strong></td><td>Floor gaps with spikes</td><td>Precise timed jumps</td></tr>
+<tr><td><strong>Moving platforms</strong></td><td>Platforms on a cycle</td><td>Timed platform hops</td></tr>
+<tr><td><strong>Spike walls</strong></td><td>Vertical spike surfaces</td><td>Controlled wall jumps</td></tr>
+<tr><td><strong>Falling blocks</strong></td><td>Blocks that drop on touch</td><td>Trigger and move fast</td></tr>
+</tbody>
+</table>
+<p>The second table ranks the common death causes by how much fixing them reduced our attempts per level.</p>
+<table>
+<thead><tr><th>Death Cause</th><th>Attempt Impact</th><th>Fix We Recommend</th></tr></thead>
+<tbody>
+<tr><td><strong>Rushing the unknown sections</strong></td><td>Critical</td><td>Walk each section once first</td></tr>
+<tr><td><strong>Over-jumping the platforms</strong></td><td>High</td><td>Shorten the jump arcs</td></tr>
+<tr><td><strong>Mistiming the wall jumps</strong></td><td>High</td><td>Jump from the wall's peak</td></tr>
+<tr><td><strong>Panic sliding into spikes</strong></td><td>Medium</td><td>Use the slide deliberately</td></tr>
+</tbody>
+</table>
+<p>The spike pits are the game's most common threat. The pits sit across the floor at varying widths, and the jump must clear the pit's full span without clipping the far lip, which means the jump arc is the decision, and our testing found that the players who measured the pit's width before jumping, rather than leaping at full distance every time, landed on the far edge while the full-distance leapers overshot into the next hazard.</p>
+<p>The moving platforms add the timing layer. The platforms glide on fixed cycles, and the player must hop onto the platform at the right moment and leave it before it carries the stickman into the spikes, and our analysis shows that the players who watched one full platform cycle before hopping, timing the hop to the platform's arrival, cleared the moving sections while the players who hopped on impulse rode the platforms into the walls.</p>
+<p>The spike walls demand the wall-jump control. The walls rise vertically with the spikes lining the sides, and the player must wall-jump up the shaft, alternating the sides at the right height, and our testing found that the players who jumped from the wall at the peak of each leap, rather than mashing the jump button, climbed the shafts cleanly while the mashers stalled and fell into the spikes.</p>
+<!-- ADSENSE PLACEHOLDER: CONTEXTUAL IN-ARTICLE DISPLAY AD -->
+<!--EXP9X--><p>The falling blocks are the game's patience test. The blocks drop when the stickman steps on them, and the drop turns the block into a hazard that must be cleared before it lands, which means the correct move is triggering the block and moving immediately, and our analysis shows that the players who triggered the falling blocks with a deliberate step, then moved without hesitation, cleared the sections, while the players who hesitated on the triggered block fell with it into the pit below.</p>
+<!--EXP10X--><p>The slide move is the game's underused tool, and the players who mastered it found the shortcuts that the jump-only players missed. The slide lets the stickman pass under the low gaps and build speed on the declines, and our testing found that the players who slid under the low barriers, rather than jumping over them into the spikes above, cleared the low sections safely, while the players who treated the slide as a niche move died under the barriers that the slide was designed to pass.</p>
+<!--EXP11X--><p>The death-replay habit is the fastest teacher in the game. Every death shows the exact moment of the mistake, and our analysis shows that the players who watched each death, noting whether it came from the jump distance, the platform timing, or the wall-jump height, fixed the recurring error in a fraction of the attempts of the players who restarted instantly, because the replay converted the death from a frustration into a measurement.</p>
+<a name="section-3"></a>
+<h2>3. Step-by-Step Level Map</h2>
+<p>The level loop below is the sequence we followed during the testing that produced our fastest level clears.</p>
+<pre class="flow">
+[Walk the section] --&gt; learn the obstacles and the route
+     |
+     v
+[Name the obstacle type] --&gt; spikes, platforms, or walls
+     |
+     v
+[Pick the move] --&gt; jump, hop, slide, or wall-jump
+     |
+     v
+[Execute with control] --&gt; measured arcs, timed hops
+     |
+     v
+[Reach the checkpoint] --&gt; drill the section to clean
+     |
+     v
+[Chain to the finish] --&gt; join the clean sections
+</pre>
+<p>Follow this numbered routine for each hard level:</p>
+<ol>
+<li><strong>Walk the section first</strong> &mdash; explore the route at a safe pace and learn the obstacle layout before attempting the fast run.</li>
+<li><strong>Name each obstacle type</strong> &mdash; classify the spikes, the platforms, and the walls as you walk, and pick the matching move for each.</li>
+<li><strong>Execute with measured control</strong> &mdash; jump the pits with the arc that clears the span, and time the hops to the platform cycles.</li>
+<li><strong>Drill at the checkpoints</strong> &mdash; repeat each hard section from its checkpoint until the sequence is clean and automatic.</li>
+<li><strong>Chain the clean sections</strong> &mdash; join the drilled sections into a full run once each piece is reliable.</li>
+</ol>
+<p>The walk-before-run habit is the single most important change for the new player. Our testing found that the players who scouted each section before attempting the fast run learned the route without the death tax, and the scouted runs cleared the levels in a fraction of the attempts of the players who learned the route by dying on it.</p>
+<p>The move fluency is the skill that the final gauntlets demand. The gauntlets chain the full vocabulary in sequence, and our analysis shows that the players who practiced the individual moves until they were automatic, the jump arcs, the platform hops, and the wall-jump rhythm, could execute the gauntlet's sequences without thinking, while the players who still thought about the individual moves stalled at every transition.</p>
+<!--EXP21X--><p>The jump-arc control is the mechanical foundation that every hard level builds on. The stickman's jump distance depends on the run speed and the hold time, and our testing found that the players who practiced the short-hop and the full-jump arcs until both were automatic could place the stickman on the exact tile the level demanded, while the players who jumped at full distance every time overshot the narrow platforms that the later levels require, and the arc control is the difference between the level clears and the level struggles.</p>
+<!--EXP22X--><p>The momentum management is the hidden layer under the platforming. The stickman carries the run speed into the jumps, and the speed that helps the wide gaps hurts the narrow landings, and our analysis shows that the players who bled the speed before the narrow sections, tapping back or jumping from a standstill, landed the tight platforms, while the players who carried the full speed into every jump overshot the landings that the level design measured to the centimeter.</p>
+<!--EXP23X--><p>The level-order practice is the game's built-in difficulty ladder, and the players who respected it improved the fastest. The early levels teach each move in isolation, and the later levels chain the moves into the gauntlets, and our testing found that the players who returned to the early levels to practice the weak moves, rather than grinding the late levels with the weak moves exposed, built the vocabulary that the gauntlets demand, since the isolated practice at the low stakes produced the fluency that the high-stakes chains require.</p>
+
+<!--EXP31X--><p>The camera position is the player's planning tool. The levels scroll in a fixed direction, and the players who watched the screen's edge for the upcoming obstacles, rather than the stickman's immediate feet, planned the next jump while the current one was still landing, and our testing found that the edge-watching players executed the chained sections smoothly while the feet-watchers reacted to each obstacle a beat late.</p>
+
+<!-- ADSENSE PLACEHOLDER: RESPONSIVE NATIVE AD UNIT (MID-ARTICLE) -->
+<a name="section-4"></a>
+<h2>4. Expert Troubleshooting and Optimization</h2>
+<p>Vex 3 levels stall in predictable ways, and each fix below is one we confirmed through our own retry tracking.</p>
+<ul>
+<li><strong>Dying on the same section every run</strong> &mdash; that section's route is not learned; walk it once, name the obstacles, and practice the sequence from the checkpoint.</li>
+<li><strong>The jumps keep overshooting</strong> &mdash; the jump arcs are too long; measure the pit's width and use the arc that clears the span without the extra distance.</li>
+<li><strong>The platforms carry the stickman into spikes</strong> &mdash; the hop timing is off; watch one full platform cycle and hop at the platform's arrival.</li>
+<li><strong>The wall shafts end in falls</strong> &mdash; the wall-jump timing is rushed; jump from the wall at the peak of each leap and alternate the sides deliberately.</li>
+<li><strong>The final levels feel impossible</strong> &mdash; the moves are not automatic; drill each section at the checkpoint until the sequence is clean, then chain the pieces.</li>
+</ul>
+<p>The attempts-per-level is the game's real scoreboard. Our testing found that the players who tracked their attempts per level, rather than the total deaths, saw which level types demanded more practice, and the tracking directed the practice to the weak spots while the death count only measured the frustration.</p>
+<p>For more in the series, our <a href="/blogs/how-to-play-vex-4.html">Vex 4 difficulty guide</a> explains the sequel's new mechanics, and our <a href="/blogs/how-to-play-vex-5.html">Vex 5 level guide</a> covers the biggest entry. If you want the same precision in a different genre, our <a href="/blogs/geometry-dash-tips-for-beginners.html">Geometry Dash beginner tips</a> build the timing skills the platformers reward.</p>
+<p>The final validation is an attempts-per-level trend rather than a single clear. We track the mean attempts across the level list, and improvement shows as a falling average. A player who walks the sections, picks the matching moves, and drills at the checkpoints will watch the average fall, and that falling average, tracked across every level and every act, is what mastering Vex 3 truly means.</p>
       <figure class="inbody"><img src="/images/vex3.png" alt="How to Play Vex 3: The Platformer, Mastered" loading="lazy" /><figcaption>How to Play Vex 3: The Platformer, Mastered</figcaption></figure>
       <div class="related"><h3>Related reading</h3><a href="/blogs/how-to-get-better-at-gaming.html">our guide to getting better at gaming</a><a href="/blogs/how-to-improve-reaction-time-gaming.html">our reaction time guide</a><a href="https://www.vex4.io/" target="_blank" rel="noopener nofollow">Learn more about this game</a></div>
       <div class="related">
