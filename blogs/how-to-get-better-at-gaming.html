@@ -112,7 +112,18 @@
     @media(max-width:600px){.blog-grid{grid-template-columns:1fr;}}
   </style>
 
-<style id="artx">.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
+<style id="artx">
+.article .proc{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px 22px;margin:22px 0;}
+.article .proc-head{display:flex;align-items:center;gap:8px;margin-bottom:14px;}
+.article .proc-head .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px rgba(34,197,94,.6);}
+.article .proc-head span{font-size:.78rem;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);}
+.article ol.proc-steps{list-style:none;margin:0;padding:0;counter-reset:ps;}
+.article ol.proc-steps li{display:flex;gap:14px;align-items:flex-start;margin:0;padding:11px 0;border-bottom:1px dashed var(--border);}
+.article ol.proc-steps li:last-child{border-bottom:none;}
+.article ol.proc-steps .ps-n{flex:0 0 30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--accent),#16a34a);color:#04120a;font-weight:800;font-size:.9rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(34,197,94,.25);}
+.article ol.proc-steps .ps-t{color:var(--txt);font-weight:600;font-size:.98rem;line-height:1.45;padding-top:3px;}
+.article ol.proc-steps .ps-t small{display:block;color:var(--muted);font-weight:400;font-size:.86rem;margin-top:2px;}
+.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
 </head>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -180,30 +191,14 @@
 <p>Physical fundamentals are the most ignored improvement lever. Sleep consolidates the motor patterns that practice builds, posture prevents the fatigue that degrades performance, and breaks prevent the burnout that stops improvement entirely. Our testing showed that players who protected their sleep improved faster and held their gains longer.</p>
 <p>Skill transfer between games is real and trainable. Reaction, timing, resource management, and pattern recognition appear across genres, and our testing found that players who consciously practiced these transferable skills improved across their whole library rather than in one title. The habit is to identify the transferable skill a game exercises and to practice it deliberately, so that time in one game builds skill that carries into the next.</p>
 <p>Goal setting turns vague ambition into measurable progress. Wanting to get better is not a plan, while a goal like landing the combo consistently or winning fifty percent of close fights is, and our testing found that players who set specific weekly goals improved faster than players with general intentions. The practice is to set one measurable goal per week, track it in a simple log, and replace it when achieved.</p>
+<figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Nintendo-Switch-Pro-Controller-FL.jpg/960px-Nintendo-Switch-Pro-Controller-FL.jpg" alt="A modern game controller" loading="lazy" /><figcaption>A modern game controller</figcaption></figure>
 <!-- ADSENSE PLACEHOLDER: CONTEXTUAL IN-ARTICLE DISPLAY AD -->
 <!--EXP5X--><p>Warm-up routines protect the first part of every session. Skill needs activation, and players who jumped straight into difficult content without warming up performed measurably worse in their opening attempts than players who spent a few minutes on easy repetition, and our testing found that the benefit lasted through the whole session. The routine does not need to be long, five to ten minutes of comfortable practice is enough to wake the motor patterns, but it needs to happen before the challenging work begins.</p>
 <!--EXP5X--><p>Reviewing session data separates perception from reality. Players often believe one skill is the problem when the log shows another, and our testing found that players who tracked their goals and mistakes over sessions made better training decisions than players who guessed from feel. The habit is to review the log weekly, compare the trends against the previous weeks, and let the data direct the next goals, since the record reveals whether the training is working long before the results do.</p>
 <a name="section-3"></a>
 <h2>3. Step-by-Step Improvement Map</h2>
 <p>The improvement loop below is the system we followed during the testing period that produced our measured gains.</p>
-<pre class="flow">
-[Set a session goal] --&gt; one skill to improve, not winning
-     |
-     v
-[Warm up 10 min] --&gt; easy repetition to build rhythm
-     |
-     v
-[Practice the goal 30 min] --&gt; stretch difficulty deliberately
-     |
-     v
-[Play for application] --&gt; use the skill in real situations
-     |
-     v
-[Review one mistake] --&gt; log the error and the fix
-     |
-     v
-[Rest and repeat] --&gt; sleep consolidates the learning
-</pre>
+<div class="proc"><div class="proc-head"><span class="dot"></span><span>Process Map</span></div><ol class="proc-steps"><li><span class="ps-n">1</span><span class="ps-t">Set a session goal</span></li><li><span class="ps-n">2</span><span class="ps-t">Warm up 10 min</span></li><li><span class="ps-n">3</span><span class="ps-t">Practice the goal 30 min</span></li><li><span class="ps-n">4</span><span class="ps-t">Play for application</span></li><li><span class="ps-n">5</span><span class="ps-t">Review one mistake</span></li><li><span class="ps-n">6</span><span class="ps-t">Rest and repeat</span></li></ol></div>
 <p>Follow this numbered routine to build the improvement habit:</p>
 <ol>
 <li><strong>Set one focus goal</strong> — choose a single skill to improve each session, and measure success by that skill, not by wins.</li>
@@ -216,7 +211,8 @@
 <p>Consistency beats intensity. A daily twenty-minute practice habit outperforms a weekly three-hour marathon, because skill builds through frequent reinforcement and sleep consolidation, and our analysis showed that players who practiced daily improved steadily while weekly marathon players yo-yoed.</p>
 <p>Playing with and against better players accelerates learning. Our testing found that players who regularly played opponents above their level learned faster than players in comfortable matches, because the stronger play exposes the weaknesses that equal matches hide. The balance is to mix challenge and application, spending part of the session stretched by stronger play and part applying the lessons against similar players.</p>
 <p>Physical preparation is part of competitive readiness. Hydration, nutrition, and light movement before a session affect focus and reaction, and our testing found that players who treated sessions like athletic performances, warming up and managing energy, sustained higher performance through long sessions than players who sat down cold. The habit is to treat the body as part of the gaming setup, since the brain that plays the game runs on the body that supports it.</p>
-<p>Community and coaching accelerate improvement beyond solo practice. Guides, replays from strong players, and coaching sessions expose the techniques and decisions that solo play never reveals, and our testing found that players who studied strong play alongside their own practice improved faster than players who only analyzed their own games. The habit is to spend part of each week studying play above your level, watching how stronger players handle the situations that give you trouble.</p>
+<p>Community and coaching accelerate improvement beyond solo practice. Guides, replays from strong players, and coaching sessions expose the techniques and decisions that solo play never reveals, and our testing found t<figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Hands_holding_video_game_controller_%2850811892858%29.jpg/900px-Hands_holding_video_game_controller_%2850811892858%29.jpg" alt="Hands holding a video game controller" loading="lazy" /><figcaption>Hands holding a video game controller</figcaption></figure>
+hat players who studied strong play alongside their own practice improved faster than players who only analyzed their own games. The habit is to spend part of each week studying play above your level, watching how stronger players handle the situations that give you trouble.</p>
 <!-- ADSENSE PLACEHOLDER: RESPONSIVE NATIVE AD UNIT (MID-ARTICLE) -->
 <!--EXP5X--><p>Persistence through the plateau is the final requirement of improvement. Every player hits a stretch where the metrics will not move, and our testing found that the players who kept the daily habit through those flat weeks were the ones who broke through to the next level, while players who quit during the plateau lost even the gains they had built. Trust the system, keep the log honest, and measure over months, because skill builds on a schedule the player does not control.</p>
 <a name="section-4"></a>
@@ -236,7 +232,7 @@
 <p>Accountability accelerates habit formation. Players who shared their practice goals with a friend or community followed through more consistently than players who trained alone, and our testing found that the accountability group completed more sessions and logged more honest reviews over the testing month. A simple check-in, reporting the session goal and the mistake found, turns improvement from a private wish into a kept commitment.</p>
 <p>Apply this system to a specific genre with <a href="/blogs/how-to-get-better-at-fps-games.html">our FPS improvement framework</a>, <a href="/blogs/how-to-get-better-at-chess.html">our chess three-tier study plan</a>, or <a href="/blogs/how-to-get-better-at-minecraft.html">our Minecraft skill stacking guide</a>. Each one uses the same deliberate-practice loop with the drills that genre needs.</p>
 <p>The final validation is a weekly trend rather than a daily score. We track one skill metric weekly and look for improvement over a month, because single sessions vary but trends reveal learning. A player who logs goals, reviews mistakes, and protects sleep is compounding improvement every week, and that compounding is what getting better at gaming truly means.</p>
-      <figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Nintendo-Switch-Pro-Controller-FL.jpg/960px-Nintendo-Switch-Pro-Controller-FL.jpg" alt="A modern game controller" loading="lazy" /><figcaption>A modern game controller</figcaption></figure><figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Hands_holding_video_game_controller_%2850811892858%29.jpg/960px-Hands_holding_video_game_controller_%2850811892858%29.jpg" alt="Hands holding a game controller" loading="lazy" /><figcaption>Hands holding a game controller</figcaption></figure>
+      
       <div class="related"><h3>Related reading</h3><a href="/blogs/best-games-that-look-like-work.html">our games that look like work list</a><a href="/blogs/how-to-improve-reaction-time-gaming.html">our reaction time guide</a><a href="https://en.wikipedia.org/wiki/Office" target="_blank" rel="noopener nofollow">Learn more about this game</a></div>
       <div class="related">
         <h3>Keep reading</h3>

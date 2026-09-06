@@ -112,7 +112,18 @@
     @media(max-width:600px){.blog-grid{grid-template-columns:1fr;}}
   </style>
 
-<style id="artx">.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
+<style id="artx">
+.article .proc{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px 22px;margin:22px 0;}
+.article .proc-head{display:flex;align-items:center;gap:8px;margin-bottom:14px;}
+.article .proc-head .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px rgba(34,197,94,.6);}
+.article .proc-head span{font-size:.78rem;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);}
+.article ol.proc-steps{list-style:none;margin:0;padding:0;counter-reset:ps;}
+.article ol.proc-steps li{display:flex;gap:14px;align-items:flex-start;margin:0;padding:11px 0;border-bottom:1px dashed var(--border);}
+.article ol.proc-steps li:last-child{border-bottom:none;}
+.article ol.proc-steps .ps-n{flex:0 0 30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--accent),#16a34a);color:#04120a;font-weight:800;font-size:.9rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(34,197,94,.25);}
+.article ol.proc-steps .ps-t{color:var(--txt);font-weight:600;font-size:.98rem;line-height:1.45;padding-top:3px;}
+.article ol.proc-steps .ps-t small{display:block;color:var(--muted);font-weight:400;font-size:.86rem;margin-top:2px;}
+.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
 </head>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -178,6 +189,7 @@
 <p>Flick aim is a ballistic skill, a single fast movement planned in advance and executed in one motion. It improves through repetition against static targets, and the key metric is accuracy over speed, since a flick that misses is slower than a careful shot that lands. Our analysis shows that players who drilled flicks at controlled speeds built accuracy that speed then multiplied.</p>
 <p>Micro-adjustment is the final refinement that separates good aim from great aim. After the large movement places the crosshair near the target, the small correction lands the shot, and this skill builds through precision drills on small targets that force the hand to make tiny, controlled movements.</p>
 <p>Arm versus wrist aiming is a style decision with real trade-offs. Wrist aim offers speed with less movement, while arm aim offers stability with more range, and our testing found that most players use a hybrid, arm for large movements and wrist for micro-adjustment. The practice is to find the mix that feels stable, to set the sensitivity to match it, and to train with that style consistently, since switching styles mid-training resets the muscle memory.</p>
+<figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/Computer_mouse_1_2015-02-28.JPG/960px-Computer_mouse_1_2015-02-28.JPG" alt="A computer mouse for aiming" loading="lazy" /><figcaption>A computer mouse for aiming</figcaption></figure>
 <!-- ADSENSE PLACEHOLDER: CONTEXTUAL IN-ARTICLE DISPLAY AD -->
 <!--EXP5X--><p>Different game genres reward different aim styles, and matching the drill to the game is the difference between practice that transfers and practice that does not. Tactical shooters with instant kills reward flick aim and first-shot accuracy, while hero shooters with sustained damage reward tracking, and our testing found that players who identified their game's dominant aim type and trained it specifically improved faster than players who split their time evenly across all drills. Reassess the balance whenever you switch main games, since the aim mix that wins in one title can be the wrong mix in another.</p>
 <!--EXP5X--><p>Warm-up routines protect the first games of a session. Aim skill needs activation, and players who jumped straight into ranked matches without warming up performed measurably worse in their opening games than players who spent ten minutes on easy tracking, and our testing found that the warm-up benefit lasted through the whole session. The routine does not need to be long, a few minutes of large-target tracking and slow flicks is enough to wake the motor patterns, but it needs to happen before competitive play rather than after the first losses.</p>
@@ -185,24 +197,7 @@
 <a name="section-3"></a>
 <h2>3. Step-by-Step Aim Drill Map</h2>
 <p>The drill loop below is the structure we used during the testing that produced our measured improvements.</p>
-<pre class="flow">
-[Lock sensitivity] --&gt; one value, weeks of consistency
-     |
-     v
-[Warm up 10 min] --&gt; large targets, easy tracking
-     |
-     v
-[Primary drill 15 min] --&gt; the aim type your game uses
-     |
-     v
-[Secondary drill 10 min] --&gt; micro-adjustment precision
-     |
-     v
-[Deathmatch application] --&gt; use the skill under pressure
-     |
-     v
-[Log accuracy weekly] --&gt; track the trend, not the session
-</pre>
+<div class="proc"><div class="proc-head"><span class="dot"></span><span>Process Map</span></div><ol class="proc-steps"><li><span class="ps-n">1</span><span class="ps-t">Lock sensitivity</span></li><li><span class="ps-n">2</span><span class="ps-t">Warm up 10 min</span></li><li><span class="ps-n">3</span><span class="ps-t">Primary drill 15 min</span></li><li><span class="ps-n">4</span><span class="ps-t">Secondary drill 10 min</span></li><li><span class="ps-n">5</span><span class="ps-t">Deathmatch application</span></li><li><span class="ps-n">6</span><span class="ps-t">Log accuracy weekly</span></li></ol></div>
 <p>Follow this numbered routine for each aim training session:</p>
 <ol>
 <li><strong>Lock your sensitivity</strong> — choose a value and keep it constant for weeks, since changing it resets the muscle memory aim depends on.</li>
@@ -214,7 +209,8 @@
 <p>Drill quality beats drill quantity. Ten minutes of focused, accurate repetitions builds more skill than an hour of sloppy speed, and our testing found that players who slowed down to maintain accuracy during drills improved faster than players who rushed.</p>
 <p>Crosshair placement practice belongs in every session. Moving through maps with the crosshair at head height and pre-aimed at corners trains the habit that reduces the aiming work in real fights, and we found that combining placement habits with aim drills produced the fastest overall improvement.</p>
 <p>Tracking prediction separates average from strong tracking aim. Following a target's current position is reactive, while aiming at where the target will be is predictive, and our testing found that players who learned to read movement patterns and lead their aim landed more shots on moving targets. The skill builds through practice against targets with varied movement, letting the brain learn the patterns that prediction depends on.</p>
-<p>Flick accuracy is built from the large movement inward. A flick that lands near the target every time is the foundation, and the micro-adjustment that follows finishes the shot, and our testing found that players who drilled the two stages separately, first the large movement to the target area, then the small correction, built reliable flicks faster than players who tried to land the whole shot in one motion.</p>
+<p>Flick accuracy is built from the large movement inward. A flick that lands near the target every time is the foundation, and the micro-adjustmen<figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/2023_Mysz_komputerowa_Logitech_G903_Lightspeed.jpg/900px-2023_Mysz_komputerowa_Logitech_G903_Lightspeed.jpg" alt="A modern gaming mouse" loading="lazy" /><figcaption>A modern gaming mouse</figcaption></figure>
+t that follows finishes the shot, and our testing found that players who drilled the two stages separately, first the large movement to the target area, then the small correction, built reliable flicks faster than players who tried to land the whole shot in one motion.</p>
 <!-- ADSENSE PLACEHOLDER: RESPONSIVE NATIVE AD UNIT (MID-ARTICLE) -->
 <!--EXP5X--><p>Persistence through the plateau is the final requirement of aim training. Every player hits a stretch where the accuracy number will not move, and our testing found that the players who kept the daily habit through those flat weeks were the ones who broke through to the next level, while players who quit during the plateau lost even the gains they had built. Trust the process, keep the sensitivity locked, and measure over months, because aim is a motor skill that builds on a schedule the player does not control.</p>
 <a name="section-4"></a>
@@ -233,7 +229,7 @@
 Mouse grip and hand position affect aim consistency more than players expect. A relaxed grip allows the fine motor control that micro-adjustment needs, while a tense grip transmits tremor into every shot, and our testing found that players who trained with a light grip maintained accuracy longer into sessions than players who gripped hard. Check the grip during drills, loosen the hand, and let the mouse move freely.</p>
 <p>Apply better aim inside a full improvement plan with <a href="/blogs/how-to-get-better-at-fps-games.html">our FPS aim and game sense guide</a>, and speed up the shots with <a href="/blogs/how-to-improve-reaction-time-gaming.html">our reaction time training plan</a>. For free practice arenas, <a href="/blogs/best-free-browser-fps-games.html">our best free browser FPS games list</a> and <a href="/blogs/how-to-play-1v1-lol.html">our 1v1.LOL walkthrough</a> have you covered.</p>
 <p>The final validation is a weekly accuracy trend rather than a daily score. We track first-shot accuracy and time-to-kill across matches, and improvement shows as a trend over weeks. A player who locks sensitivity, trains the right aim type, and practices placement is building aim that transfers to every shooter, and that transferable aim is what improving your aim in FPS games truly means.</p>
-      <figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/Computer_mouse_1_2015-02-28.JPG/960px-Computer_mouse_1_2015-02-28.JPG" alt="A computer mouse for aiming" loading="lazy" /><figcaption>A computer mouse for aiming</figcaption></figure><figure class="inbody"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b3/BgeFpsShooter.jpg" alt="A first-person shooter game" loading="lazy" /><figcaption>A first-person shooter game</figcaption></figure>
+      
       <div class="related"><h3>Related reading</h3><a href="/blogs/best-free-browser-fps-games.html">our free browser FPS list</a><a href="/blogs/how-to-get-better-at-gaming.html">our guide to getting better at gaming</a><a href="https://en.wikipedia.org/wiki/First-person_shooter" target="_blank" rel="noopener nofollow">Learn more about this game</a></div>
       <div class="related">
         <h3>Keep reading</h3>

@@ -112,7 +112,18 @@
     @media(max-width:600px){.blog-grid{grid-template-columns:1fr;}}
   </style>
 
-<style id="artx">.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
+<style id="artx">
+.article .proc{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px 22px;margin:22px 0;}
+.article .proc-head{display:flex;align-items:center;gap:8px;margin-bottom:14px;}
+.article .proc-head .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px rgba(34,197,94,.6);}
+.article .proc-head span{font-size:.78rem;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);}
+.article ol.proc-steps{list-style:none;margin:0;padding:0;counter-reset:ps;}
+.article ol.proc-steps li{display:flex;gap:14px;align-items:flex-start;margin:0;padding:11px 0;border-bottom:1px dashed var(--border);}
+.article ol.proc-steps li:last-child{border-bottom:none;}
+.article ol.proc-steps .ps-n{flex:0 0 30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--accent),#16a34a);color:#04120a;font-weight:800;font-size:.9rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(34,197,94,.25);}
+.article ol.proc-steps .ps-t{color:var(--txt);font-weight:600;font-size:.98rem;line-height:1.45;padding-top:3px;}
+.article ol.proc-steps .ps-t small{display:block;color:var(--muted);font-weight:400;font-size:.86rem;margin-top:2px;}
+.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
 </head>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -177,34 +188,12 @@
 </table>
 <p>The duo band deserves the deepest dive because it is the most common group size and the hardest to satisfy. A two-player session has nowhere to hide: a skill gap is immediately visible, and a boring match ends fast. Our testing found that duos stayed engaged longest with games offering a rematch-friendly loop, where a loss feels like a lesson rather than a dead end. 1v1.LOL delivers that through its build-fight training ground, Chess through its post-game review, and Basketball Stars through its rapid-fire best-of rounds. If your duo contains a clear skill gap, pick the luck-leaning variant of any of these, because our data shows mixed-skill duos report three times more fun when the weaker player still wins a fair share of rounds.</p>
 <p>The mid and large bands share a problem that most guides miss: elimination boredom. In a five-player free-for-all, the first player out can wait several minutes for the round to end, and that waiting is where group energy dies. The winning titles for larger groups all give eliminated players something to do, whether that is watching from a ghost camera, betting on the winner, or queueing the next round. Among Us solves it with its discussion phase, where eliminated players still contribute as spectators with full information, and our test groups rated that design the single biggest reason the game survived dozens of sessions.</p>
+<figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/E3_2011_-_trying_out_Playstation_Network_games_at_the_Sony_booth.jpg/900px-E3_2011_-_trying_out_Playstation_Network_games_at_the_Sony_booth.jpg" alt="Players trying online games at a gaming event" loading="lazy" /><figcaption>Players trying online games at a gaming event</figcaption></figure>
 <!-- ADSENSE PLACEHOLDER: CONTEXTUAL IN-ARTICLE DISPLAY AD -->
 <a name="section-3"></a>
 <h2>3. Step-by-Step Lobby Setup Map</h2>
 <p>Getting a group into the same game is a repeatable process, and the organizer who follows this sequence avoids the chaos that ends most spontaneous sessions.</p>
-<pre class="flow">
-[Pick a night or break] --&gt; confirm who is free
-     |
-     v
-[Choose game by group size] --&gt; use the tables above
-     |
-     v
-[Create the lobby] --&gt; generate the join link or code
-     |
-     v
-[Send link to everyone] --&gt; chat, not email, for speed
-     |
-     v
-[Set a voice channel] --&gt; Discord, Meet, or phone call
-     |
-     v
-[Warm-up round] --&gt; let late joiners catch up
-     |
-     v
-[Play the session] --&gt; rotate games every 30 minutes
-     |
-     v
-[Close cleanly] --&gt; agree on the next session time
-</pre>
+<div class="proc"><div class="proc-head"><span class="dot"></span><span>Process Map</span></div><ol class="proc-steps"><li><span class="ps-n">1</span><span class="ps-t">Pick a night or break</span></li><li><span class="ps-n">2</span><span class="ps-t">Choose game by group size</span></li><li><span class="ps-n">3</span><span class="ps-t">Create the lobby</span></li><li><span class="ps-n">4</span><span class="ps-t">Send link to everyone</span></li><li><span class="ps-n">5</span><span class="ps-t">Set a voice channel</span></li><li><span class="ps-n">6</span><span class="ps-t">Warm-up round</span></li><li><span class="ps-n">7</span><span class="ps-t">Play the session</span></li><li><span class="ps-n">8</span><span class="ps-t">Close cleanly</span></li></ol></div>
 <p>Four organizer rules keep the group coming back:</p>
 <ul>
 <li><strong>Link discipline:</strong> send the join link in the group chat five minutes before start, because half the group will arrive late and the link must be waiting.</li>
@@ -226,7 +215,8 @@
 <p>Connection problems deserve a decision rule so the group stops debugging and starts playing. Our rule of thumb: if one player cannot stabilize within five minutes, start the session without them and let them join the second game. This sounds harsh, but our data shows that the alternative, waiting for the straggler, costs the entire group its best window of energy, and the straggler usually connects successfully once the pressure is off. Designate one technically comfortable player as the designated helper so the organizer is free to run the session.</p>
 <p>Long-term friend groups benefit from a standing game night with a rotating catalog. Our most successful test groups treated the catalog like a restaurant menu, taking turns picking the title each week, and that single habit kept sessions alive for months. The picker rotates, so no one becomes the permanent organizer, and every player eventually introduces the group to a favorite. The rotation also prevents the burnout that comes from playing the same title until it feels like a chore.</p>
 <p>Voice chat etiquette is the unglamorous key to group longevity. Groups that set simple rules, like one person talking at a time during tense rounds and no backseat driving during versus matches, reported dramatically fewer arguments. Browser games attract casual players who do not want competitive pressure, so keeping the tone light matters more than winning. Our most durable test group explicitly banned trash talk aimed at specific players and channeled all competitive energy into the game itself, a policy that survived over fifty sessions without a single walkout.</p>
-<p>If your group is spread across time zones or schedules, asynchronous play is the answer. Titles with turn-based modes, like Chess and 2048 races, let friends play on their own time while still competing against each other's scores. Our testing found that groups with conflicting schedules stayed connected through these asynchronous titles long after they stopped being able to sync a live lobby. The social thread continues through a shared scoreboard or a running match, and the group stays warm for the weeks when a live session is possible.</p>
+<p>If your group is spread across time zones or schedules, asynchronous play is the answer. Titles with turn-based modes, like Chess and 2048 races, let friends play on<figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Family_playing_a_board.jpg/900px-Family_playing_a_board.jpg" alt="A family playing a board game together" loading="lazy" /><figcaption>A family playing a board game together</figcaption></figure>
+ their own time while still competing against each other's scores. Our testing found that groups with conflicting schedules stayed connected through these asynchronous titles long after they stopped being able to sync a live lobby. The social thread continues through a shared scoreboard or a running match, and the group stays warm for the weeks when a live session is possible.</p>
 <!-- ADSENSE PLACEHOLDER: IN-ARTICLE DISPLAY AD (END OF CONTENT) -->
 <h2>5. Quick-Reference FAQ</h2>
 <p><strong>What is the easiest multiplayer browser game to start?</strong> Paper.io and Slither.io lead because both put you in a live lobby from the first click with no account and no tutorial, and both run on any device.</p>
@@ -237,7 +227,7 @@
 <p><strong>Which title works best for a first-ever group session?</strong> Among Us, because its discussion phase keeps everyone socially involved even after elimination, and the deduction format forgives skill gaps completely.</p>
 <p><strong>How do we keep a weekly session alive?</strong> Rotate the game picker each week, run a two-minute warm-up, and switch titles every thirty minutes so the second game of the night carries the energy.</p>
 <p>Looking to expand your group's rotation? The <a href="/blogs/best-multiplayer-browser-games.html">full multiplayer browser game catalog</a> adds twenty more titles sorted by player count, and the <a href="/blogs/best-2-player-games-online.html">two-player online game collection</a> covers dedicated duos. For smaller screens, our <a href="/blogs/best-browser-games-for-phone.html">phone-friendly browser picks</a> list works when half the group is on mobile.</p>
-      <figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Friends_are_playing_video_games_at_home_sitting_on_sofa_and_%28cropped%29.jpg/960px-Friends_are_playing_video_games_at_home_sitting_on_sofa_and_%28cropped%29.jpg" alt="Friends playing video games together" loading="lazy" /><figcaption>Friends playing video games together</figcaption></figure>
+      
       <div class="related"><h3>Related reading</h3><a href="/blogs/best-browser-games-no-download.html">our no-download browser games list</a><a href="/blogs/best-games-for-a-quick-break.html">our quick break games list</a><a href="https://en.wikipedia.org/wiki/Friendship" target="_blank" rel="noopener nofollow">Learn more about this game</a></div>
       <div class="related">
         <h3>Keep reading</h3>

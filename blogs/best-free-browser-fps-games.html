@@ -112,7 +112,18 @@
     @media(max-width:600px){.blog-grid{grid-template-columns:1fr;}}
   </style>
 
-<style id="artx">.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
+<style id="artx">
+.article .proc{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px 22px;margin:22px 0;}
+.article .proc-head{display:flex;align-items:center;gap:8px;margin-bottom:14px;}
+.article .proc-head .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px rgba(34,197,94,.6);}
+.article .proc-head span{font-size:.78rem;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);}
+.article ol.proc-steps{list-style:none;margin:0;padding:0;counter-reset:ps;}
+.article ol.proc-steps li{display:flex;gap:14px;align-items:flex-start;margin:0;padding:11px 0;border-bottom:1px dashed var(--border);}
+.article ol.proc-steps li:last-child{border-bottom:none;}
+.article ol.proc-steps .ps-n{flex:0 0 30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--accent),#16a34a);color:#04120a;font-weight:800;font-size:.9rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(34,197,94,.25);}
+.article ol.proc-steps .ps-t{color:var(--txt);font-weight:600;font-size:.98rem;line-height:1.45;padding-top:3px;}
+.article ol.proc-steps .ps-t small{display:block;color:var(--muted);font-weight:400;font-size:.86rem;margin-top:2px;}
+.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
 </head>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -234,6 +245,7 @@ Our testing split browser shooters into two families. Pure arena shooters reward
 <td>Loadout variety</td>
 </tr>
 </tbody></table>
+<figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/ESport_IFNG_Munich_20-Nov-11_Stage5.jpg/900px-ESport_IFNG_Munich_20-Nov-11_Stage5.jpg" alt="An esports tournament stage with players competing" loading="lazy" /><figcaption>An esports tournament stage with players competing</figcaption></figure>
 <!-- ADSENSE PLACEHOLDER: CONTEXTUAL IN-ARTICLE DISPLAY AD -->
 <h3>Aim training: drills that transfer to matches</h3>
 <p>Aim training in browser FPS games works best when it mirrors the game's own mechanics. Our testing compared generic aim trainers against in-game bot modes, and the in-game drills transferred better because they matched the title's movement speed, weapon recoil, and hitbox sizes. Ten minutes of in-game tracking practice beat twenty minutes of a generic trainer.</p>
@@ -262,25 +274,7 @@ Our testing split browser shooters into two families. Pure arena shooters reward
 <a name="section-3"></a>
 <h2 id="section-3">3. Step-by-Step Skill Map</h2>
 Improvement in browser FPS follows a deliberate loop. We mapped the progression after testing the drill sequence with players new to mouse aiming.
-<pre class="flow">[Set up input] -- raw mouse, stable FPS
-        |
-        v
-[Learn the movement layer] -- strafe, jump
-        |
-        v
-[Master ONE weapon] -- recoil and range
-        |
-        v
-[Practice tracking bots] -- 10 minutes
-        |
-        v
-[Enter casual matchmaking] -- placement losses
-        |
-        v
-[Review one death per match]
-        |
-        v
-[Fix ONE weakness] --> repeat loop</pre>
+<div class="proc"><div class="proc-head"><span class="dot"></span><span>Process Map</span></div><ol class="proc-steps"><li><span class="ps-n">1</span><span class="ps-t">Set up input</span></li><li><span class="ps-n">2</span><span class="ps-t">Learn the movement layer</span></li><li><span class="ps-n">3</span><span class="ps-t">Master ONE weapon</span></li><li><span class="ps-n">4</span><span class="ps-t">Practice tracking bots</span></li><li><span class="ps-n">5</span><span class="ps-t">Enter casual matchmaking</span></li><li><span class="ps-n">6</span><span class="ps-t">Review one death per match</span></li><li><span class="ps-n">7</span><span class="ps-t">Fix ONE weakness</span></li></ol></div>
 <p class="tblcap">Process map 1: The step-by-step flow for this article.</p><h3>Recommended browser FPS lineup</h3>
 - <strong>Krunker.io</strong> — the closest browser equivalent to a proper arena shooter; fast movement and real matchmaking.
 - <strong>1v1.LOL</strong> — Fortnite-style building and shooting with a genuine competitive edge.
@@ -301,7 +295,8 @@ Improvement in browser FPS follows a deliberate loop. We mapped the progression 
 </ul>
 <p>The population math explains most matchmaking complaints. A title feels broken at 3 a.m. and fine at 8 p.m. with zero changes to the game itself. Match your sessions to the population curve and the experience transforms.</p>
 <h3>Hardware ceilings: what actually limits browser shooters</h3>
-<p>Browser shooters are CPU-bound more often than players expect. Our testing on integrated-graphics laptops found the processor and browser engine determined frame rate more than the GPU, because WebGL scenes and game logic share the CPU. Closing background tabs and updating the browser delivered bigger gains than any graphics setting.</p>
+<p>Browser shooters are CPU-bound more often than players expect. Our testing on integrated-graphics laptops found the processor and browser engine determined frame rate more than the GPU, because WebGL scenes and game logic sh<figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/GameCube-Set.jpg/900px-GameCube-Set.jpg" alt="A video game console and controllers" loading="lazy" /><figcaption>A video game console and controllers</figcaption></figure>
+are the CPU. Closing background tabs and updating the browser delivered bigger gains than any graphics setting.</p>
 <p>The practical ceiling check is simple: open the task manager during a match and watch the CPU graph. If the browser thread pegs the processor, the fix is fewer tabs and a current browser, not a new graphics card.</p>
 <!-- ADSENSE PLACEHOLDER: CONTEXTUAL IN-ARTICLE DISPLAY AD (PRE-FOOTER) -->
 <a name="section-4"></a>
@@ -323,7 +318,7 @@ Improvement in browser FPS follows a deliberate loop. We mapped the progression 
 </ul>
 <p>The routine converts play into deliberate practice. Players who adopted it in our testing held their rank across a full month, while players who chased nightly wins yo-yoed back to their starting point within weeks.</p>
 <p>Browser FPS games now deliver legitimate competitive shooting with zero install friction. Master the flagship duel format with our <a href="/blogs/how-to-play-1v1-lol.html">1v1.LOL building and aiming guide</a>, build your fundamentals with the <a href="/blogs/how-to-improve-your-aim-in-fps.html">aim improvement framework</a>, and scan the <a href="/blogs/best-action-games-browser.html">best browser action games list</a> when you want to branch out.</p>
-      <figure class="inbody"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b3/BgeFpsShooter.jpg" alt="A first-person shooter game" loading="lazy" /><figcaption>A first-person shooter game</figcaption></figure>
+      
       <div class="related"><h3>Related reading</h3><a href="/blogs/best-browser-games-no-download.html">our no-download browser games list</a><a href="/blogs/best-games-for-a-quick-break.html">our quick break games list</a><a href="https://en.wikipedia.org/wiki/First-person_shooter" target="_blank" rel="noopener nofollow">Learn more about this game</a></div>
       <div class="related">
         <h3>Keep reading</h3>

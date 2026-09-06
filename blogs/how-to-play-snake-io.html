@@ -112,7 +112,18 @@
     @media(max-width:600px){.blog-grid{grid-template-columns:1fr;}}
   </style>
 
-<style id="artx">.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
+<style id="artx">
+.article .proc{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px 22px;margin:22px 0;}
+.article .proc-head{display:flex;align-items:center;gap:8px;margin-bottom:14px;}
+.article .proc-head .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px rgba(34,197,94,.6);}
+.article .proc-head span{font-size:.78rem;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);}
+.article ol.proc-steps{list-style:none;margin:0;padding:0;counter-reset:ps;}
+.article ol.proc-steps li{display:flex;gap:14px;align-items:flex-start;margin:0;padding:11px 0;border-bottom:1px dashed var(--border);}
+.article ol.proc-steps li:last-child{border-bottom:none;}
+.article ol.proc-steps .ps-n{flex:0 0 30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--accent),#16a34a);color:#04120a;font-weight:800;font-size:.9rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(34,197,94,.25);}
+.article ol.proc-steps .ps-t{color:var(--txt);font-weight:600;font-size:.98rem;line-height:1.45;padding-top:3px;}
+.article ol.proc-steps .ps-t small{display:block;color:var(--muted);font-weight:400;font-size:.86rem;margin-top:2px;}
+.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
 </head>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -174,6 +185,7 @@
 <p>The perimeter strategy works because the arena edges are the only walls that never move. A snake farming the edges has its tail covered by the boundary, which halves the directions that a rival can cut it off from, and our testing found that the snakes that held the edge lanes grew steadily while the center hunters traded their length for kills that often ended in their own deaths.</p>
 <p>The boost mechanic is the game's double-edged sword. The boost spends the snake's length for speed, which makes it the tool for escaping a trap and the tool for chasing a kill, and our analysis shows that the players who boosted only into cleared space, never into the blind zones where a rival's head could be waiting, kept the length that the leaderboard requires.</p>
 <p>The fallen-snake jackpots are the fastest growth in the game. When a snake dies, its remains scatter into glowing orbs that any snake can eat, and the players who positioned themselves near the kills, rather than chasing the kills themselves, collected the remains without the risk, and our testing found that the jackpot positioning was the habit that separated the top-ten snakes from the mid-pack.</p>
+<figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/Green_snake_looking_at_me.jpg/900px-Green_snake_looking_at_me.jpg" alt="A green snake, like the ones in a snake game" loading="lazy" /><figcaption>A green snake, like the ones in a snake game</figcaption></figure>
 <!-- ADSENSE PLACEHOLDER: CONTEXTUAL IN-ARTICLE DISPLAY AD -->
 <!--EXP9X--><p>The kill watching is the arena's hidden economy. The biggest snakes attract the most hunters, and the hunters' collisions produce the richest remains, which means the players who watched the leaderboard giants, positioning themselves at the edge of the fight rather than inside it, collected the fallout without joining the brawl, and our analysis shows that the edge-of-fight positioning produced the most consistent growth of any single habit in our testing.</p>
 <!--EXP10X--><p>The orb lines are the arena's highways. The orbs spawn in patterns that the players can read, and the lines of orbs that trail the dead snakes mark the routes the fallen snakes took, which means the players who followed the orb trails found the richest feeding lanes, and our testing found that the trail followers grew faster than the players who wandered for the orbs, because the trails led to the areas where the recent action had concentrated the food.</p>
@@ -181,24 +193,7 @@
 <a name="section-3"></a>
 <h2>3. Step-by-Step Growth Map</h2>
 <p>The growth loop below is the sequence we followed during the testing that produced our most consistent leaderboard runs.</p>
-<pre class="flow">
-[Spawn and read the arena] --&gt; find the edges and the giants
-     |
-     v
-[Farm the perimeter] --&gt; eat the edge orbs in a safe loop
-     |
-     v
-[Track the leaderboard] --&gt; know which snakes are the threats
-     |
-     v
-[Position at the fights] --&gt; collect the remains, not the risk
-     |
-     v
-[Boost into cleared space] --&gt; escape or chase with purpose
-     |
-     v
-[Claim the top ten] --&gt; hold the edge lanes as the snake grows
-</pre>
+<div class="proc"><div class="proc-head"><span class="dot"></span><span>Process Map</span></div><ol class="proc-steps"><li><span class="ps-n">1</span><span class="ps-t">Spawn and read the arena</span></li><li><span class="ps-n">2</span><span class="ps-t">Farm the perimeter</span></li><li><span class="ps-n">3</span><span class="ps-t">Track the leaderboard</span></li><li><span class="ps-n">4</span><span class="ps-t">Position at the fights</span></li><li><span class="ps-n">5</span><span class="ps-t">Boost into cleared space</span></li><li><span class="ps-n">6</span><span class="ps-t">Claim the top ten</span></li></ol></div>
 <p>Follow this numbered routine for each run:</p>
 <ol>
 <li><strong>Read the arena at spawn</strong> &mdash; find the perimeter lanes, the center crowds, and the leaderboard giants before choosing the first route.</li>
@@ -214,7 +209,8 @@
 <!--EXP23X--><p>The kill-window reading is the skill that turns the defensive perimeter strategy into the offensive leaderboard push. When a giant snake dies, its remains scatter in a long trail, and the players who read the death direction, moving along the trail's path rather than to its middle, collected the richest segments before the other snakes arrived, and our testing found that the trail readers doubled their jackpot collection rate, which is the single fastest growth the arena offers.</p>
 
 <!--EXP31X--><p>The ring formation is the endgame shape that the longest snakes use to protect their length. A snake long enough to circle its own tail can form a ring around the feeding area, and the ring blocks the rivals while the orbs inside feed the growth, and our analysis shows that the ring is the arena's ultimate defensive structure, since the rivals cannot cross the body without dying and the snake inside the ring grows undisturbed until the ring's size forces a move.</p>
-<!--EXP32X--><p>The death-spiral avoidance is the discipline that keeps the late runs alive. The arena's giants die in spirals when they corner themselves, and the spiral remains scatter into the richest jackpot of the match, which draws every nearby snake into the feeding frenzy, and our testing found that the players who watched the spiral from a distance, waiting for the frenzy to thin before entering, collected the remains without joining the collision that ended the impatient feeders' runs.</p>
+<!--EXP32X--><p>The death-spiral avoidance is the discipline that keeps the late runs alive. The arena's giants die in spirals when they corner themselves, and the spiral remains scatter into the riches<figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/GameCube-Set.jpg/900px-GameCube-Set.jpg" alt="A video game console and controllers" loading="lazy" /><figcaption>A video game console and controllers</figcaption></figure>
+t jackpot of the match, which draws every nearby snake into the feeding frenzy, and our testing found that the players who watched the spiral from a distance, waiting for the frenzy to thin before entering, collected the remains without joining the collision that ended the impatient feeders' runs.</p>
 
 <!-- ADSENSE PLACEHOLDER: RESPONSIVE NATIVE AD UNIT (MID-ARTICLE) -->
 <a name="section-4"></a>
@@ -230,7 +226,7 @@
 <p>The arena is won by the snakes that control the space, not the snakes that chase the kills. Our testing found that the players who held the perimeter, watched the giants, and collected the fight fallout without joining the brawls grew the most consistently, and the consistency is what the leaderboard rewards over the flashy single kills.</p>
 <p>For the classic version of the chase, our <a href="/blogs/how-to-play-snake.html">classic Snake game guide</a> explains the original single-player formula. If you enjoy the arena survival, our <a href="/blogs/how-to-play-agar-io.html">Agar.io growth guide</a> covers the other giant of the genre, and our <a href="/blogs/how-to-play-slither-io.html">Slither.io survival guide</a> explains the similar snake arena.</p>
 <p>The final validation is a leaderboard finish rate rather than a single length. We track the share of runs that reach the top ten, and improvement shows as a rising rate. A player who farms the perimeter, tracks the giants, and positions at the fights will watch the finish rate climb, and that climbing rate is what playing Snake.io well truly means.</p>
-      <figure class="inbody"><img src="/images/snakeio.png" alt="How to Play Snake.io: The Modern Snake Game" loading="lazy" /><figcaption>How to Play Snake.io: The Modern Snake Game</figcaption></figure>
+      
       <div class="related"><h3>Related reading</h3><a href="/blogs/how-to-play-snake.html">our Snake guide</a><a href="/blogs/how-to-get-better-at-gaming.html">our guide to getting better at gaming</a><a href="https://en.wikipedia.org/wiki/Snake_(video_game_genre)" target="_blank" rel="noopener nofollow">Learn more about this game</a></div>
       <div class="related">
         <h3>Keep reading</h3>

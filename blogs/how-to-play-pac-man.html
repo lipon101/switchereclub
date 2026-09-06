@@ -112,7 +112,18 @@
     @media(max-width:600px){.blog-grid{grid-template-columns:1fr;}}
   </style>
 
-<style id="artx">.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
+<style id="artx">
+.article .proc{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px 22px;margin:22px 0;}
+.article .proc-head{display:flex;align-items:center;gap:8px;margin-bottom:14px;}
+.article .proc-head .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px rgba(34,197,94,.6);}
+.article .proc-head span{font-size:.78rem;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);}
+.article ol.proc-steps{list-style:none;margin:0;padding:0;counter-reset:ps;}
+.article ol.proc-steps li{display:flex;gap:14px;align-items:flex-start;margin:0;padding:11px 0;border-bottom:1px dashed var(--border);}
+.article ol.proc-steps li:last-child{border-bottom:none;}
+.article ol.proc-steps .ps-n{flex:0 0 30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--accent),#16a34a);color:#04120a;font-weight:800;font-size:.9rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(34,197,94,.25);}
+.article ol.proc-steps .ps-t{color:var(--txt);font-weight:600;font-size:.98rem;line-height:1.45;padding-top:3px;}
+.article ol.proc-steps .ps-t small{display:block;color:var(--muted);font-weight:400;font-size:.86rem;margin-top:2px;}
+.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
 </head>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -174,6 +185,7 @@
 <p>Blinky is the direct chaser, and he is the ghost that most players learn to fear first. He targets Pac-Man's current tile, which makes him predictable: he follows the shortest path to wherever Pac-Man is, and the counter is to turn corners, since his direct pursuit is slower around the bends than a player who plans the route ahead. Our testing found that the corner turn, executed just before Blinky commits to the corridor, shakes him off more reliably than any straight-line speed.</p>
 <p>Pinky is the ambusher, and she is the ghost that ends the most runs for players who move predictably. She targets the tile four spaces ahead of Pac-Man's current direction, which means she is waiting where the player is going, not where the player is, and the counter is to change direction at the intersections, since the ambush point shifts when the heading changes. Our analysis shows that the players who varied their direction at the intersections avoided Pinky's ambushes far more often than the players who held a steady route.</p>
 <p>Inky is the pincer, and his rule is the most complex. He targets a tile that combines Blinky's position with Pac-Man's heading, which makes him the ghost that cuts off the escape routes, and the counter is to read the pair, staying away from the line between Blinky and the ambush point. Our testing found that the players who watched both Inky and Blinky, rather than each ghost separately, avoided the pincer traps that ended the deepest runs.</p>
+<figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Tiger_-_mouse_maze_-_retro.jpg/900px-Tiger_-_mouse_maze_-_retro.jpg" alt="A retro maze puzzle" loading="lazy" /><figcaption>A retro maze puzzle</figcaption></figure>
 <!-- ADSENSE PLACEHOLDER: CONTEXTUAL IN-ARTICLE DISPLAY AD -->
 <!--EXP9X--><p>Clyde is the wildcard, and he is the ghost that the aggressive players can turn into an asset. He chases Pac-Man when he is close and wanders toward the corner when he is far, which means the players who kept Clyde at the distance boundary, baiting him into the wander mode, removed one ghost from the chase while they cleared the pellets, and our analysis shows that the players who used Clyde as a movable obstacle, rather than a random threat, found the maze significantly easier to clear.</p>
 <!--EXP10X--><p>The ghost house release timing is the clock that starts every chase. The ghosts release from the center house on a staggered schedule, and the players who watched the release order knew which ghost was joining the chase next, while the players who ignored the house were surprised by the new arrivals, and our testing found that the release awareness is most valuable in the early maze, where the single active ghost is the only constraint on the pellet route.</p>
@@ -181,24 +193,7 @@
 <a name="section-3"></a>
 <h2>3. Step-by-Step Maze Map</h2>
 <p>The maze loop below is the sequence we followed during the testing that produced our longest survival runs.</p>
-<pre class="flow">
-[Read the ghost positions] --&gt; name each ghost's mode
-     |
-     v
-[Plan the pellet route] --&gt; route through the dots first
-     |
-     v
-[Check the corners] --&gt; avoid the dead-end traps
-     |
-     v
-[Turn at the intersections] --&gt; break Pinky's ambush line
-     |
-     v
-[Use the tunnel escapes] --&gt; shake the direct chasers
-     |
-     v
-[Route the power pellets] --&gt; reverse the chase on the ghosts
-</pre>
+<div class="proc"><div class="proc-head"><span class="dot"></span><span>Process Map</span></div><ol class="proc-steps"><li><span class="ps-n">1</span><span class="ps-t">Read the ghost positions</span></li><li><span class="ps-n">2</span><span class="ps-t">Plan the pellet route</span></li><li><span class="ps-n">3</span><span class="ps-t">Check the corners</span></li><li><span class="ps-n">4</span><span class="ps-t">Turn at the intersections</span></li><li><span class="ps-n">5</span><span class="ps-t">Use the tunnel escapes</span></li><li><span class="ps-n">6</span><span class="ps-t">Route the power pellets</span></li></ol></div>
 <p>Follow this numbered routine for each maze:</p>
 <ol>
 <li><strong>Read the ghost positions</strong> &mdash; name each ghost's current mode, chaser, ambusher, pincer, or wanderer, before choosing the route.</li>
@@ -214,7 +209,8 @@
 <!--EXP23X--><p>The sound cues carry the ghost-state information that the eyes can miss. The game plays a distinctive musical sting when the ghosts turn blue and a different tone when they revert, and the players who played with the sound on knew the power-pellet window without watching the ghosts, and our testing found that the audio-aware players timed the reversals more precisely, converting the blue windows into the multi-ghost feasts that the high-score runs require.</p>
 
 <!--EXP31X--><p>The corridor counting is the habit that the maze veterans use to stay ahead of the chasers. Each corridor in the maze has a length, and the players who counted the corridor lengths knew exactly how many turns they could make before the ghost at the corridor's mouth caught them, and our analysis shows that the counting habit turned the chase from a panic into a schedule, since the counted corridor told the player when to reverse, when to take the tunnel, and when to commit to the power pellet that sat at the far end.</p>
-<!--EXP32X--><p>The reversal bait is the advanced move that the high-score players use to clear the packed corridors. When the ghosts cluster behind the player, a sudden reversal sends the whole pack past the player's position, and the players who timed the reversal at the intersection, baiting the pack into the corridor and then doubling back, cleared the packed lanes that the straight-line players could not enter, and our testing found that the reversal bait is the move that separates the maze clearers from the maze survivors.</p>
+<!--EXP32X--><p>The reversal bait is the advanced move that the high-score players use to clear the packed corridors. When the ghosts cluster behind the player, a sudden reversal sends the whole pack past the player's position, and the players who timed the reversal at the intersecti<figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Arcade_cabinet.png/900px-Arcade_cabinet.png" alt="A classic arcade game cabinet" loading="lazy" /><figcaption>A classic arcade game cabinet</figcaption></figure>
+on, baiting the pack into the corridor and then doubling back, cleared the packed lanes that the straight-line players could not enter, and our testing found that the reversal bait is the move that separates the maze clearers from the maze survivors.</p>
 
 <!-- ADSENSE PLACEHOLDER: RESPONSIVE NATIVE AD UNIT (MID-ARTICLE) -->
 <a name="section-4"></a>
@@ -230,7 +226,7 @@
 <p>The ghost personalities turn the maze from a reaction test into a reading exercise. Our testing found that the players who named each ghost's mode at the start of every maze, chaser, ambusher, pincer, wanderer, made better routing decisions throughout, because the names carried the counter-strategies with them.</p>
 <p>For more arcade classics, our <a href="/blogs/how-to-play-snake.html">classic Snake game guide</a> explains another genre-defining chase, and our <a href="/blogs/how-to-play-pac-man.html">Pac-Man ghost guide</a> covers the maze patterns in depth. If you want the modern multiplayer take, our <a href="/blogs/how-to-play-snake-io.html">Snake.io growth guide</a> explains the competitive version.</p>
 <p>The final validation is an average maze survival rather than a single high score. We track the mean survival across runs, and improvement shows as a rising average. A player who reads the ghost modes, plans the pellet route, and checks the corners will watch the average climb, and that climbing average is what playing Pac-Man well truly means.</p>
-      <figure class="inbody"><img src="/images/pacman.png" alt="How to Play Pac-Man: Ghosts, Power Pellets, and High Scores" loading="lazy" /><figcaption>How to Play Pac-Man: Ghosts, Power Pellets, and High Scores</figcaption></figure>
+      
       <div class="related"><h3>Related reading</h3><a href="/blogs/how-to-get-better-at-gaming.html">our guide to getting better at gaming</a><a href="/blogs/how-to-improve-reaction-time-gaming.html">our reaction time guide</a><a href="https://en.wikipedia.org/wiki/Pac-Man" target="_blank" rel="noopener nofollow">Learn more about this game</a></div>
       <div class="related">
         <h3>Keep reading</h3>

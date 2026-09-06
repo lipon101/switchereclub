@@ -112,7 +112,18 @@
     @media(max-width:600px){.blog-grid{grid-template-columns:1fr;}}
   </style>
 
-<style id="artx">.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
+<style id="artx">
+.article .proc{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px 22px;margin:22px 0;}
+.article .proc-head{display:flex;align-items:center;gap:8px;margin-bottom:14px;}
+.article .proc-head .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px rgba(34,197,94,.6);}
+.article .proc-head span{font-size:.78rem;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);}
+.article ol.proc-steps{list-style:none;margin:0;padding:0;counter-reset:ps;}
+.article ol.proc-steps li{display:flex;gap:14px;align-items:flex-start;margin:0;padding:11px 0;border-bottom:1px dashed var(--border);}
+.article ol.proc-steps li:last-child{border-bottom:none;}
+.article ol.proc-steps .ps-n{flex:0 0 30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--accent),#16a34a);color:#04120a;font-weight:800;font-size:.9rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(34,197,94,.25);}
+.article ol.proc-steps .ps-t{color:var(--txt);font-weight:600;font-size:.98rem;line-height:1.45;padding-top:3px;}
+.article ol.proc-steps .ps-t small{display:block;color:var(--muted);font-weight:400;font-size:.86rem;margin-top:2px;}
+.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
 </head>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -182,29 +193,13 @@
 <p>RAM speed produced a smaller but measurable effect in our runs. Moving from 2666MHz to 3600MHz memory added between 3 and 6 percent to average frame rates in CPU-bound scenes, which is why we treat fast dual-channel memory as a cheap upgrade rather than an optional luxury.</p>
 <p>The case and power supply are where budget builders sabotage themselves. We found that a quality 550 to 650 watt unit from a reputable brand protects the whole system from instability, while a no-name PSU can damage components during transient power spikes. The case, by contrast, only needs airflow and clearance, so we keep its share of the budget deliberately small.</p>
 <!--EXP2--><p>Graphics card selection deserves its own decision rule because it dominates the budget. Our testing compared the current entry tier against the previous generation's mid tier at the same price, and the previous-generation card delivered roughly twenty percent more frames in most titles, which is why we recommend checking the previous generation before settling on the current entry model. The memory size matters too, since games are crossing the eight-gigabyte boundary at 1080p high settings, and a card with more memory holds its performance longer as games demand more.</p>
+<figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Astaroth-_Build_in_Progress.jpg/900px-Astaroth-_Build_in_Progress.jpg" alt="A gaming PC build in progress" loading="lazy" /><figcaption>A gaming PC build in progress</figcaption></figure>
 <!-- ADSENSE PLACEHOLDER: CONTEXTUAL IN-ARTICLE DISPLAY AD -->
 <!--EXP2X--><p>Operating system installation is where budget builds either shine or stumble. We install from a USB drive created with the official tool, choose the clean install option, and let Windows activate against the digital license tied to the hardware. After the first boot, we run Windows Update completely before installing any drivers, because the update pass installs most of the base drivers and prevents the conflicts that happen when drivers fight each other. Our testing found that machines updated before driver installation ran more stably than machines where the graphics driver went on first.</p>
 <a name="section-3"></a>
 <h2>3. Step-by-Step Build and Assembly Map</h2>
 <p>Our assembly sequence below is the exact process we followed for all three test machines, and it prevents the two most common assembly errors: forgotten standoffs and mis-seated RAM.</p>
-<pre class="flow">
-[Set budget] --&gt; lock total before any shopping
-     |
-     v
-[Pick resolution] --&gt; 1080p target for budget builds
-     |
-     v
-[Allocate 45% to GPU] --&gt; then CPU, RAM, storage, PSU
-     |
-     v
-[Source parts] --&gt; new CPU and PSU, vetted used GPU
-     |
-     v
-[Assemble] --&gt; board on standoffs, RAM in A2 and B2 slots
-     |
-     v
-[Post and test] --&gt; BIOS check, thermal test, game benchmark
-</pre>
+<div class="proc"><div class="proc-head"><span class="dot"></span><span>Process Map</span></div><ol class="proc-steps"><li><span class="ps-n">1</span><span class="ps-t">Set budget</span></li><li><span class="ps-n">2</span><span class="ps-t">Pick resolution</span></li><li><span class="ps-n">3</span><span class="ps-t">Allocate 45% to GPU</span></li><li><span class="ps-n">4</span><span class="ps-t">Source parts</span></li><li><span class="ps-n">5</span><span class="ps-t">Assemble</span></li><li><span class="ps-n">6</span><span class="ps-t">Post and test</span></li></ol></div>
 <p>Follow this numbered sequence during assembly:</p>
 <ol>
 <li><strong>Prep the workspace</strong> — clear a static-safe area and lay out every part against the manual before opening anything.</li>
@@ -215,7 +210,8 @@
 </ol>
 <p>After assembly, we power on with only the essentials connected: one stick of RAM, the CPU cooler, and integrated or spare graphics if available. This isolation step turns a confusing multi-part failure into a simple component check, and it saved us hours of diagnosis during our test builds.</p>
 <p>Once the machine posts, we enter the BIOS, enable the memory's advertised speed profile, and confirm the processor and storage are recognized before installing the operating system.</p>
-<!--EXP3--><p>Storage layout changes the feel of a budget build more than any other component choice. We install the operating system and the most-played games on the NVMe drive, where load times drop from minutes to seconds, and we keep the bulk drive for the library of games played less often. The operating system on an SSD also removes the stutter that happens when Windows swaps to a slow disk, and in our testing this single change made a budget machine feel faster than a more expensive build with everything on one slow drive.</p>
+<!--EXP3--><p>Storage layout changes the feel of a budget build more than any other component choice. We install the operating system and the most-played games on the NVMe drive, where load times drop from minutes to seconds, and we keep the bulk drive for the l<figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/Dual_monitor_setup_in_a_gaming_room_with_keyboard_and_mouse_in_foreground.jpg/900px-Dual_monitor_setup_in_a_gaming_room_with_keyboard_and_mouse_in_foreground.jpg" alt="A dual-monitor gaming setup with keyboard and mouse" loading="lazy" /><figcaption>A dual-monitor gaming setup with keyboard and mouse</figcaption></figure>
+ibrary of games played less often. The operating system on an SSD also removes the stutter that happens when Windows swaps to a slow disk, and in our testing this single change made a budget machine feel faster than a more expensive build with everything on one slow drive.</p>
 <!-- ADSENSE PLACEHOLDER: RESPONSIVE NATIVE AD UNIT (MID-ARTICLE) -->
 <a name="section-4"></a>
 <h2>4. Expert Troubleshooting and Optimization</h2>
@@ -234,7 +230,7 @@
 <!--EXP4--><p>Software setup is the last mile that determines whether the build performs to its parts list. We install the operating system fresh, then the motherboard chipset drivers, then the graphics driver using the vendor's clean-install option, and only then the game launchers. Enabling the memory's rated speed profile in the BIOS is a step that budget boards often skip by default, and our testing measured a five to eight percent frame-rate difference between default memory speed and the rated speed profile, which is a free upgrade that takes one minute to claim.</p>
 <!--EXP5--><p>Budget planning should include the peripherals that the tower needs to be useful. A decent 1080p monitor, a keyboard, and a mouse can add a quarter to the total cost, and our testing found that builders who planned for them from the start chose better towers, while builders who forgot them spent the remaining budget on whatever was left. The monitor matters most for gaming, since a higher refresh rate changes how smooth games feel even on a budget graphics card, so we recommend reserving part of the budget for a monitor with at least 120 hertz before spending the last dollars on tower components.</p>
 <p>The final validation in our process is a real game session rather than a synthetic benchmark. We play for thirty minutes, watch the frame-time graph for spikes, and confirm that the whole system runs quieter and cooler than the parts list suggested it would. A budget build that passes that test outperforms an expensive machine that was never tuned, and it leaves room in the budget for the next GPU upgrade.</p>
-      <figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Gaming_PC-Setup_-_Astaroth-_The_Completed_System.jpg/960px-Gaming_PC-Setup_-_Astaroth-_The_Completed_System.jpg" alt="A complete gaming PC setup" loading="lazy" /><figcaption>A complete gaming PC setup</figcaption></figure>
+      
       <div class="related"><h3>Related reading</h3><a href="/blogs/how-to-get-better-at-gaming.html">our guide to getting better at gaming</a><a href="/blogs/how-to-improve-reaction-time-gaming.html">our reaction time guide</a><a href="https://en.wikipedia.org/wiki/Gaming_computer" target="_blank" rel="noopener nofollow">Learn more about this game</a></div>
       <div class="related">
         <h3>Keep reading</h3>

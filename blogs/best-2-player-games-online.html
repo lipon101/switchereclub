@@ -112,7 +112,18 @@
     @media(max-width:600px){.blog-grid{grid-template-columns:1fr;}}
   </style>
 
-<style id="artx">.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
+<style id="artx">
+.article .proc{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px 22px;margin:22px 0;}
+.article .proc-head{display:flex;align-items:center;gap:8px;margin-bottom:14px;}
+.article .proc-head .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px rgba(34,197,94,.6);}
+.article .proc-head span{font-size:.78rem;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);}
+.article ol.proc-steps{list-style:none;margin:0;padding:0;counter-reset:ps;}
+.article ol.proc-steps li{display:flex;gap:14px;align-items:flex-start;margin:0;padding:11px 0;border-bottom:1px dashed var(--border);}
+.article ol.proc-steps li:last-child{border-bottom:none;}
+.article ol.proc-steps .ps-n{flex:0 0 30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--accent),#16a34a);color:#04120a;font-weight:800;font-size:.9rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(34,197,94,.25);}
+.article ol.proc-steps .ps-t{color:var(--txt);font-weight:600;font-size:.98rem;line-height:1.45;padding-top:3px;}
+.article ol.proc-steps .ps-t small{display:block;color:var(--muted);font-weight:400;font-size:.86rem;margin-top:2px;}
+.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
 </head>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -229,6 +240,7 @@ Our testing shows the choice is rarely about quality and almost always about dis
 <td>Five-minute sessions with clean exits</td>
 </tr>
 </tbody></table>
+<figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Powerhoof_playing_multiplayer_prototypes.png/960px-Powerhoof_playing_multiplayer_prototypes.png" alt="Multiplayer game development" loading="lazy" /><figcaption>Multiplayer game development</figcaption></figure>
 <!-- ADSENSE PLACEHOLDER: CONTEXTUAL IN-ARTICLE DISPLAY AD -->
 <h3>The host advantage: who should own the session</h3>
 <p>Every online two-player session has a host, and the host holds real advantages: zero connect lag, first pick of settings, and the power to restart quickly. Our testing shows sessions run smoothest when the player with the stronger upload connection hosts, because the host carries the session state and the guest's inputs travel to them before resolving.</p>
@@ -257,32 +269,7 @@ Our testing shows the choice is rarely about quality and almost always about dis
 <a name="section-3"></a>
 <h2 id="section-3">3. Step-by-Step Setup Map</h2>
 Every title below follows the same setup skeleton. We mapped the flow after reproducing it across four networks, including a filtered school Wi-Fi connection.
-<pre class="flow">[Open browser tab]
-        |
-        v
-[Load game URL] --fail--> [Check site / mirror]
-        |
-        v
-[Pick mode: LOCAL or ONLINE]
-        |
-        +-- LOCAL --> [Assign keys: P1 WASD / P2 Arrows]
-        |                    |
-        |                    v
-        |             [Set round count / target score]
-        |                    |
-        |                    v
-        |             [Start; confirm both inputs register]
-        |
-        +-- ONLINE --> [Create lobby] --> [Copy room code]
-                          |                    |
-                          v                    v
-                   [Share code with friend] <--+
-                          |
-                          v
-                   [Friend joins] --> [Settings lock] --> [Launch]
-                          |
-                          v
-              [Lag? Switch host or region]</pre>
+<div class="proc"><div class="proc-head"><span class="dot"></span><span>Process Map</span></div><ol class="proc-steps"><li><span class="ps-n">1</span><span class="ps-t">Open browser tab</span></li><li><span class="ps-n">2</span><span class="ps-t">Load game URL</span></li><li><span class="ps-n">3</span><span class="ps-t">Check site / mirror</span></li><li><span class="ps-n">4</span><span class="ps-t">Pick mode: LOCAL or ONLINE</span></li><li><span class="ps-n">5</span><span class="ps-t">Assign keys: P1 WASD / P2 Arrows</span></li><li><span class="ps-n">6</span><span class="ps-t">Set round count / target score</span></li><li><span class="ps-n">7</span><span class="ps-t">Start; confirm both inputs register</span></li><li><span class="ps-n">8</span><span class="ps-t">Create lobby</span></li><li><span class="ps-n">9</span><span class="ps-t">Copy room code</span></li><li><span class="ps-n">10</span><span class="ps-t">Share code with friend</span></li></ol></div>
 <p class="tblcap">Process map 1: The step-by-step flow for this article.</p><h3>Recommended starting lineup</h3>
 - <strong>Basketball Legends</strong> — the best 2-player games online for same-keyboard sports rivalry; two-button shooting with a satisfying stamina system.
 - <strong>Fireboy and Watergirl</strong> — the definitive co-op puzzle; each player masters one element and both must cooperate to reach the exits.
@@ -308,7 +295,8 @@ Every title below follows the same setup skeleton. We mapped the flow after repr
 </ul>
 <p>The rule that makes handicaps work is transparency. Both players agree on the handicap before the match, and the weaker player gets to decline it without pressure. When we evaluated this setup, pairs who used transparent handicaps played twice as long as pairs who let the skill gap end the session.</p>
 <h3>Rage management: keeping the rivalry friendly</h3>
-<p>Two-player games amplify emotion because the opponent is present, and tilt ends sessions early. Our testing shows the most durable duos follow three rules: a one-loss quit rule for the frustrated player, a no-taunt agreement during the first three rounds, and a rematch clause that lets the loser set the next game's parameters. Small structural rules prevent the emotional spiral that turns rivalry into resentment.</p>
+<p>Two-player games amplify emotion because the opponent is present, and tilt ends sessions early. Our testing shows the most durable duos follow three rules: a one-loss quit rule for the frustrated player, a no-taunt agreement during the first three rounds, and a rematch clause that lets the loser set the next game's parameters<figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/E3_2011_-_trying_out_Playstation_Network_games_at_the_Sony_booth.jpg/900px-E3_2011_-_trying_out_Playstation_Network_games_at_the_Sony_booth.jpg" alt="Players trying online games at a gaming event" loading="lazy" /><figcaption>Players trying online games at a gaming event</figcaption></figure>
+. Small structural rules prevent the emotional spiral that turns rivalry into resentment.</p>
 <p>The deeper fix is choosing the right game for the mood. Co-op titles de-escalate, duels escalate, and knowing which one the session needs is a skill that keeps two-player gaming sustainable for years.</p>
 <!-- ADSENSE PLACEHOLDER: CONTEXTUAL IN-ARTICLE DISPLAY AD (PRE-FOOTER) -->
 <a name="section-4"></a>
@@ -321,7 +309,7 @@ Every title below follows the same setup skeleton. We mapped the flow after repr
 - <strong>Lag spikes on shared Wi-Fi</strong> — pause large downloads and move the host closer to the router; wired connections beat wireless for online duels.
 <div class="tip"><strong>Pro tip:</strong> Before a long-distance session, run a quick latency check with the friend's region selected. Our analysis shows stable matches under 60 ms feel indistinguishable from local play for most browser titles.</div>
 Our analysis shows the browser now hosts some of the best 2-player experiences available anywhere, and the barrier to entry is a single shared link. Start with our <a href="/blogs/how-to-play-1v1-lol.html">1v1.LOL strategy guide for building and aiming</a> if you want the competitive edge, pair it with the <a href="/blogs/best-games-for-a-quick-break.html">quick-break games list</a> for variety, or check the <a href="/blogs/fireboy-and-watergirl-co-op-guide.html">Fireboy and Watergirl co-op walkthrough</a> when teamwork is the goal.
-      <figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Powerhoof_playing_multiplayer_prototypes.png/960px-Powerhoof_playing_multiplayer_prototypes.png" alt="Multiplayer game development" loading="lazy" /><figcaption>Multiplayer game development</figcaption></figure><figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Lyon_E-Sport_9_-_Palais_des_sports_de_Lyon_-_LAN_party_%28detail%29.jpg/960px-Lyon_E-Sport_9_-_Palais_des_sports_de_Lyon_-_LAN_party_%28detail%29.jpg" alt="Two players at a LAN party" loading="lazy" /><figcaption>Two players at a LAN party</figcaption></figure>
+      
       <div class="related"><h3>Related reading</h3><a href="/blogs/best-browser-games-no-download.html">our no-download browser games list</a><a href="/blogs/best-games-for-a-quick-break.html">our quick break games list</a><a href="https://en.wikipedia.org/wiki/Multiplayer_video_game" target="_blank" rel="noopener nofollow">Learn more about this game</a></div>
       <div class="related">
         <h3>Keep reading</h3>

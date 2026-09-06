@@ -112,7 +112,18 @@
     @media(max-width:600px){.blog-grid{grid-template-columns:1fr;}}
   </style>
 
-<style id="artx">.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
+<style id="artx">
+.article .proc{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px 22px;margin:22px 0;}
+.article .proc-head{display:flex;align-items:center;gap:8px;margin-bottom:14px;}
+.article .proc-head .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px rgba(34,197,94,.6);}
+.article .proc-head span{font-size:.78rem;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);}
+.article ol.proc-steps{list-style:none;margin:0;padding:0;counter-reset:ps;}
+.article ol.proc-steps li{display:flex;gap:14px;align-items:flex-start;margin:0;padding:11px 0;border-bottom:1px dashed var(--border);}
+.article ol.proc-steps li:last-child{border-bottom:none;}
+.article ol.proc-steps .ps-n{flex:0 0 30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--accent),#16a34a);color:#04120a;font-weight:800;font-size:.9rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(34,197,94,.25);}
+.article ol.proc-steps .ps-t{color:var(--txt);font-weight:600;font-size:.98rem;line-height:1.45;padding-top:3px;}
+.article ol.proc-steps .ps-t small{display:block;color:var(--muted);font-weight:400;font-size:.86rem;margin-top:2px;}
+.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
 </head>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -177,28 +188,12 @@
 <p>The category logic is the hidden structure of the game. Elements belong to recognizable families, nature, tools, food, and the recipes follow the families, and our testing found that players who combined within a family, then bridged across families, discovered items in a smooth progression rather than a random scatter.</p>
 <p>The base sweep is the most efficient single habit. Every new discovery should be recombined with the four base elements immediately, and our analysis shows that this single habit reveals the majority of the new element's recipes, because the base elements are the most common partners in the game's formula.</p>
 <p>The tracking habit prevents the stagnation loop. Players who repeat the same failed pairings waste the attempts, and our testing found that the players who kept a simple checklist of tested combinations moved through the catalog without the frustrating plateaus that stall the untracked players.</p>
+<figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/Birdfeeder_dice_tower_in_Wingspan_board_game.jpg/900px-Birdfeeder_dice_tower_in_Wingspan_board_game.jpg" alt="Board game components and dice" loading="lazy" /><figcaption>Board game components and dice</figcaption></figure>
 <!-- ADSENSE PLACEHOLDER: CONTEXTUAL IN-ARTICLE DISPLAY AD -->
 <a name="section-3"></a>
 <h2>3. Step-by-Step Discovery Map</h2>
 <p>The discovery loop below is the sequence we followed during the testing that produced our catalog progress.</p>
-<pre class="flow">
-[Start with the bases] --&gt; air, earth, fire, water
-     |
-     v
-[Build the primaries] --&gt; combine the bases into rain, stone, steam
-     |
-     v
-[Sweep the catalog] --&gt; pair every element with the bases
-     |
-     v
-[Track the results] --&gt; note the tested pairs and new finds
-     |
-     v
-[Bridge the families] --&gt; combine across nature, tools, food
-     |
-     v
-[Repeat the sweep] --&gt; recombine every new discovery with the bases
-</pre>
+<div class="proc"><div class="proc-head"><span class="dot"></span><span>Process Map</span></div><ol class="proc-steps"><li><span class="ps-n">1</span><span class="ps-t">Start with the bases</span></li><li><span class="ps-n">2</span><span class="ps-t">Build the primaries</span></li><li><span class="ps-n">3</span><span class="ps-t">Sweep the catalog</span></li><li><span class="ps-n">4</span><span class="ps-t">Track the results</span></li><li><span class="ps-n">5</span><span class="ps-t">Bridge the families</span></li><li><span class="ps-n">6</span><span class="ps-t">Repeat the sweep</span></li></ol></div>
 <p>Follow this numbered routine for each session:</p>
 <ol>
 <li><strong>Start with the four bases</strong> — combine air, earth, fire, and water in every pairing to build the primary elements.</li>
@@ -213,7 +208,8 @@
 <!--EXP21X--><p>The game's encyclopedia of discovered items doubles as the player's progress map, and our testing found that the players who reviewed the full list at the start of each session refreshed the memory of what the catalog already contained. The review takes under a minute, and it prevents the wasted attempts that come from trying combinations that the catalog already proved empty, while it also surfaces the elements that the player unlocked and forgot to sweep against the bases. The players who ran the review kept the mental model of the catalog current, and the current mental model is what makes the systematic sweep fast enough to sustain.</p>
 <!--EXP22X--><p>The hidden recipes that require three or more steps are the real test of the planning habit. A recipe like the one that produces a living creature rarely comes from a single pairing, it comes from a chain where the intermediate elements each unlock the next, and our analysis shows that the players who planned the chain backward, starting from the rare target and listing the ingredients it needs, solved the multi-step recipes in a fraction of the attempts of the players who clicked forward randomly. The backward plan is the difference between the players who complete the catalog and the players who stall at ninety percent with the same few rare items missing.</p>
 <!--EXP23X--><p>The time-based content, the daily rewards and the bonus elements, keeps the catalog growing even after the main discoveries slow. Our testing found that the players who checked in daily and banked the bonus items maintained a steady trickle of new elements between the big discovery sessions, and the trickle kept the sweep alive because every new element, however small, reopens the full set of base pairings. The daily habit is not the main engine of the progress, but it is the maintenance that keeps the catalog moving when the focused sessions are not running.</p>
-<!--EXP24X--><p>The game's charm is the moment of surprise when an unexpected combination works, and the systematic method preserves that charm instead of destroying it. Our analysis shows that the players who swept the bases in order, rather than clicking randomly, still hit the unexpected discoveries, but they hit them with the context of knowing exactly which pair produced the surprise, which made the discovery satisfying rather than confusing. The method does not remove the magic, it organizes it, and the players who completed the catalog reported that the final discoveries felt like the reward for a puzzle solved rather than a lottery won.</p>
+<!--EXP24X--><p>The game's charm is the moment of surprise when an unexpected combination works, and the systematic method preserves that charm instead of destroying it. Our analysis shows that the players who swept the bases in order, rather than clicking randomly, still hit the unexpected discoveries, but they hit them with the context of k<figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Active_learning_-_jigsaw_map_of_Southeast_Asia.jpg/900px-Active_learning_-_jigsaw_map_of_Southeast_Asia.jpg" alt="A jigsaw puzzle being assembled" loading="lazy" /><figcaption>A jigsaw puzzle being assembled</figcaption></figure>
+nowing exactly which pair produced the surprise, which made the discovery satisfying rather than confusing. The method does not remove the magic, it organizes it, and the players who completed the catalog reported that the final discoveries felt like the reward for a puzzle solved rather than a lottery won.</p>
 
 <!-- ADSENSE PLACEHOLDER: RESPONSIVE NATIVE AD UNIT (MID-ARTICLE) -->
 
@@ -237,7 +233,7 @@
 <p>The game's charm hides its logic. The combinations follow categories, the bases dominate the recipes, and the only variable is the player's method, and our analysis shows that the players who accepted the structure, tracking their tests and sweeping the bases, moved through the catalog with a satisfaction that the random clickers never found.</p>
 <p>If you enjoy systematic puzzle games, our <a href="/blogs/best-puzzle-games-brain.html">best puzzle games for brain training list</a> has similar discovery challenges, and our <a href="/blogs/best-games-for-a-quick-break.html">quick-break games collection</a> covers the full genre range. For the collection side of the genre, our <a href="/blogs/how-to-play-cut-the-rope.html">Cut the Rope solving guide</a> explores a different kind of puzzle logic.</p>
 <p>The final validation is a discovery rate rather than a single item. We measure how many new items a session produces, and improvement shows as a faster catalog completion. A player who builds the bases, sweeps every discovery, and tracks the tested pairs will watch the catalog fill at a steady pace, and that pace is what playing Little Alchemy well truly means.</p>
-      <figure class="inbody"><img src="/images/littlealchemy.png" alt="How to Play Little Alchemy: A Guide to Combining" loading="lazy" /><figcaption>How to Play Little Alchemy: A Guide to Combining</figcaption></figure>
+      
       <div class="related"><h3>Related reading</h3><a href="/blogs/how-to-get-better-at-gaming.html">our guide to getting better at gaming</a><a href="/blogs/how-to-improve-reaction-time-gaming.html">our reaction time guide</a><a href="https://littlealchemy.com/" target="_blank" rel="noopener nofollow">Learn more about this game</a></div>
       <div class="related">
         <h3>Keep reading</h3>

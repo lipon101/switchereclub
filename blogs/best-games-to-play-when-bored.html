@@ -112,7 +112,18 @@
     @media(max-width:600px){.blog-grid{grid-template-columns:1fr;}}
   </style>
 
-<style id="artx">.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
+<style id="artx">
+.article .proc{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px 22px;margin:22px 0;}
+.article .proc-head{display:flex;align-items:center;gap:8px;margin-bottom:14px;}
+.article .proc-head .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px rgba(34,197,94,.6);}
+.article .proc-head span{font-size:.78rem;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);}
+.article ol.proc-steps{list-style:none;margin:0;padding:0;counter-reset:ps;}
+.article ol.proc-steps li{display:flex;gap:14px;align-items:flex-start;margin:0;padding:11px 0;border-bottom:1px dashed var(--border);}
+.article ol.proc-steps li:last-child{border-bottom:none;}
+.article ol.proc-steps .ps-n{flex:0 0 30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--accent),#16a34a);color:#04120a;font-weight:800;font-size:.9rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(34,197,94,.25);}
+.article ol.proc-steps .ps-t{color:var(--txt);font-weight:600;font-size:.98rem;line-height:1.45;padding-top:3px;}
+.article ol.proc-steps .ps-t small{display:block;color:var(--muted);font-weight:400;font-size:.86rem;margin-top:2px;}
+.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
 </head>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -178,34 +189,12 @@
 <p>Rounding out the 35-pick catalog, the remaining titles slot into the same four rows by their dominant loop. Reflex row: Run 3, Vex, Snake.io, Subway Surfers, Temple Run 2, Crossy Road, Pac-Man, Basketball Legends, Basketball Stars, Moto X3M 2 and 3. Calm row: Tetris, Cut the Rope, Chess, Snake, 2048 Cupcakes, Vex 3 through 7. Social row: Snake.io, multiplayer Chess, Basketball Stars versus mode, and every .io lobby title. That distribution matters because it guarantees a valid pick for any flavor without forcing a genre you are not in the mood for.</p>
 <p>Two catalog-wide findings came out of our benchmarking. First, the calm row holds up better across repeated sessions: Tetris, 2048, and Solitaire produced consistent satisfaction on the tenth play, while reflex titles faded after the third. Second, the social row is the most mood-dependent, because a lobby game with strangers can amplify frustration when you wanted solitude. Treat those titles as mood tools rather than defaults, and the catalog keeps working for years.</p>
 <p>The calm row deserves a closer look because it is the most underestimated. These games look plain next to a neon arcade title, yet they scored the highest sustained-satisfaction numbers in our study, and the reason is structural: calm games give you a visible measure of your own improvement. A Tetris score, a 2048 best tile, or a Solitaire win rate all create a personal record line that reflex games cannot match, because reflex runs are too short to track meaningfully. If boredom is a recurring afternoon problem, building one skill-based calm game into a daily routine converts dead time into a measurable hobby.</p>
+<figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/Back_Bay_Station_waiting_room.jpg/900px-Back_Bay_Station_waiting_room.jpg" alt="A clock in a waiting room" loading="lazy" /><figcaption>A clock in a waiting room</figcaption></figure>
 <!-- ADSENSE PLACEHOLDER: CONTEXTUAL IN-ARTICLE DISPLAY AD -->
 <a name="section-3"></a>
 <h2>3. Step-by-Step Implementation Map</h2>
 <p>Finding the right game for this exact moment is a quick decision process, and running it consciously prevents the paradox of choice, where you spend ten minutes picking a game and then have no time to play it.</p>
-<pre class="flow">
-[Feel bored] 
-     |
-     v
-[Name the flavor] --&gt; tired / restless / social / creative
-     |
-     v
-[Set the budget] --&gt; 5 min, 15 min, or open-ended
-     |
-     v
-[Match the genre] --&gt; idle, arcade, lobby, or sandbox
-     |
-     v
-[Pick from catalog] --&gt; one click, no install
-     |
-     v
-[Play the first run] --&gt; if fun in 60s, continue
-     |
-     v
-[Not engaged yet?] --&gt; switch genre, never force it
-     |
-     v
-[Budget reached] --&gt; close tab, zero loss of progress
-</pre>
+<div class="proc"><div class="proc-head"><span class="dot"></span><span>Process Map</span></div><ol class="proc-steps"><li><span class="ps-n">1</span><span class="ps-t">Feel bored</span></li><li><span class="ps-n">2</span><span class="ps-t">Name the flavor</span></li><li><span class="ps-n">3</span><span class="ps-t">Set the budget</span></li><li><span class="ps-n">4</span><span class="ps-t">Match the genre</span></li><li><span class="ps-n">5</span><span class="ps-t">Pick from catalog</span></li><li><span class="ps-n">6</span><span class="ps-t">Play the first run</span></li><li><span class="ps-n">7</span><span class="ps-t">Not engaged yet?</span></li><li><span class="ps-n">8</span><span class="ps-t">Budget reached</span></li></ol></div>
 <p>Apply these selection rules to make the map faster on future attempts:</p>
 <ul>
 <li><strong>Time honesty:</strong> set the budget before opening the game, because a five-minute slot played in a forty-minute game always ends in regret.</li>
@@ -227,7 +216,8 @@
 <p>Longer sessions benefit from session stacking, where several short games fill an afternoon without any single one overstaying its welcome. Our testers reported that rotating three titles across a free afternoon produced more sustained satisfaction than forcing one game for the same span, because each fresh start re-triggers the novelty response that boredom-killers depend on. The ideal rotation mixes rows: one reflex burst, one calm puzzle, and one social round cover all four flavors across a single free block.</p>
 <p>There is also a skill dimension hidden inside the catalog. Reflex titles like Slope and Geometry Dash reward deliberate practice, and a ten-minute daily session measurably improves reaction speed over a month. Calm titles like Chess and 2048 build planning ability. If the boredom is recurring at the same time each day, converting it into a short practice block turns dead time into a hobby, which is the most durable cure this catalog offers. Track your best scores in a note file and the practice gains a visible progression line that motivates the next session.</p>
 <p>When boredom is actually exhaustion, no game will fix it, and our data supports the unglamorous answer: testers who took a ten-minute break instead of opening a game returned more focused and less bored than those who played through fatigue. Treat the games above as tools for genuine empty time, and keep the break option in your rotation. Similarly, boredom that arrives with irritability often signals hunger or eye strain, and a glass of water or a look out the window resolves more sessions than any game in our test.</p>
-<p>One final habit separates people who stay bored from people who stop being bored: keeping a personal shortlist. Instead of re-deciding every time the feeling hits, write down the five titles that worked for you across all four flavors, bookmark them in a dedicated folder, and skip the search step entirely. In our follow-up survey, testers with a saved shortlist reported acting on boredom within thirty seconds of feeling it, while testers who searched fresh each time took an average of four minutes, by which point the usable gap had often already closed. Build the list once, and every future bored moment starts already solved.</p>
+<p>One final habit separates people who stay bored from people who stop being bored: keeping a personal shortlist. Instead of re-deciding every time the feeling hits, write down the five titles that worked for you across all four flavors, bookmark them in a dedicated folder, and skip the search step entirely. In our follow-up survey, testers with a saved shortlist <figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Family_playing_a_board.jpg/900px-Family_playing_a_board.jpg" alt="A family playing a board game together" loading="lazy" /><figcaption>A family playing a board game together</figcaption></figure>
+reported acting on boredom within thirty seconds of feeling it, while testers who searched fresh each time took an average of four minutes, by which point the usable gap had often already closed. Build the list once, and every future bored moment starts already solved.</p>
 <!-- ADSENSE PLACEHOLDER: IN-ARTICLE DISPLAY AD (END OF CONTENT) -->
 <h2>5. Quick-Reference FAQ</h2>
 <p><strong>What is the fastest game to start when bored?</strong> Anything in the reflex row with one-click launch, led by Slope and Helix Jump, both of which reach gameplay in under five seconds on a normal connection.</p>
@@ -236,7 +226,7 @@
 <p><strong>Are browser games as good as downloaded ones?</strong> For boredom killing, better, because load time and exit friction matter more than graphical fidelity when the session is five minutes long.</p>
 <p><strong>What if I only have two minutes?</strong> Use a single round of an arcade title or one board in 2048; both fit a two-minute window with a natural ending point.</p>
 <p>If you are bored at a specific moment, our <a href="/blogs/best-games-for-a-quick-break.html">quick break game recommendations by minute budget</a> give you exact picks for five, ten, and fifteen-minute windows, and the <a href="/blogs/best-multiplayer-browser-games.html">multiplayer browser game collection</a> covers the social boredom flavor with friends. When you want variety beyond the browser, the <a href="/blogs/best-games-for-a-phone.html">best mobile games for phones</a> list translates the same mood-matching logic to your pocket.</p>
-      <figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Bored%2C_bored%2C_bored_%287949872568%29.jpg/960px-Bored%2C_bored%2C_bored_%287949872568%29.jpg" alt="A bored person" loading="lazy" /><figcaption>A bored person</figcaption></figure>
+      
       <div class="related"><h3>Related reading</h3><a href="/blogs/best-browser-games-no-download.html">our no-download browser games list</a><a href="/blogs/best-games-for-a-quick-break.html">our quick break games list</a><a href="https://en.wikipedia.org/wiki/Boredom" target="_blank" rel="noopener nofollow">Learn more about this game</a></div>
       <div class="related">
         <h3>Keep reading</h3>

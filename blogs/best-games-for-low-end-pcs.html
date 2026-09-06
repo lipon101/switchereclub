@@ -112,7 +112,18 @@
     @media(max-width:600px){.blog-grid{grid-template-columns:1fr;}}
   </style>
 
-<style id="artx">.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
+<style id="artx">
+.article .proc{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px 22px;margin:22px 0;}
+.article .proc-head{display:flex;align-items:center;gap:8px;margin-bottom:14px;}
+.article .proc-head .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px rgba(34,197,94,.6);}
+.article .proc-head span{font-size:.78rem;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);}
+.article ol.proc-steps{list-style:none;margin:0;padding:0;counter-reset:ps;}
+.article ol.proc-steps li{display:flex;gap:14px;align-items:flex-start;margin:0;padding:11px 0;border-bottom:1px dashed var(--border);}
+.article ol.proc-steps li:last-child{border-bottom:none;}
+.article ol.proc-steps .ps-n{flex:0 0 30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--accent),#16a34a);color:#04120a;font-weight:800;font-size:.9rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(34,197,94,.25);}
+.article ol.proc-steps .ps-t{color:var(--txt);font-weight:600;font-size:.98rem;line-height:1.45;padding-top:3px;}
+.article ol.proc-steps .ps-t small{display:block;color:var(--muted);font-weight:400;font-size:.86rem;margin-top:2px;}
+.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
 </head>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -195,6 +206,7 @@
 </tbody>
 </table>
 <p class="tblcap">Table 2: The low-end catalog is deeper than most players assume.</p>
+<figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Desk_workspace_featuring_coffee_cup%2C_laptop%2C_and_plant_with_artwork.jpg/900px-Desk_workspace_featuring_coffee_cup%2C_laptop%2C_and_plant_with_artwork.jpg" alt="A laptop workspace with coffee and plants" loading="lazy" /><figcaption>A laptop workspace with coffee and plants</figcaption></figure>
 <!-- ADSENSE PLACEHOLDER: CONTEXTUAL IN-ARTICLE DISPLAY AD -->
 <h3>How we tested for this list</h3>
 <p>Every title below passed a five-point low-end test on genuine weak hardware. We played each game on a 4 GB laptop and a decade-old desktop with integrated graphics, then scored the experience on frame stability, load time, memory footprint, input response, and depth-per-system-cost. Titles that failed any criterion were cut regardless of reputation.</p>
@@ -209,28 +221,7 @@
 <a name="section-3"></a>
 <h2 id="section-3">Step-by-Step Implementation Map</h2>
 <p>Setting up a low-end machine for smooth gaming follows a repeatable sequence. We refined this flow across our weakest test hardware.</p>
-<pre class="flow">[Clean the system] -- close background apps, free RAM
-        |
-        v
-[Update the drivers] -- integrated GPU drivers improve steadily
-        |
-        v
-[Set the power plan to high performance]
-        |
-        v
-[Choose native-fit genres] -- 2D, strategy, indie 3D
-        |
-        v
-[Install one game at a time] -- keep the drive lean
-        |
-        v
-[Set graphics to minimum first] -- then raise until it stutters
-        |
-        v
-[Test one full level] --> [Stutter? Drop one setting]
-                          |
-                          v
-                   [Play; the depth is in the systems]</pre>
+<div class="proc"><div class="proc-head"><span class="dot"></span><span>Process Map</span></div><ol class="proc-steps"><li><span class="ps-n">1</span><span class="ps-t">Clean the system</span></li><li><span class="ps-n">2</span><span class="ps-t">Update the drivers</span></li><li><span class="ps-n">3</span><span class="ps-t">Set the power plan to high performance</span></li><li><span class="ps-n">4</span><span class="ps-t">Choose native-fit genres</span></li><li><span class="ps-n">5</span><span class="ps-t">Install one game at a time</span></li><li><span class="ps-n">6</span><span class="ps-t">Set graphics to minimum first</span></li><li><span class="ps-n">7</span><span class="ps-t">Test one full level</span></li><li><span class="ps-n">8</span><span class="ps-t">Stutter? Drop one setting</span></li><li><span class="ps-n">9</span><span class="ps-t">Play; the depth is in the systems</span></li></ol></div>
 <p class="tblcap">Process map 1: The low-end setup sequence that maximizes frame stability.</p>
 <h3>The fifteen low-end games we recommend</h3>
 <ul>
@@ -272,7 +263,8 @@
 <li><strong>RAM-limited systems:</strong> lightweight 2D titles plus closed background tabs keep 4 GB viable.</li>
 <li><strong>GPU-limited systems:</strong> 2D, strategy, and indie 3D run beautifully where AAA stutters.</li>
 <li><strong>Storage-limited systems:</strong> small installs keep multiple games on low-capacity drives.</li>
-<li><strong>Old-but-CPU-strong systems:</strong> grand strategy and automation reward the processor you already own.</li>
+<li><strong>Old-<figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/A_person_working_on_old_desktop_computer.jpg/900px-A_person_working_on_old_desktop_computer.jpg" alt="A person using a vintage desktop computer" loading="lazy" /><figcaption>A person using a vintage desktop computer</figcaption></figure>
+but-CPU-strong systems:</strong> grand strategy and automation reward the processor you already own.</li>
 </ul>
 <p>Weak-spot matching converts a frustrating machine into a capable one. Our analysis shows players who match games to their system's actual bottleneck enjoy smooth sessions across genres, while players who ignore the bottleneck keep blaming hardware for genre mismatches.</p>
 
@@ -295,7 +287,7 @@
 <p>One more upgrade note: an SSD is the single highest-impact upgrade for a low-end PC. Our testing showed swapping a mechanical drive for a budget SSD cut load times by up to seventy percent and eliminated the stutter that came from streaming assets off a slow disk. If the machine has one upgrade left in it, make it the SSD.</p>
 <p>The catalog above is the proof that the constraint is the point.</p>
 <p>For browser-based options, see our <a href="/blogs/best-browser-games-no-download.html">no-download browser games list</a>, check the <a href="/blogs/best-games-for-a-laptop.html">laptop games guide</a> for portable picks, and browse the <a href="/blogs/best-free-games-on-steam.html">free Steam games list</a> for downloadable titles.</p>
-      <figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Backlit_Laptop_Keyboard.jpg/960px-Backlit_Laptop_Keyboard.jpg" alt="A laptop keyboard" loading="lazy" /><figcaption>A laptop keyboard</figcaption></figure>
+      
       <div class="related"><h3>Related reading</h3><a href="/blogs/best-games-for-a-laptop.html">our laptop games list</a><a href="/blogs/best-browser-games-no-download.html">our no-download browser games list</a><a href="https://en.wikipedia.org/wiki/Computer" target="_blank" rel="noopener nofollow">Learn more about this game</a></div>
       <div class="related">
         <h3>Keep reading</h3>

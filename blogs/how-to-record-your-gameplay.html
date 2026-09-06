@@ -112,7 +112,18 @@
     @media(max-width:600px){.blog-grid{grid-template-columns:1fr;}}
   </style>
 
-<style id="artx">.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
+<style id="artx">
+.article .proc{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px 22px;margin:22px 0;}
+.article .proc-head{display:flex;align-items:center;gap:8px;margin-bottom:14px;}
+.article .proc-head .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px rgba(34,197,94,.6);}
+.article .proc-head span{font-size:.78rem;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);}
+.article ol.proc-steps{list-style:none;margin:0;padding:0;counter-reset:ps;}
+.article ol.proc-steps li{display:flex;gap:14px;align-items:flex-start;margin:0;padding:11px 0;border-bottom:1px dashed var(--border);}
+.article ol.proc-steps li:last-child{border-bottom:none;}
+.article ol.proc-steps .ps-n{flex:0 0 30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--accent),#16a34a);color:#04120a;font-weight:800;font-size:.9rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(34,197,94,.25);}
+.article ol.proc-steps .ps-t{color:var(--txt);font-weight:600;font-size:.98rem;line-height:1.45;padding-top:3px;}
+.article ol.proc-steps .ps-t small{display:block;color:var(--muted);font-weight:400;font-size:.86rem;margin-top:2px;}
+.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
 </head>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -172,6 +183,7 @@
 <p>The game capture is the default choice for the fullscreen games, and it hooks directly into the game's rendering pipeline, which produces the cleanest frames at the lowest performance cost. Our testing found that the game capture held the frame rate within a few percent of the unrecorded baseline on the fullscreen titles, while the display capture on the same games cost noticeably more frames, since it duplicated the entire desktop including the game.</p>
 <p>The window capture sits between the two extremes, and it grabs a single window's contents without the desktop overhead. It is the right choice for the borderless windowed games and the 2D titles where the game capture has no hook, and our analysis shows that the window capture is the reliable fallback when the game capture fails to detect the title, since it records the game's window without the full-desktop cost of the display capture.</p>
 <p>The display capture is the most flexible and the most expensive, and it grabs the entire monitor including every overlay and every window. It is the right choice when the recording must include the multiple windows, the OBS overlays, or the menus that the game capture misses, and our testing found that the display capture is best reserved for the desktop content and the cases where the game capture simply will not hook.</p>
+<figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Esempio_timeline_di_videopad.jpg/900px-Esempio_timeline_di_videopad.jpg" alt="A video editing timeline on screen" loading="lazy" /><figcaption>A video editing timeline on screen</figcaption></figure>
 <!-- ADSENSE PLACEHOLDER: CONTEXTUAL IN-ARTICLE DISPLAY AD -->
 <!--EXP9X--><p>The bitrate is the second lever after the encoder, and the right bitrate balances the file size against the visual clarity. The bitrate sets how much data each second of video carries, and the higher bitrates preserve the detail while they balloon the file sizes, and our analysis shows that the 1080p recording at sixty frames per second needs roughly twelve to sixteen megabits per second for the clean action, while the lower bitrates introduce the blocky artifacts during the fast motion that the higher rates carry smoothly.</p>
 <!--EXP10X--><p>The audio chain is the half of the recording that the beginners forget, and the clean game audio needs the same attention as the clean video. The desktop audio and the microphone must be captured on the separate tracks so the levels can be balanced in the edit, and our testing found that the recordings with the separate audio tracks saved the sessions that the single mixed track ruined, since the loud game audio buried the quiet commentary until the tracks were split, and the split tracks let the editor balance the levels after the fact.</p>
@@ -179,24 +191,7 @@
 <a name="section-3"></a>
 <h2>3. Step-by-Step Recording Setup</h2>
 <p>The setup flow below is the sequence we followed when configuring our test systems for the clean captures.</p>
-<pre class="flow">
-[Check the hardware] --&gt; identify the GPU and the free space
-     |
-     v
-[Pick the encoder] --&gt; match it to the graphics card
-     |
-     v
-[Set the bitrate] --&gt; match it to the resolution and the fps
-     |
-     v
-[Choose the capture] --&gt; game capture for the fullscreen titles
-     |
-     v
-[Configure the audio] --&gt; separate the desktop and the mic tracks
-     |
-     v
-[Test the recording] --&gt; record one minute and check the sync
-</pre>
+<div class="proc"><div class="proc-head"><span class="dot"></span><span>Process Map</span></div><ol class="proc-steps"><li><span class="ps-n">1</span><span class="ps-t">Check the hardware</span></li><li><span class="ps-n">2</span><span class="ps-t">Pick the encoder</span></li><li><span class="ps-n">3</span><span class="ps-t">Set the bitrate</span></li><li><span class="ps-n">4</span><span class="ps-t">Choose the capture</span></li><li><span class="ps-n">5</span><span class="ps-t">Configure the audio</span></li><li><span class="ps-n">6</span><span class="ps-t">Test the recording</span></li></ol></div>
 <p>Follow this numbered routine for the first clean recording:</p>
 <ol>
 <li><strong>Identify the hardware</strong> &mdash; check the graphics card model and the free drive space so the encoder and the storage match the system.</li>
@@ -210,7 +205,8 @@
 <p>The one-minute test is the habit that prevents the wasted sessions. Our analysis shows that the players who tested the recording before the real session caught the sync drift and the stutter while the test footage cost nothing, while the players who skipped the test discovered the issues after the gameplay they wanted to keep was already corrupted.</p>
 <!--EXP31X--><p>The recording software choice matters less than the settings, and the free tools cover the full range of the capture needs. OBS Studio is the free standard that handles the game capture, the scene layouts, and the streaming in one package, and our testing found that the free tools matched the paid recorders on the capture quality once the encoder and the bitrate were set correctly, which means the beginners should start with the free software and spend the saved budget on the storage and the microphone instead.</p>
 <!--EXP32X--><p>The variable frame rate is the subtle setting that causes the sync drift in the editors, since the video editors expect the constant frame rate for the accurate audio alignment. The recorders that default to the variable frame rate produce the files whose frame timing varies, and our analysis shows that the footage recorded with the constant frame rate setting, matching the project's timeline rate, imported into the editors without the drift, while the variable-rate files slid out of sync during the longer edits, and the constant-rate setting is the hidden fix for the sync complaints.</p>
-<!--EXP33X--><p>The replay buffer is the feature that saves the highlight without the hours of the footage, since it records continuously into the memory and keeps only the last configured window. Our testing found that the replay buffer, set to sixty seconds and triggered by the hotkey after the great play, captured the highlight that the manual recording would have missed, and the buffer files are the efficient path to the clip libraries that the full-session recordings bloat, which makes the replay buffer the tool for the highlight-driven content creators.</p>
+<!--EXP33X--><p>The replay buffer is the feature that saves the highlight without the hours of the footage, since it records continuously into the memory and keeps only the last configured window. Our testing found that the replay buffer, set to sixty seconds and triggered by the <figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Astaroth-_Build_in_Progress.jpg/900px-Astaroth-_Build_in_Progress.jpg" alt="A gaming PC build in progress" loading="lazy" /><figcaption>A gaming PC build in progress</figcaption></figure>
+hotkey after the great play, captured the highlight that the manual recording would have missed, and the buffer files are the efficient path to the clip libraries that the full-session recordings bloat, which makes the replay buffer the tool for the highlight-driven content creators.</p>
 
 <!-- ADSENSE PLACEHOLDER: RESPONSIVE NATIVE AD UNIT (MID-ARTICLE) -->
 <a name="section-4"></a>
@@ -226,7 +222,7 @@
 <p>The frame-rate delta is the recording setup's real scoreboard. Our testing found that the players who measured the frame rate with the recording on and off, rather than guessing at the quality, saw the exact cost of their settings, and the delta directed the configuration while the visual guesswork only produced the inconsistent results.</p>
 <p>Once the recordings are clean, the next step is the delivery. Our <a href="/blogs/how-to-stream-your-gameplay.html">gameplay streaming setup guide</a> covers the live side of the same encoder choices, and our <a href="/blogs/gaming-setup-on-a-budget.html">budget gaming setup guide</a> builds the system that records well. If the goal is the clips, our <a href="/blogs/how-to-type-faster.html">typing speed improvement guide</a> covers the input side of the same performance goal.</p>
 <p>The final validation is a frame-rate delta rather than a visual guess, and the delta is the metric that never lies. We track the recording cost as the percentage of frames lost during the live capture session, and the improvement shows as the delta shrinking steadily. A player who matches the encoder, splits the audio, and tests the setup will watch the delta shrink, and that shrinking delta, measured in the frames saved on every single capture across the whole library of the games you play, is what recording gameplay cleanly and consistently in every session truly means.</p>
-      <figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Google_Stadia_Cloud-gaming_%2848605895992%29.jpg/960px-Google_Stadia_Cloud-gaming_%2848605895992%29.jpg" alt="Recording gameplay on screen" loading="lazy" /><figcaption>Recording gameplay on screen</figcaption></figure>
+      
       <div class="related"><h3>Related reading</h3><a href="/blogs/how-to-get-better-at-gaming.html">our guide to getting better at gaming</a><a href="/blogs/how-to-improve-reaction-time-gaming.html">our reaction time guide</a><a href="https://en.wikipedia.org/wiki/Screen_recording" target="_blank" rel="noopener nofollow">Learn more about this game</a></div>
       <div class="related">
         <h3>Keep reading</h3>

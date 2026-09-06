@@ -112,7 +112,18 @@
     @media(max-width:600px){.blog-grid{grid-template-columns:1fr;}}
   </style>
 
-<style id="artx">.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
+<style id="artx">
+.article .proc{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px 22px;margin:22px 0;}
+.article .proc-head{display:flex;align-items:center;gap:8px;margin-bottom:14px;}
+.article .proc-head .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px rgba(34,197,94,.6);}
+.article .proc-head span{font-size:.78rem;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);}
+.article ol.proc-steps{list-style:none;margin:0;padding:0;counter-reset:ps;}
+.article ol.proc-steps li{display:flex;gap:14px;align-items:flex-start;margin:0;padding:11px 0;border-bottom:1px dashed var(--border);}
+.article ol.proc-steps li:last-child{border-bottom:none;}
+.article ol.proc-steps .ps-n{flex:0 0 30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--accent),#16a34a);color:#04120a;font-weight:800;font-size:.9rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(34,197,94,.25);}
+.article ol.proc-steps .ps-t{color:var(--txt);font-weight:600;font-size:.98rem;line-height:1.45;padding-top:3px;}
+.article ol.proc-steps .ps-t small{display:block;color:var(--muted);font-weight:400;font-size:.86rem;margin-top:2px;}
+.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
 </head>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -194,6 +205,7 @@
 </tbody>
 </table>
 <p class="tblcap">Table 2: Match the arc to your energy and the break actually recharges you.</p>
+<figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/Back_Bay_Station_waiting_room.jpg/900px-Back_Bay_Station_waiting_room.jpg" alt="A clock in a waiting room" loading="lazy" /><figcaption>A clock in a waiting room</figcaption></figure>
 <!-- ADSENSE PLACEHOLDER: CONTEXTUAL IN-ARTICLE DISPLAY AD -->
 <h3>How we tested for this list</h3>
 <p>Every title below passed a five-point break test measured in real five-minute windows. We played each game across dozens of timed sessions, scoring load speed, time-to-fun, arc completion, exit cleanliness, and post-break state. Titles that failed any criterion were cut, because a quick-break game that fails its window is worse than no break at all.</p>
@@ -208,28 +220,7 @@
 <a name="section-3"></a>
 <h2 id="section-3">Step-by-Step Implementation Map</h2>
 <p>Running a perfect quick break follows a repeatable sequence. We refined this flow across months of five-minute sessions.</p>
-<pre class="flow">[Notice the break window] -- 3 to 10 minutes available
-        |
-        v
-[Check your energy level] -- high, medium, low, social
-        |
-        v
-[Pick the matching arc] -- spike, puzzle, gentle, shared
-        |
-        v
-[Open the bookmarked game] -- instant load from cache
-        |
-        v
-[Set a mental timer] -- the break owns the clock
-        |
-        v
-[Play to a natural stopping point]
-        |
-        v
-[Quit at the round end] -- not mid-run, not overrun
-        |
-        v
-[Return to work refreshed] -- the break did its job</pre>
+<div class="proc"><div class="proc-head"><span class="dot"></span><span>Process Map</span></div><ol class="proc-steps"><li><span class="ps-n">1</span><span class="ps-t">Notice the break window</span></li><li><span class="ps-n">2</span><span class="ps-t">Check your energy level</span></li><li><span class="ps-n">3</span><span class="ps-t">Pick the matching arc</span></li><li><span class="ps-n">4</span><span class="ps-t">Open the bookmarked game</span></li><li><span class="ps-n">5</span><span class="ps-t">Set a mental timer</span></li><li><span class="ps-n">6</span><span class="ps-t">Play to a natural stopping point</span></li><li><span class="ps-n">7</span><span class="ps-t">Quit at the round end</span></li><li><span class="ps-n">8</span><span class="ps-t">Return to work refreshed</span></li></ol></div>
 <p class="tblcap">Process map 1: The five-minute break loop that ends cleanly every time.</p>
 <h3>The twelve quick-break games we recommend</h3>
 <ul>
@@ -268,7 +259,8 @@
 <li><strong>After analytical work:</strong> gentle puzzles and tile games let the logic brain coast.</li>
 <li><strong>After sedentary work:</strong> fast runners and duels deliver the physical spark a desk job lacks.</li>
 <li><strong>After social work:</strong> calm solo loops protect the depleted social battery.</li>
-<li><strong>Between meetings:</strong> zero-commitment games fit the unpredictable five-minute gap.</li>
+<li><strong>Between meetings:</strong> zero-commitment games fit the unpredic<figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/Desk-office-workspace-coworking_%2823699033283%29.jpg/900px-Desk-office-workspace-coworking_%2823699033283%29.jpg" alt="A tidy office desk with a computer" loading="lazy" /><figcaption>A tidy office desk with a computer</figcaption></figure>
+table five-minute gap.</li>
 </ul>
 <p>Work matching explains why the same game can feel perfect one day and wrong the next. Our analysis shows the break that matches the work type resets more effectively, which is why the list notes the best context for each arc shape.</p>
 
@@ -290,7 +282,7 @@
 <p>One more measurement from our logs: players who set a visible timer reported 40 percent fewer overruns than players who trusted their sense of time. The timer externalizes the stopping decision, which is the entire battle in quick-break gaming. Any timer app works; the discipline is starting it before the first round.</p>
 <p>The final word is simple: a quick break is a skill, and the games above are the practice tools. Choose the arc that matches your energy, keep the bookmarks warm, set the timer, and the five-minute window becomes the most dependable pleasure in your day. Our testing showed the routine compounds, and the catalog stays fresh because the moods keep rotating.</p>
 <p>For more short-session picks, see our <a href="/blogs/best-browser-games-no-download.html">no-download browser games list</a>, check the <a href="/blogs/slope-game-high-score-tips.html">Slope high-score guide</a> for the perfect two-minute arc, and browse the <a href="/blogs/best-games-to-play-when-bored.html">games for boredom list</a> when the break needs a different kind of fix.</p>
-      <figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Coffee_Break_%2816109357644%29.jpg/960px-Coffee_Break_%2816109357644%29.jpg" alt="A coffee break" loading="lazy" /><figcaption>A coffee break</figcaption></figure>
+      
       <div class="related"><h3>Related reading</h3><a href="/blogs/best-browser-games-no-download.html">our no-download browser games list</a><a href="https://en.wikipedia.org/wiki/Break_(work)" target="_blank" rel="noopener nofollow">Learn more about this game</a></div>
       <div class="related">
         <h3>Keep reading</h3>

@@ -112,7 +112,18 @@
     @media(max-width:600px){.blog-grid{grid-template-columns:1fr;}}
   </style>
 
-<style id="artx">.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
+<style id="artx">
+.article .proc{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px 22px;margin:22px 0;}
+.article .proc-head{display:flex;align-items:center;gap:8px;margin-bottom:14px;}
+.article .proc-head .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px rgba(34,197,94,.6);}
+.article .proc-head span{font-size:.78rem;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);}
+.article ol.proc-steps{list-style:none;margin:0;padding:0;counter-reset:ps;}
+.article ol.proc-steps li{display:flex;gap:14px;align-items:flex-start;margin:0;padding:11px 0;border-bottom:1px dashed var(--border);}
+.article ol.proc-steps li:last-child{border-bottom:none;}
+.article ol.proc-steps .ps-n{flex:0 0 30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--accent),#16a34a);color:#04120a;font-weight:800;font-size:.9rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(34,197,94,.25);}
+.article ol.proc-steps .ps-t{color:var(--txt);font-weight:600;font-size:.98rem;line-height:1.45;padding-top:3px;}
+.article ol.proc-steps .ps-t small{display:block;color:var(--muted);font-weight:400;font-size:.86rem;margin-top:2px;}
+.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
 </head>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -178,34 +189,12 @@
 <p>The pure-hand tier deserves the deepest look because it works literally anywhere. Rock-paper-scissors seems too simple to rank, but competitive variants add a bluffing layer that transforms it: players who study their opponent's tendencies and deliberately break their own patterns turn a children's game into a genuine mind sport. Our testing found that adding a best-of-eleven format and a visible score track doubled the engagement of casual pairs, because the score created stakes that the base game lacks.</p>
 <p>Paper games carry an unexpected cognitive benefit that our testing measured directly. Dots and boxes and its grid-strategy cousins forced players to plan several moves ahead, and paired testers who played paper strategy games for thirty minutes scored measurably higher on a follow-up planning task than control pairs who scrolled their phones. The games are not just time fillers; they are light brain training wearing a fun disguise, and that dual identity makes them the easiest recommendation in the entire catalog.</p>
 <p>Object games fill the middle tier with a different kind of value: they teach dexterity and deception in equal measure. Coin hiding builds a genuine poker face because the physical tell is everything. Pencil cricket turns a writing instrument into a full scoring sport with innings and dramatic finishes. In our testing, object games produced the most laughter per minute of any tier, because the physical element creates the kind of shared clumsiness that people remember. If the goal is a memorable ten minutes, the object tier is the fastest route.</p>
+<figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/Birdfeeder_dice_tower_in_Wingspan_board_game.jpg/900px-Birdfeeder_dice_tower_in_Wingspan_board_game.jpg" alt="Board game components and dice" loading="lazy" /><figcaption>Board game components and dice</figcaption></figure>
 <!-- ADSENSE PLACEHOLDER: CONTEXTUAL IN-ARTICLE DISPLAY AD -->
 <a name="section-3"></a>
 <h2>3. Step-by-Step Game Selection Map</h2>
 <p>Choosing the right hand game for the moment follows a quick decision path, and running it consciously prevents the fumble of suggesting a paper game when you have no pen.</p>
-<pre class="flow">
-[Assess the setting] --&gt; cafe, desk, waiting room, outdoors
-     |
-     v
-[Check the equipment] --&gt; hands only, one object, or paper
-     |
-     v
-[Gauge the opponent] --&gt; stranger, friend, child, rival
-     |
-     v
-[Match the skill tier] --&gt; casual, competitive, or mixed
-     |
-     v
-[Pick the game] --&gt; use the equipment table above
-     |
-     v
-[Explain in one breath] --&gt; rules under 30 seconds
-     |
-     v
-[Play a practice round] --&gt; confirm understanding first
-     |
-     v
-[Start the real game] --&gt; best-of format for stakes
-</pre>
+<div class="proc"><div class="proc-head"><span class="dot"></span><span>Process Map</span></div><ol class="proc-steps"><li><span class="ps-n">1</span><span class="ps-t">Assess the setting</span></li><li><span class="ps-n">2</span><span class="ps-t">Check the equipment</span></li><li><span class="ps-n">3</span><span class="ps-t">Gauge the opponent</span></li><li><span class="ps-n">4</span><span class="ps-t">Match the skill tier</span></li><li><span class="ps-n">5</span><span class="ps-t">Pick the game</span></li><li><span class="ps-n">6</span><span class="ps-t">Explain in one breath</span></li><li><span class="ps-n">7</span><span class="ps-t">Play a practice round</span></li><li><span class="ps-n">8</span><span class="ps-t">Start the real game</span></li></ol></div>
 <p>Four selection rules make the map reliable across every setting we tested:</p>
 <ul>
 <li><strong>Rule count check:</strong> never start a game whose rules take longer to explain than to play, because the explanation itself is where most hand games die.</li>
@@ -227,7 +216,8 @@
 <p>Building a personal repertoire of five reliable games is the single highest-leverage investment a hand-game player can make. In our follow-up survey, players who could name five games from memory reported successfully starting sessions in nine out of ten opportunities, while players with one or two games started sessions less than half the time. The repertoire should span the equipment tiers, so at least one game is always available regardless of what is in your pockets.</p>
 <p>Hand games also translate surprisingly well to digital life when the other person is remote. Video-call pairs in our testing successfully played paper games by pointing cameras at their notebooks, and pure-hand games like rock-paper-scissors variants worked with a simple countdown. The connection benefits survived the screen, which makes the repertoire useful for long-distance friendships that miss the spontaneity of in-person time.</p>
 <p>Children absorb hand games faster than adults expect, and teaching them early pays compounding dividends. A child who learns dots and boxes, concentration, and a couple of card games carries a lifelong toolkit for waiting rooms, restaurants, and power outages. Our parent testers reported that children who knew hand games chose them over screens roughly a third of the time when offered both, a number that grew as the games became associated with fun family moments rather than enforced boredom. The key is teaching one game per visit and letting the child win the first session, which builds the confidence that turns a taught game into an owned one.</p>
-<p>Serious players can take hand games further than casual rounds by adding a practice ritual. Concentration improves fastest with daily two-minute memory drills using a shuffled deck. Dots and boxes rewards studying the chain-counting endgame, where a player who can count the forced chains before committing wins games that look lost. Even rock-paper-scissors responds to deliberate practice: record your own throw history for fifty rounds, find your unconscious biases, and then exploit the same bias in opponents. In our testing, pairs who practiced for one week measurably closed the gap against experienced players, which proves the strategy layer in these games runs far deeper than their simple surfaces suggest.</p>
+<p>Serious players can take hand games further than casual rounds by adding a practice ritual. Concentration improves fastest with daily two-minute memory drills using a shuffled deck. Dots and boxes rewards studying the chain-counting endgame, where a player who can count the forced chains before committing wins games that look lost. Even rock-paper-scissors responds to deliberate practice: record your own <figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/A_studio_image_of_a_hand_of_playing_cards._MOD_45148377.jpg/900px-A_studio_image_of_a_hand_of_playing_cards._MOD_45148377.jpg" alt="A hand holding playing cards" loading="lazy" /><figcaption>A hand holding playing cards</figcaption></figure>
+throw history for fifty rounds, find your unconscious biases, and then exploit the same bias in opponents. In our testing, pairs who practiced for one week measurably closed the gap against experienced players, which proves the strategy layer in these games runs far deeper than their simple surfaces suggest.</p>
 <!-- ADSENSE PLACEHOLDER: IN-ARTICLE DISPLAY AD (END OF CONTENT) -->
 <h2>5. Quick-Reference FAQ</h2>
 <p><strong>What is the best hand game that needs no equipment?</strong> A competitive rock-paper-scissors variant with a best-of-eleven format, because the bluffing layer transforms a children's game into a genuine mind sport.</p>
@@ -236,7 +226,7 @@
 <p><strong>How do I keep a child engaged with hand games?</strong> Let them win the first game, teach one new game per visit, and stop while they are still asking for more.</p>
 <p><strong>What is the fastest game to start in a waiting room?</strong> Tic-tac-toe variants need only a napkin and a pen, and concentration needs only a standard deck of cards.</p>
 <p>If you are looking for digital companions to your new hand-game repertoire, the <a href="/blogs/best-2-player-games-online.html">two-player browser game list</a> covers the screen-based version of the same social energy, and the <a href="/blogs/best-games-to-play-with-kids.html">family game picks for children</a> pair well with the child-friendly hand games above. For solo moments, the <a href="/blogs/best-games-for-a-quick-break.html">quick break browser games</a> fill single-player gaps.</p>
-      <figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/BoxHockeyPhili1930.jpg/960px-BoxHockeyPhili1930.jpg" alt="A hand game" loading="lazy" /><figcaption>A hand game</figcaption></figure>
+      
       <div class="related"><h3>Related reading</h3><a href="/blogs/best-browser-games-no-download.html">our no-download browser games list</a><a href="/blogs/best-games-for-a-quick-break.html">our quick break games list</a><a href="https://en.wikipedia.org/wiki/Hand_game" target="_blank" rel="noopener nofollow">Learn more about this game</a></div>
       <div class="related">
         <h3>Keep reading</h3>

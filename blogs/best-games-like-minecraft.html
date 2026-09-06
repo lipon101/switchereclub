@@ -112,7 +112,18 @@
     @media(max-width:600px){.blog-grid{grid-template-columns:1fr;}}
   </style>
 
-<style id="artx">.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
+<style id="artx">
+.article .proc{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px 22px;margin:22px 0;}
+.article .proc-head{display:flex;align-items:center;gap:8px;margin-bottom:14px;}
+.article .proc-head .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px rgba(34,197,94,.6);}
+.article .proc-head span{font-size:.78rem;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);}
+.article ol.proc-steps{list-style:none;margin:0;padding:0;counter-reset:ps;}
+.article ol.proc-steps li{display:flex;gap:14px;align-items:flex-start;margin:0;padding:11px 0;border-bottom:1px dashed var(--border);}
+.article ol.proc-steps li:last-child{border-bottom:none;}
+.article ol.proc-steps .ps-n{flex:0 0 30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--accent),#16a34a);color:#04120a;font-weight:800;font-size:.9rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(34,197,94,.25);}
+.article ol.proc-steps .ps-t{color:var(--txt);font-weight:600;font-size:.98rem;line-height:1.45;padding-top:3px;}
+.article ol.proc-steps .ps-t small{display:block;color:var(--muted);font-weight:400;font-size:.86rem;margin-top:2px;}
+.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
 </head>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -167,6 +178,7 @@
 <li><strong>Voxel worlds:</strong> Vintage Story and similar titles keep the blocky aesthetic while deepening survival realism.</li>
 <li><strong>Creative platforms:</strong> Roblox and Dreams hand players full toolkits with social sharing built in.</li>
 </ul>
+<figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Family_playing_a_board.jpg/900px-Family_playing_a_board.jpg" alt="A family playing a board game together" loading="lazy" /><figcaption>A family playing a board game together</figcaption></figure>
 <!-- ADSENSE PLACEHOLDER: CONTEXTUAL IN-ARTICLE DISPLAY AD -->
 <h3>Fifteen worlds, one shared loop</h3>
 <p>The fifteen titles on this list each replace a different slice of the Minecraft experience, and knowing the slice prevents disappointment. Terraria and its 2D cousins deliver the exploration and boss progression with denser content per square meter. Vintage Story slows the survival loop into a hardcore realism sim where copper age tools feel like genuine milestones. Satisfactory and Factorio abandon the block aesthetic entirely but preserve the engineering high of a machine that runs itself. Garry's Mod and Dreams remove survival and hand over pure creation toolkits. Roblox wraps building in a social platform with instant sharing. The spread is deliberate: whatever you loved in Minecraft, one of these worlds replicates it with a fresh texture.</p>
@@ -186,26 +198,13 @@
 <a name="section-3"></a>
 <h2 id="section-3">3. Step-by-Step Selection Map</h2>
 <p>Choosing your next sandbox is a five-step funnel. We use this process for every recommendation and it has never pointed a player to the wrong family.</p>
-<pre class="flow">
-[Identify your favorite Minecraft pillar]
-            |
-            v
-Survival?  --> [Terraria]  -> boss depth, 2D exploration
-            |
-Creative?  --> [Garry's Mod / Dreams] -> pure tools, no stakes
-            |
-Automation? --> [Satisfactory / Factorio] -> logistics as gameplay
-            |
-Multiplayer? -> [Roblox / Vintage Story servers] -> shared worlds
-            |
-            v
-[Demonstrate 3 hours before committing]
-</pre>
+<div class="proc"><div class="proc-head"><span class="dot"></span><span>Process Map</span></div><ol class="proc-steps"><li><span class="ps-n">1</span><span class="ps-t">Identify your favorite Minecraft pillar</span></li><li><span class="ps-n">2</span><span class="ps-t">Terraria</span></li><li><span class="ps-n">3</span><span class="ps-t">Garry&#x27;s Mod / Dreams</span></li><li><span class="ps-n">4</span><span class="ps-t">Satisfactory / Factorio</span></li><li><span class="ps-n">5</span><span class="ps-t">Roblox / Vintage Story servers</span></li><li><span class="ps-n">6</span><span class="ps-t">Demonstrate 3 hours before committing</span></li></ol></div>
 <h3>Matching the pick to your play style</h3>
 <p>Our testing produced a reliable matching rule: players who loved Minecraft's early game, the scramble for resources and first shelter, should pick survival builders; players who spent most time in creative mode should pick pure sandboxes; players who built redstone contraptions should move to automation games immediately, because redstone is a logistics puzzle in disguise.</p>
 <ul>
 <li><strong>Early-game lovers:</strong> the first night tension is the draw; survival builders preserve it best.</li>
-<li><strong>Creative-mode builders:</strong> pure sandboxes with robust tools remove the grind between ideas.</li>
+<li><strong>Creative-mode builders:</strong> pure sandboxes with robust<figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/Birdfeeder_dice_tower_in_Wingspan_board_game.jpg/900px-Birdfeeder_dice_tower_in_Wingspan_board_game.jpg" alt="Board game components and dice" loading="lazy" /><figcaption>Board game components and dice</figcaption></figure>
+ tools remove the grind between ideas.</li>
 <li><strong>Redstone engineers:</strong> automation games reward the same logic with far better interfaces.</li>
 <li><strong>Server socializers:</strong> multiplayer-first sandboxes deliver the community Minecraft servers offered.</li>
 </ul>
@@ -229,7 +228,7 @@ Multiplayer? -> [Roblox / Vintage Story servers] -> shared worlds
 <p>One more observation from our retention logs: the players who stuck with the sandbox genre longest treated their library as a rotation rather than a single loyalty. A survival world for intense sessions, a creative sandbox for relaxed building, and an automation game for engineering moods covered every gaming appetite, and the variety prevented the burnout that comes from grinding one world. The fifteen alternatives above support that rotation model, because each fills a distinct mood that Minecraft alone cannot cover.</p>
 <div class="tip"><strong>Pro tip:</strong> Install the alternative alongside Minecraft instead of replacing it. Our testing shows players who rotate between two sandboxes stay engaged longer than players who switch entirely, because each game keeps the other feeling fresh.</div>
 <p>The sandbox genre is one of gaming's healthiest families, and the fifteen games like Minecraft above each preserve the spirit while building something distinct. For more building and survival ideas, browse our <a href="/blogs/best-games-like-minecraft.html">best games like Minecraft list</a>, check the <a href="/blogs/best-free-games-on-roblox.html">best free Roblox games guide</a> for user-made sandbox worlds, and see the <a href="/blogs/best-games-for-low-end-pcs.html">low-end PC games collection</a> if your machine struggles with big voxel worlds.</p>
-      <figure class="inbody"><img src="/images/minecraft.png" alt="The Best Games Like Minecraft" loading="lazy" /><figcaption>The Best Games Like Minecraft</figcaption></figure><figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Minecraft_-_Lush_caves.jpg/960px-Minecraft_-_Lush_caves.jpg" alt="Minecraft lush caves" loading="lazy" /><figcaption>Minecraft lush caves</figcaption></figure>
+      
       <div class="related"><h3>Related reading</h3><a href="/blogs/how-to-get-better-at-minecraft.html">our Minecraft tips</a><a href="/blogs/best-browser-games-no-download.html">our no-download browser games list</a><a href="https://en.wikipedia.org/wiki/Minecraft" target="_blank" rel="noopener nofollow">Learn more about this game</a></div>
       <div class="related">
         <h3>Keep reading</h3>

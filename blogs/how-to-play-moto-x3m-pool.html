@@ -112,7 +112,18 @@
     @media(max-width:600px){.blog-grid{grid-template-columns:1fr;}}
   </style>
 
-<style id="artx">.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
+<style id="artx">
+.article .proc{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px 22px;margin:22px 0;}
+.article .proc-head{display:flex;align-items:center;gap:8px;margin-bottom:14px;}
+.article .proc-head .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px rgba(34,197,94,.6);}
+.article .proc-head span{font-size:.78rem;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);}
+.article ol.proc-steps{list-style:none;margin:0;padding:0;counter-reset:ps;}
+.article ol.proc-steps li{display:flex;gap:14px;align-items:flex-start;margin:0;padding:11px 0;border-bottom:1px dashed var(--border);}
+.article ol.proc-steps li:last-child{border-bottom:none;}
+.article ol.proc-steps .ps-n{flex:0 0 30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--accent),#16a34a);color:#04120a;font-weight:800;font-size:.9rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(34,197,94,.25);}
+.article ol.proc-steps .ps-t{color:var(--txt);font-weight:600;font-size:.98rem;line-height:1.45;padding-top:3px;}
+.article ol.proc-steps .ps-t small{display:block;color:var(--muted);font-weight:400;font-size:.86rem;margin-top:2px;}
+.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
 </head>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -174,6 +185,7 @@
 <p>The inflatable floats are the spin-off's signature hazard. The floats sit on the track and bounce the bike when it lands on them, which can launch the bike into a helpful arc or a fatal one depending on the angle, and our testing found that the players who treated the floats as terrain to read, rather than obstacles to avoid, used the bounces to clear the tall walls and the wide gaps that the direct route cannot reach.</p>
 <p>The water sections replace the spike pits with a different threat. The water slows the bike dramatically when it lands, and the submerged hazards and the currents push the bike off the line, and our analysis shows that the players who kept the bike out of the water entirely, using the floats and the ramps to stay airborne across the wet sections, cleared those stages faster than the players who splashed down and fought the current.</p>
 <p>The party theme hides the same physics puzzle that the main series teaches. Every gap is sized for a specific flight path, every float has a predictable bounce angle, and every water section rewards the airborne line, and our testing found that the players who scouted each stage before the fast run, mapping the floats and the water lines, cleared the list with the same walk-then-run discipline that the main series rewards.</p>
+<figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/1959_-_First_National_Bank_Pool_Party_-_Dorney_Park_Pool_-_Allentown_%281%29.jpg/900px-1959_-_First_National_Bank_Pool_Party_-_Dorney_Park_Pool_-_Allentown_%281%29.jpg" alt="A swimming pool on a summer day" loading="lazy" /><figcaption>A swimming pool on a summer day</figcaption></figure>
 <!-- ADSENSE PLACEHOLDER: CONTEXTUAL IN-ARTICLE DISPLAY AD -->
 <!--EXP9X--><p>The slide sections are the spin-off's unique mechanical treat. The bike rides down the long water slides and launches off the end with a speed and an arc that the ramp jumps never produce, and our analysis shows that the players who treated the slides as speed builders rather than scenic interludes, holding the throttle through the whole descent, arrived at the launch with the momentum that the following gap demanded. The players who braked on the slides lost the launch distance and frequently fell short of the landing zone.</p>
 <!--EXP10X--><p>The spin-off's checkpoints are placed even more generously than the main series', which makes the harder stages a pure practice loop. Our testing found that the players who used each checkpoint as a deliberate drill station, repeating the section until the bounce and the flight were predictable, cleared the late stages with a fraction of the retries of the players who attempted the full runs from the stage start every time. The generous checkpoints are the game's way of saying that the difficulty is meant to be mined, not brute-forced.</p>
@@ -181,24 +193,7 @@
 <a name="section-3"></a>
 <h2>3. Step-by-Step Level Map</h2>
 <p>The level loop below is the sequence we followed during the testing that produced our fastest stage clears.</p>
-<pre class="flow">
-[Scout the stage] --&gt; map the floats, slides, and water
-     |
-     v
-[Calibrate the throttle] --&gt; ease off earlier for the lighter arcs
-     |
-     v
-[Read the bounce] --&gt; aim for the first bounce point
-     |
-     v
-[Ride the slides] --&gt; hold the throttle through the descent
-     |
-     v
-[Stay airborne over water] --&gt; use the floats to skip the current
-     |
-     v
-[Mine the checkpoints] --&gt; drill each hard piece to automatic
-</pre>
+<div class="proc"><div class="proc-head"><span class="dot"></span><span>Process Map</span></div><ol class="proc-steps"><li><span class="ps-n">1</span><span class="ps-t">Scout the stage</span></li><li><span class="ps-n">2</span><span class="ps-t">Calibrate the throttle</span></li><li><span class="ps-n">3</span><span class="ps-t">Read the bounce</span></li><li><span class="ps-n">4</span><span class="ps-t">Ride the slides</span></li><li><span class="ps-n">5</span><span class="ps-t">Stay airborne over water</span></li><li><span class="ps-n">6</span><span class="ps-t">Mine the checkpoints</span></li></ol></div>
 <p>Follow this numbered routine for each new stage:</p>
 <ol>
 <li><strong>Scout the stage first</strong> &mdash; ride slowly and map the float positions, the slide lines, and the water hazards before the fast run.</li>
@@ -211,7 +206,8 @@
 <p>The bounce reading is the spin-off's hidden skill. The bike's landings on the floats and the ramps produce a second, smaller arc before the bike settles, and our analysis shows that the players who watched the first bounce point, rather than the landing itself, positioned the bike correctly for the next hazard while the bounce was still settling.</p>
 <!--EXP21X--><p>The float bounce angles are predictable, and the players who learned them turned the floats from hazards into a route system. Our testing measured the main bounce angles across the stage list and found that the floats launch the bike in a consistent direction relative to the landing point, which means the players who aimed each float landing at the angle the next gap required used the bounces to chain the jumps that the ground route could not connect. The float map is the spin-off's hidden layer, and the players who read it cleared the late stages with the environmental route rather than the direct one.</p>
 <!--EXP22X--><p>The water sections reward the airborne line so consistently that the stage times are built around it. Our analysis shows that the players who stayed out of the water entirely, using the floats and the ramps to skip the wet stretches, set the three-star times on the water stages, while the players who splashed down and fought the current lost the seconds that the thresholds demand. The airborne route is not the safe route, it is the fast route, and the players who committed to it early learned the float timing that the late stages require.</p>
-<!--EXP23X--><p>The spin-off's gentler physics make it the ideal training ground for the main-series skills. Our testing found that the players who learned the throttle control and the landing tilt on the pool party stages, where the margins are generous, carried the habits into the main series and cleared its early stages with fewer retries than the players who learned on the harsher originals. The floaty physics magnify the input errors, which makes them visible and fixable, and the players who used the spin-off as the practice sandbox arrived at the main series with the air control already installed.</p>
+<!--EXP23X--><p>The spin-off's gentler physics make it the ideal training ground for the main-series skills. Our testing found that the players who learned the throttle control and the landing tilt on the pool party stages, where the ma<figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/500px_photo_%2851094182%29.jpeg/900px-500px_photo_%2851094182%29.jpeg" alt="A dirt bike rider jumping on a motocross course" loading="lazy" /><figcaption>A dirt bike rider jumping on a motocross course</figcaption></figure>
+rgins are generous, carried the habits into the main series and cleared its early stages with fewer retries than the players who learned on the harsher originals. The floaty physics magnify the input errors, which makes them visible and fixable, and the players who used the spin-off as the practice sandbox arrived at the main series with the air control already installed.</p>
 
 <!-- ADSENSE PLACEHOLDER: RESPONSIVE NATIVE AD UNIT (MID-ARTICLE) -->
 <a name="section-4"></a>
@@ -227,7 +223,7 @@
 <p>The generous star times make the spin-off the best entry point for the series. Our testing found that the players who started with Pool Party, learning the throttle and the air control on the gentler stages, carried those habits into the main series and cleared its early stages faster than the players who started with the original's harsher difficulty curve.</p>
 <p>For the main-series foundation, our <a href="/blogs/moto-x3m-all-levels-guide.html">Moto X3M full level guide</a> explains the core mechanics and the original stage families. If you enjoy the spin-offs, our <a href="/blogs/how-to-play-moto-x3m-spooky.html">Moto X3M Spooky Land guide</a> covers the Halloween entry, and our <a href="/blogs/how-to-play-moto-x3m-2.html">Moto X3M 2 stage guide</a> explains the harder main-series sequel.</p>
 <p>The final validation is a stage clear rate rather than a single time. We track the attempts per stage across the level list, and improvement shows as fewer retries as the list progresses. A player who scouts the stage, calibrates the throttle, and reads the bounces will clear the pool party list with a fraction of the retries, and that efficiency is what playing Moto X3M Pool Party well truly means.</p>
-      <figure class="inbody"><img src="/images/motox3mpool.jpg" alt="How to Play Moto X3M Pool Party: A Guide" loading="lazy" /><figcaption>How to Play Moto X3M Pool Party: A Guide</figcaption></figure>
+      
       <div class="related"><h3>Related reading</h3><a href="/blogs/moto-x3m-all-levels-guide.html">our Moto X3M guide</a><a href="/blogs/how-to-get-better-at-gaming.html">our guide to getting better at gaming</a><a href="https://poki.com/en/g/moto-x3m" target="_blank" rel="noopener nofollow">Learn more about this game</a></div>
       <div class="related">
         <h3>Keep reading</h3>

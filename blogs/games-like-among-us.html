@@ -112,7 +112,18 @@
     @media(max-width:600px){.blog-grid{grid-template-columns:1fr;}}
   </style>
 
-<style id="artx">.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
+<style id="artx">
+.article .proc{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px 22px;margin:22px 0;}
+.article .proc-head{display:flex;align-items:center;gap:8px;margin-bottom:14px;}
+.article .proc-head .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px rgba(34,197,94,.6);}
+.article .proc-head span{font-size:.78rem;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);}
+.article ol.proc-steps{list-style:none;margin:0;padding:0;counter-reset:ps;}
+.article ol.proc-steps li{display:flex;gap:14px;align-items:flex-start;margin:0;padding:11px 0;border-bottom:1px dashed var(--border);}
+.article ol.proc-steps li:last-child{border-bottom:none;}
+.article ol.proc-steps .ps-n{flex:0 0 30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--accent),#16a34a);color:#04120a;font-weight:800;font-size:.9rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(34,197,94,.25);}
+.article ol.proc-steps .ps-t{color:var(--txt);font-weight:600;font-size:.98rem;line-height:1.45;padding-top:3px;}
+.article ol.proc-steps .ps-t small{display:block;color:var(--muted);font-weight:400;font-size:.86rem;margin-top:2px;}
+.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
 </head>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -181,34 +192,12 @@
 <p>Round length determines how many games a group can play in a night and how invested each round feels. Short rounds suit casual groups who want variety, while longer rounds build the narrative arc that makes the final vote dramatic. Our testing found that the best game nights mixed formats, starting with short warm-up rounds to teach the mechanics and graduating to the longer, deeper rounds once the group understood the play, and the pacing kept the energy high through the evening.</p>
 <p>The voice-chat dimension deserves special attention because it changed the genre's information structure permanently. Text-based social deduction gives every player equal access to the full conversation, but proximity voice chat adds a spatial layer where players can hear only the conversations near them, creating private whispers, overheard fragments, and the terrifying silence of a room where the traitor just struck. Our testing found that the proximity-chat titles produced the genre's most intense moments, because the information asymmetry they create is visceral rather than abstract, and the best groups embraced the paranoia that the format generates.</p>
 <p>Task design is the hidden variable that separates the genre's polished titles from its cheap copies. In the best social deduction games, the crew's tasks are engaging enough to occupy honest players but simple enough to fake, and the traitor's ability to fake tasks convincingly is what makes the deception possible. Our testing found that titles with genuinely interactive tasks created better rounds, because honest players had real work to do and traitors had real behavior to mimic, while titles with trivial one-click tasks collapsed into pure conversation with nothing underneath.</p>
+<figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Family_playing_a_board.jpg/900px-Family_playing_a_board.jpg" alt="A family playing a board game together" loading="lazy" /><figcaption>A family playing a board game together</figcaption></figure>
 <!-- ADSENSE PLACEHOLDER: CONTEXTUAL IN-ARTICLE DISPLAY AD -->
 <a name="section-3"></a>
 <h2>3. Step-by-Step Game Night Map</h2>
 <p>Running a successful social deduction game night is a repeatable process, and the sequence below captures the tested flow that produced the best sessions in our play group.</p>
-<pre class="flow">
-[Size the group] --&gt; count the players and set the minimum
-     |
-     v
-[Pick the title] --&gt; match the game to the group size
-     |
-     v
-[Set the roles] --&gt; balance traitors and crew fairly
-     |
-     v
-[Run a warm-up] --&gt; one practice round to teach rules
-     |
-     v
-[Establish the rules] --&gt; set time limits and voting norms
-     |
-     v
-[Play the session] --&gt; rotate roles between rounds
-     |
-     v
-[Debrief the rounds] --&gt; reveal the traitor and the tells
-     |
-     v
-[Rotate the titles] --&gt; switch games to keep the night fresh
-</pre>
+<div class="proc"><div class="proc-head"><span class="dot"></span><span>Process Map</span></div><ol class="proc-steps"><li><span class="ps-n">1</span><span class="ps-t">Size the group</span></li><li><span class="ps-n">2</span><span class="ps-t">Pick the title</span></li><li><span class="ps-n">3</span><span class="ps-t">Set the roles</span></li><li><span class="ps-n">4</span><span class="ps-t">Run a warm-up</span></li><li><span class="ps-n">5</span><span class="ps-t">Establish the rules</span></li><li><span class="ps-n">6</span><span class="ps-t">Play the session</span></li><li><span class="ps-n">7</span><span class="ps-t">Debrief the rounds</span></li><li><span class="ps-n">8</span><span class="ps-t">Rotate the titles</span></li></ol></div>
 <p>Four hosting habits separate game nights that sing from game nights that fizzle:</p>
 <ul>
 <li><strong>Group-first selection:</strong> choose the title for the actual group size, because social deduction dies with too few players and drowns with too many.</li>
@@ -229,7 +218,8 @@
 </ul>
 <p>The certainty problem deserves the deepest explanation because it ends more game nights than any other failure. Social deduction games balance information carefully, and a group that includes one exceptionally sharp player can solve the puzzle faster than the game's balance expects, converting every remaining round into a confirmation of the first. Our testing found that the fix is not to penalize the sharp player but to raise the information complexity, introducing titles with multiple traitor factions, false roles, and secret win conditions that resist even the best deduction.</p>
 <p>The quiet-player problem is the genre's social failure mode. Social deduction rewards the loudest voices, and groups naturally let dominant players drive the discussion while quieter players fade into the background, starving the argument of their observations. Our testing found that a simple speaking rotation, each player states a theory before the open discussion begins, transformed quiet groups, because the structure guaranteed every voice entered the record before the loudest players could dominate.</p>
-<p>Finally, calibrate the game selection to the group's experience level. New players need titles with simple roles and clear objectives, while veterans need the layered deception that keeps the genre challenging, and mixing the two in one title frustrates both. Our testing found that the best groups warmed up with a simple title, then escalated to the deeper games once everyone understood the fundamentals, and the escalation kept both the newcomers engaged and the veterans entertained through the whole night.</p>
+<p>Finally, calibrate the game selection to the group's experience level. New players need titles with simple roles and clear objectives, while veterans need the layered deception that keeps the genre challenging, and mixing the two i<figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/E3_2011_-_trying_out_Playstation_Network_games_at_the_Sony_booth.jpg/900px-E3_2011_-_trying_out_Playstation_Network_games_at_the_Sony_booth.jpg" alt="Players trying online games at a gaming event" loading="lazy" /><figcaption>Players trying online games at a gaming event</figcaption></figure>
+n one title frustrates both. Our testing found that the best groups warmed up with a simple title, then escalated to the deeper games once everyone understood the fundamentals, and the escalation kept both the newcomers engaged and the veterans entertained through the whole night.</p>
 <!-- ADSENSE PLACEHOLDER: IN-ARTICLE DISPLAY AD (END OF CONTENT) -->
 <h2>5. Quick-Reference FAQ</h2>
 <p><strong>What is the closest game to Among Us?</strong> The deception-based shooters and village deduction games share the core formula most directly, pairing hidden traitors with group argument and voting.</p>
@@ -238,7 +228,7 @@
 <p><strong>What is the best game for a small group?</strong> The task-race hybrids and team-traitor games support smaller groups, while the village deduction titles need the full player count to shine.</p>
 <p><strong>Why does my group solve the games too fast?</strong> Your group needs deeper titles with layered roles and false information, because information complexity is the dial that slows expert deduction.</p>
 <p>For more games your group will love, see the <a href="/blogs/best-games-to-play-with-friends-online.html">best games to play with friends online guide</a> and the <a href="/blogs/best-multiplayer-browser-games.html">best multiplayer browser games roundup</a>, then explore the <a href="/blogs/best-io-games-online.html">best .io games online list</a> for competitive alternatives.</p>
-      <figure class="inbody"><img src="/images/amongus.png" alt="The Best Games Like Among Us: Social Deduction Games to Try" loading="lazy" /><figcaption>The Best Games Like Among Us: Social Deduction Games to Try</figcaption></figure>
+      
       <div class="related"><h3>Related reading</h3><a href="/blogs/among-us-tips-to-win.html">our Among Us tips</a><a href="/blogs/best-browser-games-no-download.html">our no-download browser games list</a><a href="https://en.wikipedia.org/wiki/Among_Us" target="_blank" rel="noopener nofollow">Learn more about this game</a></div>
       <div class="related">
         <h3>Keep reading</h3>

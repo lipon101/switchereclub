@@ -112,7 +112,18 @@
     @media(max-width:600px){.blog-grid{grid-template-columns:1fr;}}
   </style>
 
-<style id="artx">.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
+<style id="artx">
+.article .proc{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px 22px;margin:22px 0;}
+.article .proc-head{display:flex;align-items:center;gap:8px;margin-bottom:14px;}
+.article .proc-head .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px rgba(34,197,94,.6);}
+.article .proc-head span{font-size:.78rem;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);}
+.article ol.proc-steps{list-style:none;margin:0;padding:0;counter-reset:ps;}
+.article ol.proc-steps li{display:flex;gap:14px;align-items:flex-start;margin:0;padding:11px 0;border-bottom:1px dashed var(--border);}
+.article ol.proc-steps li:last-child{border-bottom:none;}
+.article ol.proc-steps .ps-n{flex:0 0 30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--accent),#16a34a);color:#04120a;font-weight:800;font-size:.9rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(34,197,94,.25);}
+.article ol.proc-steps .ps-t{color:var(--txt);font-weight:600;font-size:.98rem;line-height:1.45;padding-top:3px;}
+.article ol.proc-steps .ps-t small{display:block;color:var(--muted);font-weight:400;font-size:.86rem;margin-top:2px;}
+.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
 </head>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -174,6 +185,7 @@
 <p>The route memory is the skill that the game's length demands. The long levels chain dozens of jumps into a single run, and the players who memorized the route, knowing the jump arcs and the platform timings before the run started, executed the chains smoothly, while the players who improvised the routes made the decisions under the time pressure that the long levels impose. Our testing found that the memorized runs cleared the long levels with a fraction of the deaths of the improvised runs.</p>
 <p>The stamina management is the game's hidden challenge. The precision platforming demands the full attention, and the attention fades over the long sessions, which means the players who played past the focus limit died on the simple jumps that the fresh players cleared easily, and our analysis shows that the act-by-act practice, with the rests between the acts, kept the attention fresh for the gauntlets that the marathon sessions could not hold.</p>
 <p>The mechanic continuity is the trap for the returning players. The earlier games' habits, the jump arcs and the slide timings, carry into Vex 5 but with the level-design variations that punish the assumption, and our testing found that the players who treated the first act as a recalibration, re-measuring the jumps against the new level geometry, adapted faster than the players who assumed the old measurements still held.</p>
+<figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Hands_holding_video_game_controller_%2850811892858%29.jpg/900px-Hands_holding_video_game_controller_%2850811892858%29.jpg" alt="Hands holding a video game controller" loading="lazy" /><figcaption>Hands holding a video game controller</figcaption></figure>
 <!-- ADSENSE PLACEHOLDER: CONTEXTUAL IN-ARTICLE DISPLAY AD -->
 <!--EXP9X--><p>The act themes are visual, but the difficulty tiers they mark are real, and the players who read the tier shifts adjusted their practice accordingly. The theme change between the acts signals the new hazard mix, and our analysis shows that the players who scouted the first level of each new act slowly, learning the act's new combinations before the speed runs, avoided the death streaks that the theme-blind players suffered, since the new act always introduces at least one new way to die.</p>
 <!--EXP10X--><p>The death-replay habit matters more in the long levels, where a single death can erase minutes of progress. Our testing found that the players who watched each death replay, identifying whether the mistake was the jump distance, the platform timing, or the route choice, fixed the error before the next attempt, while the players who restarted instantly repeated the same death at the same section, and the replay discipline converted the long-level frustration into the measured improvement.</p>
@@ -181,24 +193,7 @@
 <a name="section-3"></a>
 <h2>3. Step-by-Step Level Map</h2>
 <p>The level loop below is the sequence we followed during the testing that produced our fastest full-game clears.</p>
-<pre class="flow">
-[Refresh the moves] --&gt; drill the vocabulary before the act
-     |
-     v
-[Scout the act's first level] --&gt; learn the new hazard mix
-     |
-     v
-[Memorize the long route] --&gt; walk it until the arcs are known
-     |
-     v
-[Run the memorized route] --&gt; execute without the improvisation
-     |
-     v
-[Drill at the checkpoints] --&gt; mine the hard sections in pieces
-     |
-     v
-[Rest between the acts] --&gt; keep the focus for the gauntlets
-</pre>
+<div class="proc"><div class="proc-head"><span class="dot"></span><span>Process Map</span></div><ol class="proc-steps"><li><span class="ps-n">1</span><span class="ps-t">Refresh the moves</span></li><li><span class="ps-n">2</span><span class="ps-t">Scout the act&#x27;s first level</span></li><li><span class="ps-n">3</span><span class="ps-t">Memorize the long route</span></li><li><span class="ps-n">4</span><span class="ps-t">Run the memorized route</span></li><li><span class="ps-n">5</span><span class="ps-t">Drill at the checkpoints</span></li><li><span class="ps-n">6</span><span class="ps-t">Rest between the acts</span></li></ol></div>
 <p>Follow this numbered routine for the game's long levels:</p>
 <ol>
 <li><strong>Refresh the moves before each act</strong> &mdash; drill the jumps, the slides, and the wall-jumps in the act's early levels until the vocabulary is fluent.</li>
@@ -211,7 +206,8 @@
 <p>The route memorization is the skill that the final gauntlets reward. The late levels chain the full vocabulary into the long sequences, and our analysis shows that the players who walked the routes until the arcs were known, then ran the memorized paths, cleared the gauntlets, while the players who improvised the routes died at the transitions that the memorized runners crossed without thinking.</p>
 <!--EXP21X--><p>The jump-arc calibration is the first skill to re-check in the biggest entry, since the level geometry varies more than the earlier games. The stickman's jump distance depends on the run speed and the hold time, and our testing found that the players who practiced the short-hop and the full-jump arcs against the new platforms, measuring the distances the new level design demanded, landed the narrow ledges consistently, while the players who carried the old measurements overshot the new platforms that the wider level variety introduced.</p>
 <!--EXP22X--><p>The momentum management carries more weight in the long levels, where the speed bleeds and the precision compounds. The stickman carries the run speed into the jumps, and the speed that clears the wide gaps overshoots the narrow landings, and our analysis shows that the players who bled the speed before the tight sections, tapping back or jumping from the controlled approach, landed the platforms that the full-speed players flew past, and the controlled approaches are what the long levels' mixed geometry demands.</p>
-<!--EXP23X--><p>The secret-area hunting is the practice that the observant players used to build the fluency without the gauntlet pressure. The game hides the optional areas that reuse the mechanics in the relaxed settings, and our testing found that the players who explored the secret areas between the acts, drilling the wall-jump rhythm and the slide timing in the low-stakes spaces, arrived at the gauntlets with the moves automatic, and the secret-area practice translated into the fewer deaths on the mandatory levels that the rushed players could not match.</p>
+<!--EXP23X--><p>The secret-area hunting is the practice that the observant players used to build the fluency without the gauntlet pressure. The game hides the optional areas that reuse the mechanics in the relaxed settings, a<figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/Birdfeeder_dice_tower_in_Wingspan_board_game.jpg/900px-Birdfeeder_dice_tower_in_Wingspan_board_game.jpg" alt="Board game components and dice" loading="lazy" /><figcaption>Board game components and dice</figcaption></figure>
+nd our testing found that the players who explored the secret areas between the acts, drilling the wall-jump rhythm and the slide timing in the low-stakes spaces, arrived at the gauntlets with the moves automatic, and the secret-area practice translated into the fewer deaths on the mandatory levels that the rushed players could not match.</p>
 
 <!-- ADSENSE PLACEHOLDER: RESPONSIVE NATIVE AD UNIT (MID-ARTICLE) -->
 <a name="section-4"></a>
@@ -227,7 +223,7 @@
 <p>The total deaths per act is the game's real scoreboard. Our testing found that the players who tracked the deaths per act, rather than the total play time, saw which acts demanded the extra practice, and the tracking directed the drilling to the weak acts while the play time only measured the effort.</p>
 <p>For the rest of the series, our <a href="/blogs/how-to-play-vex-3.html">Vex 3 platformer guide</a> covers the earlier entry, and our <a href="/blogs/how-to-play-vex-4.html">Vex 4 mechanics guide</a> explains the sequel's new hazards. If you want the same precision in a different genre, our <a href="/blogs/geometry-dash-tips-for-beginners.html">Geometry Dash beginner tips</a> build the timing skills the platformers reward.</p>
 <p>The final validation is a deaths-per-act trend rather than a single clear. We track the mean deaths across the acts, and improvement shows as a falling average. A player who refreshes the moves, memorizes the routes, and rests between the acts will watch the average fall, and that falling average, tracked across the full level list of the series' biggest entry, is what truly mastering the biggest Vex levels in the whole of the series means at the end.</p>
-      <figure class="inbody"><img src="/images/vex5.png" alt="How to Play Vex 5: The Ultimate Vex Guide" loading="lazy" /><figcaption>How to Play Vex 5: The Ultimate Vex Guide</figcaption></figure>
+      
       <div class="related"><h3>Related reading</h3><a href="/blogs/how-to-play-vex-3.html">our Vex guide</a><a href="/blogs/how-to-get-better-at-gaming.html">our guide to getting better at gaming</a><a href="https://www.vex4.io/" target="_blank" rel="noopener nofollow">Learn more about this game</a></div>
       <div class="related">
         <h3>Keep reading</h3>

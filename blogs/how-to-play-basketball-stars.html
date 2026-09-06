@@ -112,7 +112,18 @@
     @media(max-width:600px){.blog-grid{grid-template-columns:1fr;}}
   </style>
 
-<style id="artx">.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
+<style id="artx">
+.article .proc{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px 22px;margin:22px 0;}
+.article .proc-head{display:flex;align-items:center;gap:8px;margin-bottom:14px;}
+.article .proc-head .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px rgba(34,197,94,.6);}
+.article .proc-head span{font-size:.78rem;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);}
+.article ol.proc-steps{list-style:none;margin:0;padding:0;counter-reset:ps;}
+.article ol.proc-steps li{display:flex;gap:14px;align-items:flex-start;margin:0;padding:11px 0;border-bottom:1px dashed var(--border);}
+.article ol.proc-steps li:last-child{border-bottom:none;}
+.article ol.proc-steps .ps-n{flex:0 0 30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--accent),#16a34a);color:#04120a;font-weight:800;font-size:.9rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(34,197,94,.25);}
+.article ol.proc-steps .ps-t{color:var(--txt);font-weight:600;font-size:.98rem;line-height:1.45;padding-top:3px;}
+.article ol.proc-steps .ps-t small{display:block;color:var(--muted);font-weight:400;font-size:.86rem;margin-top:2px;}
+.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
 </head>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -178,6 +189,7 @@
 <p>The shot meter is the game's core skill because it appears in every scoring attempt. The meter swings from low to high, the green zone sits near the perfect release, and stopping the meter there produces the highest make percentage. Our testing found that players who practiced the meter's swing speed made the green zone reliably, while players who rushed their stops missed consistently.</p>
 <p>The dunk meter adds a second timing skill for inside scoring. Dunks trigger a separate meter or timing prompt, and beating it produces the game's most reliable two points, while missing it wastes the possession. Our testing showed that players who practiced the dunk timing scored more consistently in the paint and drew more defensive attention.</p>
 <p>Power-up management is the strategic layer that separates good players from consistent winners. The score multiplier doubles the value of baskets for a short window, and using it during a hot streak or a close finish turns a tight game into a comfortable lead, while the defensive power-ups cancel an opponent's momentum. Our analysis shows that the timing of the power-up matters more than the power-up itself.</p>
+<figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/2011-06-07_Basketball_in_hoop_still_shot.jpg/900px-2011-06-07_Basketball_in_hoop_still_shot.jpg" alt="A basketball dropping through a hoop" loading="lazy" /><figcaption>A basketball dropping through a hoop</figcaption></figure>
 <!-- ADSENSE PLACEHOLDER: CONTEXTUAL IN-ARTICLE DISPLAY AD -->
 <!--EXP6X--><p>The game's practice mode is the fastest route to meter mastery. Our testing found that players who spent time learning the meter's swing before their first match made the green zone consistently, while players who skipped practice spent their early matches learning the timing at the cost of the scoreboard. The practice is short, a few minutes of focused meter stops, but it converts directly into points when the match begins.</p>
 <!--EXP6X--><p>Shot selection is the tactical layer under the meter. A contested three is a worse bet than an open two, and our testing found that players who created open looks, using screens, drives, and ball movement to earn space, scored more efficiently than players who fired from anywhere. The meter decides whether the shot goes in, but the shot selection decides whether the attempt was worth taking.</p>
@@ -185,24 +197,7 @@
 <a name="section-3"></a>
 <h2>3. Step-by-Step Match Map</h2>
 <p>The match loop below is the structure we followed during the testing that produced our measured improvements.</p>
-<pre class="flow">
-[Pick the star] --&gt; match stats to the scoring style
-     |
-     v
-[Win the opening] --&gt; take the first possession
-     |
-     v
-[Find the meter rhythm] --&gt; make the first shots count
-     |
-     v
-[Mix the offense] --&gt; alternate shots, drives, dunks
-     |
-     v
-[Time the power-ups] --&gt; multiply during the hot streak
-     |
-     v
-[Close the match] --&gt; protect the lead, finish at the meter
-</pre>
+<div class="proc"><div class="proc-head"><span class="dot"></span><span>Process Map</span></div><ol class="proc-steps"><li><span class="ps-n">1</span><span class="ps-t">Pick the star</span></li><li><span class="ps-n">2</span><span class="ps-t">Win the opening</span></li><li><span class="ps-n">3</span><span class="ps-t">Find the meter rhythm</span></li><li><span class="ps-n">4</span><span class="ps-t">Mix the offense</span></li><li><span class="ps-n">5</span><span class="ps-t">Time the power-ups</span></li><li><span class="ps-n">6</span><span class="ps-t">Close the match</span></li></ol></div>
 <p>Follow this numbered routine for each match:</p>
 <ol>
 <li><strong>Select the right star</strong> — choose a player whose stats match the scoring style you will use in the match.</li>
@@ -211,7 +206,8 @@
 <li><strong>Mix the offense</strong> — alternate perimeter shots and inside drives so the defense cannot settle into a read.</li>
 <li><strong>Time the power-ups</strong> — save the multiplier for a hot streak or the final minute, and use defensive boosts to stop runs.</li>
 </ol>
-<p>The practice mode is the fastest route to meter mastery. Our testing found that players who spent time learning the meter's swing before their first match made the green zone consistently, while players who skipped practice spent their early matches learning the timing at the cost of the scoreboard.</p>
+<p>The practice mode is the fastest route to meter mastery. Our testing found that players who spent time learning the meter's swing before their first match made the green zone consistently, while players who skipped practice spent their early matches learning the timing at the cost of the scoreboard<figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Bo_Jackson%2C_2011_NCAA_Honors_Celebration%2C_San_Antonio%2C_TX.jpg/900px-Bo_Jackson%2C_2011_NCAA_Honors_Celebration%2C_San_Antonio%2C_TX.jpg" alt="A championship trophy presentation" loading="lazy" /><figcaption>A championship trophy presentation</figcaption></figure>
+.</p>
 <p>Momentum is a real factor in the game's flow. Scoring runs change the energy of the match, and our testing found that players who recognized their own hot streaks and pressed the advantage, while slowing the game when the opponent was hot, won more matches than players who played at one pace throughout.</p>
 <!-- ADSENSE PLACEHOLDER: RESPONSIVE NATIVE AD UNIT (MID-ARTICLE) -->
 <!--EXP6X--><p>The final possessions of a close match reward the composed player. The meter does not change under pressure, but the hands do, and our testing found that players who practiced their meter routine until it was automatic made the green zone in the clutch while players who thought about the moment missed it. Build the routine in practice, breathe through the stop, and let the trained timing handle the pressure.</p>
@@ -235,7 +231,7 @@ If you enjoy the duel format, our <a href="/blogs/how-to-play-basketball-legends
 <!--EXP8X--><p>The progression system rewards returning players who build their star around a coherent style. Our testing found that players who upgraded the stats that matched their meter strengths, three-point accuracy for perimeter shooters or dunk for inside scorers, won more than players who spread their upgrades evenly across every category. Specialization amplifies the skills the matches already reward, and the focused star outperforms the balanced one at every level we tested.</p>
 <!--EXP8X--><p>Consistency is the final separator between the occasional winner and the regular winner. Our testing found that players who maintained the same meter routine, the same power-up timing, and the same defensive patience across every match won more than players who played brilliantly in flashes and poorly between them, because the game rewards the reliable green-zone stop more than the lucky one. The highlight plays will come, but the meter consistency is what wins the match.</p>
 <p>The final validation is a meter-accuracy trend rather than a single result. We track the percentage of green-zone stops across matches, and improvement shows as a rising line. A player who masters the meter, times the power-ups, and reads the opponent will win consistently, and that consistency is what playing Basketball Stars to win truly means.</p>
-      <figure class="inbody"><img src="/images/basketballstars.png" alt="How to Play Basketball Stars: Score Big, Win Big" loading="lazy" /><figcaption>How to Play Basketball Stars: Score Big, Win Big</figcaption></figure>
+      
       <div class="related"><h3>Related reading</h3><a href="/blogs/how-to-play-basketball-legends.html">our basketball game guide</a><a href="/blogs/how-to-get-better-at-gaming.html">our guide to getting better at gaming</a><a href="https://en.wikipedia.org/wiki/Basketball" target="_blank" rel="noopener nofollow">Learn more about this game</a></div>
       <div class="related">
         <h3>Keep reading</h3>

@@ -112,7 +112,18 @@
     @media(max-width:600px){.blog-grid{grid-template-columns:1fr;}}
   </style>
 
-<style id="artx">.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
+<style id="artx">
+.article .proc{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px 22px;margin:22px 0;}
+.article .proc-head{display:flex;align-items:center;gap:8px;margin-bottom:14px;}
+.article .proc-head .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px rgba(34,197,94,.6);}
+.article .proc-head span{font-size:.78rem;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);}
+.article ol.proc-steps{list-style:none;margin:0;padding:0;counter-reset:ps;}
+.article ol.proc-steps li{display:flex;gap:14px;align-items:flex-start;margin:0;padding:11px 0;border-bottom:1px dashed var(--border);}
+.article ol.proc-steps li:last-child{border-bottom:none;}
+.article ol.proc-steps .ps-n{flex:0 0 30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--accent),#16a34a);color:#04120a;font-weight:800;font-size:.9rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(34,197,94,.25);}
+.article ol.proc-steps .ps-t{color:var(--txt);font-weight:600;font-size:.98rem;line-height:1.45;padding-top:3px;}
+.article ol.proc-steps .ps-t small{display:block;color:var(--muted);font-weight:400;font-size:.86rem;margin-top:2px;}
+.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
 </head>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -234,6 +245,7 @@ Our testing shows swipe-driven games suit one-handed play on commutes, tap-rhyth
 <td>Very high, async-friendly</td>
 </tr>
 </tbody></table>
+<figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Playing_with_smartphone.jpg/900px-Playing_with_smartphone.jpg" alt="A person playing a game on a smartphone" loading="lazy" /><figcaption>A person playing a game on a smartphone</figcaption></figure>
 <!-- ADSENSE PLACEHOLDER: CONTEXTUAL IN-ARTICLE DISPLAY AD -->
 <h3>Data and battery math for phone sessions</h3>
 <p>Phone browser gaming runs on a metered connection, and the costs add up faster than most players expect. Our testing measured the leading titles across a full hour of play on cellular data, and the range was striking: lightweight puzzle games stayed under 15 MB, while asset-heavy 3D titles pushed past 80 MB.</p>
@@ -262,27 +274,7 @@ Our testing shows swipe-driven games suit one-handed play on commutes, tap-rhyth
 <a name="section-3"></a>
 <h2 id="section-3">3. Step-by-Step Mobile Setup Map</h2>
 Optimizing a phone for browser gaming takes under two minutes. We reproduced this sequence on both major mobile operating systems.
-<pre class="flow">[Open mobile browser]
-        |
-        v
-[Enable desktop site ONLY if needed]
-        |
-        v
-[Add game URL to home screen] -- app-like icon
-        |
-        v
-[Disable battery saver for sessions]
-        |
-        v
-[Rotate ONLY if the title demands it]
-        |
-        v
-[Play first round] --> [Controls feel off?]
-                          |
-                          +--> YES --> [Fullscreen / adjust zoom]
-                          |
-                          v
-                   [Bookmark for next session]</pre>
+<div class="proc"><div class="proc-head"><span class="dot"></span><span>Process Map</span></div><ol class="proc-steps"><li><span class="ps-n">1</span><span class="ps-t">Open mobile browser</span></li><li><span class="ps-n">2</span><span class="ps-t">Enable desktop site ONLY if needed</span></li><li><span class="ps-n">3</span><span class="ps-t">Add game URL to home screen</span></li><li><span class="ps-n">4</span><span class="ps-t">Disable battery saver for sessions</span></li><li><span class="ps-n">5</span><span class="ps-t">Rotate ONLY if the title demands it</span></li><li><span class="ps-n">6</span><span class="ps-t">Play first round</span></li><li><span class="ps-n">7</span><span class="ps-t">Controls feel off?</span></li><li><span class="ps-n">8</span><span class="ps-t">Fullscreen / adjust zoom</span></li><li><span class="ps-n">9</span><span class="ps-t">Bookmark for next session</span></li></ol></div>
 <p class="tblcap">Process map 1: The step-by-step flow for this article.</p><h3>Recommended mobile lineup</h3>
 - <strong>2048</strong> — the perfect phone puzzle; swipe to merge tiles, easy to learn, surprisingly deep.
 - <strong>Snake</strong> — the classic reflex game; direction swipes keep it playable with one thumb.
@@ -305,7 +297,8 @@ Optimizing a phone for browser gaming takes under two minutes. We reproduced thi
 </ul>
 <p>The calibration fix is simple: play the first minute of any new title in fullscreen with a clean screen, and adjust your grip if inputs ghost. If a game feels unresponsive, test it in another browser before blaming the title; browser engines differ measurably in touch handling.</p>
 <h3>Reading mode and interruption etiquette</h3>
-<p>Turn-based and idle games tolerate interruptions gracefully, but real-time titles punish them. Our analysis shows the polite pattern is checking the game type before starting: if a notification could ruin a run, enable do-not-disturb or pick a turn-based title. Matching the game to the interruption risk of your environment keeps both the game and your relationships intact.</p>
+<p>Turn-based and idle games tolerate interruptions gracefully, but real-time titles punish them. Our analysis shows the polite pattern is checking the game type before starting: if a notification could ruin a run, enable do-not-disturb or pick a turn-based title. Matching the game to the interruption risk of your environment keeps both<figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Cloud_Memory_Game_%284688242451%29.jpg/900px-Cloud_Memory_Game_%284688242451%29.jpg" alt="A cloud-based memory game on screen" loading="lazy" /><figcaption>A cloud-based memory game on screen</figcaption></figure>
+ the game and your relationships intact.</p>
 <p>For commutes with predictable stops, choose games with natural pause points. For waiting rooms where interruptions are rare, real-time titles are fine. The context match is the difference between a refreshing break and a frustrating one.</p>
 <!-- ADSENSE PLACEHOLDER: CONTEXTUAL IN-ARTICLE DISPLAY AD (PRE-FOOTER) -->
 <a name="section-4"></a>
@@ -328,7 +321,7 @@ Optimizing a phone for browser gaming takes under two minutes. We reproduced thi
 </ul>
 <p>Review the folder monthly and rotate out any title that stopped pulling you back. Our analysis shows the rotation keeps the folder fresh while the core five stay familiar enough to launch instantly, which is the entire advantage of browser gaming on a phone.</p>
 <p>Mobile browser gaming replaces an entire app-library habit with a bookmark folder. Start with our <a href="/blogs/what-is-2048-game-rules.html">2048 rules and winning strategy guide</a>, add the <a href="/blogs/how-to-play-snake.html">classic Snake controls primer</a> for nostalgia, and browse the <a href="/blogs/best-games-for-a-phone.html">best games for a phone list</a> when you want the full mobile catalog.</p>
-      <figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Playing_with_smartphone.jpg/960px-Playing_with_smartphone.jpg" alt="Playing a game on a smartphone" loading="lazy" /><figcaption>Playing a game on a smartphone</figcaption></figure>
+      
       <div class="related"><h3>Related reading</h3><a href="/blogs/best-browser-games-no-download.html">our no-download browser games list</a><a href="/blogs/best-games-for-a-quick-break.html">our quick break games list</a><a href="https://en.wikipedia.org/wiki/Browser_game" target="_blank" rel="noopener nofollow">Learn more about this game</a></div>
       <div class="related">
         <h3>Keep reading</h3>

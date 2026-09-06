@@ -112,7 +112,18 @@
     @media(max-width:600px){.blog-grid{grid-template-columns:1fr;}}
   </style>
 
-<style id="artx">.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
+<style id="artx">
+.article .proc{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px 22px;margin:22px 0;}
+.article .proc-head{display:flex;align-items:center;gap:8px;margin-bottom:14px;}
+.article .proc-head .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px rgba(34,197,94,.6);}
+.article .proc-head span{font-size:.78rem;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);}
+.article ol.proc-steps{list-style:none;margin:0;padding:0;counter-reset:ps;}
+.article ol.proc-steps li{display:flex;gap:14px;align-items:flex-start;margin:0;padding:11px 0;border-bottom:1px dashed var(--border);}
+.article ol.proc-steps li:last-child{border-bottom:none;}
+.article ol.proc-steps .ps-n{flex:0 0 30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--accent),#16a34a);color:#04120a;font-weight:800;font-size:.9rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(34,197,94,.25);}
+.article ol.proc-steps .ps-t{color:var(--txt);font-weight:600;font-size:.98rem;line-height:1.45;padding-top:3px;}
+.article ol.proc-steps .ps-t small{display:block;color:var(--muted);font-weight:400;font-size:.86rem;margin-top:2px;}
+.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
 </head>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -179,29 +190,13 @@
 <p>Building speed is about order memory, not button speed. The standard ramp-and-wall push is a sequence of five or six inputs that become automatic with repetition, and our testing showed that players who drilled the sequence until it was automatic built 40 percent faster than players who thought about each placement.</p>
 <p>Editing is the skill that separates mid and high brackets. A player who can edit a window, shoot through it, and re-place the wall in under two seconds controls the pace of every fight, and we found that this single skill converted more losses into wins than any other practice.</p>
 <!--EXP2--><p>High-ground control is the positional goal that ties building and aim together. The player above controls the engagement, shooting down over ramps while forcing the opponent to build up or expose themselves, and our testing found that fights where one player held high ground ended with that player winning the large majority of the time. The skill to practice is the retake, the sequence of edits and builds that reclaims height from an opponent, and it matters more than any single aim improvement for players who frequently lose height battles.</p>
+<figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/ESport_IFNG_Munich_20-Nov-11_Stage5.jpg/900px-ESport_IFNG_Munich_20-Nov-11_Stage5.jpg" alt="An esports tournament stage with players competing" loading="lazy" /><figcaption>An esports tournament stage with players competing</figcaption></figure>
 <!-- ADSENSE PLACEHOLDER: CONTEXTUAL IN-ARTICLE DISPLAY AD -->
 <!--EXP2X--><p>Map awareness in 1v1.LOL is simpler than in battle royale modes, but it still matters. Knowing where the opponent spawns, which routes give the high ground first, and where cover sits lets a player dictate the engagement, and our testing found that players who moved toward the high-ground position at the start of each round won more openings. The habit is to treat the first seconds as a positioning race, claiming the favorable ground before trading shots, since the player who controls position controls the pace.</p>
 <a name="section-3"></a>
 <h2>3. Step-by-Step Practice Map</h2>
 <p>The practice loop below is the exact structure we used to measure the 18 percent improvement in our testing group.</p>
-<pre class="flow">
-[Enter practice mode] --&gt; no opponents, full material focus
-     |
-     v
-[Aim drill 10 min] --&gt; track moving targets, strafe between shots
-     |
-     v
-[Build drill 15 min] --&gt; repeat ramp-wall push until automatic
-     |
-     v
-[Edit drill 10 min] --&gt; window edit, shoot, re-place wall
-     |
-     v
-[Apply in matches] --&gt; three matches with one focus goal
-     |
-     v
-[Review and repeat] --&gt; log mistakes, adjust next session
-</pre>
+<div class="proc"><div class="proc-head"><span class="dot"></span><span>Process Map</span></div><ol class="proc-steps"><li><span class="ps-n">1</span><span class="ps-t">Enter practice mode</span></li><li><span class="ps-n">2</span><span class="ps-t">Aim drill 10 min</span></li><li><span class="ps-n">3</span><span class="ps-t">Build drill 15 min</span></li><li><span class="ps-n">4</span><span class="ps-t">Edit drill 10 min</span></li><li><span class="ps-n">5</span><span class="ps-t">Apply in matches</span></li><li><span class="ps-n">6</span><span class="ps-t">Review and repeat</span></li></ol></div>
 <p>Follow this numbered routine for each practice session:</p>
 <ol>
 <li><strong>Warm up the aim</strong> — spend ten minutes tracking moving targets and strafing between shots to build the sustained-aim habit.</li>
@@ -212,7 +207,8 @@
 </ol>
 <p>Sensitivity consistency is the invisible foundation of aim improvement. Changing sensitivity between sessions resets the muscle memory that tracking depends on, so we recommend choosing a sensitivity and staying with it for at least two weeks before making small adjustments.</p>
 <p>We also recommend practicing with the same keybinds used in matches. Switching build keys between practice and play means the automatic responses you build in drills will not transfer to real fights, which our testing showed was a common reason practice did not translate to results.</p>
-<!--EXP3--><p>Material management is a resource skill that separates experienced builders from beginners. Building without thought drains materials that the endgame of a fight needs, and our testing found that players who built efficiently, one wall and ramp instead of five layers, kept materials for the decisive retake while overbuilders ran empty at the worst moment. The discipline is to build only what the situation needs and to use edits rather than new structures when adjusting, which conserves materials while keeping the same defensive value.</p>
+<!--EXP3--><p>Material management is a resource skill that separates experienced builders from beginners. Building without thought drains materials that the endgame of a fight needs, and our testing found that players who b<figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/2023_Mysz_komputerowa_Logitech_G903_Lightspeed.jpg/900px-2023_Mysz_komputerowa_Logitech_G903_Lightspeed.jpg" alt="A modern gaming mouse" loading="lazy" /><figcaption>A modern gaming mouse</figcaption></figure>
+uilt efficiently, one wall and ramp instead of five layers, kept materials for the decisive retake while overbuilders ran empty at the worst moment. The discipline is to build only what the situation needs and to use edits rather than new structures when adjusting, which conserves materials while keeping the same defensive value.</p>
 <!-- ADSENSE PLACEHOLDER: RESPONSIVE NATIVE AD UNIT (MID-ARTICLE) -->
 <!--EXP2X--><p>Adapting to opponent styles is the tactical skill that turns mechanical parity into wins. Some opponents rush and overbuild, some camp high ground, and some edit aggressively, and our testing found that players who identified the style in the first exchange and adjusted their own play won more matches than players who repeated one approach. The practice is to vary the response, pushing against campers, playing patiently against rushers, and holding edits against aggressive editors, reading the opponent rather than autopiloting.</p>
 <a name="section-4"></a>
@@ -234,7 +230,7 @@
 <!--EXP3X--><p>The mental side of duels matters as much as the mechanical side. Players who stay calm after losing the first round adapt and win the set, while players who rush to recover make the mistakes that lose the match, and our testing found that a composed approach after an early loss produced more comebacks than mechanical improvements alone. Treat each round as independent data, reset after every death, and let the trained mechanics do their work without the interference of frustration.</p>
 <!--EXP4X--><p>Consistent practice scheduling beats marathon sessions for dueling games. Our testing found that players who practiced thirty minutes daily improved their mechanics faster than players who practiced three hours weekly, because the daily repetition kept the build and edit sequences fresh and the sleep between sessions consolidated the learning. Short daily sessions also prevent the fatigue that turns late practice into bad habit reinforcement.</p>
 <p>The final validation is a weekly benchmark rather than a daily mood check. We track win rate and average fight length over the week, and improvement shows as longer fights won rather than quick losses. A player who consistently wins fights that last beyond the first three seconds has built the full skill set, and that player will keep climbing every bracket.</p>
-      <figure class="inbody"><img src="/images/1v1.lol.png" alt="How to Get Better at 1v1.LOL: Aim, Building, and Editing" loading="lazy" /><figcaption>How to Get Better at 1v1.LOL: Aim, Building, and Editing</figcaption></figure>
+      
       <div class="related"><h3>Related reading</h3><a href="/blogs/how-to-play-1v1-lol.html">our 1v1.LOL guide</a><a href="/blogs/how-to-improve-your-aim-in-fps.html">our aim guide</a><a href="https://1v1.lol/" target="_blank" rel="noopener nofollow">Learn more about this game</a></div>
       <div class="related">
         <h3>Keep reading</h3>

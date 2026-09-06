@@ -112,7 +112,18 @@
     @media(max-width:600px){.blog-grid{grid-template-columns:1fr;}}
   </style>
 
-<style id="artx">.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
+<style id="artx">
+.article .proc{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px 22px;margin:22px 0;}
+.article .proc-head{display:flex;align-items:center;gap:8px;margin-bottom:14px;}
+.article .proc-head .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px rgba(34,197,94,.6);}
+.article .proc-head span{font-size:.78rem;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);}
+.article ol.proc-steps{list-style:none;margin:0;padding:0;counter-reset:ps;}
+.article ol.proc-steps li{display:flex;gap:14px;align-items:flex-start;margin:0;padding:11px 0;border-bottom:1px dashed var(--border);}
+.article ol.proc-steps li:last-child{border-bottom:none;}
+.article ol.proc-steps .ps-n{flex:0 0 30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--accent),#16a34a);color:#04120a;font-weight:800;font-size:.9rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(34,197,94,.25);}
+.article ol.proc-steps .ps-t{color:var(--txt);font-weight:600;font-size:.98rem;line-height:1.45;padding-top:3px;}
+.article ol.proc-steps .ps-t small{display:block;color:var(--muted);font-weight:400;font-size:.86rem;margin-top:2px;}
+.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
 </head>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -229,6 +240,7 @@ Our top 15 spans every major genre, so there is a pick for every mood and machin
 <td>One-more-run loops, skill ceilings</td>
 </tr>
 </tbody></table>
+<figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Freeciv-net-screenshot-2011-06-23.png/960px-Freeciv-net-screenshot-2011-06-23.png" alt="Freeciv, a free browser strategy game" loading="lazy" /><figcaption>Freeciv, a free browser strategy game</figcaption></figure>
 <!-- ADSENSE PLACEHOLDER: CONTEXTUAL IN-ARTICLE DISPLAY AD -->
 <h3>Genre-by-genre: the pick for every mood</h3>
 <p>The fifteen-title list covers seven genres, and each genre answers a different mood. Our testing mapped the catalog to contexts so you can skip the decision paralysis and jump straight to the right tab.</p>
@@ -259,23 +271,7 @@ Our top 15 spans every major genre, so there is a pick for every mood and machin
 <a name="section-3"></a>
 <h2 id="section-3">3. Step-by-Step Discovery Map</h2>
 Finding your next favorite browser game is a repeatable process. We use this funnel every time we review new titles.
-<pre class="flow">[Start with a genre you already enjoy]
-        |
-        v
-[Filter for instant access] -- no install/sign-up
-        |
-        v
-[Test on your weakest device]
-        |
-        v
-[Play one full session] -- 10 minutes minimum
-        |
-        v
-[Does the loop hook you?]
-        |
-        +--> YES --> [Bookmark and return this week]
-        |
-        +--> NO  --> [Next title] --> repeat funnel</pre>
+<div class="proc"><div class="proc-head"><span class="dot"></span><span>Process Map</span></div><ol class="proc-steps"><li><span class="ps-n">1</span><span class="ps-t">Start with a genre you already enjoy</span></li><li><span class="ps-n">2</span><span class="ps-t">Filter for instant access</span></li><li><span class="ps-n">3</span><span class="ps-t">Test on your weakest device</span></li><li><span class="ps-n">4</span><span class="ps-t">Play one full session</span></li><li><span class="ps-n">5</span><span class="ps-t">Does the loop hook you?</span></li><li><span class="ps-n">6</span><span class="ps-t">Bookmark and return this week</span></li><li><span class="ps-n">7</span><span class="ps-t">Next title</span></li></ol></div>
 <p class="tblcap">Process map 1: The step-by-step flow for this article.</p><h3>The 15 best free browser games of 2026</h3>
 - <strong>Geometry Dash</strong> — the rhythm platformer that never gets old; one button, perfect music sync, and a difficulty curve from gentle to impossible.
 - <strong>Slope</strong> — the neon endless runner; a ball, a slope, and speed that tests reflexes hard.
@@ -307,7 +303,8 @@ Finding your next favorite browser game is a repeatable process. We use this fun
 </ul>
 <p>The cuts explain the list's character: these fifteen games survive real usage, not demo conditions. That is the standard that keeps a bookmarks bar honest across a full year of sessions.</p>
 <h3>What 2027 will change</h3>
-<p>The browser gaming curve points in one direction: deeper multiplayer, bigger worlds, and smarter cross-device saves. Our analysis expects 2027 to blur the line between browser and native further, as WebGPU matures and streaming infrastructure spreads. The fifteen titles above are chosen to survive that shift, because their core loops do not depend on any single technology.</p>
+<p>The browser gaming curve points in one direction: deeper multiplayer, bigger worlds, and smarter cross-device saves. Our analysis expects 2027 to blur the line between browser and native further, as WebGPU matures and streaming infrastructure spreads. The fifteen titles above are chosen to<figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/E3_2011_-_trying_out_Playstation_Network_games_at_the_Sony_booth.jpg/900px-E3_2011_-_trying_out_Playstation_Network_games_at_the_Sony_booth.jpg" alt="Players trying online games at a gaming event" loading="lazy" /><figcaption>Players trying online games at a gaming event</figcaption></figure>
+ survive that shift, because their core loops do not depend on any single technology.</p>
 <p>The practical takeaway is to invest bookmarks in games with durable mechanics rather than flashy tech. Puzzles, duels, and social loops outlive rendering generations, which is why the 2026 list leans on them.</p>
 <!-- ADSENSE PLACEHOLDER: CONTEXTUAL IN-ARTICLE DISPLAY AD (PRE-FOOTER) -->
 <a name="section-4"></a>
@@ -329,7 +326,7 @@ Finding your next favorite browser game is a repeatable process. We use this fun
 </ul>
 <p>The review cycle is what separates a living recommendation from a dated roundup. Titles fall off as the catalog evolves, and the list earns its place in a bookmarks bar only by earning it again every season.</p>
 <p>The 2026 browser catalog rewards curiosity, and the fifteen titles above are the strongest entry points we found this year. For deeper dives, start with our <a href="/blogs/slope-game-high-score-tips.html">Slope high-score strategy guide</a>, master the duel format in the <a href="/blogs/how-to-play-1v1-lol.html">1v1.LOL walkthrough</a>, or explore the full <a href="/blogs/best-games-for-a-quick-break.html">quick-break games collection</a> when you want more options.</p>
-      <figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Freeciv-net-screenshot-2011-06-23.png/960px-Freeciv-net-screenshot-2011-06-23.png" alt="Freeciv, a free browser strategy game" loading="lazy" /><figcaption>Freeciv, a free browser strategy game</figcaption></figure><figure class="inbody"><img src="https://upload.wikimedia.org/wikipedia/commons/6/62/D%C3%A9but_de_Candy_Box.png" alt="Candy Box, a classic browser game" loading="lazy" /><figcaption>Candy Box, a classic browser game</figcaption></figure>
+      
       <div class="related"><h3>Related reading</h3><a href="/blogs/best-browser-games-no-download.html">our no-download browser games list</a><a href="/blogs/best-games-for-a-quick-break.html">our quick break games list</a><a href="https://en.wikipedia.org/wiki/Browser_game" target="_blank" rel="noopener nofollow">Learn more about this game</a></div>
       <div class="related">
         <h3>Keep reading</h3>

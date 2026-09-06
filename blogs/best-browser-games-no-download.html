@@ -112,7 +112,18 @@
     @media(max-width:600px){.blog-grid{grid-template-columns:1fr;}}
   </style>
 
-<style id="artx">.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
+<style id="artx">
+.article .proc{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px 22px;margin:22px 0;}
+.article .proc-head{display:flex;align-items:center;gap:8px;margin-bottom:14px;}
+.article .proc-head .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px rgba(34,197,94,.6);}
+.article .proc-head span{font-size:.78rem;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);}
+.article ol.proc-steps{list-style:none;margin:0;padding:0;counter-reset:ps;}
+.article ol.proc-steps li{display:flex;gap:14px;align-items:flex-start;margin:0;padding:11px 0;border-bottom:1px dashed var(--border);}
+.article ol.proc-steps li:last-child{border-bottom:none;}
+.article ol.proc-steps .ps-n{flex:0 0 30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--accent),#16a34a);color:#04120a;font-weight:800;font-size:.9rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(34,197,94,.25);}
+.article ol.proc-steps .ps-t{color:var(--txt);font-weight:600;font-size:.98rem;line-height:1.45;padding-top:3px;}
+.article ol.proc-steps .ps-t small{display:block;color:var(--muted);font-weight:400;font-size:.86rem;margin-top:2px;}
+.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
 </head>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -228,6 +239,7 @@ Our testing split the catalog into three tiers. Logic games run anywhere, 2D arc
 <td>Personal machines</td>
 </tr>
 </tbody></table>
+<figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Desk_workspace_featuring_coffee_cup%2C_laptop%2C_and_plant_with_artwork.jpg/900px-Desk_workspace_featuring_coffee_cup%2C_laptop%2C_and_plant_with_artwork.jpg" alt="A laptop workspace with coffee and plants" loading="lazy" /><figcaption>A laptop workspace with coffee and plants</figcaption></figure>
 <!-- ADSENSE PLACEHOLDER: CONTEXTUAL IN-ARTICLE DISPLAY AD -->
 <h3>The privacy footprint of instant games</h3>
 <p>No-download gaming leaves a smaller privacy footprint than native installs, but it is not zero. Our analysis of the leading titles found most store progress in local browser storage and send only the telemetry needed for matchmaking and anti-cheat. The trade-off is worth understanding before you play on a shared machine.</p>
@@ -256,27 +268,7 @@ Our testing split the catalog into three tiers. Logic games run anywhere, 2D arc
 <a name="section-3"></a>
 <h2 id="section-3">3. Step-by-Step Instant-Play Map</h2>
 Getting from link to gameplay follows a short, repeatable path. We verified this flow on Windows, macOS, and ChromeOS.
-<pre class="flow">[Find or receive game link]
-        |
-        v
-[Open in a modern browser]
-        |
-        v
-[Assets load and cache locally] -- first load
-        |
-        v
-[Check hardware acceleration is ON]
-        |
-        v
-[Input ready: keyboard / mouse / touch]
-        |
-        v
-[Play] --> [Poor performance?]
-                |
-                +--> [Close background tabs] --> [Retest]
-                |
-                v
-         [Bookmark for the next session]</pre>
+<div class="proc"><div class="proc-head"><span class="dot"></span><span>Process Map</span></div><ol class="proc-steps"><li><span class="ps-n">1</span><span class="ps-t">Find or receive game link</span></li><li><span class="ps-n">2</span><span class="ps-t">Open in a modern browser</span></li><li><span class="ps-n">3</span><span class="ps-t">Assets load and cache locally</span></li><li><span class="ps-n">4</span><span class="ps-t">Check hardware acceleration is ON</span></li><li><span class="ps-n">5</span><span class="ps-t">Input ready: keyboard / mouse / touch</span></li><li><span class="ps-n">6</span><span class="ps-t">Play</span></li><li><span class="ps-n">7</span><span class="ps-t">Poor performance?</span></li><li><span class="ps-n">8</span><span class="ps-t">Close background tabs</span></li><li><span class="ps-n">9</span><span class="ps-t">Retest</span></li><li><span class="ps-n">10</span><span class="ps-t">Bookmark for the next session</span></li></ol></div>
 <p class="tblcap">Process map 1: The step-by-step flow for this article.</p><h3>Recommended no-download lineup</h3>
 - <strong>Slope</strong> — the fast 3D runner; a ball, an endless slope, and reflexes that ramp up quickly.
 - <strong>2048</strong> — the pure-logic classic; slide tiles, merge numbers, chase the 2048 tile.
@@ -300,7 +292,8 @@ Getting from link to gameplay follows a short, repeatable path. We verified this
 </ul>
 <p>Review the rotation monthly and swap out any title that stopped pulling you back. Our analysis shows the swap cadence keeps the catalog fresh while the core five stay familiar enough to load instantly, which is the entire point of the no-download category.</p>
 <h3>Why no-download gaming suits low-end hardware</h3>
-<p>Low-end machines are the natural home of instant games. Our testing on a 4 GB Chromebook and a five-year-old Windows laptop found the leading titles held playable frame rates where native games refused to install or ran at slideshow speed. The browser's hardware abstraction and the genre's modest asset demands make the combination reliable.</p>
+<p>Low-end machines are the natural home of instant games. Our testing on a 4 GB Chromebook and a five-year-old Windows laptop found the leading titles held playable frame rates where native games refused to install or <figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/E3_2011_-_trying_out_Playstation_Network_games_at_the_Sony_booth.jpg/900px-E3_2011_-_trying_out_Playstation_Network_games_at_the_Sony_booth.jpg" alt="Players trying online games at a gaming event" loading="lazy" /><figcaption>Players trying online games at a gaming event</figcaption></figure>
+ran at slideshow speed. The browser's hardware abstraction and the genre's modest asset demands make the combination reliable.</p>
 <p>Keep the machine healthy and the catalog runs smoothly: close background tabs, enable hardware acceleration, and update the browser. On low-end hardware, the browser itself is the bottleneck, and a current browser is the single best upgrade available.</p>
 <!-- ADSENSE PLACEHOLDER: CONTEXTUAL IN-ARTICLE DISPLAY AD (PRE-FOOTER) -->
 <a name="section-4"></a>
@@ -322,7 +315,7 @@ Getting from link to gameplay follows a short, repeatable path. We verified this
 </ul>
 <p>Instant access is a feature, not a license. Players who pair the catalog with light structure in our testing reported the same fun with none of the guilt, which is the sustainable way to enjoy the most accessible corner of gaming.</p>
 <p>The no-download category is the most accessible corner of gaming, and the browser is its native home. Deepen your skills with our <a href="/blogs/slope-game-high-score-tips.html">Slope high-score strategy guide</a>, learn the <a href="/blogs/how-to-beat-2048-every-time.html">guaranteed 2048 winning pattern</a>, and explore the <a href="/blogs/best-browser-games-for-phone.html">best phone-friendly browser games</a> when you move to a smaller screen.</p>
-      <figure class="inbody"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Arena_%28web_browser%29_screenshot.png" alt="A browser game screenshot" loading="lazy" /><figcaption>A browser game screenshot</figcaption></figure>
+      
       <div class="related"><h3>Related reading</h3><a href="/blogs/best-games-for-a-quick-break.html">our quick break games list</a><a href="https://en.wikipedia.org/wiki/Browser_game" target="_blank" rel="noopener nofollow">Learn more about this game</a></div>
       <div class="related">
         <h3>Keep reading</h3>

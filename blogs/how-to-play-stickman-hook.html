@@ -112,7 +112,18 @@
     @media(max-width:600px){.blog-grid{grid-template-columns:1fr;}}
   </style>
 
-<style id="artx">.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
+<style id="artx">
+.article .proc{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px 22px;margin:22px 0;}
+.article .proc-head{display:flex;align-items:center;gap:8px;margin-bottom:14px;}
+.article .proc-head .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px rgba(34,197,94,.6);}
+.article .proc-head span{font-size:.78rem;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);}
+.article ol.proc-steps{list-style:none;margin:0;padding:0;counter-reset:ps;}
+.article ol.proc-steps li{display:flex;gap:14px;align-items:flex-start;margin:0;padding:11px 0;border-bottom:1px dashed var(--border);}
+.article ol.proc-steps li:last-child{border-bottom:none;}
+.article ol.proc-steps .ps-n{flex:0 0 30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--accent),#16a34a);color:#04120a;font-weight:800;font-size:.9rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(34,197,94,.25);}
+.article ol.proc-steps .ps-t{color:var(--txt);font-weight:600;font-size:.98rem;line-height:1.45;padding-top:3px;}
+.article ol.proc-steps .ps-t small{display:block;color:var(--muted);font-weight:400;font-size:.86rem;margin-top:2px;}
+.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
 </head>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -174,6 +185,7 @@
 <p>The release point is the game's core decision. The pendulum's speed peaks at the bottom of the arc, which makes the bottom the release point for the longest launches, and our testing found that the players who released at the bottom consistently cleared the wide gaps, while the players who released at random points in the arc launched too slow or too high and fell short.</p>
 <p>The anchor selection is the planning layer. Every swing starts with a hook, and the hook's position decides the arc, which means the players who picked the anchor before pressing, choosing the one that the next platform demanded, swung the useful arcs, while the players who hooked the nearest anchor automatically swung wherever the level happened to place it.</p>
 <p>The over-swing is the momentum trap. A swing that passes the platform's level carries the stickman past the landing zone, and the fix is releasing earlier on the short gaps, letting the launch angle drop the stickman onto the platform rather than over it, and our analysis shows that the players who read the gap length before the swing adjusted the release point to match.</p>
+<figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/GameCube-Set.jpg/900px-GameCube-Set.jpg" alt="A video game console and controllers" loading="lazy" /><figcaption>A video game console and controllers</figcaption></figure>
 <!-- ADSENSE PLACEHOLDER: CONTEXTUAL IN-ARTICLE DISPLAY AD -->
 <!--EXP9X--><p>The momentum chain is the game's hidden scoring system. Every swing that carries full speed into the next hook adds to the chain, and the players who kept the chain alive, releasing at the bottom of each arc and hooking the next anchor at the launch's peak, traveled the levels at a speed that the stop-start players never reached, and our testing found that the chained momentum is what separates the level clears from the level struggles.</p>
 <!--EXP10X--><p>The short-gap rhythm is a different skill from the long-gap launch. The short gaps demand a quick hook and an early release, while the long gaps demand the full pendulum swing, and our analysis shows that the players who read the gap type before the swing, adjusting the release timing to the distance, cleared both patterns, while the players who used one release timing for every gap stalled on the pattern they had not practiced.</p>
@@ -181,24 +193,7 @@
 <a name="section-3"></a>
 <h2>3. Step-by-Step Swing Map</h2>
 <p>The swing loop below is the sequence we followed during the testing that produced our longest runs.</p>
-<pre class="flow">
-[Read the gap] --&gt; name the swing archetype
-     |
-     v
-[Pick the anchor] --&gt; choose the hook that the gap needs
-     |
-     v
-[Hook at the level] --&gt; attach and start the pendulum
-     |
-     v
-[Let the arc build] --&gt; hold through the descent
-     |
-     v
-[Release at the bottom] --&gt; launch with the peak speed
-     |
-     v
-[Hook the next anchor] --&gt; chain the momentum forward
-</pre>
+<div class="proc"><div class="proc-head"><span class="dot"></span><span>Process Map</span></div><ol class="proc-steps"><li><span class="ps-n">1</span><span class="ps-t">Read the gap</span></li><li><span class="ps-n">2</span><span class="ps-t">Pick the anchor</span></li><li><span class="ps-n">3</span><span class="ps-t">Hook at the level</span></li><li><span class="ps-n">4</span><span class="ps-t">Let the arc build</span></li><li><span class="ps-n">5</span><span class="ps-t">Release at the bottom</span></li><li><span class="ps-n">6</span><span class="ps-t">Hook the next anchor</span></li></ol></div>
 <p>Follow this numbered routine for each section:</p>
 <ol>
 <li><strong>Read the gap first</strong> &mdash; name the swing archetype, short hop, long launch, vertical climb, or spiral, before pressing the hook.</li>
@@ -214,7 +209,8 @@
 <!--EXP23X--><p>The practice levels are the game's built-in training ground, and the players who mined them for the release timing cleared the hard levels faster. The early levels repeat the same swing archetypes with generous margins, and our testing found that the players who replayed the early levels until the release timing was automatic, rather than rushing to the hard levels to learn by failing, arrived at the hard sections with the muscle memory already installed, and the muscle memory is what the spike-lined later levels demand.</p>
 
 <!--EXP31X--><p>The fall recovery is the skill that saves the runs that should be dead. When the stickman misses the anchor, the fall is not always the end, since the lower anchors can catch the falling stickman if the player reacts in time, and our testing found that the players who watched for the recovery anchor during the fall, pressing the hook the moment the lower anchor came into reach, saved a measurable share of the runs that the despairing players abandoned, and the saved runs often continued for surprising distances.</p>
-<!--EXP32X--><p>The rhythm consistency is what the leaderboard distances are built on. The top distances come from the players who repeat the same release timing at every swing, and our analysis shows that the players who found their personal rhythm, the exact release point that felt natural and repeated it without variation, traveled farther than the players who adjusted the timing at every swing, because the consistent rhythm removed the decision time that the varied timing kept spending at every anchor.</p>
+<!--EXP32X--><p>The rhythm consistency is what the leaderboard distances are built on. The top distances come from the players who repeat the same release timing at every swing, and our analysis shows that the players who found their personal rhythm, the <figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Playing_with_smartphone.jpg/900px-Playing_with_smartphone.jpg" alt="A person playing a game on a smartphone" loading="lazy" /><figcaption>A person playing a game on a smartphone</figcaption></figure>
+exact release point that felt natural and repeated it without variation, traveled farther than the players who adjusted the timing at every swing, because the consistent rhythm removed the decision time that the varied timing kept spending at every anchor.</p>
 
 <!-- ADSENSE PLACEHOLDER: RESPONSIVE NATIVE AD UNIT (MID-ARTICLE) -->
 <a name="section-4"></a>
@@ -230,7 +226,7 @@
 <p>The momentum is the game's real scoreboard. Our testing found that the players who kept the chain alive, releasing at the bottom of each arc and hooking the next anchor at the peak, traveled the levels at speed, while the players who stopped and restarted the pendulum after every swing crawled through the same sections.</p>
 <p>If you enjoy the physics-challenge genre, our <a href="/blogs/geometry-dash-tips-for-beginners.html">Geometry Dash beginner tips</a> build the same timing discipline in a different form, and our <a href="/blogs/how-to-play-run-3.html">Run 3 mechanics guide</a> explains another momentum-based runner. For more arcade tests, our <a href="/blogs/best-games-for-a-quick-break.html">quick-break games collection</a> has the full list.</p>
 <p>The final validation is an average distance rather than a single run. We track the mean distance across sessions, and improvement shows as a rising average. A player who reads the gap, picks the anchor, and releases at the bottom of the arc will watch the average climb, and that climbing average is what playing Stickman Hook well truly means.</p>
-      <figure class="inbody"><img src="/images/stickmanhook.png" alt="How to Play Stickman Hook: Swing Like a Pro" loading="lazy" /><figcaption>How to Play Stickman Hook: Swing Like a Pro</figcaption></figure>
+      
       <div class="related"><h3>Related reading</h3><a href="/blogs/how-to-get-better-at-gaming.html">our guide to getting better at gaming</a><a href="/blogs/how-to-improve-reaction-time-gaming.html">our reaction time guide</a><a href="https://en.wikipedia.org/wiki/Stick_figure" target="_blank" rel="noopener nofollow">Learn more about this game</a></div>
       <div class="related">
         <h3>Keep reading</h3>

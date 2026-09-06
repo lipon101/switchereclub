@@ -112,7 +112,18 @@
     @media(max-width:600px){.blog-grid{grid-template-columns:1fr;}}
   </style>
 
-<style id="artx">.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
+<style id="artx">
+.article .proc{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px 22px;margin:22px 0;}
+.article .proc-head{display:flex;align-items:center;gap:8px;margin-bottom:14px;}
+.article .proc-head .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px rgba(34,197,94,.6);}
+.article .proc-head span{font-size:.78rem;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);}
+.article ol.proc-steps{list-style:none;margin:0;padding:0;counter-reset:ps;}
+.article ol.proc-steps li{display:flex;gap:14px;align-items:flex-start;margin:0;padding:11px 0;border-bottom:1px dashed var(--border);}
+.article ol.proc-steps li:last-child{border-bottom:none;}
+.article ol.proc-steps .ps-n{flex:0 0 30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--accent),#16a34a);color:#04120a;font-weight:800;font-size:.9rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(34,197,94,.25);}
+.article ol.proc-steps .ps-t{color:var(--txt);font-weight:600;font-size:.98rem;line-height:1.45;padding-top:3px;}
+.article ol.proc-steps .ps-t small{display:block;color:var(--muted);font-weight:400;font-size:.86rem;margin-top:2px;}
+.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
 </head>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -178,6 +189,7 @@
 <p>The rook, bishop, and queen move in straight lines, and the queen combines the rook's lines with the bishop's diagonals, which makes her the most powerful piece. Our testing found that beginners who learned the sliding pieces together, then the knight's jump, then the pawn's exceptions, built the movement rules in a logical order that prevented confusion.</p>
 <p>The knight is the piece that confuses beginners most because it jumps. It moves in an L shape, two squares in one direction and one square perpendicular, and it is the only piece that can jump over others, and our testing found that demonstrating the L shape visually taught the knight faster than any verbal explanation.</p>
 <p>The pawn is the most rule-heavy piece because it moves forward but captures diagonally, and it carries the three exceptions: the two-square first move, en passant, and promotion. Our teaching tests found that beginners grasped the pawn's forward movement instantly but needed deliberate practice on the diagonal capture.</p>
+<figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Chess_board_with_chess_set_in_opening_position_2012_PD_04.jpg/900px-Chess_board_with_chess_set_in_opening_position_2012_PD_04.jpg" alt="A chess board set up for a game" loading="lazy" /><figcaption>A chess board set up for a game</figcaption></figure>
 <!-- ADSENSE PLACEHOLDER: CONTEXTUAL IN-ARTICLE DISPLAY AD -->
 <!--EXP6X--><p>Learning the notation, the letter and number system that records moves, is worth the early effort. Notation lets beginners review games, follow lessons, and share positions, and our testing found that learners who picked up basic notation alongside the rules progressed into study material faster than learners who skipped it. The basics are simple, pieces have letters, squares have coordinates, and a move is written as the piece letter plus the destination square.</p>
 <!--EXP6X--><p>Chess etiquette and the touch-move rule are part of the game's culture. The touch-move rule, if you touch a piece you must move it, prevents the fiddling that slows casual games, and our testing found that beginners who learned the etiquette early felt more comfortable playing in clubs and online. The etiquette is simple, resign when the position is hopeless, offer draws politely, and never distract an opponent mid-game.</p>
@@ -185,24 +197,7 @@
 <a name="section-3"></a>
 <h2>3. Step-by-Step Learning Map</h2>
 <p>The learning sequence below is the exact order we used in our beginner teaching tests, and it produced the fastest path to a legal full game.</p>
-<pre class="flow">
-[Set up the board] --&gt; white on the right, queen on her color
-     |
-     v
-[Learn piece moves] --&gt; sliding pieces, knight, pawn
-     |
-     v
-[Add the special rules] --&gt; castling, en passant, promotion
-     |
-     v
-[Understand check and mate] --&gt; attack, escape, block, capture
-     |
-     v
-[Play a full game] --&gt; apply the rules with a patient partner
-     |
-     v
-[Review the mistakes] --&gt; fix illegal moves and missed captures
-</pre>
+<div class="proc"><div class="proc-head"><span class="dot"></span><span>Process Map</span></div><ol class="proc-steps"><li><span class="ps-n">1</span><span class="ps-t">Set up the board</span></li><li><span class="ps-n">2</span><span class="ps-t">Learn piece moves</span></li><li><span class="ps-n">3</span><span class="ps-t">Add the special rules</span></li><li><span class="ps-n">4</span><span class="ps-t">Understand check and mate</span></li><li><span class="ps-n">5</span><span class="ps-t">Play a full game</span></li><li><span class="ps-n">6</span><span class="ps-t">Review the mistakes</span></li></ol></div>
 <p>Follow this numbered routine to learn the game:</p>
 <ol>
 <li><strong>Set up the board correctly</strong> — place the board with a white square on the right and the queen on her matching color, then fill the back rank and the pawns.</li>
@@ -211,7 +206,8 @@
 <li><strong>Understand check and checkmate</strong> — learn the three responses to check, move, block, or capture, and what makes a mate.</li>
 <li><strong>Play a full game</strong> — play slowly with a patient partner or a beginner-friendly app, looking up rules as they come up.</li>
 </ol>
-<p>Playing on an empty board is the fastest way to learn movement. Our testing found that beginners who spent ten minutes moving each piece in isolation learned the movements faster than learners who jumped straight into games where the rules competed for attention.</p>
+<p>Playing on an empty board is the fastest way to learn movement. Our testing found that beginners who spent ten minutes moving each piece in isolation learned the movements faster than learners who jumped straight into games wh<figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Family_playing_a_board.jpg/900px-Family_playing_a_board.jpg" alt="A family playing a board game together" loading="lazy" /><figcaption>A family playing a board game together</figcaption></figure>
+ere the rules competed for attention.</p>
 <p>Using a chess app with legal-move highlighting is a powerful learning aid. The app prevents illegal moves and shows the legal options, and our testing found that beginners who used such an app for their first games learned the movement rules through gentle correction rather than frustration.</p>
 <!-- ADSENSE PLACEHOLDER: RESPONSIVE NATIVE AD UNIT (MID-ARTICLE) -->
 <!--EXP6X--><p>Playing through the endgame positions is the fastest way to understand the pieces' true power. A lone queen, a rook, or two bishops can each deliver checkmate against a lone king, and our teaching tests found that beginners who practiced these basic mates understood the king's vulnerability and the pieces' cooperation better than learners who only played full games. The mates are simple patterns, and they appear in real games more often than new players expect.</p>
@@ -234,7 +230,7 @@ Once the rules are comfortable, our <a href="/blogs/how-to-play-chess-online.htm
 <!--EXP6X--><p>The learning curve of chess is famously deep, but the entry is friendlier than its reputation. Our teaching tests found that the beginners who reached a legal full game quickly were the ones who treated the rules as a checklist rather than a mountain, learning each rule in its turn and practicing it before moving on. Follow the sequence, use the apps, and find a patient partner, and the rules will be second nature within a week.</p>
 <!--EXP8X--><p>The final piece of the beginner's foundation is simply playing regularly. Our teaching tests found that beginners who played even one short game daily retained the rules and improved faster than beginners who studied for hours once a week, because the daily play kept the movements and rules fresh. The rules are learned through use, the strategy through experience, and the first win comes to the player who keeps the board in the daily routine.</p>
 <p>The final validation for a beginner is a complete legal game, not a win. We measure success when a new player finishes a game with all rules applied correctly, and our teaching tests found that every learner who followed the sequence reached that point within a few sessions. A player who knows the six pieces, the three special rules, and the goal of checkmate has everything needed to start the lifelong game, and the next win is just practice away.</p>
-      <figure class="inbody"><img src="/images/chess.png" alt="How to Play Chess for Beginners" loading="lazy" /><figcaption>How to Play Chess for Beginners</figcaption></figure>
+      
       <div class="related"><h3>Related reading</h3><a href="/blogs/how-to-play-chess-online.html">our chess guide</a><a href="/blogs/best-games-for-beginners.html">our beginner games list</a><a href="https://en.wikipedia.org/wiki/Chess" target="_blank" rel="noopener nofollow">Learn more about this game</a></div>
       <div class="related">
         <h3>Keep reading</h3>

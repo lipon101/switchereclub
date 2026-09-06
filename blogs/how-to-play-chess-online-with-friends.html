@@ -112,7 +112,18 @@
     @media(max-width:600px){.blog-grid{grid-template-columns:1fr;}}
   </style>
 
-<style id="artx">.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
+<style id="artx">
+.article .proc{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px 22px;margin:22px 0;}
+.article .proc-head{display:flex;align-items:center;gap:8px;margin-bottom:14px;}
+.article .proc-head .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px rgba(34,197,94,.6);}
+.article .proc-head span{font-size:.78rem;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);}
+.article ol.proc-steps{list-style:none;margin:0;padding:0;counter-reset:ps;}
+.article ol.proc-steps li{display:flex;gap:14px;align-items:flex-start;margin:0;padding:11px 0;border-bottom:1px dashed var(--border);}
+.article ol.proc-steps li:last-child{border-bottom:none;}
+.article ol.proc-steps .ps-n{flex:0 0 30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--accent),#16a34a);color:#04120a;font-weight:800;font-size:.9rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(34,197,94,.25);}
+.article ol.proc-steps .ps-t{color:var(--txt);font-weight:600;font-size:.98rem;line-height:1.45;padding-top:3px;}
+.article ol.proc-steps .ps-t small{display:block;color:var(--muted);font-weight:400;font-size:.86rem;margin-top:2px;}
+.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
 </head>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -179,6 +190,7 @@
 <p>The direct challenge is the fastest method when both players are already on the same platform. Adding a friend by username takes seconds, and the challenge button starts a game immediately with the chosen time control, and our testing found that this method has the fewest steps of any option.</p>
 <p>The link challenge is the most flexible method because it bypasses the friend system entirely. The platform generates a link to a private game, the sender shares it through any messaging app, and the receiver joins by opening the link, and our testing found that this works even when the receiver has never used the platform.</p>
 <p>The correspondence format suits friends who cannot play in real time. Each player moves when they have a moment, and the game unfolds over days or weeks, and our analysis shows that correspondence chess is the friendliest format for busy players who still want the connection of a shared game.</p>
+<figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Chess_board_with_chess_set_in_opening_position_2012_PD_04.jpg/900px-Chess_board_with_chess_set_in_opening_position_2012_PD_04.jpg" alt="A chess board set up for a game" loading="lazy" /><figcaption>A chess board set up for a game</figcaption></figure>
 <!-- ADSENSE PLACEHOLDER: CONTEXTUAL IN-ARTICLE DISPLAY AD -->
 <!--EXP9X--><p>The mobile apps change the friend game experience. Both major platforms offer apps where friends can challenge each other from anywhere, and our testing found that the push notifications make the correspondence games work beautifully, with each player alerted when the other moves. The apps are the best way to play friends who live in different time zones, since the game travels in each player's pocket rather than requiring a shared session at a shared desk.</p>
 <!--EXP9X--><p>Playing friends across different devices works seamlessly on the modern platforms. A player on a phone can face a friend on a computer, since the games live on the platform's servers rather than on either device, and our testing found that the cross-device play just worked in every combination we tried. The only requirement is that both players have accounts on the same platform, and the game follows them across every screen they use.</p>
@@ -186,24 +198,7 @@
 <a name="section-3"></a>
 <h2>3. Step-by-Step Setup Map</h2>
 <p>The setup sequence below is the exact path we used in our testing, and it produces a working friend game in under five minutes.</p>
-<pre class="flow">
-[Agree on a platform] --&gt; both players choose one site
-     |
-     v
-[Create the accounts] --&gt; free registration for both
-     |
-     v
-[Start a private game] --&gt; generate the challenge link
-     |
-     v
-[Share the link] --&gt; send it through any messaging app
-     |
-     v
-[Set the time control] --&gt; agree on a pace both enjoy
-     |
-     v
-[Make the first move] --&gt; white starts the game
-</pre>
+<div class="proc"><div class="proc-head"><span class="dot"></span><span>Process Map</span></div><ol class="proc-steps"><li><span class="ps-n">1</span><span class="ps-t">Agree on a platform</span></li><li><span class="ps-n">2</span><span class="ps-t">Create the accounts</span></li><li><span class="ps-n">3</span><span class="ps-t">Start a private game</span></li><li><span class="ps-n">4</span><span class="ps-t">Share the link</span></li><li><span class="ps-n">5</span><span class="ps-t">Set the time control</span></li><li><span class="ps-n">6</span><span class="ps-t">Make the first move</span></li></ol></div>
 <p>Follow this numbered setup routine:</p>
 <ol>
 <li><strong>Agree on one platform</strong> — choose the site both players will use, since friend games require a shared platform.</li>
@@ -212,7 +207,8 @@
 <li><strong>Share the challenge link</strong> — copy the generated link and send it through text, email, or any messaging app.</li>
 <li><strong>Open and play</strong> — the receiver joins by opening the link, and the game starts when both players are ready.</li>
 </ol>
-<p>Agreeing on the time control before the game prevents the most common friend-game friction. Our testing found that players who discussed the pace first, and the odds if the skill gap was large, enjoyed the game more than players who discovered the mismatch after the first moves. A quick message confirming the minutes per side, or the correspondence format for busy weeks, takes seconds to send and saves the whole game from the wrong expectation, which makes the pre-game check the cheapest investment in the entire setup.</p>
+<p>Agreeing on the time control before the game prevents the most common friend-game friction. Our testing found that players who discussed the pace first, and the odds if the skill gap was large, enjoyed the game more than players who discovered the mismatch after the first moves. A quick message confirming the minutes per side, or the correspondence format for busy weeks, takes seconds to send and saves the whole game from the wrong expectation, which makes the pre-game check the cheapes<figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Hands_holding_video_game_controller_%2850811892858%29.jpg/900px-Hands_holding_video_game_controller_%2850811892858%29.jpg" alt="Hands holding a video game controller" loading="lazy" /><figcaption>Hands holding a video game controller</figcaption></figure>
+t investment in the entire setup.</p>
 <p>Using the built-in chat makes the game social. The platforms include chat with the game board, and our analysis shows that friends who chat during the game, commenting on the blunders and the brilliant moves, get the social value that makes chess with friends different from chess with strangers.</p>
 <!-- ADSENSE PLACEHOLDER: RESPONSIVE NATIVE AD UNIT (MID-ARTICLE) -->
 <!--EXP9X--><p>Spectator and kibitz features add a social dimension for friend groups. Some platforms let other friends watch a game in progress and comment in the chat, and our testing found that the spectators turned a private duel into a small social event that kept the whole group engaged. The watching friends learn from the game too, which makes the friend match a shared learning experience rather than an isolated contest.</p>
@@ -235,7 +231,7 @@
 <!--EXP10X--><p>The friend game features have made chess a social game again. Our testing found that the challenge links, the rematch buttons, and the built-in chat removed every technical barrier between friends who want to play, and the only remaining requirement is the shared willingness to sit down at the board. Send the link, agree on the time control, and the game that has connected people for centuries connects one more pair of friends.</p>
 <!--EXP11X--><p>The technology behind friend chess has matured to the point where the game is the only thing left to arrange. Our testing found that the challenge links, the cross-device play, and the built-in chat handled every practical detail of the friend game, leaving the players free to focus on the board. The centuries-old game has found its perfect modern form, and the only move left is the first one.</p>
 <p>The final validation is a completed game rather than a win. We measure success when two friends sit down, agree on the terms, and finish a game together, and our testing found that the first game is the hardest to arrange, with every game after it becoming routine. A player who knows the link method, the time-control discussion, and the odds options can play any friend at any time, and that freedom is what playing chess online with friends is all about.</p>
-      <figure class="inbody"><img src="/images/chess.png" alt="How to Play Chess Online With Friends" loading="lazy" /><figcaption>How to Play Chess Online With Friends</figcaption></figure>
+      
       <div class="related"><h3>Related reading</h3><a href="/blogs/how-to-play-chess-online.html">our chess guide</a><a href="/blogs/best-games-to-play-with-friends-online.html">our games to play with friends list</a><a href="https://en.wikipedia.org/wiki/Chess" target="_blank" rel="noopener nofollow">Learn more about this game</a></div>
       <div class="related">
         <h3>Keep reading</h3>

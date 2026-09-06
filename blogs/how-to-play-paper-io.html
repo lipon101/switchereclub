@@ -112,7 +112,18 @@
     @media(max-width:600px){.blog-grid{grid-template-columns:1fr;}}
   </style>
 
-<style id="artx">.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
+<style id="artx">
+.article .proc{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px 22px;margin:22px 0;}
+.article .proc-head{display:flex;align-items:center;gap:8px;margin-bottom:14px;}
+.article .proc-head .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px rgba(34,197,94,.6);}
+.article .proc-head span{font-size:.78rem;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);}
+.article ol.proc-steps{list-style:none;margin:0;padding:0;counter-reset:ps;}
+.article ol.proc-steps li{display:flex;gap:14px;align-items:flex-start;margin:0;padding:11px 0;border-bottom:1px dashed var(--border);}
+.article ol.proc-steps li:last-child{border-bottom:none;}
+.article ol.proc-steps .ps-n{flex:0 0 30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--accent),#16a34a);color:#04120a;font-weight:800;font-size:.9rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(34,197,94,.25);}
+.article ol.proc-steps .ps-t{color:var(--txt);font-weight:600;font-size:.98rem;line-height:1.45;padding-top:3px;}
+.article ol.proc-steps .ps-t small{display:block;color:var(--muted);font-weight:400;font-size:.86rem;margin-top:2px;}
+.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
 </head>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -153,6 +164,7 @@
 <h3>What the leaderboard actually measures</h3>
 <p>The leaderboard sorts by territory, which makes new players chase size above all. But territory is a stock, not a flow: what matters is how much of it survives, not how much you paint. The players who finish at the top are usually the ones who expanded early, then defended.</p>
 <p>Treat the first minute as your growth phase and every minute after as defense with opportunistic strikes. The lobby leader who keeps growing past the midpoint is also the leader with the longest tail, which makes them the biggest target in the room.</p>
+<figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/E3_2011_-_trying_out_Playstation_Network_games_at_the_Sony_booth.jpg/900px-E3_2011_-_trying_out_Playstation_Network_games_at_the_Sony_booth.jpg" alt="Players trying online games at a gaming event" loading="lazy" /><figcaption>Players trying online games at a gaming event</figcaption></figure>
 <!-- ADSENSE PLACEHOLDER: CONTEXTUAL IN-ARTICLE DISPLAY AD -->
 <a name="section-2"></a>
 <h2>2. Aggressive Expansion vs. Optimized Paper.io Protocol</h2>
@@ -186,34 +198,7 @@
 <p>Position yourself to exploit those reads. When a giant dies, its territory returns to neutral in a burst, and whoever is nearest to that burst collects the largest share. Proximity to other people's mistakes is the cheapest territory in Paper.io.</p>
 <a name="section-3"></a>
 <h2>3. The Lobby Progression Blueprint</h2>
-<pre class="flow">LOBBY START
-   |
-   v
-[0-20s: assess spawn] --corner--&gt; [claim quadrant in short loops]
-   |                     |
-   |                     center
-   |                     v
-   |              [survive opening, small pockets]
-   |                     |
-   v                     v
-[20-60s: growth phase] --&gt; [3-5 short expansions]
-   |                         ^
-   |                         |
-   +-- tail cut? --yes--&gt; [rebuild small, avoid same zone] --+
-   |                                                        |
-   v                                                        |
-[60s+: defense phase] --&gt; [patrol border, no long lines] ---+
-   |
-   v
-[Giant killed nearby?] --yes--&gt; [rush the neutral burst]
-   |                              ^
-   no                              |
-   v                              |
-[Top 3?] --yes--&gt; [tighten: tiny loops only] --------+
-   |                ^                                |
-   |                +-- tail cut again? --yes--------+
-   v
-[Win / death] --&gt; [log death cause, restart]</pre>
+<div class="proc"><div class="proc-head"><span class="dot"></span><span>Process Map</span></div><ol class="proc-steps"><li><span class="ps-n">1</span><span class="ps-t">0-20s: assess spawn</span></li><li><span class="ps-n">2</span><span class="ps-t">claim quadrant in short loops</span></li><li><span class="ps-n">3</span><span class="ps-t">survive opening, small pockets</span></li><li><span class="ps-n">4</span><span class="ps-t">20-60s: growth phase</span></li><li><span class="ps-n">5</span><span class="ps-t">3-5 short expansions</span></li><li><span class="ps-n">6</span><span class="ps-t">rebuild small, avoid same zone</span></li><li><span class="ps-n">7</span><span class="ps-t">60s+: defense phase</span></li><li><span class="ps-n">8</span><span class="ps-t">patrol border, no long lines</span></li><li><span class="ps-n">9</span><span class="ps-t">Giant killed nearby?</span></li><li><span class="ps-n">10</span><span class="ps-t">rush the neutral burst</span></li></ol></div>
 <p class="tblcap">Process map 1: The full lobby progression from spawn to top-three finish.</p>
 <h3>Step 1: Read your spawn and choose a phase</h3>
 <p>In the first twenty seconds, decide whether you are in a corner, on an edge, or in the center. Corners are the safest starting zones because they have natural borders on two sides, cutting your defensive perimeter in half.</p>
@@ -227,7 +212,8 @@
 <h3>Step 4: Hunt the dying giants</h3>
 <p>The biggest territory windfalls come from other players' deaths. When a giant's tail gets cut, its territory floods back to neutral. If you are within reach, draw one controlled loop through that burst to collect the largest share before the vultures arrive.</p>
 <p>Positioning for these moments is a skill of its own: stay one screen away from the giants, close enough to sprint to their death site, far enough that their killers do not notice you.</p>
-<h3>Step 5: Tighten your loops for the top three</h3>
+<h3>Step 5: Tighten your loops for the top thre<figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/2023_Mysz_komputerowa_Logitech_G903_Lightspeed.jpg/900px-2023_Mysz_komputerowa_Logitech_G903_Lightspeed.jpg" alt="A modern gaming mouse" loading="lazy" /><figcaption>A modern gaming mouse</figcaption></figure>
+e</h3>
 <p>In the final stretch, the remaining players are all territorial powers and every line you draw is watched. Switch to tiny loops that claim slivers of neutral space between the giants, and let them fight each other while you consolidate.</p>
 <p>The final three almost always collapse into a stalemate broken by one player's overreach. Make sure that player is never you.</p>
 <!-- ADSENSE PLACEHOLDER: CONTEXTUAL IN-ARTICLE DISPLAY AD -->
@@ -265,7 +251,7 @@
 </ul>
 <p>Our testing shows that players who left owned lobbies early and re-queued won roughly twice as often as players who ground out hopeless maps, because fresh lobbies restored the growth phase their strategy depended on.</p>
 <p class="tip"><strong>Pro tip:</strong> In our testing, players who capped every expansion line at a quarter of the map width doubled their average survival time while losing almost no territory growth. In Paper.io, the players who paint the most are not the winners; the players whose paint survives are.</p>
-      <figure class="inbody"><img src="/images/paper.io2.png" alt="How to Play Paper.io: Claim the Map" loading="lazy" /><figcaption>How to Play Paper.io: Claim the Map</figcaption></figure>
+      
       <div class="related"><h3>Related reading</h3><a href="/blogs/how-to-improve-your-aim-in-fps.html">our aim guide</a><a href="/blogs/how-to-get-better-at-gaming.html">our guide to getting better at gaming</a><a href="https://en.wikipedia.org/wiki/First-person_shooter" target="_blank" rel="noopener nofollow">Learn more about this game</a></div>
       <div class="related">
         <h3>Keep reading</h3>

@@ -112,7 +112,18 @@
     @media(max-width:600px){.blog-grid{grid-template-columns:1fr;}}
   </style>
 
-<style id="artx">.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
+<style id="artx">
+.article .proc{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px 22px;margin:22px 0;}
+.article .proc-head{display:flex;align-items:center;gap:8px;margin-bottom:14px;}
+.article .proc-head .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px rgba(34,197,94,.6);}
+.article .proc-head span{font-size:.78rem;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);}
+.article ol.proc-steps{list-style:none;margin:0;padding:0;counter-reset:ps;}
+.article ol.proc-steps li{display:flex;gap:14px;align-items:flex-start;margin:0;padding:11px 0;border-bottom:1px dashed var(--border);}
+.article ol.proc-steps li:last-child{border-bottom:none;}
+.article ol.proc-steps .ps-n{flex:0 0 30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--accent),#16a34a);color:#04120a;font-weight:800;font-size:.9rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(34,197,94,.25);}
+.article ol.proc-steps .ps-t{color:var(--txt);font-weight:600;font-size:.98rem;line-height:1.45;padding-top:3px;}
+.article ol.proc-steps .ps-t small{display:block;color:var(--muted);font-weight:400;font-size:.86rem;margin-top:2px;}
+.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
 </head>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -194,6 +205,7 @@
 </tbody>
 </table>
 <p class="tblcap">Table 2: Host reputation is the filter gate; domain choice decides what you can actually reach.</p>
+<figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Acer_desktop_computers_in_computer_classroom_of_Baozhong_Junior_High_School_20130906.jpg/900px-Acer_desktop_computers_in_computer_classroom_of_Baozhong_Junior_High_School_20130906.jpg" alt="Desktop computers in a school computer classroom" loading="lazy" /><figcaption>Desktop computers in a school computer classroom</figcaption></figure>
 <!-- ADSENSE PLACEHOLDER: CONTEXTUAL IN-ARTICLE DISPLAY AD -->
 <h3>How we tested for this list</h3>
 <p>Every title below passed a five-point lab test on managed school hardware, not a gaming rig. We loaded each game on a Chromebook with 4 GB of RAM and a Windows lab desktop with integrated graphics, played a full session on both, and scored the experience against five criteria: load speed, filter survival, frame stability, input response, and clean exits. Titles that failed any criterion were cut regardless of popularity.</p>
@@ -208,29 +220,7 @@
 <a name="section-3"></a>
 <h2 id="section-3">Step-by-Step Implementation Map</h2>
 <p>Getting a game running on a school machine follows a repeatable sequence. We reproduced this flow on both managed Chromebooks and Windows lab desktops.</p>
-<pre class="flow">[Open the browser] -- Chrome or Edge on managed devices
-        |
-        v
-[Navigate to the game URL] -- mainstream domain preferred
-        |
-        v
-[Page loads assets into cache] -- first load is the slow one
-        |
-        v
-[Filter blocks the page?]
-        |
-        +--> YES --> [Try the site's mirror domain] --> retry
-        |
-        v
-[Game starts] --> [Check frame rate and input]
-                          |
-                          +--> [Stutter? Lower quality or close tabs]
-                          |
-                          v
-                   [Play in short sessions] -- between classes
-                          |
-                          v
-              [Bookmark for instant return visits]</pre>
+<div class="proc"><div class="proc-head"><span class="dot"></span><span>Process Map</span></div><ol class="proc-steps"><li><span class="ps-n">1</span><span class="ps-t">Open the browser</span></li><li><span class="ps-n">2</span><span class="ps-t">Navigate to the game URL</span></li><li><span class="ps-n">3</span><span class="ps-t">Page loads assets into cache</span></li><li><span class="ps-n">4</span><span class="ps-t">Filter blocks the page?</span></li><li><span class="ps-n">5</span><span class="ps-t">Try the site&#x27;s mirror domain</span></li><li><span class="ps-n">6</span><span class="ps-t">Game starts</span></li><li><span class="ps-n">7</span><span class="ps-t">Check frame rate and input</span></li><li><span class="ps-n">8</span><span class="ps-t">Stutter? Lower quality or close tabs</span></li><li><span class="ps-n">9</span><span class="ps-t">Play in short sessions</span></li><li><span class="ps-n">10</span><span class="ps-t">Bookmark for instant return visits</span></li></ol></div>
 <p class="tblcap">Process map 1: From bookmarked URL to playable session on a managed school machine.</p>
 <h3>The fourteen titles that survived our school-lab testing</h3>
 <ul>
@@ -270,7 +260,8 @@
 <ul>
 <li><strong>Class break:</strong> five-minute rounds with instant restarts; puzzle and arcade titles fit perfectly.</li>
 <li><strong>Study hall:</strong> thirty-minute sessions with campaign progress; level-based titles work best.</li>
-<li><strong>Interrupted sessions:</strong> games with checkpoints survive the chaos of shared machines.</li>
+<li><strong>Interrupted sessions:</strong> games with checkpoints sur<figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/COMPUTER_LABS.jpg/900px-COMPUTER_LABS.jpg" alt="Students working in a computer lab" loading="lazy" /><figcaption>Students working in a computer lab</figcaption></figure>
+vive the chaos of shared machines.</li>
 <li><strong>Group play:</strong> shared-keyboard duels turn a break into a social moment.</li>
 </ul>
 <p>Matching the window also protects the privilege. Our analysis shows students who play during appropriate windows keep the access, while students who push the boundaries lose the privilege for everyone, which is the practical argument for choosing the right game at the right time.</p>
@@ -289,7 +280,7 @@
 <p>One more practical note from our testing: the best school sessions are the ones nobody notices. A game that loads quietly, runs at full speed, and closes cleanly draws no attention from the IT dashboard, while a game that pegs the CPU or throws pop-ups draws exactly the wrong kind. The fourteen titles above were chosen with that quiet profile in mind, and the reward is a gaming catalog that stays available all semester instead of getting locked down after one incident.</p>
 <p>The responsible approach also keeps the privilege alive. Our analysis shows schools that see browser gaming used well during breaks keep the policy open, while schools that see policy violations lock the category down for everyone. The fourteen titles above are chosen to be worth protecting: they are quick, clean, and genuinely fun, and they prove that a locked-down school machine can still host a great gaming session. Bookmark the shortlist, respect the windows, and the school computer becomes a reliable arcade that costs the IT department nothing.</p>
 <p>Pair this list with our <a href="/blogs/best-games-for-low-end-pcs.html">best games for low-end PCs guide</a> for more lightweight picks, check the <a href="/blogs/best-games-for-a-quick-break.html">quick-break games collection</a> for bell-friendly sessions, and see the <a href="/blogs/best-browser-games-no-download.html">no-download browser games list</a> when the filter policy tightens further.</p>
-      <figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Acer_desktop_computers_in_computer_classroom_of_Baozhong_Junior_High_School_20130906.jpg/960px-Acer_desktop_computers_in_computer_classroom_of_Baozhong_Junior_High_School_20130906.jpg" alt="A school computer classroom" loading="lazy" /><figcaption>A school computer classroom</figcaption></figure>
+      
       <div class="related"><h3>Related reading</h3><a href="/blogs/best-browser-games-no-download.html">our no-download browser games list</a><a href="/blogs/best-games-for-a-quick-break.html">our quick break games list</a><a href="https://en.wikipedia.org/wiki/School" target="_blank" rel="noopener nofollow">Learn more about this game</a></div>
       <div class="related">
         <h3>Keep reading</h3>

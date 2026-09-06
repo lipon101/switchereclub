@@ -112,7 +112,18 @@
     @media(max-width:600px){.blog-grid{grid-template-columns:1fr;}}
   </style>
 
-<style id="artx">.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
+<style id="artx">
+.article .proc{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px 22px;margin:22px 0;}
+.article .proc-head{display:flex;align-items:center;gap:8px;margin-bottom:14px;}
+.article .proc-head .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px rgba(34,197,94,.6);}
+.article .proc-head span{font-size:.78rem;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);}
+.article ol.proc-steps{list-style:none;margin:0;padding:0;counter-reset:ps;}
+.article ol.proc-steps li{display:flex;gap:14px;align-items:flex-start;margin:0;padding:11px 0;border-bottom:1px dashed var(--border);}
+.article ol.proc-steps li:last-child{border-bottom:none;}
+.article ol.proc-steps .ps-n{flex:0 0 30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--accent),#16a34a);color:#04120a;font-weight:800;font-size:.9rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(34,197,94,.25);}
+.article ol.proc-steps .ps-t{color:var(--txt);font-weight:600;font-size:.98rem;line-height:1.45;padding-top:3px;}
+.article ol.proc-steps .ps-t small{display:block;color:var(--muted);font-weight:400;font-size:.86rem;margin-top:2px;}
+.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
 </head>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -179,34 +190,12 @@
 <p>Which Android titles thrive on a Chromebook follows a pattern worth naming: the games that succeed are the ones originally designed for phones with modest hardware, while the games that fail are the console-scale ports that assumed a powerful mobile flagship. Our testing found that puzzle games, 2D platformers, and turn-based strategy titles ran smoothly on the mid-range test device, while open-world and competitive 3D shooters dropped below playable frame rates within minutes. The rule of thumb that emerged was simple, if a game runs well on a three-year-old budget phone, it will likely run on the Chromebook, and if it needs a flagship phone, it will struggle.</p>
 <p>ChromeOS version matters more than most players realize because the Android subsystem improves with each release. The modern ChromeOS runs Android apps with better memory management, smoother input handling, and fewer compatibility layers than the early implementations, and our testing found that the same app that stuttered on an older version ran acceptably after an update. Players with an outdated ChromeOS should update before judging the Android lane, because the platform they are testing may no longer be the platform that exists.</p>
 <p>The three lanes are not competitors but a stack. Our testing found that the best Chromebook gaming sessions combined lanes, browser games for quick breaks, Android games for mobile-style sessions, and cloud streams for the evening's big title, and the players who treated the lanes as complementary reported far more gaming success than those who forced every game into a single lane.</p>
+<figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Acer_Chromebook_11_%2824451042976%29.jpg/900px-Acer_Chromebook_11_%2824451042976%29.jpg" alt="A Chromebook laptop, open and ready" loading="lazy" /><figcaption>A Chromebook laptop, open and ready</figcaption></figure>
 <!-- ADSENSE PLACEHOLDER: CONTEXTUAL IN-ARTICLE DISPLAY AD -->
 <a name="section-3"></a>
 <h2>3. Step-by-Step Setup Map</h2>
 <p>Turning a Chromebook into a capable gaming machine takes ten minutes of setup, and the sequence below covers the tested configuration that produced the best results.</p>
-<pre class="flow">
-[Check the hardware] --&gt; note the processor, RAM, and ChromeOS version
-     |
-     v
-[Enable Android apps] --&gt; turn on the Play Store if it is disabled
-     |
-     v
-[Test the browser lane] --&gt; play a WebAssembly game to confirm performance
-     |
-     v
-[Install Android games] --&gt; add the lightweight titles that suit your device
-     |
-     v
-[Set up cloud gaming] --&gt; create the account and test the connection
-     |
-     v
-[Connect a controller] --&gt; pair a gamepad for Android and cloud play
-     |
-     v
-[Calibrate the display] --&gt; adjust resolution and performance settings
-     |
-     v
-[Run a full session] --&gt; play across all three lanes to confirm the setup
-</pre>
+<div class="proc"><div class="proc-head"><span class="dot"></span><span>Process Map</span></div><ol class="proc-steps"><li><span class="ps-n">1</span><span class="ps-t">Check the hardware</span></li><li><span class="ps-n">2</span><span class="ps-t">Enable Android apps</span></li><li><span class="ps-n">3</span><span class="ps-t">Test the browser lane</span></li><li><span class="ps-n">4</span><span class="ps-t">Install Android games</span></li><li><span class="ps-n">5</span><span class="ps-t">Set up cloud gaming</span></li><li><span class="ps-n">6</span><span class="ps-t">Connect a controller</span></li><li><span class="ps-n">7</span><span class="ps-t">Calibrate the display</span></li><li><span class="ps-n">8</span><span class="ps-t">Run a full session</span></li></ol></div>
 <p>Four setup habits separate Chromebooks that game well from Chromebooks that struggle:</p>
 <ul>
 <li><strong>Browser-first testing:</strong> confirm the browser lane runs well before investing in the other lanes, because it is the platform's native strength.</li>
@@ -227,7 +216,8 @@
 </ul>
 <p>The browser performance issue deserves the deepest explanation because it is the easiest to fix and the most common. ChromeOS shares its memory and processor between every open tab, so a Chromebook with fifteen background tabs runs games with a fraction of its available resources. Our testing found that closing background tabs and disabling heavy extensions recovered dramatic performance in browser games, and the players who maintained a lean browser session reported frame rates that matched dedicated gaming on the same hardware.</p>
 <p>Thermal management is the hidden constraint on fanless Chromebooks. The designs that make Chromebooks silent also trap heat, and the processors throttle their speed when temperatures climb, producing performance that degrades over a long session. Our testing found that the degradation was real and measurable, with frame rates dropping after sustained play, and the fix was structural, lower the graphics settings, take breaks, and keep the device on a hard surface that dissipates heat rather than a lap or a blanket.</p>
-<p>Finally, update ChromeOS before troubleshooting anything else. The operating system's gaming support improves with every release, adding WebAssembly optimizations, Android compatibility fixes, and controller improvements, and a Chromebook running an outdated version fights the ecosystem with one hand tied. Our testing found that the players who kept ChromeOS current encountered dramatically fewer compatibility issues across all three lanes, because the updates fixed problems at the platform level rather than requiring per-game workarounds.</p>
+<p>Finally, update ChromeOS before troubleshooting anything else. The operating system's gaming support improves with every release, adding WebAssembly optimizations, Android compatibility fixes, and controller improvements, and a Chromebook run<figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Cloud_Memory_Game_%284688242451%29.jpg/900px-Cloud_Memory_Game_%284688242451%29.jpg" alt="A cloud-based memory game on screen" loading="lazy" /><figcaption>A cloud-based memory game on screen</figcaption></figure>
+ning an outdated version fights the ecosystem with one hand tied. Our testing found that the players who kept ChromeOS current encountered dramatically fewer compatibility issues across all three lanes, because the updates fixed problems at the platform level rather than requiring per-game workarounds.</p>
 <!-- ADSENSE PLACEHOLDER: IN-ARTICLE DISPLAY AD (END OF CONTENT) -->
 <h2>5. Quick-Reference FAQ</h2>
 <p><strong>Can you really game on a Chromebook?</strong> Yes, through the browser, Android, and cloud lanes; our testing found that a mid-range Chromebook delivers playable sessions in roughly 85 percent of gaming scenarios.</p>
@@ -238,7 +228,7 @@
 <p><strong>Is cloud gaming worth it on a Chromebook?</strong> Yes, on a strong connection; the lane delivers triple-A quality that the hardware could never run locally, but network quality decides the experience.</p>
 <p><strong>Can I use a gaming mouse and keyboard on a Chromebook?</strong> Yes, wired and wireless peripherals work natively, and browser games respond to them exactly as they do on any laptop, making the Chromebook a viable setup for competitive browser titles.</p>
 <p>Start with the games that need no setup, see the <a href="/blogs/best-browser-games-no-download.html">best browser games with no download list</a> and the <a href="/blogs/best-free-games-for-school-computers.html">best free games for school computers guide</a>, then explore the <a href="/blogs/best-browser-games-for-phone.html">best browser games for phone roundup</a> for touch-friendly picks.</p>
-      <figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Chromebook_laptop_for_Wikimedians_1.jpg/960px-Chromebook_laptop_for_Wikimedians_1.jpg" alt="A Chromebook laptop" loading="lazy" /><figcaption>A Chromebook laptop</figcaption></figure>
+      
       <div class="related"><h3>Related reading</h3><a href="/blogs/best-games-that-look-like-work.html">our games that look like work list</a><a href="/blogs/how-to-get-better-at-gaming.html">our guide to getting better at gaming</a><a href="https://en.wikipedia.org/wiki/Chromebook" target="_blank" rel="noopener nofollow">Learn more about this game</a></div>
       <div class="related">
         <h3>Keep reading</h3>

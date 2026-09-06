@@ -112,7 +112,18 @@
     @media(max-width:600px){.blog-grid{grid-template-columns:1fr;}}
   </style>
 
-<style id="artx">.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
+<style id="artx">
+.article .proc{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px 22px;margin:22px 0;}
+.article .proc-head{display:flex;align-items:center;gap:8px;margin-bottom:14px;}
+.article .proc-head .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px rgba(34,197,94,.6);}
+.article .proc-head span{font-size:.78rem;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);}
+.article ol.proc-steps{list-style:none;margin:0;padding:0;counter-reset:ps;}
+.article ol.proc-steps li{display:flex;gap:14px;align-items:flex-start;margin:0;padding:11px 0;border-bottom:1px dashed var(--border);}
+.article ol.proc-steps li:last-child{border-bottom:none;}
+.article ol.proc-steps .ps-n{flex:0 0 30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--accent),#16a34a);color:#04120a;font-weight:800;font-size:.9rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(34,197,94,.25);}
+.article ol.proc-steps .ps-t{color:var(--txt);font-weight:600;font-size:.98rem;line-height:1.45;padding-top:3px;}
+.article ol.proc-steps .ps-t small{display:block;color:var(--muted);font-weight:400;font-size:.86rem;margin-top:2px;}
+.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
 </head>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -174,6 +185,7 @@
 <p>The graveyard sections are the spin-off's signature hazard set. The tombstones and the bone piles sit across the track as solid obstacles, and the gaps between them are sized for the main-series jump arcs, which means the players who read each graveyard as a standard obstacle course, rather than a new physics puzzle, cleared it with the familiar timing. Our testing found that the graveyard sections punished the players who expected the floaty spin-off physics and over-jumped the gaps.</p>
 <p>The pumpkin hazards add a rolling threat that the main series rarely uses. The pumpkins roll across the track on fixed paths, and the player must time the approach between the passes, and our analysis shows that the rolling hazards are best treated like the moving saw blades of the main series, with a one-cycle watch before the crossing paying for itself in saved attempts.</p>
 <p>The haunted-house interiors switch the visual theme without changing the physics. The interior stages use the same ramps, gaps, and platforms as the outdoor stages, and our testing found that the players who recognized the familiar geometry under the new skin cleared the interiors with the same lines they used in the outdoor sections.</p>
+<figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Fall_Color_2021_%2820211026-FS-Superior-SAR-014%29.jpg/900px-Fall_Color_2021_%2820211026-FS-Superior-SAR-014%29.jpg" alt="A forest in autumn colors" loading="lazy" /><figcaption>A forest in autumn colors</figcaption></figure>
 <!-- ADSENSE PLACEHOLDER: CONTEXTUAL IN-ARTICLE DISPLAY AD -->
 <!--EXP9X--><p>The ghost decorations are purely visual, but our testing found that they still caused a measurable share of the crashes. The floating ghosts and the flickering lights sit beside the track rather than on it, and the players who watched the decorations instead of the line in front of the bike drifted into the real hazards, while the players who tuned the decorations out and read only the track geometry cleared the same sections cleanly. The lesson is a practical one: the spooky theme is designed to distract, and the players who ignored it entirely rode the best lines.</p>
 <!--EXP10X--><p>The spin-off's stage order is a deliberate difficulty ramp that mirrors the main series. The opening stages teach the standard jumps, the midpoint adds the rolling pumpkins and the tighter graveyard gaps, and the final stages layer the hazards into the long continuous sequences that the main series players already know how to mine and drill, and our analysis shows that the players who recognized the ramp treated each stage as the next lesson rather than a fresh shock. The familiar structure means the main-series practice habits, the scout, the checkpoint mining, and the clean-line chase, all transfer without modification.</p>
@@ -181,24 +193,7 @@
 <a name="section-3"></a>
 <h2>3. Step-by-Step Level Map</h2>
 <p>The level loop below is the sequence we followed during the testing that produced our fastest stage clears.</p>
-<pre class="flow">
-[Scout the stage] --&gt; map the tombstones, pumpkins, and ramps
-     |
-     v
-[Apply the main-series timing] --&gt; no physics recalibration needed
-     |
-     v
-[Time the rolling hazards] --&gt; watch one full cycle first
-     |
-     v
-[Tilt and land clean] --&gt; wheels-first on the familiar arcs
-     |
-     v
-[Ignore the decorations] --&gt; read only the track geometry
-     |
-     v
-[Mine the checkpoints] --&gt; drill each hard piece to automatic
-</pre>
+<div class="proc"><div class="proc-head"><span class="dot"></span><span>Process Map</span></div><ol class="proc-steps"><li><span class="ps-n">1</span><span class="ps-t">Scout the stage</span></li><li><span class="ps-n">2</span><span class="ps-t">Apply the main-series timing</span></li><li><span class="ps-n">3</span><span class="ps-t">Time the rolling hazards</span></li><li><span class="ps-n">4</span><span class="ps-t">Tilt and land clean</span></li><li><span class="ps-n">5</span><span class="ps-t">Ignore the decorations</span></li><li><span class="ps-n">6</span><span class="ps-t">Mine the checkpoints</span></li></ol></div>
 <p>Follow this numbered routine for each new stage:</p>
 <ol>
 <li><strong>Scout the stage first</strong> &mdash; ride slowly and map the tombstone gaps, the pumpkin paths, and the ramp lines before the fast run.</li>
@@ -211,7 +206,8 @@
 <p>The scout habit matters more here than in the other spin-offs because the hazards look unfamiliar under the Halloween theme. The tombstone gaps and the pumpkin paths are new visuals over the familiar geometry, and our analysis shows that the players who scouted each stage once, translating the spooky scenery into the standard obstacle types, rode the main-series lines without the hesitation that the new look caused.</p>
 <!--EXP21X--><p>The pumpkin crossings are the spin-off's most consistent retry sink, and the fix is a timing habit rather than a speed change. Our testing found that the players who watched one full pumpkin cycle, counting the passes until the gap appeared, crossed the rolling sections on the first or second attempt, while the players who approached and adjusted at the last moment died to the same pumpkin repeatedly. The cycle watch takes seconds, and it converts the rolling hazard from a reaction test into a scheduled crossing.</p>
 <!--EXP22X--><p>The graveyard sections reward the same line-reading that the main series teaches, but the new visuals hide the familiar geometry. Our analysis shows that the players who translated the tombstones and the bone piles into the standard obstacle types during the scout, naming each hazard as a gap, a wall, or a ramp, rode the familiar lines without the hesitation that the spooky scenery caused. The translation habit is quick, and it removes the visual confusion that cost the unprepared players their clean runs.</p>
-<!--EXP23X--><p>The spin-off's stage length sits between the main series' shortest and longest stages, which makes the checkpoint mining the decisive habit on the later levels. Our testing found that the players who split the longer stages at the checkpoints, drilling each section until the line was automatic, cleared them in a fraction of the attempts of the players who attempted the full runs from the start every time. The longer stages are not harder per section, they are harder to hold together, and the mining habit is what holds them together.</p>
+<!--EXP23X--><p>The spin-off's stage length sits between the main series' shortest and longest stages, which makes the checkpoint mining the decisive habit on the later levels. Our testing found that the players who split the longer stages at t<figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/500px_photo_%2851094182%29.jpeg/900px-500px_photo_%2851094182%29.jpeg" alt="A dirt bike rider jumping on a motocross course" loading="lazy" /><figcaption>A dirt bike rider jumping on a motocross course</figcaption></figure>
+he checkpoints, drilling each section until the line was automatic, cleared them in a fraction of the attempts of the players who attempted the full runs from the start every time. The longer stages are not harder per section, they are harder to hold together, and the mining habit is what holds them together.</p>
 
 <!-- ADSENSE PLACEHOLDER: RESPONSIVE NATIVE AD UNIT (MID-ARTICLE) -->
 <a name="section-4"></a>
@@ -227,7 +223,7 @@
 <p>The tight star times make the clean-line discipline the heart of the spin-off. Our testing found that the players who cleared each stage once, then replayed it looking for the single biggest time loss, earned the three-star finishes faster than the players who pushed for speed on the first successful run, since the crash time always outweighs the small gains that the reckless speed buys.</p>
 <p>For the main-series foundation, our <a href="/blogs/moto-x3m-all-levels-guide.html">Moto X3M full level guide</a> explains the core mechanics that Spooky Land inherits. If you are working through the spin-offs, our <a href="/blogs/how-to-play-moto-x3m-pool.html">Moto X3M Pool Party guide</a> covers the floaty summer entry, and our <a href="/blogs/how-to-play-moto-x3m-winter.html">Moto X3M Winter guide</a> explains the icy holiday version.</p>
 <p>The final validation is a stage clear rate rather than a single time. We track the attempts per stage across the level list, and improvement shows as fewer retries on the later stages. A player who scouts the stage, applies the main-series timing, and reads only the geometry will clear the spooky list with a fraction of the retries, and that efficiency, measured in the retries saved per stage across the whole spooky list, is what playing Moto X3M Spooky Land really well truly means in practice.</p>
-      <figure class="inbody"><img src="/images/moto3mspooky.jpeg" alt="How to Play Moto X3M Spooky Land: A Guide" loading="lazy" /><figcaption>How to Play Moto X3M Spooky Land: A Guide</figcaption></figure>
+      
       <div class="related"><h3>Related reading</h3><a href="/blogs/moto-x3m-all-levels-guide.html">our Moto X3M guide</a><a href="/blogs/how-to-get-better-at-gaming.html">our guide to getting better at gaming</a><a href="https://poki.com/en/g/moto-x3m" target="_blank" rel="noopener nofollow">Learn more about this game</a></div>
       <div class="related">
         <h3>Keep reading</h3>

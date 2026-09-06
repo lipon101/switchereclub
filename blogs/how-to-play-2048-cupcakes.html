@@ -112,7 +112,18 @@
     @media(max-width:600px){.blog-grid{grid-template-columns:1fr;}}
   </style>
 
-<style id="artx">.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
+<style id="artx">
+.article .proc{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px 22px;margin:22px 0;}
+.article .proc-head{display:flex;align-items:center;gap:8px;margin-bottom:14px;}
+.article .proc-head .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px rgba(34,197,94,.6);}
+.article .proc-head span{font-size:.78rem;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);}
+.article ol.proc-steps{list-style:none;margin:0;padding:0;counter-reset:ps;}
+.article ol.proc-steps li{display:flex;gap:14px;align-items:flex-start;margin:0;padding:11px 0;border-bottom:1px dashed var(--border);}
+.article ol.proc-steps li:last-child{border-bottom:none;}
+.article ol.proc-steps .ps-n{flex:0 0 30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--accent),#16a34a);color:#04120a;font-weight:800;font-size:.9rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(34,197,94,.25);}
+.article ol.proc-steps .ps-t{color:var(--txt);font-weight:600;font-size:.98rem;line-height:1.45;padding-top:3px;}
+.article ol.proc-steps .ps-t small{display:block;color:var(--muted);font-weight:400;font-size:.86rem;margin-top:2px;}
+.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
 </head>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -180,6 +191,7 @@
 <p>The corner lock works in the cupcake version through the same geometry as the original. A tile in the corner has two walls protecting it, so it can only be pushed in two directions, and those directions feed the merge partners toward it. Our testing found that players who broke the corner lock, even once, dramatically reduced their win rate, exactly as the original game punishes the same mistake.</p>
 <p>The value ladder is the cupcake version's unique skill. Each cupcake represents a power of two, from the small plain cake up to the elaborate final pastry, and players who memorized the order could read the board at a glance while players who did not paused to decode each tile. Our testing showed that the recognition speed gap disappeared after a few games, but the players who learned the ladder deliberately played better from the start.</p>
 <p>Direction discipline protects the corner lock in both versions. One direction is effectively forbidden, the direction that would push the largest tile off its corner, and every move must respect that prohibition. Our testing found that the forbidden move is almost never necessary, because the other three directions provide enough flexibility to manage the board.</p>
+<figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Active_learning_-_jigsaw_map_of_Southeast_Asia.jpg/900px-Active_learning_-_jigsaw_map_of_Southeast_Asia.jpg" alt="A jigsaw puzzle being assembled" loading="lazy" /><figcaption>A jigsaw puzzle being assembled</figcaption></figure>
 <!-- ADSENSE PLACEHOLDER: CONTEXTUAL IN-ARTICLE DISPLAY AD -->
 <!--EXP6X--><p>The cupcake version shares its difficulty curve with the original. The early game feels spacious and forgiving, the middle game requires the first real discipline as the board fills, and the late game becomes a tight management problem where every slide matters. Our testing found that players who recognized these phases and adjusted their attention, relaxing in the early game, tightening up in the middle, and focusing completely in the late game, lost fewer runs to careless middle-game mistakes.</p>
 <!--EXP6X--><p>Undo and restart habits shape how quickly players learn. Restarting at the first sign of a broken chain teaches less than playing out the broken position, because the recovery attempts build the rescue skills that save real runs, and our testing found that players who played out their mistakes learned the strategy faster than players who restarted constantly. Use the restart sparingly, and treat every broken board as a puzzle in recovery rather than a reason to begin again.</p>
@@ -187,24 +199,7 @@
 <a name="section-3"></a>
 <h2>3. Step-by-Step Strategy Map</h2>
 <p>Reaching the final cupcake tile is a repeatable process, and the sequence below captures the tested loop that produced the highest win rate in our sessions.</p>
-<pre class="flow">
-[Open the board] --&gt; start a fresh cupcake game
-     |
-     v
-[Pick the corner] --&gt; commit to one corner for the whole run
-     |
-     v
-[Learn the ladder] --&gt; map each cupcake to its power of two
-     |
-     v
-[Build the chain] --&gt; descending cupcakes toward the corner
-     |
-     v
-[Merge upward] --&gt; slide only in the three safe directions
-     |
-     v
-[Reach the final tile] --&gt; complete the last merge
-</pre>
+<div class="proc"><div class="proc-head"><span class="dot"></span><span>Process Map</span></div><ol class="proc-steps"><li><span class="ps-n">1</span><span class="ps-t">Open the board</span></li><li><span class="ps-n">2</span><span class="ps-t">Pick the corner</span></li><li><span class="ps-n">3</span><span class="ps-t">Learn the ladder</span></li><li><span class="ps-n">4</span><span class="ps-t">Build the chain</span></li><li><span class="ps-n">5</span><span class="ps-t">Merge upward</span></li><li><span class="ps-n">6</span><span class="ps-t">Reach the final tile</span></li></ol></div>
 <p>Follow this numbered routine for each game:</p>
 <ol>
 <li><strong>Commit to a corner</strong> — choose the bottom-left corner and keep the largest cupcake locked there for the entire game.</li>
@@ -213,7 +208,8 @@
 <li><strong>Respect the forbidden direction</strong> — never slide in the direction that would move the corner tile, and use the other three directions for all merges.</li>
 <li><strong>Watch the far edges</strong> — merge small cupcakes before they become trapped on the edges opposite the chain.</li>
 </ol>
-<p>The cupcake ladder deserves deliberate study because the images grow more elaborate as values rise. Our testing found that players who named the ladder out loud, saying the power of two each new cupcake represented, memorized the order in a single session and never misread a tile again.</p>
+<p>The cupcake ladder deserves deliberate study because the images grow more elaborate as values rise. Our testing found that players who named the ladder out loud, saying the power of two each new cupcake represented, memorized the or<figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Chef%27s_Station_%28Unsplash%29.jpg/900px-Chef%27s_Station_%28Unsplash%29.jpg" alt="A chef preparing food in a professional kitchen" loading="lazy" /><figcaption>A chef preparing food in a professional kitchen</figcaption></figure>
+der in a single session and never misread a tile again.</p>
 <p>Patience is the same requirement it is in the original. The cupcake theme makes the game feel lighter, but the discipline is identical, and our testing found that players who rushed moves because the game felt casual lost runs that patient players won.</p>
 <!-- ADSENSE PLACEHOLDER: RESPONSIVE NATIVE AD UNIT (MID-ARTICLE) -->
 <!--EXP6X--><p>When the board fills toward the end, the priority order changes. The first priority is protecting the corner chain, the second is clearing the far edges, and the third is creating new merges, and our testing found that players who kept this order in the late game completed runs that players who panicked and made random slides lost. The late game rewards calm priority management over fast reactions, since the board punishes haste with dead ends.</p>
@@ -235,7 +231,7 @@
 <!--EXP6X--><p>The cupcake version also serves as the perfect test of whether the corner strategy has become a habit. Because the visuals are different, players cannot rely on the numbered tiles to remind them of the strategy, and our testing found that players who won the cupcake version consistently had internalized the corner method rather than merely following the numbers. Win the cupcake board and the original becomes a formality.</p>
 <!--EXP8X--><p>The cupcake version is also the perfect introduction for new players before they attempt the numbered original, since the friendly theme lowers the intimidation while teaching the identical discipline. Our testing found that beginners who learned the corner method on the cupcake board then moved to the original won their first numbered games faster than beginners who started on the numbered grid. Start sweet, graduate to numbers, and the strategy carries the whole way.</p>
 <p>The final validation is a completed run rather than a high score. We measure success by reaching the final cupcake tile, and our testing found that players who followed the corner discipline completed the game in the large majority of runs. A player who locks the corner, learns the ladder, and respects the forbidden direction will finish the cupcake board consistently, and that consistency transfers directly to the original 2048.</p>
-      <figure class="inbody"><img src="/images/2048cupcake.png" alt="How to Play 2048 Cupcakes: A Sweet Strategy Guide" loading="lazy" /><figcaption>How to Play 2048 Cupcakes: A Sweet Strategy Guide</figcaption></figure>
+      
       <div class="related"><h3>Related reading</h3><a href="/blogs/how-to-beat-2048-every-time.html">our 2048 strategy guide</a><a href="/blogs/how-to-get-better-at-gaming.html">our guide to getting better at gaming</a><a href="https://en.wikipedia.org/wiki/2048_(video_game)" target="_blank" rel="noopener nofollow">Learn more about this game</a></div>
       <div class="related">
         <h3>Keep reading</h3>

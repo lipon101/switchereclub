@@ -112,7 +112,18 @@
     @media(max-width:600px){.blog-grid{grid-template-columns:1fr;}}
   </style>
 
-<style id="artx">.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
+<style id="artx">
+.article .proc{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px 22px;margin:22px 0;}
+.article .proc-head{display:flex;align-items:center;gap:8px;margin-bottom:14px;}
+.article .proc-head .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px rgba(34,197,94,.6);}
+.article .proc-head span{font-size:.78rem;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);}
+.article ol.proc-steps{list-style:none;margin:0;padding:0;counter-reset:ps;}
+.article ol.proc-steps li{display:flex;gap:14px;align-items:flex-start;margin:0;padding:11px 0;border-bottom:1px dashed var(--border);}
+.article ol.proc-steps li:last-child{border-bottom:none;}
+.article ol.proc-steps .ps-n{flex:0 0 30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--accent),#16a34a);color:#04120a;font-weight:800;font-size:.9rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(34,197,94,.25);}
+.article ol.proc-steps .ps-t{color:var(--txt);font-weight:600;font-size:.98rem;line-height:1.45;padding-top:3px;}
+.article ol.proc-steps .ps-t small{display:block;color:var(--muted);font-weight:400;font-size:.86rem;margin-top:2px;}
+.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
 </head>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -174,6 +185,7 @@
 <p>The barrier family is the game's most common trap. The barriers sit across the lane at the slide height, and the correct response is the slide, which means the players who slid by default at every low obstacle cleared the barriers, while the players who jumped by habit launched into the barrier's top and crashed. Our testing found that the slide response, matched to the barrier's height, was the most consistent run extender in the game.</p>
 <p>The gap family punishes the late jump. The track ends in a visible drop, and the jump must clear the gap's full width, which means the jump timing is set by the gap's approach rather than the gap's edge, and our analysis shows that the players who jumped a beat before the edge, using the arc's peak to cross the center, landed on the far track while the players who jumped at the edge clipped the far lip and fell.</p>
 <p>The turn family is the game's silent killer. The track bends without a warning obstacle, and the runner who misses the turn swipe runs straight off the track, and our testing found that the players who watched the track's geometry, reading the bend's direction a section ahead, made the turn swipe smoothly, while the players who watched only the obstacles ran off the bends that the obstacle-focused eyes missed.</p>
+<figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/ESport_IFNG_Munich_20-Nov-11_Stage5.jpg/900px-ESport_IFNG_Munich_20-Nov-11_Stage5.jpg" alt="An esports tournament stage with players competing" loading="lazy" /><figcaption>An esports tournament stage with players competing</figcaption></figure>
 <!-- ADSENSE PLACEHOLDER: CONTEXTUAL IN-ARTICLE DISPLAY AD -->
 <!--EXP9X--><p>The boost pickups are the game's riskiest reward, and the players who used them deliberately rather than instantly gained the most. The boost accelerates the runner through a short window, and our analysis shows that the players who saved the boost for the straight sections, where the extra speed carried them past the coin clusters and the safe stretches, extended their distance, while the players who activated the boost instantly at every pickup spent the speed window inside the trap-dense sections where the acceleration turned the readable traps into the reaction tests.</p>
 <!--EXP10X--><p>The magnet pickup is the coin collector's best friend, and the players who understood its timing collected the high coin lines without the lane swerves. The magnet pulls the nearby coins to the runner for a short window, and our testing found that the players who activated the magnet before the dense coin lines, rather than after passing them, vacuumed the lines while staying in the safe lane, and the magnet runs collected more coins with fewer swerves than the manual collection runs.</p>
@@ -181,24 +193,7 @@
 <a name="section-3"></a>
 <h2>3. Step-by-Step Run Map</h2>
 <p>The run loop below is the sequence we followed during the testing that produced our measured run-length improvements.</p>
-<pre class="flow">
-[Read the track geometry] --&gt; spot the bends and the drops
-     |
-     v
-[Name the trap family] --&gt; barrier, gap, or obstacle wall
-     |
-     v
-[Pick the swipe] --&gt; slide, jump, or lane shift
-     |
-     v
-[Execute one section early] --&gt; swipe before the trap arrives
-     |
-     v
-[Follow the safe coin lines] --&gt; collect without the swerves
-     |
-     v
-[Reset the read] --&gt; scan the next section immediately
-</pre>
+<div class="proc"><div class="proc-head"><span class="dot"></span><span>Process Map</span></div><ol class="proc-steps"><li><span class="ps-n">1</span><span class="ps-t">Read the track geometry</span></li><li><span class="ps-n">2</span><span class="ps-t">Name the trap family</span></li><li><span class="ps-n">3</span><span class="ps-t">Pick the swipe</span></li><li><span class="ps-n">4</span><span class="ps-t">Execute one section early</span></li><li><span class="ps-n">5</span><span class="ps-t">Follow the safe coin lines</span></li><li><span class="ps-n">6</span><span class="ps-t">Reset the read</span></li></ol></div>
 <p>Follow this numbered routine for each run:</p>
 <ol>
 <li><strong>Read the track geometry first</strong> &mdash; spot the bends, the drops, and the lane blocks a section ahead of the runner.</li>
@@ -213,7 +208,8 @@
 <!--EXP22X--><p>The power-up selection is the run's loadout decision, and the players who matched the power-ups to the track section stretched their value. The shield absorbs one crash, the boost accelerates the runner, and the magnet pulls the coins, and our analysis shows that the players who activated the shield before the trap-dense sections, the barrier clusters and the gap chains, protected the run through the danger, while the players who saved the shield for the hypothetical emergency died before the emergency arrived.</p>
 <!--EXP23X--><p>The artifact and the upgrade system add the meta-progression that makes the repeated runs productive. The collected coins fund the permanent upgrades, the extra time, the coin multipliers, and the power-up durations, and our testing found that the players who prioritized the coin-multiplier and the power-up upgrades, rather than the cosmetic purchases, grew the run value with every session, and the meta-growth compounded into the longer runs that the upgraded loadouts enabled.</p>
 
-<!--EXP31X--><p>The center-line return is the habit that keeps the runner's options open. After every dodge, the runner is safest returning to the track's center line, and our testing found that the players who recentered after each swipe had the room to choose the next response, while the players who stayed at the track's edge ran out of lane when the next trap arrived on their side.</p>
+<!--EXP31X--><p>The center-line return is the habit that <figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/Back_Bay_Station_waiting_room.jpg/900px-Back_Bay_Station_waiting_room.jpg" alt="A clock in a waiting room" loading="lazy" /><figcaption>A clock in a waiting room</figcaption></figure>
+keeps the runner's options open. After every dodge, the runner is safest returning to the track's center line, and our testing found that the players who recentered after each swipe had the room to choose the next response, while the players who stayed at the track's edge ran out of lane when the next trap arrived on their side.</p>
 
 <!-- ADSENSE PLACEHOLDER: RESPONSIVE NATIVE AD UNIT (MID-ARTICLE) -->
 <a name="section-4"></a>
@@ -229,7 +225,7 @@
 <p>The average distance is the game's real scoreboard. Our testing found that the players who tracked the mean run across sessions, rather than the single lucky run, improved the fastest, because the average revealed the consistent reading skill while the single run hid the luck.</p>
 <p>For more endless-runner strategy, our <a href="/blogs/how-to-play-subway-surfers-tips.html">Subway Surfers high-score guide</a> explains the genre's other giant, and our <a href="/blogs/how-to-play-crossy-road.html">Crossy Road run guide</a> covers the hopper version. If you want the reflex training behind the genre, our <a href="/blogs/how-to-improve-reaction-time-gaming.html">reaction time training plan</a> builds the response speed the runners reward.</p>
 <p>The final validation is an average run length rather than a single score. We track the mean distance across sessions, and improvement shows as a rising average. A player who reads the geometry, names the trap families, and swipes one section early will watch the average climb, and that climbing average is what running further and dying less in Temple Run 2 truly means.</p>
-      <figure class="inbody"><img src="/images/templerun2.png" alt="How to Play Temple Run 2: Run Further, Die Less" loading="lazy" /><figcaption>How to Play Temple Run 2: Run Further, Die Less</figcaption></figure>
+      
       <div class="related"><h3>Related reading</h3><a href="/blogs/how-to-get-better-at-gaming.html">our guide to getting better at gaming</a><a href="/blogs/how-to-improve-reaction-time-gaming.html">our reaction time guide</a><a href="https://en.wikipedia.org/wiki/Temple_Run" target="_blank" rel="noopener nofollow">Learn more about this game</a></div>
       <div class="related">
         <h3>Keep reading</h3>

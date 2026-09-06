@@ -112,7 +112,18 @@
     @media(max-width:600px){.blog-grid{grid-template-columns:1fr;}}
   </style>
 
-<style id="artx">.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
+<style id="artx">
+.article .proc{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px 22px;margin:22px 0;}
+.article .proc-head{display:flex;align-items:center;gap:8px;margin-bottom:14px;}
+.article .proc-head .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px rgba(34,197,94,.6);}
+.article .proc-head span{font-size:.78rem;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);}
+.article ol.proc-steps{list-style:none;margin:0;padding:0;counter-reset:ps;}
+.article ol.proc-steps li{display:flex;gap:14px;align-items:flex-start;margin:0;padding:11px 0;border-bottom:1px dashed var(--border);}
+.article ol.proc-steps li:last-child{border-bottom:none;}
+.article ol.proc-steps .ps-n{flex:0 0 30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--accent),#16a34a);color:#04120a;font-weight:800;font-size:.9rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(34,197,94,.25);}
+.article ol.proc-steps .ps-t{color:var(--txt);font-weight:600;font-size:.98rem;line-height:1.45;padding-top:3px;}
+.article ol.proc-steps .ps-t small{display:block;color:var(--muted);font-weight:400;font-size:.86rem;margin-top:2px;}
+.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
 </head>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -153,6 +164,7 @@
 <h3>What the box-fight meta actually rewards</h3>
 <p>High-level 1v1.LOL fights look like players building small boxes around themselves and then editing windows to shoot through. This is the box-fight meta, and it rewards two things: build speed and edit accuracy. Players who can box up and edit a window in under two seconds are almost impossible to hit from outside.</p>
 <p>You do not need advanced retakes to benefit. Two patterns, the ramp-wall push and the box-window peek, cover most ranked situations, and both are learnable in a single practice session.</p>
+<figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/ESport_IFNG_Munich_20-Nov-11_Stage5.jpg/900px-ESport_IFNG_Munich_20-Nov-11_Stage5.jpg" alt="An esports tournament stage with players competing" loading="lazy" /><figcaption>An esports tournament stage with players competing</figcaption></figure>
 <!-- ADSENSE PLACEHOLDER: CONTEXTUAL IN-ARTICLE DISPLAY AD -->
 <a name="section-2"></a>
 <h2>2. Casual Fighting vs. Optimized 1v1.LOL Protocol</h2>
@@ -187,28 +199,7 @@
 <p>Most opponents below gold will not shoot your ramps at all. They will try to out-aim you from the ground, which is exactly the mistake the high-ground race punishes.</p>
 <a name="section-3"></a>
 <h2>3. The 40-Minute Warm-Up Blueprint</h2>
-<pre class="flow">WARM-UP START (40 MIN)
-   |
-   v
-[0-8 min: Practice Arena] --&gt; [ramp-wall push x20 reps]
-   |
-   v
-[8-16 min: Box drills] --&gt; [box up, edit window, reset x15]
-   |                         ^
-   |                         |
-   +-- stuck in own box? --yes--&gt; [slow down, reset edit key] --+
-   |                                                            |
-   v                                                            |
-[16-24 min: Aim trainer map] --&gt; [track + flick drills] -------+
-   |
-   v
-[24-32 min: Box Fight vs AI] --&gt; [one pattern per round]
-   |
-   v
-[32-40 min: 1v1 Duel] --&gt; [apply triangle, log losses]
-   |
-   v
-[Review: which side of triangle failed most?]</pre>
+<div class="proc"><div class="proc-head"><span class="dot"></span><span>Process Map</span></div><ol class="proc-steps"><li><span class="ps-n">1</span><span class="ps-t">0-8 min: Practice Arena</span></li><li><span class="ps-n">2</span><span class="ps-t">ramp-wall push x20 reps</span></li><li><span class="ps-n">3</span><span class="ps-t">8-16 min: Box drills</span></li><li><span class="ps-n">4</span><span class="ps-t">box up, edit window, reset x15</span></li><li><span class="ps-n">5</span><span class="ps-t">slow down, reset edit key</span></li><li><span class="ps-n">6</span><span class="ps-t">16-24 min: Aim trainer map</span></li><li><span class="ps-n">7</span><span class="ps-t">track + flick drills</span></li><li><span class="ps-n">8</span><span class="ps-t">24-32 min: Box Fight vs AI</span></li><li><span class="ps-n">9</span><span class="ps-t">one pattern per round</span></li><li><span class="ps-n">10</span><span class="ps-t">32-40 min: 1v1 Duel</span></li></ol></div>
 <p class="tblcap">Process map 1: The 40-minute daily warm-up loop for all three skills.</p>
 <h3>Step 1: Drill the ramp-wall push (0 to 8 minutes)</h3>
 <p>In the practice arena, build the ramp-wall push until it is automatic: ramp forward, wall in front, ramp again, wall again. Repeat twenty times, alternating the direction you face, so the pattern works whether you push left or right.</p>
@@ -223,7 +214,8 @@
 <p>Box Fight rounds are short and mechanical, which makes them perfect for applying one pattern per round. Round one, only use the ramp-wall push. Round two, only use the box-window peek. Round three, combine them. The constraint forces real practice instead of autopilot.</p>
 <p>Log which rounds you lose and why. Losses to faster builders mean more ramp drills; losses through your own edits mean more box drills.</p>
 <h3>Step 5: Test the triangle in 1v1 Duel (32 to 40 minutes)</h3>
-<p>Finish with 1v1 Duel matches where you consciously run the full triangle: build cover on contact, claim high ground, edit a window, then shoot. Do not chase kills; chase clean executions of the sequence.</p>
+<p>Finish with 1v1 Duel matches where you consci<figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/GameCube-Set.jpg/900px-GameCube-Set.jpg" alt="A video game console and controllers" loading="lazy" /><figcaption>A video game console and controllers</figcaption></figure>
+ously run the full triangle: build cover on contact, claim high ground, edit a window, then shoot. Do not chase kills; chase clean executions of the sequence.</p>
 <p>After the session, review your losses and rank which side of the triangle failed most. That single answer tells you exactly what tomorrow's warm-up should emphasize.</p>
 <!-- ADSENSE PLACEHOLDER: CONTEXTUAL IN-ARTICLE DISPLAY AD -->
 <a name="section-4"></a>
@@ -260,7 +252,7 @@
 </ul>
 <p>Ranked is a measure of your average play, not your peak, so every session should aim to raise the floor. The floor rises in the practice arena and the ladder follows.</p>
 <p class="tip"><strong>Pro tip:</strong> In our testing, beginners who spent their first week on build and edit drills instead of match volume won over 60 percent of their next 1v1 duels against players with double their match count. Mechanics first, matches second, and the ladder follows.</p>
-      <figure class="inbody"><img src="/images/1v1.lol.png" alt="How to Play 1v1.LOL: A Complete Beginner&#x27;s Guide" loading="lazy" /><figcaption>How to Play 1v1.LOL: A Complete Beginner&#x27;s Guide</figcaption></figure>
+      
       <div class="related"><h3>Related reading</h3><a href="/blogs/how-to-get-better-at-gaming.html">our guide to getting better at gaming</a><a href="/blogs/how-to-improve-reaction-time-gaming.html">our reaction time guide</a><a href="https://1v1.lol/" target="_blank" rel="noopener nofollow">Learn more about this game</a></div>
       <div class="related">
         <h3>Keep reading</h3>

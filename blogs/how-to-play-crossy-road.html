@@ -112,7 +112,18 @@
     @media(max-width:600px){.blog-grid{grid-template-columns:1fr;}}
   </style>
 
-<style id="artx">.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
+<style id="artx">
+.article .proc{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px 22px;margin:22px 0;}
+.article .proc-head{display:flex;align-items:center;gap:8px;margin-bottom:14px;}
+.article .proc-head .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px rgba(34,197,94,.6);}
+.article .proc-head span{font-size:.78rem;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);}
+.article ol.proc-steps{list-style:none;margin:0;padding:0;counter-reset:ps;}
+.article ol.proc-steps li{display:flex;gap:14px;align-items:flex-start;margin:0;padding:11px 0;border-bottom:1px dashed var(--border);}
+.article ol.proc-steps li:last-child{border-bottom:none;}
+.article ol.proc-steps .ps-n{flex:0 0 30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--accent),#16a34a);color:#04120a;font-weight:800;font-size:.9rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(34,197,94,.25);}
+.article ol.proc-steps .ps-t{color:var(--txt);font-weight:600;font-size:.98rem;line-height:1.45;padding-top:3px;}
+.article ol.proc-steps .ps-t small{display:block;color:var(--muted);font-weight:400;font-size:.86rem;margin-top:2px;}
+.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
 </head>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -177,6 +188,7 @@
 <p>The road pattern is the game's first lesson. Each lane has cars moving at a set speed with gaps between them, and the survival skill is reading the gap timing across all the lanes before committing to the crossing. Our testing found that players who watched one full cycle of each lane before hopping crossed roads safely almost every time.</p>
 <p>The river pattern replaces cars with moving platforms. Logs carry the character safely while turtles sink after a few seconds, and the survival skill is judging which platform will carry the character to the next safe spot, with our testing showing that the river punishes rushed hops more than any other environment.</p>
 <p>The train tracks are the game's audio lesson. The train approaches on a visible and audible timer, and the survival skill is listening and watching for the warning before crossing, with our analysis finding that players who paused at every track crossing, even when no train was visible, never died to a train.</p>
+<figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Playing_with_smartphone.jpg/900px-Playing_with_smartphone.jpg" alt="A person playing a game on a smartphone" loading="lazy" /><figcaption>A person playing a game on a smartphone</figcaption></figure>
 <!-- ADSENSE PLACEHOLDER: CONTEXTUAL IN-ARTICLE DISPLAY AD -->
 <!--EXP9X--><p>The different characters in Crossy Road change the feel of the run more than the mechanics. Each character is a reskin with the same hitbox and hop distance, and our testing found that the character choice is purely cosmetic, which means players should pick the character they enjoy rather than hunting for a mechanical advantage that does not exist. The daily challenge often requires a specific character, which rotates the player through the roster and keeps the visuals fresh.</p>
 <!--EXP9X--><p>The screen scroll and the camera angle affect how players read the obstacles. The camera sits behind and above the character, and the scroll reveals new obstacles as the character advances, and our testing found that players who kept the character near the center of the screen, rather than pushing to the top edge, gave themselves the maximum warning time for the obstacles ahead. The positioning habit is subtle, but it buys the extra moments that the pause-and-read rhythm needs.</p>
@@ -184,24 +196,7 @@
 <a name="section-3"></a>
 <h2>3. Step-by-Step Run Map</h2>
 <p>The run loop below is the pattern we followed during the testing that produced our measured run-length improvements.</p>
-<pre class="flow">
-[Pause at each new screen] --&gt; read the obstacle pattern
-     |
-     v
-[Time the road gaps] --&gt; watch a full cycle before hopping
-     |
-     v
-[Ride the river platforms] --&gt; choose the safe log or turtle
-     |
-     v
-[Listen at the tracks] --&gt; wait for the all clear
-     |
-     v
-[Move forward deliberately] --&gt; one safe hop at a time
-     |
-     v
-[Collect without chasing] --&gt; grab coins only when safe
-</pre>
+<div class="proc"><div class="proc-head"><span class="dot"></span><span>Process Map</span></div><ol class="proc-steps"><li><span class="ps-n">1</span><span class="ps-t">Pause at each new screen</span></li><li><span class="ps-n">2</span><span class="ps-t">Time the road gaps</span></li><li><span class="ps-n">3</span><span class="ps-t">Ride the river platforms</span></li><li><span class="ps-n">4</span><span class="ps-t">Listen at the tracks</span></li><li><span class="ps-n">5</span><span class="ps-t">Move forward deliberately</span></li><li><span class="ps-n">6</span><span class="ps-t">Collect without chasing</span></li></ol></div>
 <p>Follow this numbered routine for each run:</p>
 <ol>
 <li><strong>Pause and read the screen</strong> — stop at each new environment and identify the obstacle pattern before making the first hop.</li>
@@ -211,7 +206,8 @@
 <li><strong>Hop with purpose</strong> — make each hop a deliberate decision, and collect coins only when the collection does not risk the run.</li>
 </ol>
 <p>The pause habit is the single highest-value change for most players. Our testing found that players who paused for a second at each new screen, reading the pattern before hopping, extended their runs dramatically, because the pause eliminated the blind hops that caused most deaths.</p>
-<p>The collect-without-chasing rule protects the run from the coins. The coins sit in tempting positions, often in the path of traffic, and our analysis shows that chasing coins is the second most common cause of death after blind hopping, so the discipline is to take coins only when they sit safely in the planned path.</p>
+<p>The collect-without-chasing rule <figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/A_person_working_on_old_desktop_computer.jpg/900px-A_person_working_on_old_desktop_computer.jpg" alt="A person using a vintage desktop computer" loading="lazy" /><figcaption>A person using a vintage desktop computer</figcaption></figure>
+protects the run from the coins. The coins sit in tempting positions, often in the path of traffic, and our analysis shows that chasing coins is the second most common cause of death after blind hopping, so the discipline is to take coins only when they sit safely in the planned path.</p>
 <!-- ADSENSE PLACEHOLDER: RESPONSIVE NATIVE AD UNIT (MID-ARTICLE) -->
 <!--EXP9X--><p>The endless format rewards sustainable play over heroic sprints. Our testing found that players who played shorter sessions with full attention achieved longer individual runs than players who played long sessions while tired, since the attention that the pause-and-read rhythm requires degrades with fatigue. The discipline is to stop the session when the attention fades, and the high scores will come from the fresh sessions rather than the extended ones.</p>
 <!--EXP10X--><p>Practicing the individual environments in isolation is the fastest way to build the pattern library. Our testing found that players who focused on the river until the platform timing was automatic, then the tracks until the listening habit was fixed, then the roads, built the full skill set faster than players who tried to master every environment in every run. The game rotates the environments, but the deliberate practice isolates them, and the isolated practice is what makes the rotated runs long.</p>
@@ -233,7 +229,7 @@
 <!--EXP10X--><p>Crossy Road rewards the player who respects the pause. The game's simple controls invite constant hopping, and our testing found that the players who resisted the invitation, pausing to read each screen and hopping with purpose, were the ones who reached the distances that the frantic players never saw. The game is a test of patience disguised as an arcade hopper, and the patient players are the ones who pass.</p>
 <!--EXP11X--><p>The game's charm is that its difficulty is entirely self-imposed. The obstacles are fair, the patterns are learnable, and every death traces back to a decision the player made, and our testing found that this fairness is what keeps players returning, since the next run always holds the promise of the lesson learned. Crossy Road does not cheat, and the players who respect the patterns it teaches are the ones who cross the furthest.</p>
 <p>The final validation is an average run length rather than a single high score. We track the mean run across sessions, and improvement shows as a rising average, since the average reveals the consistent skill while the high score can hide luck. A player who pauses, reads each screen, and hops with purpose will watch the average climb, and that climbing average is what playing Crossy Road well truly means.</p>
-      <figure class="inbody"><img src="/images/crossyroad.png" alt="How to Play Crossy Road: A Guide to Getting Further" loading="lazy" /><figcaption>How to Play Crossy Road: A Guide to Getting Further</figcaption></figure>
+      
       <div class="related"><h3>Related reading</h3><a href="/blogs/how-to-get-better-at-gaming.html">our guide to getting better at gaming</a><a href="/blogs/how-to-improve-reaction-time-gaming.html">our reaction time guide</a><a href="https://en.wikipedia.org/wiki/Crossy_Road" target="_blank" rel="noopener nofollow">Learn more about this game</a></div>
       <div class="related">
         <h3>Keep reading</h3>

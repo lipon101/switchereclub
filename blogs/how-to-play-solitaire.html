@@ -112,7 +112,18 @@
     @media(max-width:600px){.blog-grid{grid-template-columns:1fr;}}
   </style>
 
-<style id="artx">.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
+<style id="artx">
+.article .proc{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px 22px;margin:22px 0;}
+.article .proc-head{display:flex;align-items:center;gap:8px;margin-bottom:14px;}
+.article .proc-head .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px rgba(34,197,94,.6);}
+.article .proc-head span{font-size:.78rem;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);}
+.article ol.proc-steps{list-style:none;margin:0;padding:0;counter-reset:ps;}
+.article ol.proc-steps li{display:flex;gap:14px;align-items:flex-start;margin:0;padding:11px 0;border-bottom:1px dashed var(--border);}
+.article ol.proc-steps li:last-child{border-bottom:none;}
+.article ol.proc-steps .ps-n{flex:0 0 30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--accent),#16a34a);color:#04120a;font-weight:800;font-size:.9rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(34,197,94,.25);}
+.article ol.proc-steps .ps-t{color:var(--txt);font-weight:600;font-size:.98rem;line-height:1.45;padding-top:3px;}
+.article ol.proc-steps .ps-t small{display:block;color:var(--muted);font-weight:400;font-size:.86rem;margin-top:2px;}
+.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
 </head>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -174,6 +185,7 @@
 <p>The expose-first rule is the foundation of the winning method. Every face-down card that the player exposes adds a new set of possible moves, and our testing found that the players who scanned the tableau for the expose opportunities before every other move kept the game's options open, while the players who moved the face-up cards first painted themselves into the dead boards.</p>
 <p>The foundation timing is the game's most counterintuitive decision. The Aces and the low cards belong on the foundations eventually, but moving them early can strand the cards that need them in the tableau, and our analysis shows that the players who held the low cards in the tableau, using them to build the alternating sequences, won more games than the players who rushed every foundation card to the top.</p>
 <p>The draw pile management is the resource skill. The stock deals in threes, which means the useful cards are buried under the useless ones, and our testing found that the players who tracked the draw cycle, knowing which card would surface on the next pass, timed their draws to the tableau's needs rather than drawing on impulse.</p>
+<figure class="inbody"><img src="https://upload.wikimedia.org/wikipedia/commons/2/20/Bisley_%28solitaire%29.jpg" alt="A game of solitaire laid out on a table" loading="lazy" /><figcaption>A game of solitaire laid out on a table</figcaption></figure>
 <!-- ADSENSE PLACEHOLDER: CONTEXTUAL IN-ARTICLE DISPLAY AD -->
 <!--EXP9X--><p>The empty columns are the game's most powerful staging zones, and the casual players waste them. An empty column can hold any movable sequence, which makes it the parking spot for the sequences that block the tableau, and our analysis shows that the players who cleared a column deliberately, using it to reorganize the tableau and to stage the Kings, turned the dead boards into the winnable ones, while the players who filled the columns with the first available card lost the reorganization tool that the winning games require.</p>
 <!--EXP10X--><p>The King placement decides the endgame. The Kings are the only cards that can start an empty column, and the players who moved a King into an empty column without checking the cards it would trap often buried the very cards the tableau needed, and our testing found that the players who staged the Kings only when the column was the right home for the whole sequence, rather than as a tidy-up move, preserved the flexibility that the late game demands.</p>
@@ -181,24 +193,7 @@
 <a name="section-3"></a>
 <h2>3. Step-by-Step Game Map</h2>
 <p>The game loop below is the sequence we followed during the testing that produced our highest win rates.</p>
-<pre class="flow">
-[Scan the tableau] --&gt; find every expose opportunity
-     |
-     v
-[Expose the face-down cards] --&gt; unlock the hidden moves first
-     |
-     v
-[Organize by alternating colors] --&gt; build the movable sequences
-     |
-     v
-[Delay the foundations] --&gt; keep the tableau flexible
-     |
-     v
-[Draw with a target] --&gt; use the stock for the needed card
-     |
-     v
-[Stage in the empty columns] --&gt; reorganize toward the win
-</pre>
+<div class="proc"><div class="proc-head"><span class="dot"></span><span>Process Map</span></div><ol class="proc-steps"><li><span class="ps-n">1</span><span class="ps-t">Scan the tableau</span></li><li><span class="ps-n">2</span><span class="ps-t">Expose the face-down cards</span></li><li><span class="ps-n">3</span><span class="ps-t">Organize by alternating colors</span></li><li><span class="ps-n">4</span><span class="ps-t">Delay the foundations</span></li><li><span class="ps-n">5</span><span class="ps-t">Draw with a target</span></li><li><span class="ps-n">6</span><span class="ps-t">Stage in the empty columns</span></li></ol></div>
 <p>Follow this numbered routine for each game:</p>
 <ol>
 <li><strong>Scan the tableau first</strong> &mdash; find every face-down card that a move can expose before moving anything else.</li>
@@ -214,7 +209,8 @@
 <!--EXP23X--><p>The deal-reading skill is the difference between the players who win and the players who play. Not every deal is winnable, and the players who read the opening tableau, spotting the deals where the critical cards are buried under the wrong piles, saved their energy for the winnable boards, while the players who played every deal to the end spent their attention on the unwinnable ones, and our testing found that the deal readers, who abandoned the hopeless boards early and focused on the promising ones, finished more games in the same session time.</p>
 
 <!--EXP31X--><p>The waste-pile discipline is the resource habit that the three-card players need most. The waste pile holds the stock cards that the player has passed, and the players who scanned the waste pile before every draw knew which cards were already available, avoiding the re-draws that wasted the passes, and our analysis shows that the waste-pile scan is the fastest win-rate improvement for the three-card mode, since the available cards on the waste pile are the moves that the buried stock cards cannot provide.</p>
-<!--EXP32X--><p>The move-order optimization is the endgame skill that converts the promising boards into the finished games. When the tableau is nearly clear, the order of the final moves decides whether the board finishes, and our testing found that the players who planned the last ten moves in sequence, moving the cards that unlocked the most options first, completed the boards that the move-by-move players stranded, because the final moves are a chain where the wrong first link breaks the whole sequence.</p>
+<!--EXP32X--><p>The move-order optimization is the endgame skill that converts the promising boards into the finished games. When the tableau is nearly clear, the order of the final moves decides whether the board finishes, and our testing found that the players who p<figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/A_studio_image_of_a_hand_of_playing_cards._MOD_45148377.jpg/900px-A_studio_image_of_a_hand_of_playing_cards._MOD_45148377.jpg" alt="A hand holding playing cards" loading="lazy" /><figcaption>A hand holding playing cards</figcaption></figure>
+lanned the last ten moves in sequence, moving the cards that unlocked the most options first, completed the boards that the move-by-move players stranded, because the final moves are a chain where the wrong first link breaks the whole sequence.</p>
 
 <!-- ADSENSE PLACEHOLDER: RESPONSIVE NATIVE AD UNIT (MID-ARTICLE) -->
 <a name="section-4"></a>
@@ -230,7 +226,7 @@
 <p>The win rate is the game's real scoreboard. Our testing found that the players who tracked their wins and losses, rather than playing deal after deal without reflection, improved the fastest, because the tracking revealed the decision patterns that the individual games hid.</p>
 <p>For more classic single-player games, our <a href="/blogs/how-to-play-2048-cupcakes.html">2048 Cupcakes strategy guide</a> covers the sweet sliding puzzle, and our <a href="/blogs/best-puzzle-games-brain.html">best puzzle games for brain training list</a> has more mental challenges. If you want the competitive card scene, our <a href="/blogs/how-to-play-chess-online.html">online chess guide</a> explains a deeper strategy game.</p>
 <p>The final validation is a win rate rather than a single game. We track the share of winnable-looking deals that end in completion, and improvement shows as a rising rate. A player who exposes the tableau, delays the foundations, and draws with a target will watch the win rate climb, and that climbing rate is what playing Solitaire well truly means.</p>
-      <figure class="inbody"><img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Gate_%28solitaire%29.jpg" alt="A solitaire card game" loading="lazy" /><figcaption>A solitaire card game</figcaption></figure>
+      
       <div class="related"><h3>Related reading</h3><a href="/blogs/how-to-get-better-at-gaming.html">our guide to getting better at gaming</a><a href="/blogs/how-to-improve-reaction-time-gaming.html">our reaction time guide</a><a href="https://en.wikipedia.org/wiki/Klondike_(solitaire)" target="_blank" rel="noopener nofollow">Learn more about this game</a></div>
       <div class="related">
         <h3>Keep reading</h3>

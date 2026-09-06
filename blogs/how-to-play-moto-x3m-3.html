@@ -112,7 +112,18 @@
     @media(max-width:600px){.blog-grid{grid-template-columns:1fr;}}
   </style>
 
-<style id="artx">.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
+<style id="artx">
+.article .proc{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px 22px;margin:22px 0;}
+.article .proc-head{display:flex;align-items:center;gap:8px;margin-bottom:14px;}
+.article .proc-head .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px rgba(34,197,94,.6);}
+.article .proc-head span{font-size:.78rem;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);}
+.article ol.proc-steps{list-style:none;margin:0;padding:0;counter-reset:ps;}
+.article ol.proc-steps li{display:flex;gap:14px;align-items:flex-start;margin:0;padding:11px 0;border-bottom:1px dashed var(--border);}
+.article ol.proc-steps li:last-child{border-bottom:none;}
+.article ol.proc-steps .ps-n{flex:0 0 30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--accent),#16a34a);color:#04120a;font-weight:800;font-size:.9rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(34,197,94,.25);}
+.article ol.proc-steps .ps-t{color:var(--txt);font-weight:600;font-size:.98rem;line-height:1.45;padding-top:3px;}
+.article ol.proc-steps .ps-t small{display:block;color:var(--muted);font-weight:400;font-size:.86rem;margin-top:2px;}
+.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
 </head>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -174,6 +185,7 @@
 <p>The physics shift is the first thing our testing noticed. The bike in the third game rotates more slowly in the air than in the second, which means the tilt inputs must start earlier and end shorter, and the players who carried the second game's tap timing into the third consistently over-rotated the flips and landed nose-first into the spikes. The recalibration takes a few stages to internalize, and the players who spent those stages deliberately, rather than fighting the new feel, adapted the fastest.</p>
 <p>The gap design is the second shift. The third game's chained gaps require the bike to stay airborne across multiple hazard lengths, and the flight path must be set before the ramp rather than corrected mid-air, and our analysis shows that the players who planned the landing point before the jump, releasing the throttle at the exact lip position, cleared the chained gaps while the players who adjusted mid-flight crashed into the far edges.</p>
 <p>The moving blades return with faster cycles and narrower windows. The blades in the third game patrol wider arcs at higher speeds, and the crossing window is often a single bike length, which means the timing must be read from the blade's cycle rather than guessed from the approach, and our testing found that a one-cycle watch at each blade section paid for itself in saved attempts.</p>
+<figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/500px_photo_%2851094182%29.jpeg/900px-500px_photo_%2851094182%29.jpeg" alt="A dirt bike rider jumping on a motocross course" loading="lazy" /><figcaption>A dirt bike rider jumping on a motocross course</figcaption></figure>
 <!-- ADSENSE PLACEHOLDER: CONTEXTUAL IN-ARTICLE DISPLAY AD -->
 <!--EXP9X--><p>The wall-riding sections in the third game are longer and steeper than in the earlier entries. The bike climbs the walls and rides across the ceilings for extended stretches, and the player must hold the throttle while steering along the curved path, and our analysis shows that the wall sections punish the players who brake at the curve points, since the lost momentum drops the bike off the wall before the path levels out. The players who committed to the throttle and steered only at the transition points cleared the wall gauntlets with far fewer falls.</p>
 <!--EXP10X--><p>The explosive barrels return with a nastier twist: several late-stage barrels sit in positions where an accidental touch is almost guaranteed unless the player takes the deliberate detour. Our testing found that the players who mapped the barrel positions during the first walk-through, then chose the line that either cleared the barrels entirely or detonated them on purpose for the launch, stopped losing runs to the accidental blasts that ended most of the careless attempts.</p>
@@ -181,24 +193,7 @@
 <a name="section-3"></a>
 <h2>3. Step-by-Step Level Map</h2>
 <p>The level loop below is the sequence we followed during the testing that produced our consistent stage clears.</p>
-<pre class="flow">
-[Walk the stage] --&gt; map the barrels, blades, and gaps
-     |
-     v
-[Plan the flights] --&gt; pick the landing point before the ramp
-     |
-     v
-[Commit to the throttle] --&gt; no braking through the lip
-     |
-     v
-[Tilt early and short] --&gt; match the slower rotation physics
-     |
-     v
-[Land and recover] --&gt; wheels-first, then re-accelerate
-     |
-     v
-[Mine the checkpoint] --&gt; repeat the hard piece until it sticks
-</pre>
+<div class="proc"><div class="proc-head"><span class="dot"></span><span>Process Map</span></div><ol class="proc-steps"><li><span class="ps-n">1</span><span class="ps-t">Walk the stage</span></li><li><span class="ps-n">2</span><span class="ps-t">Plan the flights</span></li><li><span class="ps-n">3</span><span class="ps-t">Commit to the throttle</span></li><li><span class="ps-n">4</span><span class="ps-t">Tilt early and short</span></li><li><span class="ps-n">5</span><span class="ps-t">Land and recover</span></li><li><span class="ps-n">6</span><span class="ps-t">Mine the checkpoint</span></li></ol></div>
 <p>Follow this numbered routine for each hard stage:</p>
 <ol>
 <li><strong>Walk the stage first</strong> &mdash; ride slowly or watch the hazards cycle, and map the barrel positions and the blade arcs before the fast run.</li>
@@ -211,7 +206,8 @@
 <p>The landing recovery is the mechanical skill that the later stages reward. A wheels-first landing on the precise flat zones preserves the speed for the next jump, while a flat or nose-first landing bleeds the momentum and often triggers the crash, and our analysis shows that the players who watched the landing zone during the descent, rather than the horizon, landed cleanly enough to chain the stage's jumps into one continuous run.</p>
 <!--EXP21X--><p>The restart discipline is the mental skill that the third game's difficulty demands. Our testing found that the players who took a breath between attempts, reviewed the section that killed them, and restarted with a specific correction in mind cleared the hard stages faster than the players who slammed the restart and repeated the same mistake, because the review turned every death into a lesson while the instant restart turned every death into a coin flip. The review takes ten seconds, and it is the cheapest retry reduction in the game.</p>
 <!--EXP22X--><p>The landing zones in the third game are often smaller than the bike's full length, which makes the wheels-first landing a precision requirement rather than a preference. Our analysis shows that the players who watched the landing zone during the descent, judging the exact touchdown point from the bike's shadow, landed the bike on the safe strip consistently, while the players who watched the horizon landed long or short and paid for it with the crash. The shadow is the player's landing instrument, and the players who read it rode the tight zones cleanly.</p>
-<!--EXP23X--><p>The third game's hardest stages share a common structure that the player can learn once. The final gauntlets layer a blade crossing, a chained gap, and a wall climb into a single sequence, and our testing found that the players who recognized the structure, practicing each layer at its checkpoint and then joining them, cleared the gauntlets in a fraction of the attempts of the players who treated every layer as a new mystery. The structure repeats across the late stages, which means the practice from the first gauntlet transfers directly to the ones that follow.</p>
+<!--EXP23X--><p>The third game's hardest stages share a common structure that the player can learn once. The final gauntlets layer a blade crossing, a chained gap, and a wall climb into a single sequence, and our testing found that the players who recognized the structure, pr<figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/1986_Buick_Regal_Stage_One%3B_Speedometer_%26_Gas_Gauge_Only.jpg/900px-1986_Buick_Regal_Stage_One%3B_Speedometer_%26_Gas_Gauge_Only.jpg" alt="A car speedometer and dashboard" loading="lazy" /><figcaption>A car speedometer and dashboard</figcaption></figure>
+acticing each layer at its checkpoint and then joining them, cleared the gauntlets in a fraction of the attempts of the players who treated every layer as a new mystery. The structure repeats across the late stages, which means the practice from the first gauntlet transfers directly to the ones that follow.</p>
 
 <!-- ADSENSE PLACEHOLDER: RESPONSIVE NATIVE AD UNIT (MID-ARTICLE) -->
 <a name="section-4"></a>
@@ -227,7 +223,7 @@
 <p>The three-star times in the third game demand the clean line, and our testing found that the clean line comes from removing mistakes rather than adding speed. The players who cleared each stage once, then replayed it to remove the single biggest time loss, earned the stars faster than the players who pushed for speed on the first successful run, since the crash time always costs more than the small speed gains buy.</p>
 <p>For the foundation of the series, our <a href="/blogs/moto-x3m-all-levels-guide.html">Moto X3M full level guide</a> explains the base mechanics that every sequel builds on. If you are moving backward through the series, our <a href="/blogs/how-to-play-moto-x3m-2.html">Moto X3M 2 stage guide</a> covers the gentler second game, and our <a href="/blogs/how-to-get-better-at-gaming.html">improvement habits for gamers</a> build the practice discipline that the hardest stages demand.</p>
 <p>The final validation is a stage clear rate rather than a single time. We track the attempts per stage across the level list, and improvement shows as fewer retries on the later stages. A player who walks the stage, commits through the jumps, and mines each checkpoint piece will clear the series' hardest levels with a fraction of the retries, and that efficiency is what playing Moto X3M 3 well truly means.</p>
-      <figure class="inbody"><img src="/images/motox3m3.png" alt="How to Play Moto X3M 3: The Hardest Yet" loading="lazy" /><figcaption>How to Play Moto X3M 3: The Hardest Yet</figcaption></figure>
+      
       <div class="related"><h3>Related reading</h3><a href="/blogs/moto-x3m-all-levels-guide.html">our Moto X3M guide</a><a href="/blogs/how-to-get-better-at-gaming.html">our guide to getting better at gaming</a><a href="https://poki.com/en/g/moto-x3m" target="_blank" rel="noopener nofollow">Learn more about this game</a></div>
       <div class="related">
         <h3>Keep reading</h3>

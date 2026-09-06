@@ -112,7 +112,18 @@
     @media(max-width:600px){.blog-grid{grid-template-columns:1fr;}}
   </style>
 
-<style id="artx">.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
+<style id="artx">
+.article .proc{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px 22px;margin:22px 0;}
+.article .proc-head{display:flex;align-items:center;gap:8px;margin-bottom:14px;}
+.article .proc-head .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px rgba(34,197,94,.6);}
+.article .proc-head span{font-size:.78rem;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);}
+.article ol.proc-steps{list-style:none;margin:0;padding:0;counter-reset:ps;}
+.article ol.proc-steps li{display:flex;gap:14px;align-items:flex-start;margin:0;padding:11px 0;border-bottom:1px dashed var(--border);}
+.article ol.proc-steps li:last-child{border-bottom:none;}
+.article ol.proc-steps .ps-n{flex:0 0 30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--accent),#16a34a);color:#04120a;font-weight:800;font-size:.9rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(34,197,94,.25);}
+.article ol.proc-steps .ps-t{color:var(--txt);font-weight:600;font-size:.98rem;line-height:1.45;padding-top:3px;}
+.article ol.proc-steps .ps-t small{display:block;color:var(--muted);font-weight:400;font-size:.86rem;margin-top:2px;}
+.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
 </head>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -178,34 +189,12 @@
 <p>The 7–9 band is where most family gaming either flourishes or dies, because children at that age want real challenge but lack the fine motor control for twitch games. Our testing found that timing-based games with forgiving failure, like Crossy Road's one-tap hopping and Moto X3M's checkpointed levels, hit the sweet spot. The child experiences genuine difficulty, the adult can compete fairly, and the failure state is a giggle rather than a tantrum.</p>
 <p>Co-op titles deserve a special recommendation for family play because they remove the win-loss tension entirely. Fireboy and Watergirl asks two players to coordinate separate characters with opposite elemental rules, and our test sessions showed siblings and parent-child pairs communicating more during those levels than in any other genre we tested. The shared victory creates a different emotional register than competition, and families that started with co-op reported the highest return rates across our entire study.</p>
 <p>The youngest band needs its own guidance because most family games ignore it entirely. Children aged four to six cannot read instructions, struggle with fine motor timing, and lose focus fast, so the winning titles for them are visual and forgiving: 2048 Cupcakes turns number matching into a candy-colored board, Cut the Rope lets an adult handle the precise cuts while the child decides the sequence, and Little Alchemy becomes a guessing game where the child names combinations and the adult clicks. In our testing, the adult acting as hands while the child acts as brain kept four-year-olds engaged for the full session, because the child held genuine decision power without needing motor skill.</p>
+<figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Family_playing_a_board.jpg/900px-Family_playing_a_board.jpg" alt="A family playing a board game together" loading="lazy" /><figcaption>A family playing a board game together</figcaption></figure>
 <!-- ADSENSE PLACEHOLDER: CONTEXTUAL IN-ARTICLE DISPLAY AD -->
 <a name="section-3"></a>
 <h2>3. Step-by-Step Family Session Map</h2>
 <p>A successful family game session follows a structure that protects the child's confidence and the adult's patience. Our tested sequence below worked across every age band in the study.</p>
-<pre class="flow">
-[Pick the moment] --&gt; after homework, before dinner
-     |
-     v
-[Let the child choose] --&gt; choice builds ownership
-     |
-     v
-[Set the round count] --&gt; 3 rounds or 20 minutes, first to hit
-     |
-     v
-[Start with co-op] --&gt; build shared success first
-     |
-     v
-[Handicap for fairness] --&gt; adult sets own challenge rules
-     |
-     v
-[Praise effort, not wins] --&gt; name one good move per round
-     |
-     v
-[End at the boundary] --&gt; stop while energy is still positive
-     |
-     v
-[Debrief one highlight] --&gt; one sentence each, then done
-</pre>
+<div class="proc"><div class="proc-head"><span class="dot"></span><span>Process Map</span></div><ol class="proc-steps"><li><span class="ps-n">1</span><span class="ps-t">Pick the moment</span></li><li><span class="ps-n">2</span><span class="ps-t">Let the child choose</span></li><li><span class="ps-n">3</span><span class="ps-t">Set the round count</span></li><li><span class="ps-n">4</span><span class="ps-t">Start with co-op</span></li><li><span class="ps-n">5</span><span class="ps-t">Handicap for fairness</span></li><li><span class="ps-n">6</span><span class="ps-t">Praise effort, not wins</span></li><li><span class="ps-n">7</span><span class="ps-t">End at the boundary</span></li><li><span class="ps-n">8</span><span class="ps-t">Debrief one highlight</span></li></ol></div>
 <p>Four rules make the map work in real families:</p>
 <ul>
 <li><strong>Child chooses:</strong> let the child pick the game from a shortlist of two or three, because ownership of the choice doubles engagement before a single round starts.</li>
@@ -227,7 +216,8 @@
 <p>Screen-time guilt is a real barrier for many parents, and our testing offers a practical frame: co-play sessions convert screen time into family interaction time, which our parent testers rated as meaningfully different from solo screen use. The conversation, turn-taking, and shared problem-solving in a 20-minute co-play session mirror board-game interactions more than they mirror passive watching. Families that framed game time as a shared activity rather than a concession reported less guilt and more consistency.</p>
 <p>Building a family gaming routine takes the pressure off individual sessions. Our most successful test families scheduled one standing game night per week, let each family member rotate the game choice, and capped sessions at thirty minutes. That structure produced sessions that lasted months, while families without a routine reported their gaming fizzled out within weeks as busy schedules crowded it out. The standing appointment also gives children something to look forward to, which our testers reported reducing after-school screen negotiations on other days.</p>
 <p>When the family includes a wide age gap, alternate the game type to give every child a turn in the spotlight. A session that opens with a simple title for the youngest, moves to a co-op title for the middle, and closes with a versus game the oldest can win keeps every child engaged and prevents the oldest from dominating every round. Our multi-child test families rated this rotation pattern as their single most useful tactic, and it doubles as a fairness system that children can predict and trust.</p>
-<p>One more failure mode deserves attention because it is invisible until it ends a session: adult fatigue disguised as boredom. Parents who had a long day often sat down to family gaming expecting relaxation and found themselves doing all of the cognitive work, which produced irritability that children read as rejection. The fix is honest role selection: some nights the adult plays fully, other nights the adult watches and narrates while the child drives, and the family alternates deliberately. Our test families that rotated active and passive adult roles reported no burnout across three full months of weekly sessions.</p>
+<p>One more failure mode deserves attention because it is invisible until it ends a session: adult fatigue disguised as boredom. Parents who had a long day often sat down to family gaming expecting relaxation and found themselves doing all of the cognitive work, which produced irritability that children read as rejection. The fix is honest role<figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/Birdfeeder_dice_tower_in_Wingspan_board_game.jpg/900px-Birdfeeder_dice_tower_in_Wingspan_board_game.jpg" alt="Board game components and dice" loading="lazy" /><figcaption>Board game components and dice</figcaption></figure>
+ selection: some nights the adult plays fully, other nights the adult watches and narrates while the child drives, and the family alternates deliberately. Our test families that rotated active and passive adult roles reported no burnout across three full months of weekly sessions.</p>
 <!-- ADSENSE PLACEHOLDER: IN-ARTICLE DISPLAY AD (END OF CONTENT) -->
 <h2>5. Quick-Reference FAQ</h2>
 <p><strong>What is the best first game for a family session?</strong> Fireboy and Watergirl, because its co-op design removes win-loss tension and forces the communication that makes family gaming memorable.</p>
@@ -236,7 +226,7 @@
 <p><strong>Are browser games safe for young children?</strong> The titles here carry no chat with strangers and no purchases, which makes them safer than most app-store alternatives when an adult stays present.</p>
 <p><strong>How do we stop a session without tears?</strong> Agree on three rounds or twenty minutes before starting, then stop at the boundary while energy is still positive and name one highlight from the session.</p>
 <p>For more family-friendly variety, the <a href="/blogs/fireboy-and-watergirl-co-op-guide.html">Fireboy and Watergirl co-op level guide</a> details how to tackle the trickier shared levels, and the <a href="/blogs/best-2-player-games-online.html">two-player game collection</a> covers sibling duos. When the kids are older, the <a href="/blogs/best-free-games-on-roblox.html">free Roblox picks for older children</a> list bridges into their social gaming world.</p>
-      <figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Children_playing_video_games.jpg/960px-Children_playing_video_games.jpg" alt="Children playing video games" loading="lazy" /><figcaption>Children playing video games</figcaption></figure>
+      
       <div class="related"><h3>Related reading</h3><a href="/blogs/best-browser-games-no-download.html">our no-download browser games list</a><a href="/blogs/best-games-for-a-quick-break.html">our quick break games list</a><a href="https://en.wikipedia.org/wiki/Children%27s_game" target="_blank" rel="noopener nofollow">Learn more about this game</a></div>
       <div class="related">
         <h3>Keep reading</h3>

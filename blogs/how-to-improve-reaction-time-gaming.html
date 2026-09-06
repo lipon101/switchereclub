@@ -112,7 +112,18 @@
     @media(max-width:600px){.blog-grid{grid-template-columns:1fr;}}
   </style>
 
-<style id="artx">.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
+<style id="artx">
+.article .proc{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px 22px;margin:22px 0;}
+.article .proc-head{display:flex;align-items:center;gap:8px;margin-bottom:14px;}
+.article .proc-head .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px rgba(34,197,94,.6);}
+.article .proc-head span{font-size:.78rem;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);}
+.article ol.proc-steps{list-style:none;margin:0;padding:0;counter-reset:ps;}
+.article ol.proc-steps li{display:flex;gap:14px;align-items:flex-start;margin:0;padding:11px 0;border-bottom:1px dashed var(--border);}
+.article ol.proc-steps li:last-child{border-bottom:none;}
+.article ol.proc-steps .ps-n{flex:0 0 30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--accent),#16a34a);color:#04120a;font-weight:800;font-size:.9rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(34,197,94,.25);}
+.article ol.proc-steps .ps-t{color:var(--txt);font-weight:600;font-size:.98rem;line-height:1.45;padding-top:3px;}
+.article ol.proc-steps .ps-t small{display:block;color:var(--muted);font-weight:400;font-size:.86rem;margin-top:2px;}
+.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
 </head>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -179,30 +190,14 @@
 <p>Anticipation training works because it moves the decision earlier in time. When a player knows that an opponent will attack after a specific tell, the response starts at the tell rather than at the attack, effectively subtracting the recognition time from the reaction. Our testing found that players who studied opponent patterns reacted a full beat earlier in real matches.</p>
 <p>Setup latency is the silent tax on every player's reaction. A display with high input lag adds a visible delay between the game and the eye, wireless input devices add delay between the finger and the game, and both stack with the player's biological reaction time. Removing setup latency is the fastest reaction improvement available.</p>
 <!--EXP2--><p>Peripheral quality directly affects measured reaction. A mouse with a high polling rate reports movement more frequently, and a monitor with low input lag shows the game sooner, and our testing measured combined differences of twenty to forty milliseconds between budget and competitive setups, a margin larger than many training gains. The fix is to prioritize the display's game mode, a wired or low-latency mouse, and a frame rate that keeps the game smooth.</p>
+<figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/ESport_IFNG_Munich_20-Nov-11_Stage5.jpg/900px-ESport_IFNG_Munich_20-Nov-11_Stage5.jpg" alt="An esports tournament stage with players competing" loading="lazy" /><figcaption>An esports tournament stage with players competing</figcaption></figure>
 <!-- ADSENSE PLACEHOLDER: CONTEXTUAL IN-ARTICLE DISPLAY AD -->
 <!--EXP2X--><p>Peripheral quality directly affects measured reaction. A mouse with a high polling rate reports movement more frequently, and a monitor with low input lag shows the game sooner, and our testing measured combined differences of twenty to forty milliseconds between budget and competitive setups, a margin larger than many training gains. The fix is to prioritize the display's game mode, a wired or low-latency mouse, and a frame rate that keeps the game smooth.</p>
 <a name="section-3"></a>
 <h2>3. Step-by-Step Training Map</h2>
 <p>The training loop below is the structure we used during the testing that produced our measured improvements.</p>
 <!--EXP2X--><p>Stress and arousal affect reaction time along a curve. A relaxed player reacts too slowly, a panicked player reacts with errors, and our testing found that the optimal state sits between them, alert but calm, with the body ready and the mind clear. The practice is to notice the arousal level during matches and to regulate it, breathing to calm down when tense and actively engaging when drifting, keeping the nervous system in the band where reaction is fastest.</p>
-<pre class="flow">
-[Measure baseline] --&gt; test raw reflex and game reaction separately
-     |
-     v
-[Fix setup latency] --&gt; display mode, wired input, frame rate
-     |
-     v
-[Pattern study 10 min] --&gt; learn tells and common situations
-     |
-     v
-[Anticipation play 30 min] --&gt; practice predicting in matches
-     |
-     v
-[Reflex maintenance] --&gt; short click drills, not long sessions
-     |
-     v
-[Retest monthly] --&gt; measure effective reaction in games
-</pre>
+<div class="proc"><div class="proc-head"><span class="dot"></span><span>Process Map</span></div><ol class="proc-steps"><li><span class="ps-n">1</span><span class="ps-t">Measure baseline</span></li><li><span class="ps-n">2</span><span class="ps-t">Fix setup latency</span></li><li><span class="ps-n">3</span><span class="ps-t">Pattern study 10 min</span></li><li><span class="ps-n">4</span><span class="ps-t">Anticipation play 30 min</span></li><li><span class="ps-n">5</span><span class="ps-t">Reflex maintenance</span></li><li><span class="ps-n">6</span><span class="ps-t">Retest monthly</span></li></ol></div>
 <p>Follow this numbered routine to build both sides of reaction:</p>
 <ol>
 <li><strong>Measure both components</strong> — test raw click reaction and effective game reaction separately to see which needs training.</li>
@@ -213,7 +208,8 @@
 </ol>
 <p>Fatigue is the largest controllable variable in reaction time. Sleep deprivation adds measurable delay to every component of reaction, and our testing found that a well-rested player reacted faster than the same player after a poor night by a margin larger than most training gains.</p>
 <p>Warm-up activates the reaction pathways before competitive play. A short session of fast-paced practice or reaction drills before matches reduces the slow-start effect, and our analysis shows that players who warmed up performed at their reaction ceiling from the first match rather than reaching it by the third.</p>
-<!--EXP3--><p>Anticipation relies on probability, not prediction. Players cannot know exactly what an opponent will do, but they can weight the likely options, and our testing found that players who positioned and aimed for the most probable enemy action won more reactions than players who tried to react to every possibility. The habit is to read the situation, identify the two or three likely outcomes, and prepare for the most probable one, accepting that the rare outlier will occasionally beat the preparation.</p>
+<!--EXP3--><p>Anticipation relies on probability, not prediction. Players cannot know exactly what an opponent will do, but they can weight the likely options, and our testing found that<figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/Back_Bay_Station_waiting_room.jpg/900px-Back_Bay_Station_waiting_room.jpg" alt="A clock in a waiting room" loading="lazy" /><figcaption>A clock in a waiting room</figcaption></figure>
+ players who positioned and aimed for the most probable enemy action won more reactions than players who tried to react to every possibility. The habit is to read the situation, identify the two or three likely outcomes, and prepare for the most probable one, accepting that the rare outlier will occasionally beat the preparation.</p>
 <!-- ADSENSE PLACEHOLDER: RESPONSIVE NATIVE AD UNIT (MID-ARTICLE) -->
 <!--EXP2X--><p>Anticipation relies on probability, not prediction. Players cannot know exactly what an opponent will do, but they can weight the likely options, and our testing found that players who positioned and aimed for the most probable enemy action won more reactions than players who tried to react to every possibility. The habit is to read the situation, identify the two or three likely outcomes, and prepare for the most probable one, accepting that the rare outlier will occasionally beat the preparation.</p>
 <a name="section-4"></a>
@@ -235,7 +231,7 @@
 <!--EXP3X--><p>Reaction improvement is real but bounded, and the honest expectation keeps training effective. Raw reflexes will improve slightly, anticipation will improve substantially, and setup latency can be removed entirely, and our testing found that players who trained all three levers saw the full benefit while players who chased only raw speed were disappointed. Measure each lever, train each one, and the effective reaction in games will improve even where the click test stays flat.</p>
 <!--EXP4X--><p>Different game genres reward different reaction styles. Fighting games reward pattern recognition, shooters reward visual reaction with crosshair placement, and racing games reward consistent timing, and our testing found that players who trained the style their genre uses improved more than players who trained generic click speed. Identify the dominant demand of your game and practice that specific reaction in context.</p>
 <p>The final validation is effective reaction in games rather than raw click scores. We measure how often the player responds in time to predictable events, and improvement shows as wins in situations that previously felt too fast. A player who removes setup latency, trains anticipation, and protects sleep is improving the reaction that matters, and that is what improving reaction time for gaming truly means.</p>
-      <figure class="inbody"><img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Apparatus_for_Personal_Equation.png" alt="Reaction time stages diagram" loading="lazy" /><figcaption>Reaction time stages diagram</figcaption></figure>
+      
       <div class="related"><h3>Related reading</h3><a href="/blogs/best-action-games-browser.html">our action games list</a><a href="/blogs/how-to-get-better-at-gaming.html">our guide to getting better at gaming</a><a href="https://en.wikipedia.org/wiki/Mental_chronometry" target="_blank" rel="noopener nofollow">Learn more about this game</a></div>
       <div class="related">
         <h3>Keep reading</h3>

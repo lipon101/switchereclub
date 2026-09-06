@@ -112,7 +112,18 @@
     @media(max-width:600px){.blog-grid{grid-template-columns:1fr;}}
   </style>
 
-<style id="artx">.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
+<style id="artx">
+.article .proc{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px 22px;margin:22px 0;}
+.article .proc-head{display:flex;align-items:center;gap:8px;margin-bottom:14px;}
+.article .proc-head .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px rgba(34,197,94,.6);}
+.article .proc-head span{font-size:.78rem;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);}
+.article ol.proc-steps{list-style:none;margin:0;padding:0;counter-reset:ps;}
+.article ol.proc-steps li{display:flex;gap:14px;align-items:flex-start;margin:0;padding:11px 0;border-bottom:1px dashed var(--border);}
+.article ol.proc-steps li:last-child{border-bottom:none;}
+.article ol.proc-steps .ps-n{flex:0 0 30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--accent),#16a34a);color:#04120a;font-weight:800;font-size:.9rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(34,197,94,.25);}
+.article ol.proc-steps .ps-t{color:var(--txt);font-weight:600;font-size:.98rem;line-height:1.45;padding-top:3px;}
+.article ol.proc-steps .ps-t small{display:block;color:var(--muted);font-weight:400;font-size:.86rem;margin-top:2px;}
+.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
 </head>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -234,6 +245,7 @@ Our testing produced a reliable matching pattern. Competitive players gravitate 
 <td>Two-minute loops, one-life tension</td>
 </tr>
 </tbody></table>
+<figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/20191121-tesla-cybertruck-driving-seat.jpg/900px-20191121-tesla-cybertruck-driving-seat.jpg" alt="A driver&#x27;s seat with steering wheel" loading="lazy" /><figcaption>A driver&#x27;s seat with steering wheel</figcaption></figure>
 <!-- ADSENSE PLACEHOLDER: CONTEXTUAL IN-ARTICLE DISPLAY AD -->
 <h3>Controller support: when keyboard falls short</h3>
 <p>Keyboard steering is binary, and some driving games demand analog input. Our testing shows controller support varies wildly across the browser catalog: some titles read gamepads natively through the browser Gamepad API, while others ignore them entirely. Testing the connection takes thirty seconds and can change a title from frustrating to excellent.</p>
@@ -262,28 +274,7 @@ Our testing produced a reliable matching pattern. Competitive players gravitate 
 <a name="section-3"></a>
 <h2 id="section-3">3. Step-by-Step Skill Map</h2>
 Skill transfer across driving subgenres follows a predictable path. We mapped the progression after tracking new players through each format.
-<pre class="flow">[Choose a subgenre]
-        |
-        v
-[Learn the vehicle's turning radius]
-        |
-        v
-[Master the brake] -- slow in, fast out
-        |
-        v
-[Find the racing line] -- outside-inside-outside
-        |
-        v
-[Drift: sustain the angle] -- counter-steer
-        |
-        v
-[Stunt: commit to airtime] -- know landings
-        |
-        v
-[Runner: memorize spawn patterns]
-        |
-        v
-[Replay with a target] -- beat your best</pre>
+<div class="proc"><div class="proc-head"><span class="dot"></span><span>Process Map</span></div><ol class="proc-steps"><li><span class="ps-n">1</span><span class="ps-t">Choose a subgenre</span></li><li><span class="ps-n">2</span><span class="ps-t">Learn the vehicle&#x27;s turning radius</span></li><li><span class="ps-n">3</span><span class="ps-t">Master the brake</span></li><li><span class="ps-n">4</span><span class="ps-t">Find the racing line</span></li><li><span class="ps-n">5</span><span class="ps-t">Drift: sustain the angle</span></li><li><span class="ps-n">6</span><span class="ps-t">Stunt: commit to airtime</span></li><li><span class="ps-n">7</span><span class="ps-t">Runner: memorize spawn patterns</span></li><li><span class="ps-n">8</span><span class="ps-t">Replay with a target</span></li></ol></div>
 <p class="tblcap">Process map 1: The step-by-step flow for this article.</p><h3>Recommended driving lineup</h3>
 - <strong>Moto X3M series</strong> — the physics stunt racer with short, replayable levels; our top pick for browser driving.
 - <strong>Madalin games</strong> — free-roam driving with a large car roster and open maps.
@@ -304,7 +295,8 @@ Skill transfer across driving subgenres follows a predictable path. We mapped th
 </ul>
 <p>The view settings matter more than most players expect. Our analysis shows a wider FOV reduces the sensation of speed but improves corner judgment, which is the better trade for lap times. Tune the view for consistency, then the speed sensation returns as the brain adapts.</p>
 <h3>Reading the track: lines, markers, and braking points</h3>
-<p>Every track teaches its racing line through visual markers: curbs, sponsor boards, and surface changes. Our testing shows players who consciously read markers improve lap times faster than players who drive by feel alone. The reading habit starts with braking points: pick a fixed marker where the brake goes down, and adjust it one car-length at a time.</p>
+<p>Every track teaches its racing line through visual markers: curbs, sponsor boards, and surface changes. Our testing shows players who consciously read markers improve lap times faster than players who drive by feel alone. The reading habit starts with braking points: pi<figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Car_driving_simulator.jpg/900px-Car_driving_simulator.jpg" alt="A driving simulator setup" loading="lazy" /><figcaption>A driving simulator setup</figcaption></figure>
+ck a fixed marker where the brake goes down, and adjust it one car-length at a time.</p>
 <p>The same habit transfers to drift and stunt titles. Drift scoring rewards knowing where the combo zones sit, and stunt runs reward memorizing landing zones. Track reading is the skill that ties all driving subgenres together.</p>
 <!-- ADSENSE PLACEHOLDER: CONTEXTUAL IN-ARTICLE DISPLAY AD (PRE-FOOTER) -->
 <a name="section-4"></a>
@@ -326,7 +318,7 @@ Skill transfer across driving subgenres follows a predictable path. We mapped th
 </ul>
 <p>The variety rule also protects improvement. A player who only time-trials develops speed but weak cornering instincts, while a player who rotates builds the complete skill set that transfers across the entire driving genre.</p>
 <p>Browser driving games offer surprising depth once you match the subgenre to your style. Master the flagship with our <a href="/blogs/moto-x3m-all-levels-guide.html">complete Moto X3M level guide</a>, explore the <a href="/blogs/how-to-play-moto-x3m-2.html">Moto X3M 2 sequel walkthrough</a>, or scan the <a href="/blogs/best-racing-games-browser.html">best racing games list</a> for more circuit action.</p>
-      <figure class="inbody"><img src="https://upload.wikimedia.org/wikipedia/commons/9/92/DRM_Brands_Hatch_11.jpg" alt="Driving a racing car" loading="lazy" /><figcaption>Driving a racing car</figcaption></figure>
+      
       <div class="related"><h3>Related reading</h3><a href="/blogs/best-browser-games-no-download.html">our no-download browser games list</a><a href="/blogs/best-games-for-a-quick-break.html">our quick break games list</a></div>
       <div class="related">
         <h3>Keep reading</h3>

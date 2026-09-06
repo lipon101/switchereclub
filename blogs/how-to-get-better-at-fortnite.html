@@ -112,7 +112,18 @@
     @media(max-width:600px){.blog-grid{grid-template-columns:1fr;}}
   </style>
 
-<style id="artx">.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
+<style id="artx">
+.article .proc{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px 22px;margin:22px 0;}
+.article .proc-head{display:flex;align-items:center;gap:8px;margin-bottom:14px;}
+.article .proc-head .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px rgba(34,197,94,.6);}
+.article .proc-head span{font-size:.78rem;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);}
+.article ol.proc-steps{list-style:none;margin:0;padding:0;counter-reset:ps;}
+.article ol.proc-steps li{display:flex;gap:14px;align-items:flex-start;margin:0;padding:11px 0;border-bottom:1px dashed var(--border);}
+.article ol.proc-steps li:last-child{border-bottom:none;}
+.article ol.proc-steps .ps-n{flex:0 0 30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--accent),#16a34a);color:#04120a;font-weight:800;font-size:.9rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(34,197,94,.25);}
+.article ol.proc-steps .ps-t{color:var(--txt);font-weight:600;font-size:.98rem;line-height:1.45;padding-top:3px;}
+.article ol.proc-steps .ps-t small{display:block;color:var(--muted);font-weight:400;font-size:.86rem;margin-top:2px;}
+.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
 </head>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -179,30 +190,14 @@
 <p>Editing is the skill that wins box fights. A player who can edit a window, take a shot, and reset the wall controls the pace of close combat, and edit courses in creative mode provide the repetition that turns edits from conscious actions into reflexes. We found editing drills produced the fastest visible improvement of any practice we tested.</p>
 <p>Aim training in Fortnite is different from aim training in static shooters. Targets move, build, and edit, so tracking and flick practice need to happen against moving targets, and we found that combining aim drills with movement practice produced better fight results than aim practice alone.</p>
 <!--EXP2--><p>Zone rotation is the strategy layer that decides how many fights you take. Players who rotate early with the zone choose their engagements, while players who rotate late run through contested areas and arrive weakened, and our testing found that early rotators reached the endgame more often with better loot. The habit is to plan the rotation when the zone shrinks, choosing a path with cover and considering where other players are likely to be, rather than sprinting straight to the circle.</p>
+<figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Fortnite_Battle_Royale_at_GDC_2018.jpg/900px-Fortnite_Battle_Royale_at_GDC_2018.jpg" alt="Fortnite Battle Royale gameplay on stage" loading="lazy" /><figcaption>Fortnite Battle Royale gameplay on stage</figcaption></figure>
 <!-- ADSENSE PLACEHOLDER: CONTEXTUAL IN-ARTICLE DISPLAY AD -->
 <!--EXP2X--><p>Weapon mastery beats weapon collection. Our testing found that players who learned one weapon's recoil pattern, fire rate, and effective range outperformed players who carried different weapons every match, because the familiar weapon becomes an extension of the aim. The practice is to choose a preferred loadout and to drop toward it, spending matches with the same core weapons until the muscle memory for their behavior is automatic.</p>
 <a name="section-3"></a>
 <h2>3. Step-by-Step Practice Map</h2>
 <p>The practice loop below is the structure we used during the testing that produced our measured improvements.</p>
 <!--EXP2X--><p>Each practice session should end with a cooldown, a few minutes of free building or relaxed aim to let the trained movements settle. Our testing found that players who cooled down after intense drills retained more of the gains than players who stopped abruptly, and the cooldown also prevents the frustration that comes from ending a session on a difficult failure. Five minutes of easy repetition turns the session's learning into the next session's baseline.</p>
-<pre class="flow">
-[Enter creative mode] --&gt; no circle pressure, full focus
-     |
-     v
-[Build drills 10 min] --&gt; ramp-wall push until automatic
-     |
-     v
-[Edit course 10 min] --&gt; window edits, resets, retakes
-     |
-     v
-[Aim drills 10 min] --&gt; track moving targets while building
-     |
-     v
-[Box fight practice] --&gt; apply mechanics against a real player
-     |
-     v
-[Apply in matches] --&gt; carry one focus goal into each game
-</pre>
+<div class="proc"><div class="proc-head"><span class="dot"></span><span>Process Map</span></div><ol class="proc-steps"><li><span class="ps-n">1</span><span class="ps-t">Enter creative mode</span></li><li><span class="ps-n">2</span><span class="ps-t">Build drills 10 min</span></li><li><span class="ps-n">3</span><span class="ps-t">Edit course 10 min</span></li><li><span class="ps-n">4</span><span class="ps-t">Aim drills 10 min</span></li><li><span class="ps-n">5</span><span class="ps-t">Box fight practice</span></li><li><span class="ps-n">6</span><span class="ps-t">Apply in matches</span></li></ol></div>
 <p>Follow this numbered routine for each practice session:</p>
 <ol>
 <li><strong>Drill the core builds</strong> — spend ten minutes repeating the wall-ramp push and 90-degree turn until the inputs feel automatic.</li>
@@ -213,7 +208,8 @@
 </ol>
 <p>Settings consistency is the foundation that makes practice effective. We recommend choosing a sensitivity and keybind layout, then keeping them locked while training, because changing settings resets the muscle memory that fast building and editing depend on.</p>
 <p>We also recommend practicing with the same visual settings used in matches. Frame rate affects mechanical speed, so the practice environment should match the match environment for the skills to transfer.</p>
-<!--EXP3--><p>Third-party awareness prevents the most frustrating deaths in battle royale games. The sound of a fight draws other players, and our testing found that players who finished fights quickly and repositioned immediately survived far more often than players who lingered to loot in the open. The discipline is to assume every fight attracts attention, to take the essential loot and move, and to use the chaos of nearby fights as cover for repositioning rather than joining them blindly.</p>
+<!--EXP3--><p>Third-party awareness prevents the most frustrating deaths in battle royale games. The sound of a fight draws other players, and our testing found that players who finished f<figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/ESport_IFNG_Munich_20-Nov-11_Stage5.jpg/900px-ESport_IFNG_Munich_20-Nov-11_Stage5.jpg" alt="An esports tournament stage with players competing" loading="lazy" /><figcaption>An esports tournament stage with players competing</figcaption></figure>
+ights quickly and repositioned immediately survived far more often than players who lingered to loot in the open. The discipline is to assume every fight attracts attention, to take the essential loot and move, and to use the chaos of nearby fights as cover for repositioning rather than joining them blindly.</p>
 <!-- ADSENSE PLACEHOLDER: RESPONSIVE NATIVE AD UNIT (MID-ARTICLE) -->
 <!--EXP2X--><p>Building under fire is a composure skill that drills build indirectly. Our testing found that players who practiced building while being shot at, using creative mode pressure scenarios, kept their build quality under fire far better than players who only drilled calm builds, because the stress response had been trained rather than surprised. The habit is to add pressure to practice gradually, building against a shooting opponent until the core sequences hold at full speed.</p>
 <a name="section-4"></a>
@@ -235,7 +231,7 @@
 <!--EXP3X--><p>The meta changes every season, but the mechanical foundation does not. Building speed, edit reliability, and aim transfer across every patch, and our testing found that players who maintained their mechanics through meta shifts adapted to new seasons faster than players who chased each patch's trends. Invest the practice time in the permanent skills, learn the new items quickly when they drop, and the foundation will carry every season's wins.</p>
 <!--EXP4X--><p>Creative mode is the training ground that makes improvement possible without match pressure. The ability to isolate one mechanic, repeat it endlessly, and measure the result is what turns raw play into deliberate practice, and our testing found that players who used creative mode deliberately improved faster than players who only used it socially. Structure the creative time with a goal, run the drill, and leave when the goal is met.</p>
 <p>The final validation is a weekly mechanical benchmark. We time the core build sequence and edit course once weekly and compare the results, and improvement shows as faster times rather than higher match scores. A player whose mechanics improve weekly is building the foundation that carries through every season, and that foundation is what getting better at Fortnite actually means.</p>
-      <figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Fortnite_Battle_Royale_at_GDC_2018.jpg/960px-Fortnite_Battle_Royale_at_GDC_2018.jpg" alt="Fortnite Battle Royale" loading="lazy" /><figcaption>Fortnite Battle Royale</figcaption></figure>
+      
       <div class="related"><h3>Related reading</h3><a href="/blogs/how-to-get-better-at-gaming.html">our guide to getting better at gaming</a><a href="/blogs/how-to-improve-reaction-time-gaming.html">our reaction time guide</a><a href="https://en.wikipedia.org/wiki/Fortnite" target="_blank" rel="noopener nofollow">Learn more about this game</a></div>
       <div class="related">
         <h3>Keep reading</h3>

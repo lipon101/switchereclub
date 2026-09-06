@@ -112,7 +112,18 @@
     @media(max-width:600px){.blog-grid{grid-template-columns:1fr;}}
   </style>
 
-<style id="artx">.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
+<style id="artx">
+.article .proc{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px 22px;margin:22px 0;}
+.article .proc-head{display:flex;align-items:center;gap:8px;margin-bottom:14px;}
+.article .proc-head .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px rgba(34,197,94,.6);}
+.article .proc-head span{font-size:.78rem;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);}
+.article ol.proc-steps{list-style:none;margin:0;padding:0;counter-reset:ps;}
+.article ol.proc-steps li{display:flex;gap:14px;align-items:flex-start;margin:0;padding:11px 0;border-bottom:1px dashed var(--border);}
+.article ol.proc-steps li:last-child{border-bottom:none;}
+.article ol.proc-steps .ps-n{flex:0 0 30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--accent),#16a34a);color:#04120a;font-weight:800;font-size:.9rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(34,197,94,.25);}
+.article ol.proc-steps .ps-t{color:var(--txt);font-weight:600;font-size:.98rem;line-height:1.45;padding-top:3px;}
+.article ol.proc-steps .ps-t small{display:block;color:var(--muted);font-weight:400;font-size:.86rem;margin-top:2px;}
+.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin:20px 0;}.toc h2{font-size:1.05rem;margin-bottom:8px;}.toc ol{margin:0 0 0 18px;color:var(--txt);}.toc a{color:var(--accent2);font-weight:600;}.toc a:hover{color:var(--accent);}.article table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.95rem;background:var(--card);border-radius:10px;overflow:hidden;}.article th{background:var(--border);color:#fff;text-align:left;padding:9px 12px;font-weight:700;}.article td{border:1px solid var(--border);padding:8px 12px;vertical-align:top;}.article tr:nth-child(even) td{background:rgba(255,255,255,.02);}.article pre.flow{background:#0b1019;border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px;overflow-x:auto;color:#c9f2d8;font:13px/1.5 ui-monospace,Consolas,monospace;white-space:pre;margin:16px 0;}.article h2{margin:28px 0 10px;font-size:1.45rem;letter-spacing:-.3px;}.article h3{margin:20px 0 8px;font-size:1.12rem;color:var(--accent2);}.article li{margin:6px 0;}.tip{background:rgba(34,197,94,.08);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.warn{background:rgba(250,204,21,.07);border-left:4px solid #facc15;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.97rem;}.tblcap{font-size:.82rem;color:var(--muted);margin:-4px 0 14px;}</style>
 </head>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -153,6 +164,7 @@
 <h3>How the leaderboard warps the game</h3>
 <p>The leaderboard shows the top cells by mass, and it quietly shapes every decision in the lobby. Small cells avoid the giants. Giants hunt each other, because eating a rival giant is the only way to grow once the pellets run out. Mid-size cells orbit the giants, waiting for a failed fight to spray mass across the map.</p>
 <p>Your position on the size ladder should determine your strategy more than your reflexes do. The blueprint below tiers your play by mass so you always know whether to eat, hide, or hunt.</p>
+<figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/E3_2011_-_trying_out_Playstation_Network_games_at_the_Sony_booth.jpg/900px-E3_2011_-_trying_out_Playstation_Network_games_at_the_Sony_booth.jpg" alt="Players trying online games at a gaming event" loading="lazy" /><figcaption>Players trying online games at a gaming event</figcaption></figure>
 <!-- ADSENSE PLACEHOLDER: CONTEXTUAL IN-ARTICLE DISPLAY AD -->
 <a name="section-2"></a>
 <h2>2. Reactive Eating vs. Optimized Agar.io Protocol</h2>
@@ -187,31 +199,7 @@
 <p>Position yourself to collect the fallout of other players' fights instead of starting your own. The safest mass in Agar.io is the mass other players lose when they gamble.</p>
 <a name="section-3"></a>
 <h2>3. The Size-Tiered Growth Blueprint</h2>
-<pre class="flow">SPAWN
-   |
-   v
-[Mass under 100: hide in pellet fields] --&gt; [never split]
-   |                                            ^
-   v                                            |
-[Mass 100-500: farm safe zones] --&gt; [avoid hunters] --+
-   |                                                  |
-   +-- chased? --yes--&gt; [use virus as shield] --------+
-   |                     |
-   |                     v
-   |              [virus blocks pursuer]
-   v                     |
-[Mass 500-2000: hunt small cells] <--------+
-   |        |
-   |        +-- split to catch? --yes--&gt; [only if 2x prey size]
-   |                                                    |
-   v                                                    |
-[Mass 2000+: hunt rivals] --&gt; [virus-shot giants] ------+
-   |
-   v
-[Top 3] --&gt; [defensive: let others fight]
-   |
-   v
-[Death] --&gt; [log cause, adjust tier play]</pre>
+<div class="proc"><div class="proc-head"><span class="dot"></span><span>Process Map</span></div><ol class="proc-steps"><li><span class="ps-n">1</span><span class="ps-t">Mass under 100: hide in pellet fields</span></li><li><span class="ps-n">2</span><span class="ps-t">never split</span></li><li><span class="ps-n">3</span><span class="ps-t">Mass 100-500: farm safe zones</span></li><li><span class="ps-n">4</span><span class="ps-t">avoid hunters</span></li><li><span class="ps-n">5</span><span class="ps-t">use virus as shield</span></li><li><span class="ps-n">6</span><span class="ps-t">virus blocks pursuer</span></li><li><span class="ps-n">7</span><span class="ps-t">Mass 500-2000: hunt small cells</span></li><li><span class="ps-n">8</span><span class="ps-t">only if 2x prey size</span></li><li><span class="ps-n">9</span><span class="ps-t">Mass 2000+: hunt rivals</span></li><li><span class="ps-n">10</span><span class="ps-t">virus-shot giants</span></li></ol></div>
 <p class="tblcap">Process map 1: The full size-tiered growth loop from spawn to leaderboard.</p>
 <h3>Step 1: Farm pellets below mass 100</h3>
 <p>Spend your opening minutes in the pellet fields near the edges, eating steadily and avoiding every other cell. Your only goal is to reach mass 100 without being eaten, which means staying out of the lanes where hunters patrol.</p>
@@ -226,7 +214,8 @@
 <p>At the giant tier, your best weapon is the virus shot: split a small piece toward a virus that sits between you and a rival giant. The piece hits the virus, the virus explodes the rival into spray, and you collect the mass.</p>
 <p>The virus shot requires practice to aim, because the split piece must travel in a straight line into the virus while the rival is on the far side. Miss the shot and you have handed the rival a split piece to eat.</p>
 <h3>Step 5: Play defense in the top three</h3>
-<p>When you reach the top three, stop hunting. The other giants will fight each other, and their fight will spray mass across the map. Stay at the edge of their conflict, collect the fallout, and only engage when one rival is already committed to a losing fight.</p>
+<p>When you reach the t<figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/GameCube-Set.jpg/900px-GameCube-Set.jpg" alt="A video game console and controllers" loading="lazy" /><figcaption>A video game console and controllers</figcaption></figure>
+op three, stop hunting. The other giants will fight each other, and their fight will spray mass across the map. Stay at the edge of their conflict, collect the fallout, and only engage when one rival is already committed to a losing fight.</p>
 <p>The final three almost always resolve when one giant overcommits to a virus shot or a split-kill. Make sure that giant is never you.</p>
 <!-- ADSENSE PLACEHOLDER: CONTEXTUAL IN-ARTICLE DISPLAY AD -->
 <a name="section-4"></a>
@@ -263,7 +252,7 @@
 </ul>
 <p>In our testing, players who applied the three-death rule for one week cut their repeat-death rate by over half, because the review step converted every loss into a specific behavior change instead of vague frustration.</p>
 <p class="tip"><strong>Pro tip:</strong> In our testing, players who farmed pellets for the first three minutes reached the top ten roughly twice as often as players who chased prey immediately. Mass is a bank account; the pellets are your savings, and every split is a withdrawal you should only make when the interest is worth it.</p>
-      <figure class="inbody"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Agar.io_Gameplay_Screenshot.png/960px-Agar.io_Gameplay_Screenshot.png" alt="Agar.io gameplay" loading="lazy" /><figcaption>Agar.io gameplay</figcaption></figure>
+      
       <div class="related"><h3>Related reading</h3><a href="/blogs/how-to-get-better-at-gaming.html">our guide to getting better at gaming</a><a href="/blogs/how-to-improve-reaction-time-gaming.html">our reaction time guide</a><a href="https://en.wikipedia.org/wiki/Agar.io" target="_blank" rel="noopener nofollow">Learn more about this game</a></div>
       <div class="related">
         <h3>Keep reading</h3>
